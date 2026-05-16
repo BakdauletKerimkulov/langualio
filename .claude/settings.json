@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(flutter pub get)",
+      "Bash(flutter analyze)",
+      "Bash(flutter test)",
+      "Bash(dart run build_runner build --delete-conflicting-outputs)",
+      "Bash(dart run build_runner watch --delete-conflicting-outputs)",
+      "Bash(dart format lib/)"
+    ],
+    "deny": []
+  }
+}
