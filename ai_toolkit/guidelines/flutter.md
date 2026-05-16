@@ -205,6 +205,24 @@ After every Flutter upgrade: run `dart fix --apply`, then `dart analyze`, then `
 
 ---
 
+## Scroll-to-bottom with Pagination
+
+When a chat ListView supports both new messages (appended at bottom) and pagination (prepended at top), the auto-scroll listener must distinguish between them. Only scroll to bottom for new messages, not for pagination loads:
+
+```dart
+ref.listen(provider, (prev, next) {
+  if (prev == null) return;
+  final isNewAtEnd = next.messages.isNotEmpty &&
+      prev.messages.isNotEmpty &&
+      next.messages.last.timestamp.isAfter(prev.messages.last.timestamp);
+  if (isNewAtEnd) _scrollToBottom();
+});
+```
+
+Checking only `messages.length` change will cause scroll jumps when older messages are prepended.
+
+---
+
 ## Rules for AI Code Generation
 
 1. **Never generate code with deprecated APIs** listed above

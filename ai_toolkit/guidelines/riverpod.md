@@ -325,6 +325,23 @@ SomeState build() {
 
 ---
 
+## Cache-first with Async Refresh (Sync Notifier)
+
+When a Notifier needs network data but you want to avoid `AsyncNotifier` (and `AsyncValue` in widgets):
+
+```dart
+@override
+MyState build() {
+  final cached = _repository.loadCached();
+  _refreshFromServer(); // fire-and-forget
+  return MyState(data: cached);
+}
+```
+
+This shows cached data instantly and updates state when the server responds. Use when migrating from local-only to server-backed state without changing widget code. The trade-off: widgets don't see a "loading" state for the initial fetch — they see stale cache until refresh completes.
+
+---
+
 ## Testing & Overrides
 
 Providers are testable via `ProviderContainer` overrides:

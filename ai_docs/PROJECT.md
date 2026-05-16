@@ -218,6 +218,10 @@ lib/src/
 
 - **`LocalStorage`**: `package:supabase_flutter` exports a `LocalStorage` class that conflicts with `lib/src/core/storage/local_storage.dart`. When importing both, always use: `import 'package:supabase_flutter/supabase_flutter.dart' hide LocalStorage;`
 
+### Supabase DELETE workaround
+
+PostgREST requires at least one filter on DELETE. To delete all user's rows (with RLS), use `.delete().neq('id', '')` as a "match all owned rows" pattern.
+
 ### Quiz Day Timezone Logic
 
 The daily word quiz rolls over at **02:00 Almaty time** (21:00 UTC previous day). Almaty is hardcoded as UTC+5 (no timezone package).
