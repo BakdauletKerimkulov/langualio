@@ -1,3 +1,10 @@
+# Supabase local CLI state
+supabase/.temp/
+
+# Environment files
+.env
+.env.*
+
 # Miscellaneous
 *.class
 *.log
