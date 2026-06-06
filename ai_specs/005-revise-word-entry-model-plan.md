@@ -46,10 +46,10 @@ Restructure `WordEntry` from flat single-meaning fields to a `meanings: List<Wor
 ### Phase 3 — Data layer (repository + local cache)
 **Goal:** Repository and Drift cache correctly handle the new `meanings` JSONB field.
 
-- [ ] `lib/src/features/word_quiz/data/remote/word_quiz_repository.dart` — update `getCachedTodaysWords` cache serialization to include full `meanings` data (currently only caches `id`, `word`, `translation`)
-- [ ] `lib/src/features/word_quiz/data/local/word_entries_table.dart` — replace flat meaning columns with single `meanings` TEXT column (JSON), update `toModel()` and `toCompanion()` extensions
-- [ ] `lib/src/features/word_quiz/data/local/local_word_quiz_repo.dart` — update if any references to removed flat fields
-- [ ] Verify: `dart run build_runner build --delete-conflicting-outputs && flutter analyze && flutter test`
+- [x] `lib/src/features/word_quiz/data/remote/word_quiz_repository.dart` — update `getCachedTodaysWords` cache serialization to include full `meanings` data (already implemented in Phase 1 — uses `w.toJson()`)
+- [x] `lib/src/features/word_quiz/data/local/word_entries_table.dart` — replace flat meaning columns with single `meanings` TEXT column (JSON), update `toModel()` and `toCompanion()` extensions (already implemented in Phase 1)
+- [x] `lib/src/features/word_quiz/data/local/local_word_quiz_repo.dart` — no references to removed flat fields, no changes needed
+- [x] Verify: `dart run build_runner build --delete-conflicting-outputs && flutter analyze && flutter test`
 
 ### Phase 4 — Admin panel (Map → typed model)
 **Goal:** Admin repository, notifier, and form use `WordEntry` instead of `Map<String, dynamic>`. Form renders expandable meaning sections.
