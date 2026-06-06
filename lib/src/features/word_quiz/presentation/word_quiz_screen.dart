@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../shared/constants/app_colors.dart';
-import '../../../shared/constants/app_sizes.dart';
+import '../../../core/constants/app_colors.dart';
+import '../../../core/constants/app_sizes.dart';
 import '../application/word_quiz_notifier.dart';
-import '../domain/daily_word.dart';
 import '../domain/quiz_session.dart';
+import '../domain/word_entry.dart';
 import 'quiz_option_button.dart';
 
 class WordQuizScreen extends ConsumerStatefulWidget {
@@ -42,7 +42,7 @@ class _WordQuizScreenState extends ConsumerState<WordQuizScreen> {
     final options = notifier.generateOptions(word);
 
     final isEnToRu = session.languageDirection == LanguageDirection.enToRu;
-    final correct = isEnToRu ? word.wordRu : word.wordEn;
+    final correct = isEnToRu ? word.primaryTranslation : word.word;
 
     if (mounted) {
       setState(() {
@@ -54,7 +54,7 @@ class _WordQuizScreenState extends ConsumerState<WordQuizScreen> {
     }
   }
 
-  Future<void> _onOptionTap(String option, DailyWord word) async {
+  Future<void> _onOptionTap(String option, WordEntry word) async {
     if (_isSubmitting || _selectedOption != null) return;
 
     final isCorrect = option == _correctAnswer;
@@ -65,7 +65,9 @@ class _WordQuizScreenState extends ConsumerState<WordQuizScreen> {
     });
 
     // Submit answer
-    await ref.read(wordQuizNotifierProvider.notifier).submitAnswer(
+    await ref
+        .read(wordQuizNotifierProvider.notifier)
+        .submitAnswer(
           wordId: word.id,
           selectedOption: option,
           isCorrect: isCorrect,
@@ -117,8 +119,11 @@ class _WordQuizScreenState extends ConsumerState<WordQuizScreen> {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const Icon(Icons.error_outline, size: 48,
-                    color: AppColors.error),
+                const Icon(
+                  Icons.error_outline,
+                  size: 48,
+                  color: AppColors.error,
+                ),
                 gapH16,
                 TextButton(
                   onPressed: () => context.pop(),
@@ -139,7 +144,7 @@ class _WordQuizScreenState extends ConsumerState<WordQuizScreen> {
 
             final isEnToRu =
                 session.languageDirection == LanguageDirection.enToRu;
-            final questionWord = isEnToRu ? word.wordEn : word.wordRu;
+            final questionWord = isEnToRu ? word.word : word.primaryTranslation;
 
             return _QuizPlayContent(
               questionWord: questionWord,
@@ -182,7 +187,11 @@ class _QuizPlayContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(
-          Sizes.p24, Sizes.p16, Sizes.p24, Sizes.p24),
+        Sizes.p24,
+        Sizes.p16,
+        Sizes.p24,
+        Sizes.p24,
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -191,8 +200,11 @@ class _QuizPlayContent extends StatelessWidget {
             children: [
               GestureDetector(
                 onTap: onClose,
-                child: const Icon(Icons.close_rounded,
-                    color: AppColors.textSecondary, size: 28),
+                child: const Icon(
+                  Icons.close_rounded,
+                  color: AppColors.textSecondary,
+                  size: 28,
+                ),
               ),
               gapW16,
               Expanded(
@@ -205,7 +217,8 @@ class _QuizPlayContent extends StatelessWidget {
                     minHeight: 8,
                     backgroundColor: AppColors.surfaceDim,
                     valueColor: const AlwaysStoppedAnimation<Color>(
-                        AppColors.primary),
+                      AppColors.primary,
+                    ),
                   ),
                 ),
               ),
@@ -235,13 +248,15 @@ class _QuizPlayContent extends StatelessWidget {
           const Spacer(flex: 3),
 
           // Options
-          ...options.map((option) => QuizOptionButton(
-                text: option,
-                optionState: getOptionState(option),
-                onTap: getOptionState(option) == QuizOptionState.idle
-                    ? () => onOptionTap(option)
-                    : null,
-              )),
+          ...options.map(
+            (option) => QuizOptionButton(
+              text: option,
+              optionState: getOptionState(option),
+              onTap: getOptionState(option) == QuizOptionState.idle
+                  ? () => onOptionTap(option)
+                  : null,
+            ),
+          ),
           gapH16,
         ],
       ),

@@ -2,12 +2,12 @@ import 'dart:math';
 
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../../../core/storage/storage_provider.dart';
+import '../../../core/local_storage/storage_provider.dart';
 import '../../../core/utils/logger.dart';
-import '../data/word_quiz_repository.dart';
-import '../domain/daily_word.dart';
+import '../data/remote/word_quiz_repository.dart';
 import '../domain/quiz_day_util.dart';
 import '../domain/quiz_session.dart';
+import '../domain/word_entry.dart';
 import '../domain/word_quiz_attempt.dart';
 
 part 'word_quiz_notifier.g.dart';
@@ -30,12 +30,14 @@ class WordQuizNotifier extends _$WordQuizNotifier {
     final quizDay = getQuizDay();
 
     // Try cached words first, then fetch from server
-    List<DailyWord> words;
+    List<WordEntry> words;
     try {
       words = await _repo.fetchTodaysWords();
     } catch (e) {
-      log('Failed to fetch today words from server, trying cache: $e',
-          name: 'WordQuizNotifier');
+      log(
+        'Failed to fetch today words from server, trying cache: $e',
+        name: 'WordQuizNotifier',
+      );
       words = _repo.getCachedTodaysWords() ?? [];
     }
 
@@ -53,8 +55,10 @@ class WordQuizNotifier extends _$WordQuizNotifier {
     // Persist answered IDs to local cache
     _saveAnsweredIds(answeredWordIds);
 
-    log('Quiz loaded: ${words.length} words, ${answeredWordIds.length} answered, direction=${direction.value}',
-        name: 'WordQuizNotifier');
+    log(
+      'Quiz loaded: ${words.length} words, ${answeredWordIds.length} answered, direction=${direction.value}',
+      name: 'WordQuizNotifier',
+    );
 
     return QuizSession(
       todayWords: words,
@@ -66,19 +70,19 @@ class WordQuizNotifier extends _$WordQuizNotifier {
   }
 
   /// Generates 4 options for the given word (1 correct + 3 distractors).
-  List<String> generateOptions(DailyWord word) {
+  List<String> generateOptions(WordEntry word) {
     final session = state.valueOrNull;
     if (session == null) return [];
 
     final isEnToRu = session.languageDirection == LanguageDirection.enToRu;
 
     // Correct answer
-    final correctAnswer = isEnToRu ? word.wordRu : word.wordEn;
+    final correctAnswer = isEnToRu ? word.primaryTranslation : word.word;
 
     // Build distractor pool from today's words (excluding current word)
     final pool = session.todayWords
         .where((w) => w.id != word.id)
-        .map((w) => isEnToRu ? w.wordRu : w.wordEn)
+        .map((w) => isEnToRu ? w.primaryTranslation : w.word)
         .toSet()
         .toList();
 
@@ -90,8 +94,10 @@ class WordQuizNotifier extends _$WordQuizNotifier {
     // If we don't have enough distractors, the pool is too small
     // This shouldn't happen with 20 words, but handle gracefully
     if (distractors.length < 3) {
-      log('Warning: only ${distractors.length} distractors available',
-          name: 'WordQuizNotifier');
+      log(
+        'Warning: only ${distractors.length} distractors available',
+        name: 'WordQuizNotifier',
+      );
     }
 
     final options = [correctAnswer, ...distractors];
@@ -126,10 +132,7 @@ class WordQuizNotifier extends _$WordQuizNotifier {
 
     // Update learning progress if correct
     if (isCorrect) {
-      await _repo.updateLearningProgress(
-        wordId: wordId,
-        correctDate: quizDay,
-      );
+      await _repo.updateLearningProgress(wordId: wordId, correctDate: quizDay);
     }
 
     // Update session state
@@ -139,14 +142,18 @@ class WordQuizNotifier extends _$WordQuizNotifier {
     _saveAnsweredIds(newAnsweredIds);
 
     if (_mounted) {
-      state = AsyncData(session.copyWith(
-        answeredWordIds: newAnsweredIds,
-        attempts: newAttempts,
-      ));
+      state = AsyncData(
+        session.copyWith(
+          answeredWordIds: newAnsweredIds,
+          attempts: newAttempts,
+        ),
+      );
     }
 
-    log('Answer submitted: wordId=$wordId, correct=$isCorrect, progress=${newAnsweredIds.length}/${session.totalWords}',
-        name: 'WordQuizNotifier');
+    log(
+      'Answer submitted: wordId=$wordId, correct=$isCorrect, progress=${newAnsweredIds.length}/${session.totalWords}',
+      name: 'WordQuizNotifier',
+    );
   }
 
   /// Switches the language direction and reloads the session.
