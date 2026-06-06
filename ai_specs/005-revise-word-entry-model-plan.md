@@ -65,9 +65,9 @@ Restructure `WordEntry` from flat single-meaning fields to a `meanings: List<Wor
 ### Phase 5 — Edge Function update
 **Goal:** Edge Function returns `meanings` array structure.
 
-- [ ] `supabase/functions/generate-word-entry/index.ts` — update `SYSTEM_PROMPT` to request `meanings` array with multiple meanings per word (each with `part_of_speech`, `translation`, `alternative_translations`, `definition_en`, `definition_ru`, `example_en`, `example_ru`); parse response as new structure; keep top-level `word`, `ipa`, `level`, `topic`, `tags`
-- [ ] Manual QA: `curl` the function with "run" → verify response has `meanings` array with 2+ items
-- [ ] Verify: `supabase functions serve` starts without errors
+- [x] `supabase/functions/generate-word-entry/index.ts` — update `SYSTEM_PROMPT` to request `meanings` array with multiple meanings per word (each with `part_of_speech`, `translation`, `alternative_translations`, `definition_en`, `definition_ru`, `example_en`, `example_ru`); parse response as new structure; keep top-level `word`, `ipa`, `level`, `topic`, `tags`
+- [ ] Manual QA: `curl` the function with "run" → verify response has `meanings` array with 2+ items _blocked: requires supabase functions serve with Docker + env vars — manual step_
+- [ ] Verify: `supabase functions serve` starts without errors _blocked: requires Docker running locally — manual step_
 
 ### Phase 6 — Integration verification
 **Goal:** Full end-to-end validation.
