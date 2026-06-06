@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
+import 'package:langualio/src/features/word_quiz/domain/word_entry.dart';
 
-import 'daily_word.dart';
 import 'word_quiz_attempt.dart';
 
 enum LanguageDirection {
@@ -26,38 +26,43 @@ class QuizSession {
     this.attempts = const [],
     required this.quizDay,
     this.languageDirection = LanguageDirection.enToRu,
+    this.selectedMeaningIndexes = const {},
   });
 
-  final List<DailyWord> todayWords;
+  final List<WordEntry> todayWords;
   final Set<String> answeredWordIds;
   final List<WordQuizAttempt> attempts;
   final DateTime quizDay;
   final LanguageDirection languageDirection;
+
+  /// Maps wordId → meaning index (randomly chosen at session creation).
+  /// Not part of equality — it's randomized per session.
+  final Map<String, int> selectedMeaningIndexes;
 
   int get totalWords => todayWords.length;
   int get answeredCount => answeredWordIds.length;
   bool get isFinished => todayWords.isNotEmpty && answeredCount >= totalWords;
 
   /// Returns the next unanswered word, or null if all are answered.
-  DailyWord? get currentWord {
+  WordEntry? get currentWord {
     for (final word in todayWords) {
       if (!answeredWordIds.contains(word.id)) return word;
     }
     return null;
   }
 
-  int get correctCount =>
-      attempts.where((a) => a.isCorrect).length;
+  int get correctCount => attempts.where((a) => a.isCorrect).length;
 
   List<WordQuizAttempt> get mistakes =>
       attempts.where((a) => !a.isCorrect).toList();
 
   QuizSession copyWith({
-    List<DailyWord>? todayWords,
+    List<WordEntry>? todayWords,
     Set<String>? answeredWordIds,
     List<WordQuizAttempt>? attempts,
     DateTime? quizDay,
     LanguageDirection? languageDirection,
+    Map<String, int>? selectedMeaningIndexes,
   }) {
     return QuizSession(
       todayWords: todayWords ?? this.todayWords,
@@ -65,6 +70,8 @@ class QuizSession {
       attempts: attempts ?? this.attempts,
       quizDay: quizDay ?? this.quizDay,
       languageDirection: languageDirection ?? this.languageDirection,
+      selectedMeaningIndexes:
+          selectedMeaningIndexes ?? this.selectedMeaningIndexes,
     );
   }
 

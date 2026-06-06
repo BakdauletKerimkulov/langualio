@@ -36,12 +36,12 @@ Restructure `WordEntry` from flat single-meaning fields to a `meanings: List<Wor
 ### Phase 2 — Quiz logic (QuizSession + notifier)
 **Goal:** Quiz correctly selects a random meaning per word and derives correct answer from it.
 
-- [ ] TDD: `QuizSession` with `selectedMeaningIndexes`, `currentWord` still works → `test/src/features/word_quiz/domain/quiz_session_test.dart`
-- [ ] `lib/src/features/word_quiz/domain/quiz_session.dart` — add `Map<String, int> selectedMeaningIndexes`, update `copyWith`, exclude from `==`/`hashCode`
-- [ ] TDD: `WordQuizNotifier.generateOptions` correct answer matches selected meaning for both directions → `test/src/features/word_quiz/application/word_quiz_notifier_test.dart`
-- [ ] `lib/src/features/word_quiz/application/word_quiz_notifier.dart` — in `build()`, assign random meaning index per word; update `generateOptions` to use selected meaning's translation; update distractor pool to use `primaryTranslation`
-- [ ] `lib/src/features/word_quiz/presentation/word_quiz_screen.dart` — use `selectedMeaningIndexes` to derive `questionWord` and `correctAnswer` from the selected meaning
-- [ ] Verify: `flutter analyze && flutter test`
+- [x] TDD: `QuizSession` with `selectedMeaningIndexes`, `currentWord` still works → `test/src/features/word_quiz/domain/quiz_session_test.dart`
+- [x] `lib/src/features/word_quiz/domain/quiz_session.dart` — add `Map<String, int> selectedMeaningIndexes`, update `copyWith`, exclude from `==`/`hashCode`
+- [x] TDD: `WordQuizNotifier.generateOptions` correct answer matches selected meaning for both directions → `test/src/features/word_quiz/application/word_quiz_notifier_test.dart`
+- [x] `lib/src/features/word_quiz/application/word_quiz_notifier.dart` — in `build()`, assign random meaning index per word; update `generateOptions` to use selected meaning's translation; update distractor pool to use `primaryTranslation`
+- [x] `lib/src/features/word_quiz/presentation/word_quiz_screen.dart` — use `selectedMeaningIndexes` to derive `questionWord` and `correctAnswer` from the selected meaning
+- [x] Verify: `flutter analyze && flutter test`
 
 ### Phase 3 — Data layer (repository + local cache)
 **Goal:** Repository and Drift cache correctly handle the new `meanings` JSONB field.

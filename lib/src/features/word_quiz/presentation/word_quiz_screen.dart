@@ -42,7 +42,9 @@ class _WordQuizScreenState extends ConsumerState<WordQuizScreen> {
     final options = notifier.generateOptions(word);
 
     final isEnToRu = session.languageDirection == LanguageDirection.enToRu;
-    final correct = isEnToRu ? word.primaryTranslation : word.word;
+    final meaningIndex = session.selectedMeaningIndexes[word.id] ?? 0;
+    final selectedMeaning = word.meanings[meaningIndex];
+    final correct = isEnToRu ? selectedMeaning.translation : word.word;
 
     if (mounted) {
       setState(() {
@@ -144,7 +146,11 @@ class _WordQuizScreenState extends ConsumerState<WordQuizScreen> {
 
             final isEnToRu =
                 session.languageDirection == LanguageDirection.enToRu;
-            final questionWord = isEnToRu ? word.word : word.primaryTranslation;
+            final meaningIdx =
+                session.selectedMeaningIndexes[word.id] ?? 0;
+            final questionWord = isEnToRu
+                ? word.word
+                : word.meanings[meaningIdx].translation;
 
             return _QuizPlayContent(
               questionWord: questionWord,

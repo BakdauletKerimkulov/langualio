@@ -55,6 +55,15 @@ class WordQuizNotifier extends _$WordQuizNotifier {
     // Persist answered IDs to local cache
     _saveAnsweredIds(answeredWordIds);
 
+    // Assign a random meaning index per word for this session
+    final random = Random();
+    final selectedMeaningIndexes = <String, int>{};
+    for (final word in words) {
+      selectedMeaningIndexes[word.id] = word.meanings.length > 1
+          ? random.nextInt(word.meanings.length)
+          : 0;
+    }
+
     log(
       'Quiz loaded: ${words.length} words, ${answeredWordIds.length} answered, direction=${direction.value}',
       name: 'WordQuizNotifier',
@@ -66,6 +75,7 @@ class WordQuizNotifier extends _$WordQuizNotifier {
       attempts: attempts,
       quizDay: quizDay,
       languageDirection: direction,
+      selectedMeaningIndexes: selectedMeaningIndexes,
     );
   }
 
@@ -76,8 +86,12 @@ class WordQuizNotifier extends _$WordQuizNotifier {
 
     final isEnToRu = session.languageDirection == LanguageDirection.enToRu;
 
+    // Use the selected meaning index for this word (default to 0)
+    final meaningIndex = session.selectedMeaningIndexes[word.id] ?? 0;
+    final selectedMeaning = word.meanings[meaningIndex];
+
     // Correct answer
-    final correctAnswer = isEnToRu ? word.primaryTranslation : word.word;
+    final correctAnswer = isEnToRu ? selectedMeaning.translation : word.word;
 
     // Build distractor pool from today's words (excluding current word)
     final pool = session.todayWords
