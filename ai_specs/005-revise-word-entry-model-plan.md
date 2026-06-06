@@ -2,7 +2,7 @@
 
 Source: `ai_specs/005-revise-word-entry-model-spec.md`
 Created: 2026-06-06
-Status: draft
+Status: implementation complete — manual QA pending
 
 ## Overview
 Restructure `WordEntry` from flat single-meaning fields to a `meanings: List<WordMeaning>` model. Migrate DB column from flat fields to JSONB array. Update Edge Function, admin panel (Map → typed model), quiz logic (random meaning selection per session), and Drift local cache.
@@ -72,10 +72,10 @@ Restructure `WordEntry` from flat single-meaning fields to a `meanings: List<Wor
 ### Phase 6 — Integration verification
 **Goal:** Full end-to-end validation.
 
-- [ ] `supabase db reset` — verify migration succeeds, existing data appears in `meanings[0]`
-- [ ] Manual QA: admin create word with 2+ meanings, save, reload, verify persistence
-- [ ] Manual QA: quiz with multi-meaning word — word appears once, correct answer matches selected meaning
-- [ ] Verify: `flutter analyze && flutter test`
+- [ ] `supabase db reset` — verify migration succeeds, existing data appears in `meanings[0]` _blocked: requires Docker + local Supabase — manual step_
+- [ ] Manual QA: admin create word with 2+ meanings, save, reload, verify persistence _blocked: requires running app + Supabase — manual step_
+- [ ] Manual QA: quiz with multi-meaning word — word appears once, correct answer matches selected meaning _blocked: requires running app + Supabase — manual step_
+- [x] Verify: `flutter analyze && flutter test`
 
 ## Data layer changes
 - New migration: add `meanings JSONB NOT NULL` to `daily_words`
