@@ -54,13 +54,13 @@ Restructure `WordEntry` from flat single-meaning fields to a `meanings: List<Wor
 ### Phase 4 — Admin panel (Map → typed model)
 **Goal:** Admin repository, notifier, and form use `WordEntry` instead of `Map<String, dynamic>`. Form renders expandable meaning sections.
 
-- [ ] `lib/src/features/admin/data/admin_repository.dart` — `generateWordEntry` returns `WordEntry`, `createWord`/`updateWord` accept `WordEntry`, `fetchWords`/`fetchWordById` return `WordEntry`/`List<WordEntry>`
-- [ ] `lib/src/features/admin/application/admin_word_form_notifier.dart` — `generatedData` becomes `WordEntry?`, `save`/`update` accept `WordEntry`
-- [ ] `lib/src/features/admin/presentation/admin_word_form_screen.dart` — manage list of meaning controllers (add/remove), populate from `WordEntry`, collect `WordEntry` from form; validation: at least one meaning with required fields
-- [ ] `lib/src/features/admin/presentation/widgets/word_form_fields.dart` — refactor to render per-meaning expandable sections (POS dropdown, translation, definitions, examples per meaning)
-- [ ] `lib/src/features/admin/presentation/widgets/word_list_tile.dart` — accept `WordEntry` instead of `Map`, display `primaryTranslation` and `primaryPartOfSpeech`
-- [ ] `lib/src/features/admin/application/admin_word_list_notifier.dart` — update state type if it uses `Map<String, dynamic>`
-- [ ] Verify: `dart run build_runner build --delete-conflicting-outputs && flutter analyze && flutter test`
+- [x] `lib/src/features/admin/data/admin_repository.dart` — `generateWordEntry` returns `WordEntry`, `createWord`/`updateWord` accept `WordEntry`, `fetchWords`/`fetchWordById` return `WordEntry`/`List<WordEntry>`
+- [x] `lib/src/features/admin/application/admin_word_form_notifier.dart` — `generatedData` becomes `WordEntry?`, `save`/`update` accept `WordEntry`
+- [x] `lib/src/features/admin/presentation/admin_word_form_screen.dart` — manage list of meaning controllers (add/remove), populate from `WordEntry`, collect `WordEntry` from form; validation: at least one meaning with required fields
+- [x] `lib/src/features/admin/presentation/widgets/word_form_fields.dart` — refactor to render per-meaning expandable sections (POS dropdown, translation, definitions, examples per meaning)
+- [x] `lib/src/features/admin/presentation/widgets/word_list_tile.dart` — accept `WordEntry` instead of `Map`, display `primaryTranslation` and `primaryPartOfSpeech`
+- [x] `lib/src/features/admin/application/admin_word_list_notifier.dart` — update state type if it uses `Map<String, dynamic>`
+- [x] Verify: `dart run build_runner build --delete-conflicting-outputs && flutter analyze && flutter test`
 
 ### Phase 5 — Edge Function update
 **Goal:** Edge Function returns `meanings` array structure.
