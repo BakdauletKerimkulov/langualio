@@ -4,13 +4,13 @@ import 'package:go_router/go_router.dart';
 
 import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_sizes.dart';
-import '../../word_quiz/domain/part_of_speech.dart';
 import '../../word_quiz/domain/word_entry.dart';
-import '../../word_quiz/domain/word_meaning.dart';
 import '../application/admin_word_form_notifier.dart';
 import '../data/admin_repository.dart';
+import 'widgets/archive_confirm_dialog.dart';
 import 'widgets/generate_section.dart';
 import 'widgets/save_buttons.dart';
+import 'widgets/word_form_collector.dart';
 import 'widgets/word_form_fields.dart';
 
 class AdminWordFormScreen extends ConsumerStatefulWidget {
@@ -110,64 +110,15 @@ class _AdminWordFormScreenState extends ConsumerState<AdminWordFormScreen> {
   }
 
   WordEntry _collectFormEntry() {
-    final meanings = _meaningControllers.map((mc) {
-      return WordMeaning(
-        partOfSpeech: PartOfSpeech.values
-                .where((e) => e.name == mc.partOfSpeech)
-                .firstOrNull ??
-            PartOfSpeech.noun,
-        translation: mc.translation.text.trim(),
-        alternativeTranslations: mc.alternativeTranslations.text.trim().isEmpty
-            ? <String>[]
-            : mc.alternativeTranslations.text
-                  .split(',')
-                  .map((t) => t.trim())
-                  .where((t) => t.isNotEmpty)
-                  .toList(),
-        definitionEn: mc.definitionEn.text.trim().isEmpty
-            ? null
-            : mc.definitionEn.text.trim(),
-        definitionRu: mc.definitionRu.text.trim().isEmpty
-            ? null
-            : mc.definitionRu.text.trim(),
-        exampleEn: mc.exampleEn.text.trim(),
-        exampleRu: mc.exampleRu.text.trim(),
-      );
-    }).toList();
-
-    return WordEntry(
-      id: widget.wordId ?? '',
-      word: _wordController.text.trim(),
-      ipa: _ipaController.text.trim().isEmpty
-          ? null
-          : _ipaController.text.trim(),
-      level: DifficultyLevel.values
-              .where((e) => e.name == _level)
-              .firstOrNull ??
-          DifficultyLevel.a1,
-      meanings: meanings,
-      topic: _topicController.text.trim().isEmpty
-          ? null
-          : _topicController.text.trim(),
-      tags: _tagsController.text.trim().isEmpty
-          ? <String>[]
-          : _tagsController.text
-                .split(',')
-                .map((t) => t.trim())
-                .where((t) => t.isNotEmpty)
-                .toList(),
-      createdAt: DateTime.now(),
+    return collectFormEntry(
+      wordId: widget.wordId,
+      word: _wordController.text,
+      ipa: _ipaController.text,
+      level: _level,
+      topic: _topicController.text,
+      tags: _tagsController.text,
+      meaningControllers: _meaningControllers,
     );
-  }
-
-  bool _validateRequired() {
-    if (_wordController.text.trim().isEmpty) return false;
-    for (final mc in _meaningControllers) {
-      if (mc.translation.text.trim().isEmpty) return false;
-      if (mc.exampleEn.text.trim().isEmpty) return false;
-      if (mc.exampleRu.text.trim().isEmpty) return false;
-    }
-    return true;
   }
 
   Future<void> _onGenerate() async {
@@ -181,7 +132,10 @@ class _AdminWordFormScreenState extends ConsumerState<AdminWordFormScreen> {
   }
 
   Future<void> _onSave(String status) async {
-    if (!_validateRequired()) {
+    if (!validateRequired(
+      word: _wordController.text,
+      meaningControllers: _meaningControllers,
+    )) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
           content: Text('Заполните обязательные поля (помечены *)'),
@@ -212,23 +166,7 @@ class _AdminWordFormScreenState extends ConsumerState<AdminWordFormScreen> {
 
   Future<void> _onStatusChange(String newStatus) async {
     if (_currentStatus == 'published' && newStatus == 'archived') {
-      final confirmed = await showDialog<bool>(
-        context: context,
-        builder: (ctx) => AlertDialog(
-          title: const Text('Архивировать слово?'),
-          content: const Text('Слово будет убрано из квизов. Продолжить?'),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.of(ctx).pop(false),
-              child: const Text('Отмена'),
-            ),
-            FilledButton(
-              onPressed: () => Navigator.of(ctx).pop(true),
-              child: const Text('Архивировать'),
-            ),
-          ],
-        ),
-      );
+      final confirmed = await showArchiveConfirmDialog(context);
       if (confirmed != true) return;
     }
     await _onSave(newStatus);

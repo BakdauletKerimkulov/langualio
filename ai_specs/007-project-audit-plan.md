@@ -75,12 +75,12 @@ Bring the codebase into full compliance with `ai_toolkit/` guidelines, fix bugs 
 ### Phase 6 — File size refactoring
 **Goal:** All files in `lib/src/` ≤ 300 lines (R17–R20).
 
-- [ ] `lib/src/features/chat/presentation/chat_screen.dart` (392 lines) — extract message list, input bar, error banner to `widgets/` (R17)
-- [ ] `lib/src/features/grammar/presentation/grammar_card.dart` (348 lines) — move `_Header`, `_StatusIcon`, `_ExpandedBody` to `widgets/` (R18)
-- [ ] `lib/src/features/admin/presentation/admin_word_form_screen.dart` (338 lines) — extract form sections to `widgets/` (R19)
-- [ ] `lib/src/features/word_quiz/presentation/word_quiz_home_screen.dart` (328 lines) — extract subwidgets to `widgets/` (R20)
-- [ ] Verify: no file in `lib/src/` exceeds 300 lines (`find lib/src -name '*.dart' | xargs wc -l | awk '$1 > 300'`)
-- [ ] Verify: `flutter analyze && flutter test`
+- [x] `lib/src/features/chat/presentation/chat_screen.dart` (392 lines) — extract message list, input bar, error banner to `widgets/` (R17)
+- [x] `lib/src/features/grammar/presentation/grammar_card.dart` (348 lines) — move `_Header`, `_StatusIcon`, `_ExpandedBody` to `widgets/` (R18)
+- [x] `lib/src/features/admin/presentation/admin_word_form_screen.dart` (338 lines) — extract form sections to `widgets/` (R19)
+- [x] `lib/src/features/word_quiz/presentation/word_quiz_home_screen.dart` (328 lines) — extract subwidgets to `widgets/` (R20)
+- [x] Verify: no file in `lib/src/` exceeds 300 lines (`find lib/src -name '*.dart' | xargs wc -l | awk '$1 > 300'`)
+- [x] Verify: `flutter analyze && flutter test`
 
 ### Phase 7 — `.hardcoded` and `Sizes` compliance + docs
 **Goal:** All UI strings use `.hardcoded`, all spacing uses `Sizes` constants (R4, R6, R21).
