@@ -47,12 +47,12 @@ Bring the codebase into full compliance with `ai_toolkit/` guidelines, fix bugs 
 ### Phase 3 — Profile feature: mock → Supabase
 **Goal:** Profile screen shows real stats from DB.
 
-- [ ] TDD: `ProfileRepository.fetchUserProfile()` maps `profiles` row to `UserProfile` model
-- [ ] `lib/src/features/profile/data/profile_repository.dart` — create repository fetching from `profiles` table (totalXp, streakDays, wordsLearned, accuracy)
-- [ ] `lib/src/features/profile/application/profile_provider.dart` — create `AsyncNotifier` reading from `profileRepositoryProvider`
-- [ ] `lib/src/features/profile/presentation/profile_screen.dart` — refactor from hardcoded values to `ConsumerWidget` with `AsyncValue.when()` (R15)
-- [ ] `lib/src/features/profile/domain/user_profile.dart` — remove `static const mock` (R16 final)
-- [ ] Verify: `flutter analyze && flutter test`
+- [x] TDD: `ProfileRepository.fetchUserProfile()` maps `profiles` row to `UserProfile` model
+- [x] `lib/src/features/profile/data/profile_repository.dart` — create repository fetching from `profiles` table (totalXp, streakDays, wordsLearned, accuracy)
+- [x] `lib/src/features/profile/application/profile_provider.dart` — create `AsyncNotifier` reading from `profileRepositoryProvider`
+- [x] `lib/src/features/profile/presentation/profile_screen.dart` — refactor from hardcoded values to `ConsumerWidget` with `AsyncValue.when()` (R15)
+- [x] `lib/src/features/profile/domain/user_profile.dart` — remove `static const mock` (R16 final)
+- [x] Verify: `flutter analyze && flutter test`
 
 ### Phase 4 — Bug fixes and stale code cleanup
 **Goal:** Remove dead code, fix exceptions, audit routes.
