@@ -1,32 +1,59 @@
 import 'package:flutter/material.dart';
-import '../../../shared/constants/app_colors.dart';
-import '../../../shared/constants/app_sizes.dart';
-import '../../../shared/common_widgets/section_header.dart';
+
+import '../../../core/common_widgets/section_header.dart';
+import '../../../core/constants/app_colors.dart';
+import '../../../core/constants/app_sizes.dart';
+import '../domain/user_progress.dart';
+import 'goal_card.dart';
 import 'level_progress.dart';
 import 'streak_banner.dart';
-import 'goal_card.dart';
 
 class HomeActiveView extends StatelessWidget {
-  const HomeActiveView({super.key});
+  const HomeActiveView({super.key, required this.progress});
+
+  final UserProgress progress;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const LevelProgress(level: 7, currentXp: 340, targetXp: 500),
+        LevelProgress(
+          level: progress.level,
+          currentXp: progress.currentXp,
+          targetXp: progress.targetXp,
+        ),
         gapH32,
-        const StreakBanner(days: 5),
+        StreakBanner(days: progress.streakDays),
         gapH32,
         _QuickActions(),
         gapH32,
         const SectionHeader(title: 'Daily Goals'),
         gapH16,
-        const GoalCard(title: 'Learn 10 new words', xp: 20, isCompleted: true),
-        gapH12,
-        const GoalCard(title: 'Complete 1 grammar rule', xp: 15, isCompleted: false),
-        gapH12,
-        const GoalCard(title: 'Pass a quiz perfectly', xp: 30, isCompleted: false),
+        ...progress.dailyGoals.map(
+          (goal) => Padding(
+            padding: const EdgeInsets.only(bottom: Sizes.p12),
+            child: GoalCard(
+              title: goal.title,
+              xp: goal.xp,
+              isCompleted: goal.isCompleted,
+            ),
+          ),
+        ),
+        if (progress.dailyGoals.isEmpty)
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: Sizes.p24),
+              child: Text(
+                'No goals for today',
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                  color: AppColors.textSecondary,
+                ),
+              ),
+            ),
+          ),
       ],
     );
   }
@@ -121,10 +148,7 @@ class _ActionCard extends StatelessWidget {
             Text(
               label,
               textAlign: TextAlign.center,
-              style: TextStyle(
-                fontWeight: FontWeight.w700,
-                color: textColor,
-              ),
+              style: TextStyle(fontWeight: FontWeight.w700, color: textColor),
             ),
           ],
         ),
