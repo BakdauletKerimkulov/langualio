@@ -67,10 +67,10 @@ Bring the codebase into full compliance with `ai_toolkit/` guidelines, fix bugs 
 ### Phase 5 — Extract private `_buildX` methods to widget classes
 **Goal:** Eliminate all `Widget _buildX()` methods per code-style guidelines (R3).
 
-- [ ] `lib/src/features/admin/presentation/admin_word_list_screen.dart` — extract `_buildBody` to separate widget
-- [ ] `lib/src/features/admin/presentation/widgets/word_form_fields.dart` — extract `_buildTextField` and `_buildDropdown` to separate widget classes
-- [ ] Verify: `grep 'Widget _build' lib/src/` returns zero hits
-- [ ] Verify: `flutter analyze && flutter test`
+- [x] `lib/src/features/admin/presentation/admin_word_list_screen.dart` — extract `_buildBody` to separate widget
+- [x] `lib/src/features/admin/presentation/widgets/word_form_fields.dart` — extract `_buildTextField` and `_buildDropdown` to separate widget classes
+- [x] Verify: `grep 'Widget _build' lib/src/` returns zero hits
+- [x] Verify: `flutter analyze && flutter test`
 
 ### Phase 6 — File size refactoring
 **Goal:** All files in `lib/src/` ≤ 300 lines (R17–R20).

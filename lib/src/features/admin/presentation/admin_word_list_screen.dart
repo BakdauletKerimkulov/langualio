@@ -27,7 +27,13 @@ class AdminWordListScreen extends ConsumerWidget {
                 .setFilter(filter),
           ),
           gapH8,
-          Expanded(child: _buildBody(context, ref, listState)),
+          Expanded(
+            child: _AdminWordListBody(
+              listState: listState,
+              onRefresh: () =>
+                  ref.read(adminWordListNotifierProvider.notifier).refresh(),
+            ),
+          ),
         ],
       ),
       floatingActionButton: FloatingActionButton(
@@ -39,12 +45,19 @@ class AdminWordListScreen extends ConsumerWidget {
       ),
     );
   }
+}
 
-  Widget _buildBody(
-    BuildContext context,
-    WidgetRef ref,
-    AdminWordListState listState,
-  ) {
+class _AdminWordListBody extends StatelessWidget {
+  const _AdminWordListBody({
+    required this.listState,
+    required this.onRefresh,
+  });
+
+  final AdminWordListState listState;
+  final Future<void> Function() onRefresh;
+
+  @override
+  Widget build(BuildContext context) {
     if (listState.isLoading) {
       return const Center(child: CircularProgressIndicator());
     }
@@ -56,15 +69,15 @@ class AdminWordListScreen extends ConsumerWidget {
           children: [
             Text(
               listState.error!,
-              style: Theme.of(
-                context,
-              ).textTheme.bodyMedium?.copyWith(color: AppColors.error),
+              style: Theme.of(context)
+                  .textTheme
+                  .bodyMedium
+                  ?.copyWith(color: AppColors.error),
               textAlign: TextAlign.center,
             ),
             gapH16,
             FilledButton(
-              onPressed: () =>
-                  ref.read(adminWordListNotifierProvider.notifier).refresh(),
+              onPressed: onRefresh,
               child: const Text('Повторить'),
             ),
           ],
@@ -78,16 +91,16 @@ class AdminWordListScreen extends ConsumerWidget {
           listState.activeFilter != null
               ? 'Нет слов с таким статусом'
               : 'Нет слов',
-          style: Theme.of(
-            context,
-          ).textTheme.bodyLarge?.copyWith(color: AppColors.textSecondary),
+          style: Theme.of(context)
+              .textTheme
+              .bodyLarge
+              ?.copyWith(color: AppColors.textSecondary),
         ),
       );
     }
 
     return RefreshIndicator(
-      onRefresh: () =>
-          ref.read(adminWordListNotifierProvider.notifier).refresh(),
+      onRefresh: onRefresh,
       child: ListView.builder(
         padding: const EdgeInsets.only(bottom: Sizes.p64),
         itemCount: listState.words.length,
@@ -97,7 +110,7 @@ class AdminWordListScreen extends ConsumerWidget {
             entry: word,
             onTap: () async {
               await context.push('/admin/edit/${word.id}');
-              ref.read(adminWordListNotifierProvider.notifier).refresh();
+              await onRefresh();
             },
           );
         },

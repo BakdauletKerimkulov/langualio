@@ -70,20 +70,23 @@ class WordFormFields extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        _buildTextField(wordController, 'Слово *'),
+        _LabeledTextField(controller: wordController, label: 'Слово *'),
         gapH12,
-        _buildTextField(ipaController, 'IPA'),
+        _LabeledTextField(controller: ipaController, label: 'IPA'),
         gapH12,
-        _buildDropdown(
+        _LabeledDropdown(
           label: 'Уровень',
           value: level,
           items: _levels,
           onChanged: onLevelChanged,
         ),
         gapH12,
-        _buildTextField(topicController, 'Тема'),
+        _LabeledTextField(controller: topicController, label: 'Тема'),
         gapH12,
-        _buildTextField(tagsController, 'Теги (через запятую)'),
+        _LabeledTextField(
+          controller: tagsController,
+          label: 'Теги (через запятую)',
+        ),
         gapH24,
 
         // Meanings header
@@ -118,40 +121,6 @@ class WordFormFields extends StatelessWidget {
           );
         }),
       ],
-    );
-  }
-
-  Widget _buildTextField(TextEditingController controller, String label) {
-    return TextField(
-      controller: controller,
-      decoration: InputDecoration(
-        labelText: label,
-        border: const OutlineInputBorder(),
-      ),
-    );
-  }
-
-  Widget _buildDropdown({
-    required String label,
-    required String value,
-    required List<String> items,
-    required ValueChanged<String> onChanged,
-  }) {
-    return DropdownButtonFormField<String>(
-      initialValue: value,
-      decoration: InputDecoration(
-        labelText: label,
-        border: const OutlineInputBorder(),
-      ),
-      items: items
-          .map(
-            (item) =>
-                DropdownMenuItem(value: item, child: Text(item.toUpperCase())),
-          )
-          .toList(),
-      onChanged: (v) {
-        if (v != null) onChanged(v);
-      },
     );
   }
 }
@@ -220,33 +189,93 @@ class _MeaningSection extends StatelessWidget {
               },
             ),
             gapH12,
-            _buildTextField(controllers.translation, 'Перевод *'),
-            gapH12,
-            _buildTextField(
-              controllers.alternativeTranslations,
-              'Альт. переводы (через запятую)',
+            _LabeledTextField(
+              controller: controllers.translation,
+              label: 'Перевод *',
             ),
             gapH12,
-            _buildTextField(controllers.definitionEn, 'Определение (EN)'),
+            _LabeledTextField(
+              controller: controllers.alternativeTranslations,
+              label: 'Альт. переводы (через запятую)',
+            ),
             gapH12,
-            _buildTextField(controllers.definitionRu, 'Определение (RU)'),
+            _LabeledTextField(
+              controller: controllers.definitionEn,
+              label: 'Определение (EN)',
+            ),
             gapH12,
-            _buildTextField(controllers.exampleEn, 'Пример (EN) *'),
+            _LabeledTextField(
+              controller: controllers.definitionRu,
+              label: 'Определение (RU)',
+            ),
             gapH12,
-            _buildTextField(controllers.exampleRu, 'Пример (RU) *'),
+            _LabeledTextField(
+              controller: controllers.exampleEn,
+              label: 'Пример (EN) *',
+            ),
+            gapH12,
+            _LabeledTextField(
+              controller: controllers.exampleRu,
+              label: 'Пример (RU) *',
+            ),
           ],
         ),
       ),
     );
   }
+}
 
-  Widget _buildTextField(TextEditingController controller, String label) {
+class _LabeledTextField extends StatelessWidget {
+  const _LabeledTextField({
+    required this.controller,
+    required this.label,
+  });
+
+  final TextEditingController controller;
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
     return TextField(
       controller: controller,
       decoration: InputDecoration(
         labelText: label,
         border: const OutlineInputBorder(),
       ),
+    );
+  }
+}
+
+class _LabeledDropdown extends StatelessWidget {
+  const _LabeledDropdown({
+    required this.label,
+    required this.value,
+    required this.items,
+    required this.onChanged,
+  });
+
+  final String label;
+  final String value;
+  final List<String> items;
+  final ValueChanged<String> onChanged;
+
+  @override
+  Widget build(BuildContext context) {
+    return DropdownButtonFormField<String>(
+      initialValue: value,
+      decoration: InputDecoration(
+        labelText: label,
+        border: const OutlineInputBorder(),
+      ),
+      items: items
+          .map(
+            (item) =>
+                DropdownMenuItem(value: item, child: Text(item.toUpperCase())),
+          )
+          .toList(),
+      onChanged: (v) {
+        if (v != null) onChanged(v);
+      },
     );
   }
 }
