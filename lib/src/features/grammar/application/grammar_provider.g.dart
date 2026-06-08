@@ -7,12 +7,12 @@ part of 'grammar_provider.dart';
 // **************************************************************************
 
 String _$grammarItemsNotifierHash() =>
-    r'426d042af4e4b3e6e3f9b451c56ef8e41dcc6b3b';
+    r'b9f2342f3c2444580f0a5e882af9d6709170f104';
 
 /// See also [GrammarItemsNotifier].
 @ProviderFor(GrammarItemsNotifier)
 final grammarItemsNotifierProvider =
-    AutoDisposeNotifierProvider<
+    AutoDisposeAsyncNotifierProvider<
       GrammarItemsNotifier,
       List<GrammarItem>
     >.internal(
@@ -25,6 +25,6 @@ final grammarItemsNotifierProvider =
       allTransitiveDependencies: null,
     );
 
-typedef _$GrammarItemsNotifier = AutoDisposeNotifier<List<GrammarItem>>;
+typedef _$GrammarItemsNotifier = AutoDisposeAsyncNotifier<List<GrammarItem>>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

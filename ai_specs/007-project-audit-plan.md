@@ -37,12 +37,12 @@ Bring the codebase into full compliance with `ai_toolkit/` guidelines, fix bugs 
 ### Phase 2 — Grammar feature: mock → Supabase
 **Goal:** Grammar screen loads items + progress from DB.
 
-- [ ] TDD: `GrammarRepository.fetchGrammarItems()` maps `grammar_items` + `user_grammar_progress` to `List<GrammarItem>` with correct status (completed/unlocked/locked)
-- [ ] `lib/src/features/grammar/data/grammar_repository.dart` — create repository fetching from `grammar_items` joined with `user_grammar_progress`
-- [ ] `lib/src/features/grammar/application/grammar_provider.dart` — convert `GrammarItemsNotifier` to `AsyncNotifier` fetching from `grammarRepositoryProvider`
-- [ ] `lib/src/features/grammar/presentation/grammar_screen.dart` — use `AsyncValue.when()` for loading/error/data
-- [ ] `lib/src/features/grammar/domain/grammar_item.dart` — remove `static const mockItems` (R16 partial)
-- [ ] Verify: `flutter analyze && flutter test`
+- [x] TDD: `GrammarRepository.fetchGrammarItems()` maps `grammar_items` + `user_grammar_progress` to `List<GrammarItem>` with correct status (completed/unlocked/locked)
+- [x] `lib/src/features/grammar/data/grammar_repository.dart` — create repository fetching from `grammar_items` joined with `user_grammar_progress`
+- [x] `lib/src/features/grammar/application/grammar_provider.dart` — convert `GrammarItemsNotifier` to `AsyncNotifier` fetching from `grammarRepositoryProvider`
+- [x] `lib/src/features/grammar/presentation/grammar_screen.dart` — use `AsyncValue.when()` for loading/error/data
+- [x] `lib/src/features/grammar/domain/grammar_item.dart` — remove `static const mockItems` (R16 partial)
+- [x] Verify: `flutter analyze && flutter test`
 
 ### Phase 3 — Profile feature: mock → Supabase
 **Goal:** Profile screen shows real stats from DB.
