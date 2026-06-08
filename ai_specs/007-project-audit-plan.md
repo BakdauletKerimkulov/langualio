@@ -57,12 +57,12 @@ Bring the codebase into full compliance with `ai_toolkit/` guidelines, fix bugs 
 ### Phase 4 — Bug fixes and stale code cleanup
 **Goal:** Remove dead code, fix exceptions, audit routes.
 
-- [ ] `lib/src/core/exceptions/app_exception.dart` — remove e-commerce exceptions: `CartSyncFailedException`, `PaymentFailureEmptyCartException`, `NullProductImageUrlException`, `ParseOrderFailureException`, `ActiveOrdersExistException`, `LocationNotFoundException` (R7)
-- [ ] `lib/src/routing/app_router.dart` — verify `/practice` route points to `WordQuizHomeScreen` (already does — R9b). Update `ai_docs/PROJECT.md` route table to reflect `practice → WordQuizHomeScreen` (R9b)
-- [ ] `lib/src/features/auth/presentation/login_screen.dart` — replace raw `TextStyle(fontSize: 14)` with theme textStyle (R1)
-- [ ] `lib/src/features/auth/presentation/register_screen.dart` — same (R2)
-- [ ] `lib/src/features/assessment/presentation/widgets/question_card.dart` — replace hardcoded `TextStyle(fontSize: 16, fontWeight: FontWeight.w700)` with theme (R5)
-- [ ] Verify: `flutter analyze && flutter test`
+- [x] `lib/src/core/exceptions/app_exception.dart` — remove e-commerce exceptions: `CartSyncFailedException`, `PaymentFailureEmptyCartException`, `NullProductImageUrlException`, `ParseOrderFailureException`, `ActiveOrdersExistException`, `LocationNotFoundException` (R7)
+- [x] `lib/src/routing/app_router.dart` — verify `/practice` route points to `WordQuizHomeScreen` (already does — R9b). Update `ai_docs/PROJECT.md` route table to reflect `practice → WordQuizHomeScreen` (R9b)
+- [x] `lib/src/features/auth/presentation/login_screen.dart` — replace raw `TextStyle(fontSize: 14)` with theme textStyle (R1)
+- [x] `lib/src/features/auth/presentation/register_screen.dart` — same (R2)
+- [x] `lib/src/features/assessment/presentation/widgets/question_card.dart` — replace hardcoded `TextStyle(fontSize: 16, fontWeight: FontWeight.w700)` with theme (R5)
+- [x] Verify: `flutter analyze && flutter test`
 
 ### Phase 5 — Extract private `_buildX` methods to widget classes
 **Goal:** Eliminate all `Widget _buildX()` methods per code-style guidelines (R3).

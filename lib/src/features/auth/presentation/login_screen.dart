@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import '../../../shared/constants/app_colors.dart';
-import '../../../shared/constants/app_sizes.dart';
-import '../../../shared/common_widgets/primary_button.dart';
+
+import '../../../core/common_widgets/primary_button.dart';
+import '../../../core/constants/app_colors.dart';
+import '../../../core/constants/app_sizes.dart';
 import '../../../routing/app_router.dart';
 import '../application/auth_provider.dart';
 
@@ -31,10 +32,9 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
     final password = _passwordController.text;
     if (email.isEmpty || password.isEmpty) return;
 
-    ref.read(authNotifierProvider.notifier).signIn(
-          email: email,
-          password: password,
-        );
+    ref
+        .read(authNotifierProvider.notifier)
+        .signIn(email: email, password: password);
   }
 
   @override
@@ -101,16 +101,19 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                   ),
                   child: Row(
                     children: [
-                      Icon(Icons.error_outline, size: 18, color: AppColors.error),
+                      Icon(
+                        Icons.error_outline,
+                        size: 18,
+                        color: AppColors.error,
+                      ),
                       gapW8,
                       Expanded(
                         child: Text(
                           state.error!,
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                            color: AppColors.error,
-                          ),
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyMedium
+                              ?.copyWith(color: AppColors.error),
                         ),
                       ),
                     ],
@@ -140,7 +143,9 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                   prefixIcon: const Icon(Icons.lock_outline),
                   suffixIcon: IconButton(
                     icon: Icon(
-                      _obscurePassword ? Icons.visibility_off : Icons.visibility,
+                      _obscurePassword
+                          ? Icons.visibility_off
+                          : Icons.visibility,
                     ),
                     onPressed: () =>
                         setState(() => _obscurePassword = !_obscurePassword),

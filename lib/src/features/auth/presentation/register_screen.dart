@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import '../../../shared/constants/app_colors.dart';
-import '../../../shared/constants/app_sizes.dart';
-import '../../../shared/common_widgets/primary_button.dart';
+
+import '../../../core/common_widgets/primary_button.dart';
+import '../../../core/constants/app_colors.dart';
+import '../../../core/constants/app_sizes.dart';
 import '../../../routing/app_router.dart';
 import '../application/auth_provider.dart';
 
@@ -15,30 +16,48 @@ class RegisterScreen extends ConsumerStatefulWidget {
 }
 
 class _RegisterScreenState extends ConsumerState<RegisterScreen> {
-  final _nameController = TextEditingController();
+  final _nicknameController = TextEditingController();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   bool _obscurePassword = true;
+  String? _nicknameError;
+
+  static final _nicknameRegExp = RegExp(r'^[a-zA-Zа-яА-ЯёЁ0-9]+$');
 
   @override
   void dispose() {
-    _nameController.dispose();
+    _nicknameController.dispose();
     _emailController.dispose();
     _passwordController.dispose();
     super.dispose();
   }
 
+  String? _validateNickname(String value) {
+    if (value.isEmpty) return 'Введи никнейм';
+    if (value.length > 20) return 'Максимум 20 символов';
+    if (!_nicknameRegExp.hasMatch(value)) {
+      return 'Только буквы и цифры';
+    }
+    return null;
+  }
+
   void _handleRegister() {
-    final name = _nameController.text.trim();
+    final nickname = _nicknameController.text.trim();
     final email = _emailController.text.trim();
     final password = _passwordController.text;
-    if (name.isEmpty || email.isEmpty || password.isEmpty) return;
 
-    ref.read(authNotifierProvider.notifier).signUp(
-          email: email,
-          password: password,
-          name: name,
-        );
+    final nicknameError = _validateNickname(nickname);
+    if (nicknameError != null) {
+      setState(() => _nicknameError = nicknameError);
+      return;
+    }
+    setState(() => _nicknameError = null);
+
+    if (email.isEmpty || password.isEmpty) return;
+
+    ref
+        .read(authNotifierProvider.notifier)
+        .signUp(email: email, password: password, nickname: nickname);
   }
 
   @override
@@ -90,16 +109,19 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                   ),
                   child: Row(
                     children: [
-                      Icon(Icons.error_outline, size: 18, color: AppColors.error),
+                      Icon(
+                        Icons.error_outline,
+                        size: 18,
+                        color: AppColors.error,
+                      ),
                       gapW8,
                       Expanded(
                         child: Text(
                           state.error!,
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                            color: AppColors.error,
-                          ),
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyMedium
+                              ?.copyWith(color: AppColors.error),
                         ),
                       ),
                     ],
@@ -107,14 +129,22 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                 ),
                 gapH16,
               ],
-              // Name
+              // Nickname
               TextField(
-                controller: _nameController,
+                controller: _nicknameController,
                 textInputAction: TextInputAction.next,
-                decoration: const InputDecoration(
-                  labelText: 'Имя',
-                  prefixIcon: Icon(Icons.person_outline),
+                maxLength: 20,
+                decoration: InputDecoration(
+                  labelText: 'Никнейм',
+                  prefixIcon: const Icon(Icons.person_outline),
+                  errorText: _nicknameError,
+                  counterText: '',
                 ),
+                onChanged: (_) {
+                  if (_nicknameError != null) {
+                    setState(() => _nicknameError = null);
+                  }
+                },
               ),
               gapH16,
               // Email
@@ -139,7 +169,9 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                   prefixIcon: const Icon(Icons.lock_outline),
                   suffixIcon: IconButton(
                     icon: Icon(
-                      _obscurePassword ? Icons.visibility_off : Icons.visibility,
+                      _obscurePassword
+                          ? Icons.visibility_off
+                          : Icons.visibility,
                     ),
                     onPressed: () =>
                         setState(() => _obscurePassword = !_obscurePassword),

@@ -26,7 +26,7 @@ Android, iOS, Web.
 
 | Сущность | Описание | Таблица в БД |
 |---|---|---|
-| **AppUser** | Авторизованный пользователь (id, email, name) | `profiles` (auto-create trigger) |
+| **AppUser** | Авторизованный пользователь (id, email, nickname) | `profiles` (auto-create trigger) |
 | **UserProgress** | Прогресс: уровень, XP, streak, дневные цели | `profiles` + `daily_goals` |
 | **UserProfile** | Расширенный профиль со статистикой и ачивками | `profiles` |
 | **ChatMessage** | Сообщение в чате (role, text, context) | `chat_messages` |
@@ -34,6 +34,8 @@ Android, iOS, Web.
 | **Question** | Вопрос для практики (слово, варианты, правильный ответ) | `practice_questions` + `practice_attempts` |
 | **DailyGoal** | Дневная цель с XP-наградой | `daily_goals` |
 | **Achievement** | Достижение (title, isUnlocked) | — (пока mock) |
+| **AssessmentQuestion** | Вопрос теста уровня (text, type, discipline, CEFR level) | — (локальный банк) |
+| **AssessmentResult** | Результат теста (CEFR level, correct/total, correctByLevel) | `profiles.cefr_level` |
 
 ### Система прогресса
 
@@ -63,7 +65,7 @@ Android, iOS, Web.
 
 | Таблица | Назначение | RLS |
 |---|---|---|
-| `profiles` | Профиль пользователя (level, xp, streak, stats) | SELECT/UPDATE: own |
+| `profiles` | Профиль пользователя (nickname, level, xp, streak, cefr_level, assessment_completed) | SELECT/UPDATE: own |
 | `daily_goals` | Дневные цели с XP | SELECT/INSERT/UPDATE: own |
 | `grammar_items` | Контент грамматики (read-only) | SELECT: authenticated |
 | `user_grammar_progress` | Прогресс по грамматике (unique: user_id + grammar_id) | SELECT/INSERT/UPDATE: own |
@@ -80,7 +82,7 @@ Android, iOS, Web.
 
 ### Триггеры
 
-- `handle_new_user()` — автоматически создаёт запись в `profiles` при регистрации через auth
+- `handle_new_user()` — автоматически создаёт запись в `profiles` при регистрации через auth (пишет `nickname` из `raw_user_meta_data`, `assessment_completed = false`)
 
 ### Каскадное удаление
 
@@ -124,17 +126,28 @@ AI-чат с Claude. Полный flow:
 |---|---|---|
 | `/login` | LoginScreen | — |
 | `/register` | RegisterScreen | — |
-| `/` | HomeScreen | Auth required |
-| `/grammar` | GrammarScreen | Auth required |
-| `/practice` | PracticeScreen | Auth required |
-| `/profile` | ProfileScreen | Auth required |
-| `/chat` | ChatScreen | Auth required |
+| `/assessment` | AssessmentScreen | Auth required, вне ShellRoute |
+| `/` | HomeScreen | Auth + assessment completed |
+| `/grammar` | GrammarScreen | Auth + assessment completed |
+| `/practice` | WordQuizHomeScreen | Auth + assessment completed |
+| `/profile` | ProfileScreen | Auth + assessment completed |
+| `/chat` | ChatScreen | Auth + assessment completed |
 
 - **Auth guard:** проверяет `Supabase.instance.client.auth.currentSession`
-- **Редирект:** авторизованные → `/`, неавторизованные → `/login`
+- **Assessment guard:** проверяет `OnboardingStateNotifier.assessmentCompleted`
+- **Редирект:** неавторизованные → `/login`; авторизованные без теста → `/assessment`; fully onboarded → `/`
 - **Shell route:** нижняя навигация (home, grammar, practice, profile)
+- **Router refresh:** `RouterRefreshNotifier` (ChangeNotifier) слушает auth stream + onboarding state → `refreshListenable` на GoRouter
 - **Чат:** открывается отдельно, принимает `initialPrompt` через `route.extra`
 - **Контекстный чат:** можно перейти из grammar/practice с контекстом (`ChatContextSource`)
+
+### Onboarding / Assessment Guard
+
+GoRouter redirect is synchronous. To guard routes based on async server state (e.g. `assessment_completed`):
+
+1. `OnboardingStateNotifier` (`@Riverpod(keepAlive: true)`) — loads profile from Supabase, caches `assessmentCompleted`. Listens to `onAuthStateChange` to auto-refresh on login/logout.
+2. `RouterRefreshNotifier` (ChangeNotifier) — listens to both auth stream and onboarding state changes. Passed as `refreshListenable` to GoRouter.
+3. Redirect logic: while `isLoading` → return `null` (don't redirect); `!assessmentCompleted` → force `/assessment`; fully onboarded on auth/assessment route → redirect to `/`.
 
 ---
 
@@ -142,7 +155,8 @@ AI-чат с Claude. Полный flow:
 
 - **Провайдер:** только email/password (Supabase Auth)
 - **Нет:** Google Sign-In, Apple Sign-In, OAuth
-- **После регистрации:** автосоздание профиля через DB-триггер, редирект на home
+- **После регистрации:** автосоздание профиля через DB-триггер (`handle_new_user()` пишет nickname), редирект на `/assessment` (тест уровня)
+- **После теста:** `assessment_completed = true`, `cefr_level` сохраняется → редирект на `/`
 - **Ошибки:** локализованы на русский (неверный пароль, email не подтверждён, и т.д.)
 
 ---
@@ -163,8 +177,10 @@ AI-чат с Claude. Полный flow:
 ## Текущее состояние (MVP)
 
 ### Работает с бэкендом
-- Auth (email/password, полный flow)
+- Auth (email/password, полный flow с nickname)
 - Chat (Edge Function → Claude API, стриминг, лимиты, persistence)
+- Assessment (12-вопросный тест CEFR-уровня, сохранение в profiles)
+- Onboarding guard (route redirect на `/assessment` для новых пользователей)
 
 ### Только mock-данные (нет интеграции с Supabase)
 - Home (UserProgress — mock)
@@ -175,9 +191,8 @@ AI-чат с Claude. Полный flow:
 ### Отсутствует
 - Локализация (i18n) — строки захардкожены на русском
 - CI/CD — нет конфигурации
-- Тесты — нет unit/widget/integration тестов
+- Тесты — минимальные (level_calculator_test.dart)
 - Push-уведомления
-- Onboarding flow
 - Социальная авторизация
 - Монетизация
 
@@ -195,6 +210,7 @@ lib/src/
 │   ├── supabase/                   # Инициализация Supabase
 │   └── utils/logger.dart           # Логирование
 ├── features/                       # Фичи (domain/data/application/presentation)
+│   ├── assessment/
 │   ├── auth/
 │   ├── chat/
 │   ├── grammar/
