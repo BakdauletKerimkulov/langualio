@@ -33,12 +33,12 @@ Bundle ~2000 B1 words as a JSON asset so quizzes work offline from first launch.
 ### Phase 2 — Asset repository + placeholder JSON
 **Goal:** `AssetWordRepository` loads `b1_words.json` into `List<WordEntry>`, exposed via `keepAlive` provider.
 
-- [ ] `assets/data/b1_words.json` — create placeholder with 5 sample B1 words matching the spec schema (`b1_ability`, etc.)
-- [ ] `pubspec.yaml:40` — add `assets:` section with `- assets/data/`
-- [ ] `lib/src/features/word_quiz/data/local/asset_word_repository.dart` — create `AssetWordRepository` (loads + parses `b1_words.json` via `rootBundle`) and `assetWordsProvider` (`@Riverpod(keepAlive: true)`)
-- [ ] TDD: `AssetWordRepository` loads sample JSON and returns correctly typed `List<WordEntry>` → `test/src/features/word_quiz/data/local/asset_word_repository_test.dart`
-- [ ] Run `dart run build_runner build --delete-conflicting-outputs`
-- [ ] Verify: `dart analyze && flutter test`
+- [x] `assets/data/b1_words.json` — create placeholder with 5 sample B1 words matching the spec schema (`b1_ability`, etc.)
+- [x] `pubspec.yaml:40` — add `assets:` section with `- assets/data/`
+- [x] `lib/src/features/word_quiz/data/local/asset_word_repository.dart` — create `AssetWordRepository` (loads + parses `b1_words.json` via `rootBundle`) and `assetWordsProvider` (`@Riverpod(keepAlive: true)`)
+- [x] TDD: `AssetWordRepository` loads sample JSON and returns correctly typed `List<WordEntry>` → `test/src/features/word_quiz/data/local/asset_word_repository_test.dart`
+- [x] Run `dart run build_runner build --delete-conflicting-outputs`
+- [x] Verify: `dart analyze && flutter test`
 
 ### Phase 3 — Integrate asset words into quiz notifier
 **Goal:** Quiz uses asset words as base pool; server words merge/override by ID. Quiz fully playable offline.

@@ -1,6 +1,6 @@
 name: langualio
 description: "WordLevel - English Learning App"
-publish_to: 'none'
+publish_to: "none"
 version: 1.0.0+1
 
 environment:
@@ -18,15 +18,26 @@ dependencies:
   shared_preferences: ^2.3.4
   http: ^1.2.2
   supabase_flutter: ^2.8.4
+  freezed_annotation: ^3.1.0
+  json_annotation: ^4.9.0
+  drift: ^2.28.2
+  path_provider: ^2.1.5
+  drift_flutter: ^0.2.7
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
   flutter_lints: ^5.0.0
   riverpod_generator: ^2.6.3
   build_runner: ^2.4.14
   custom_lint: ^0.7.5
   riverpod_lint: ^2.6.3
+  freezed: ^3.1.0
+  json_serializable: ^6.9.4
+  drift_dev: ^2.28.0
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/data/

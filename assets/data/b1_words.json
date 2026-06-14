@@ -1,0 +1,117 @@
+[
+  {
+    "id": "b1_ability",
+    "word": "ability",
+    "ipa": "/əˈbɪl.ə.ti/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "способность",
+        "alternative_translations": ["умение", "навык"],
+        "definition_en": "the physical or mental power or skill needed to do something",
+        "definition_ru": "физическая или умственная сила или навык, необходимый для выполнения чего-либо",
+        "example_en": "She has the ability to learn languages quickly.",
+        "example_ru": "Она обладает способностью быстро учить языки."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_achieve",
+    "word": "achieve",
+    "ipa": "/əˈtʃiːv/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "достигать",
+        "alternative_translations": ["добиваться"],
+        "definition_en": "to succeed in finishing something or reaching an aim",
+        "definition_ru": "успешно завершить что-либо или достигнуть цели",
+        "example_en": "She achieved her goal of becoming a doctor.",
+        "example_ru": "Она достигла своей цели стать врачом."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_advantage",
+    "word": "advantage",
+    "ipa": "/ədˈvɑːn.tɪdʒ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "преимущество",
+        "alternative_translations": ["выгода"],
+        "definition_en": "a condition giving a greater chance of success",
+        "definition_ru": "условие, дающее больше шансов на успех",
+        "example_en": "The main advantage of the plan is its simplicity.",
+        "example_ru": "Главное преимущество плана — его простота."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_afford",
+    "word": "afford",
+    "ipa": "/əˈfɔːd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "позволить себе",
+        "alternative_translations": ["быть в состоянии"],
+        "definition_en": "to have enough money or time for something",
+        "definition_ru": "иметь достаточно денег или времени для чего-либо",
+        "example_en": "I can't afford to buy a new car.",
+        "example_ru": "Я не могу позволить себе купить новую машину."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_agree",
+    "word": "agree",
+    "ipa": "/əˈɡriː/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "соглашаться",
+        "alternative_translations": ["договариваться"],
+        "definition_en": "to have the same opinion or to accept a suggestion",
+        "definition_ru": "иметь одинаковое мнение или принять предложение",
+        "example_en": "I agree with you completely.",
+        "example_ru": "Я полностью с тобой согласен."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  }
+]
