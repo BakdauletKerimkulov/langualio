@@ -43,10 +43,10 @@ Bundle ~2000 B1 words as a JSON asset so quizzes work offline from first launch.
 ### Phase 3 — Integrate asset words into quiz notifier
 **Goal:** Quiz uses asset words as base pool; server words merge/override by ID. Quiz fully playable offline.
 
-- [ ] `lib/src/features/word_quiz/application/word_quiz_notifier.dart:23-42` — in `build()`, load asset words via `assetWordsProvider`, use as base pool; merge server words (server overrides by `id`); fallback to asset-only when server fails
-- [ ] TDD: `WordQuizNotifier` falls back to asset words when server fetch throws → `test/src/features/word_quiz/application/word_quiz_notifier_test.dart` (extend existing test file)
-- [ ] TDD: `generateOptions()` returns 4 options when using asset words only (sufficient distractor pool)
-- [ ] Verify: `dart analyze && flutter test`
+- [x] `lib/src/features/word_quiz/application/word_quiz_notifier.dart:23-42` — in `build()`, load asset words via `assetWordsProvider`, use as base pool; merge server words (server overrides by `id`); fallback to asset-only when server fails
+- [x] TDD: `WordQuizNotifier` falls back to asset words when server fetch throws → `test/src/features/word_quiz/application/word_quiz_notifier_test.dart` (extend existing test file)
+- [x] TDD: `generateOptions()` returns 4 options when using asset words only (sufficient distractor pool)
+- [x] Verify: `dart analyze && flutter test`
 
 ### Phase 4 — Nice-to-haves
 **Goal:** Add `WordSource` enum and eager preloading for zero-delay quiz start.

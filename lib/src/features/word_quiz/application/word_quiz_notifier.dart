@@ -4,6 +4,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../../core/local_storage/storage_provider.dart';
 import '../../../core/utils/logger.dart';
+import '../data/local/asset_word_repository.dart';
 import '../data/remote/word_quiz_repository.dart';
 import '../domain/quiz_day_util.dart';
 import '../domain/quiz_session.dart';
@@ -29,16 +30,36 @@ class WordQuizNotifier extends _$WordQuizNotifier {
 
     final quizDay = getQuizDay();
 
-    // Try cached words first, then fetch from server
+    // Load asset words as base pool
+    List<WordEntry> assetWords;
+    try {
+      assetWords = await ref.read(assetWordsProvider.future);
+    } catch (e) {
+      log('Failed to load asset words: $e', name: 'WordQuizNotifier');
+      assetWords = [];
+    }
+
+    // Try server words, merge with asset pool (server overrides by id)
     List<WordEntry> words;
     try {
-      words = await _repo.fetchTodaysWords();
+      final serverWords = await _repo.fetchTodaysWords();
+      final serverIds = serverWords.map((w) => w.id).toSet();
+      final assetOnly = assetWords.where((w) => !serverIds.contains(w.id));
+      words = [...serverWords, ...assetOnly];
     } catch (e) {
       log(
-        'Failed to fetch today words from server, trying cache: $e',
+        'Failed to fetch server words, using asset words: $e',
         name: 'WordQuizNotifier',
       );
-      words = _repo.getCachedTodaysWords() ?? [];
+      // Fallback: try cache, then asset-only
+      final cached = _repo.getCachedTodaysWords();
+      if (cached != null && cached.isNotEmpty) {
+        final cachedIds = cached.map((w) => w.id).toSet();
+        final assetOnly = assetWords.where((w) => !cachedIds.contains(w.id));
+        words = [...cached, ...assetOnly];
+      } else {
+        words = assetWords;
+      }
     }
 
     // Load today's attempts for current direction
