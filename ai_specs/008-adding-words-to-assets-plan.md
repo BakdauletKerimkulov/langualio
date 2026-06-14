@@ -51,10 +51,10 @@ Bundle ~2000 B1 words as a JSON asset so quizzes work offline from first launch.
 ### Phase 4 — Nice-to-haves
 **Goal:** Add `WordSource` enum and eager preloading for zero-delay quiz start.
 
-- [ ] `lib/src/features/word_quiz/domain/word_entry.dart` — add `WordSource` enum (`asset`, `server`), add `@Default(WordSource.asset) WordSource source` field to `WordEntry`
-- [ ] `lib/src/features/word_quiz/application/word_quiz_notifier.dart` — tag merged words with correct source
-- [ ] `lib/main.dart` — eagerly read `assetWordsProvider` during app init to preload asset words
-- [ ] Verify: `dart analyze && flutter test`
+- [x] `lib/src/features/word_quiz/domain/word_entry.dart` — add `WordSource` enum (`asset`, `server`), add `@Default(WordSource.asset) WordSource source` field to `WordEntry`
+- [x] `lib/src/features/word_quiz/application/word_quiz_notifier.dart` — tag merged words with correct source
+- [x] `lib/main.dart` — eagerly read `assetWordsProvider` during app init to preload asset words
+- [x] Verify: `dart analyze && flutter test`
 
 ## Data layer changes
 - `WordEntry.createdAt`: `required DateTime` → `DateTime?` (freezed + json_serializable)

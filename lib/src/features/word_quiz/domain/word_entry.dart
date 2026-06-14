@@ -6,6 +6,8 @@ import 'word_meaning.dart';
 part 'word_entry.freezed.dart';
 part 'word_entry.g.dart';
 
+enum WordSource { asset, server }
+
 @freezed
 abstract class WordEntry with _$WordEntry {
   const WordEntry._();
@@ -22,6 +24,7 @@ abstract class WordEntry with _$WordEntry {
     DateTime? updatedAt,
     String? status,
     String? createdBy,
+    @Default(WordSource.asset) WordSource source,
   }) = _WordEntry;
 
   factory WordEntry.fromJson(Map<String, dynamic> json) =>

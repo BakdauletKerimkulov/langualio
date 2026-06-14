@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$WordEntry {
 
- String get id; String get word; String? get ipa; DifficultyLevel get level; List<WordMeaning> get meanings; String? get topic; List<String> get tags; DateTime? get createdAt; DateTime? get updatedAt; String? get status; String? get createdBy;
+ String get id; String get word; String? get ipa; DifficultyLevel get level; List<WordMeaning> get meanings; String? get topic; List<String> get tags; DateTime? get createdAt; DateTime? get updatedAt; String? get status; String? get createdBy; WordSource get source;
 /// Create a copy of WordEntry
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -28,16 +28,16 @@ $WordEntryCopyWith<WordEntry> get copyWith => _$WordEntryCopyWithImpl<WordEntry>
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is WordEntry&&(identical(other.id, id) || other.id == id)&&(identical(other.word, word) || other.word == word)&&(identical(other.ipa, ipa) || other.ipa == ipa)&&(identical(other.level, level) || other.level == level)&&const DeepCollectionEquality().equals(other.meanings, meanings)&&(identical(other.topic, topic) || other.topic == topic)&&const DeepCollectionEquality().equals(other.tags, tags)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.status, status) || other.status == status)&&(identical(other.createdBy, createdBy) || other.createdBy == createdBy));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is WordEntry&&(identical(other.id, id) || other.id == id)&&(identical(other.word, word) || other.word == word)&&(identical(other.ipa, ipa) || other.ipa == ipa)&&(identical(other.level, level) || other.level == level)&&const DeepCollectionEquality().equals(other.meanings, meanings)&&(identical(other.topic, topic) || other.topic == topic)&&const DeepCollectionEquality().equals(other.tags, tags)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.status, status) || other.status == status)&&(identical(other.createdBy, createdBy) || other.createdBy == createdBy)&&(identical(other.source, source) || other.source == source));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,word,ipa,level,const DeepCollectionEquality().hash(meanings),topic,const DeepCollectionEquality().hash(tags),createdAt,updatedAt,status,createdBy);
+int get hashCode => Object.hash(runtimeType,id,word,ipa,level,const DeepCollectionEquality().hash(meanings),topic,const DeepCollectionEquality().hash(tags),createdAt,updatedAt,status,createdBy,source);
 
 @override
 String toString() {
-  return 'WordEntry(id: $id, word: $word, ipa: $ipa, level: $level, meanings: $meanings, topic: $topic, tags: $tags, createdAt: $createdAt, updatedAt: $updatedAt, status: $status, createdBy: $createdBy)';
+  return 'WordEntry(id: $id, word: $word, ipa: $ipa, level: $level, meanings: $meanings, topic: $topic, tags: $tags, createdAt: $createdAt, updatedAt: $updatedAt, status: $status, createdBy: $createdBy, source: $source)';
 }
 
 
@@ -48,7 +48,7 @@ abstract mixin class $WordEntryCopyWith<$Res>  {
   factory $WordEntryCopyWith(WordEntry value, $Res Function(WordEntry) _then) = _$WordEntryCopyWithImpl;
 @useResult
 $Res call({
- String id, String word, String? ipa, DifficultyLevel level, List<WordMeaning> meanings, String? topic, List<String> tags, DateTime? createdAt, DateTime? updatedAt, String? status, String? createdBy
+ String id, String word, String? ipa, DifficultyLevel level, List<WordMeaning> meanings, String? topic, List<String> tags, DateTime? createdAt, DateTime? updatedAt, String? status, String? createdBy, WordSource source
 });
 
 
@@ -65,7 +65,7 @@ class _$WordEntryCopyWithImpl<$Res>
 
 /// Create a copy of WordEntry
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? word = null,Object? ipa = freezed,Object? level = null,Object? meanings = null,Object? topic = freezed,Object? tags = null,Object? createdAt = freezed,Object? updatedAt = freezed,Object? status = freezed,Object? createdBy = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? word = null,Object? ipa = freezed,Object? level = null,Object? meanings = null,Object? topic = freezed,Object? tags = null,Object? createdAt = freezed,Object? updatedAt = freezed,Object? status = freezed,Object? createdBy = freezed,Object? source = null,}) {
   return _then(_self.copyWith(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,word: null == word ? _self.word : word // ignore: cast_nullable_to_non_nullable
@@ -78,7 +78,8 @@ as List<String>,createdAt: freezed == createdAt ? _self.createdAt : createdAt //
 as DateTime?,updatedAt: freezed == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
 as DateTime?,status: freezed == status ? _self.status : status // ignore: cast_nullable_to_non_nullable
 as String?,createdBy: freezed == createdBy ? _self.createdBy : createdBy // ignore: cast_nullable_to_non_nullable
-as String?,
+as String?,source: null == source ? _self.source : source // ignore: cast_nullable_to_non_nullable
+as WordSource,
   ));
 }
 
@@ -163,10 +164,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String word,  String? ipa,  DifficultyLevel level,  List<WordMeaning> meanings,  String? topic,  List<String> tags,  DateTime? createdAt,  DateTime? updatedAt,  String? status,  String? createdBy)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String word,  String? ipa,  DifficultyLevel level,  List<WordMeaning> meanings,  String? topic,  List<String> tags,  DateTime? createdAt,  DateTime? updatedAt,  String? status,  String? createdBy,  WordSource source)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _WordEntry() when $default != null:
-return $default(_that.id,_that.word,_that.ipa,_that.level,_that.meanings,_that.topic,_that.tags,_that.createdAt,_that.updatedAt,_that.status,_that.createdBy);case _:
+return $default(_that.id,_that.word,_that.ipa,_that.level,_that.meanings,_that.topic,_that.tags,_that.createdAt,_that.updatedAt,_that.status,_that.createdBy,_that.source);case _:
   return orElse();
 
 }
@@ -184,10 +185,10 @@ return $default(_that.id,_that.word,_that.ipa,_that.level,_that.meanings,_that.t
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String word,  String? ipa,  DifficultyLevel level,  List<WordMeaning> meanings,  String? topic,  List<String> tags,  DateTime? createdAt,  DateTime? updatedAt,  String? status,  String? createdBy)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String word,  String? ipa,  DifficultyLevel level,  List<WordMeaning> meanings,  String? topic,  List<String> tags,  DateTime? createdAt,  DateTime? updatedAt,  String? status,  String? createdBy,  WordSource source)  $default,) {final _that = this;
 switch (_that) {
 case _WordEntry():
-return $default(_that.id,_that.word,_that.ipa,_that.level,_that.meanings,_that.topic,_that.tags,_that.createdAt,_that.updatedAt,_that.status,_that.createdBy);case _:
+return $default(_that.id,_that.word,_that.ipa,_that.level,_that.meanings,_that.topic,_that.tags,_that.createdAt,_that.updatedAt,_that.status,_that.createdBy,_that.source);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -204,10 +205,10 @@ return $default(_that.id,_that.word,_that.ipa,_that.level,_that.meanings,_that.t
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String word,  String? ipa,  DifficultyLevel level,  List<WordMeaning> meanings,  String? topic,  List<String> tags,  DateTime? createdAt,  DateTime? updatedAt,  String? status,  String? createdBy)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String word,  String? ipa,  DifficultyLevel level,  List<WordMeaning> meanings,  String? topic,  List<String> tags,  DateTime? createdAt,  DateTime? updatedAt,  String? status,  String? createdBy,  WordSource source)?  $default,) {final _that = this;
 switch (_that) {
 case _WordEntry() when $default != null:
-return $default(_that.id,_that.word,_that.ipa,_that.level,_that.meanings,_that.topic,_that.tags,_that.createdAt,_that.updatedAt,_that.status,_that.createdBy);case _:
+return $default(_that.id,_that.word,_that.ipa,_that.level,_that.meanings,_that.topic,_that.tags,_that.createdAt,_that.updatedAt,_that.status,_that.createdBy,_that.source);case _:
   return null;
 
 }
@@ -219,7 +220,7 @@ return $default(_that.id,_that.word,_that.ipa,_that.level,_that.meanings,_that.t
 @JsonSerializable()
 
 class _WordEntry extends WordEntry {
-  const _WordEntry({required this.id, required this.word, this.ipa, required this.level, required final  List<WordMeaning> meanings, this.topic, final  List<String> tags = const <String>[], this.createdAt, this.updatedAt, this.status, this.createdBy}): _meanings = meanings,_tags = tags,super._();
+  const _WordEntry({required this.id, required this.word, this.ipa, required this.level, required final  List<WordMeaning> meanings, this.topic, final  List<String> tags = const <String>[], this.createdAt, this.updatedAt, this.status, this.createdBy, this.source = WordSource.asset}): _meanings = meanings,_tags = tags,super._();
   factory _WordEntry.fromJson(Map<String, dynamic> json) => _$WordEntryFromJson(json);
 
 @override final  String id;
@@ -245,6 +246,7 @@ class _WordEntry extends WordEntry {
 @override final  DateTime? updatedAt;
 @override final  String? status;
 @override final  String? createdBy;
+@override@JsonKey() final  WordSource source;
 
 /// Create a copy of WordEntry
 /// with the given fields replaced by the non-null parameter values.
@@ -259,16 +261,16 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _WordEntry&&(identical(other.id, id) || other.id == id)&&(identical(other.word, word) || other.word == word)&&(identical(other.ipa, ipa) || other.ipa == ipa)&&(identical(other.level, level) || other.level == level)&&const DeepCollectionEquality().equals(other._meanings, _meanings)&&(identical(other.topic, topic) || other.topic == topic)&&const DeepCollectionEquality().equals(other._tags, _tags)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.status, status) || other.status == status)&&(identical(other.createdBy, createdBy) || other.createdBy == createdBy));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _WordEntry&&(identical(other.id, id) || other.id == id)&&(identical(other.word, word) || other.word == word)&&(identical(other.ipa, ipa) || other.ipa == ipa)&&(identical(other.level, level) || other.level == level)&&const DeepCollectionEquality().equals(other._meanings, _meanings)&&(identical(other.topic, topic) || other.topic == topic)&&const DeepCollectionEquality().equals(other._tags, _tags)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.status, status) || other.status == status)&&(identical(other.createdBy, createdBy) || other.createdBy == createdBy)&&(identical(other.source, source) || other.source == source));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,id,word,ipa,level,const DeepCollectionEquality().hash(_meanings),topic,const DeepCollectionEquality().hash(_tags),createdAt,updatedAt,status,createdBy);
+int get hashCode => Object.hash(runtimeType,id,word,ipa,level,const DeepCollectionEquality().hash(_meanings),topic,const DeepCollectionEquality().hash(_tags),createdAt,updatedAt,status,createdBy,source);
 
 @override
 String toString() {
-  return 'WordEntry(id: $id, word: $word, ipa: $ipa, level: $level, meanings: $meanings, topic: $topic, tags: $tags, createdAt: $createdAt, updatedAt: $updatedAt, status: $status, createdBy: $createdBy)';
+  return 'WordEntry(id: $id, word: $word, ipa: $ipa, level: $level, meanings: $meanings, topic: $topic, tags: $tags, createdAt: $createdAt, updatedAt: $updatedAt, status: $status, createdBy: $createdBy, source: $source)';
 }
 
 
@@ -279,7 +281,7 @@ abstract mixin class _$WordEntryCopyWith<$Res> implements $WordEntryCopyWith<$Re
   factory _$WordEntryCopyWith(_WordEntry value, $Res Function(_WordEntry) _then) = __$WordEntryCopyWithImpl;
 @override @useResult
 $Res call({
- String id, String word, String? ipa, DifficultyLevel level, List<WordMeaning> meanings, String? topic, List<String> tags, DateTime? createdAt, DateTime? updatedAt, String? status, String? createdBy
+ String id, String word, String? ipa, DifficultyLevel level, List<WordMeaning> meanings, String? topic, List<String> tags, DateTime? createdAt, DateTime? updatedAt, String? status, String? createdBy, WordSource source
 });
 
 
@@ -296,7 +298,7 @@ class __$WordEntryCopyWithImpl<$Res>
 
 /// Create a copy of WordEntry
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? word = null,Object? ipa = freezed,Object? level = null,Object? meanings = null,Object? topic = freezed,Object? tags = null,Object? createdAt = freezed,Object? updatedAt = freezed,Object? status = freezed,Object? createdBy = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? word = null,Object? ipa = freezed,Object? level = null,Object? meanings = null,Object? topic = freezed,Object? tags = null,Object? createdAt = freezed,Object? updatedAt = freezed,Object? status = freezed,Object? createdBy = freezed,Object? source = null,}) {
   return _then(_WordEntry(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,word: null == word ? _self.word : word // ignore: cast_nullable_to_non_nullable
@@ -309,7 +311,8 @@ as List<String>,createdAt: freezed == createdAt ? _self.createdAt : createdAt //
 as DateTime?,updatedAt: freezed == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
 as DateTime?,status: freezed == status ? _self.status : status // ignore: cast_nullable_to_non_nullable
 as String?,createdBy: freezed == createdBy ? _self.createdBy : createdBy // ignore: cast_nullable_to_non_nullable
-as String?,
+as String?,source: null == source ? _self.source : source // ignore: cast_nullable_to_non_nullable
+as WordSource,
   ));
 }
 

@@ -26,6 +26,9 @@ _WordEntry _$WordEntryFromJson(Map<String, dynamic> json) => _WordEntry(
       : DateTime.parse(json['updated_at'] as String),
   status: json['status'] as String?,
   createdBy: json['created_by'] as String?,
+  source:
+      $enumDecodeNullable(_$WordSourceEnumMap, json['source']) ??
+      WordSource.asset,
 );
 
 Map<String, dynamic> _$WordEntryToJson(_WordEntry instance) =>
@@ -41,6 +44,7 @@ Map<String, dynamic> _$WordEntryToJson(_WordEntry instance) =>
       'updated_at': instance.updatedAt?.toIso8601String(),
       'status': instance.status,
       'created_by': instance.createdBy,
+      'source': _$WordSourceEnumMap[instance.source]!,
     };
 
 const _$DifficultyLevelEnumMap = {
@@ -50,4 +54,9 @@ const _$DifficultyLevelEnumMap = {
   DifficultyLevel.b2: 'b2',
   DifficultyLevel.c1: 'c1',
   DifficultyLevel.c2: 'c2',
+};
+
+const _$WordSourceEnumMap = {
+  WordSource.asset: 'asset',
+  WordSource.server: 'server',
 };

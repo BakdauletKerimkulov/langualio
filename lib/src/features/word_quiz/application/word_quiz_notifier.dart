@@ -43,9 +43,12 @@ class WordQuizNotifier extends _$WordQuizNotifier {
     List<WordEntry> words;
     try {
       final serverWords = await _repo.fetchTodaysWords();
-      final serverIds = serverWords.map((w) => w.id).toSet();
+      final tagged = serverWords
+          .map((w) => w.copyWith(source: WordSource.server))
+          .toList();
+      final serverIds = tagged.map((w) => w.id).toSet();
       final assetOnly = assetWords.where((w) => !serverIds.contains(w.id));
-      words = [...serverWords, ...assetOnly];
+      words = [...tagged, ...assetOnly];
     } catch (e) {
       log(
         'Failed to fetch server words, using asset words: $e',
@@ -54,9 +57,12 @@ class WordQuizNotifier extends _$WordQuizNotifier {
       // Fallback: try cache, then asset-only
       final cached = _repo.getCachedTodaysWords();
       if (cached != null && cached.isNotEmpty) {
-        final cachedIds = cached.map((w) => w.id).toSet();
+        final tagged = cached
+            .map((w) => w.copyWith(source: WordSource.server))
+            .toList();
+        final cachedIds = tagged.map((w) => w.id).toSet();
         final assetOnly = assetWords.where((w) => !cachedIds.contains(w.id));
-        words = [...cached, ...assetOnly];
+        words = [...tagged, ...assetOnly];
       } else {
         words = assetWords;
       }
