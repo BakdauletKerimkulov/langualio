@@ -39,7 +39,7 @@ class WordListTile extends StatelessWidget {
             ),
             gapH4,
             Text(
-              _formatDate(entry.createdAt),
+              entry.createdAt != null ? _formatDate(entry.createdAt!) : '',
               style: Theme.of(
                 context,
               ).textTheme.bodySmall?.copyWith(color: AppColors.textTertiary),

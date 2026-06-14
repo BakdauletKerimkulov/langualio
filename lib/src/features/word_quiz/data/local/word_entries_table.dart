@@ -14,7 +14,7 @@ class WordEntriesTable extends Table {
   TextColumn get meanings => text()();
   TextColumn get topic => text().nullable()();
   TextColumn get tags => text().withDefault(const Constant('[]'))();
-  DateTimeColumn get createdAt => dateTime()();
+  DateTimeColumn get createdAt => dateTime().nullable()();
   DateTimeColumn get updatedAt => dateTime().nullable()();
   TextColumn get status => text().nullable()();
   TextColumn get createdBy => text().nullable()();
@@ -54,7 +54,7 @@ extension WordEntryX on WordEntry {
     meanings: jsonEncode(meanings.map((m) => m.toJson()).toList()),
     topic: Value.absentIfNull(topic),
     tags: Value(jsonEncode(tags)),
-    createdAt: createdAt,
+    createdAt: Value.absentIfNull(createdAt),
     updatedAt: Value.absentIfNull(updatedAt),
     status: Value.absentIfNull(status),
     createdBy: Value.absentIfNull(createdBy),

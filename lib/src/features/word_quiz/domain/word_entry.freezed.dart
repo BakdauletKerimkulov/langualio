@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$WordEntry {
 
- String get id; String get word; String? get ipa; DifficultyLevel get level; List<WordMeaning> get meanings; String? get topic; List<String> get tags; DateTime get createdAt; DateTime? get updatedAt; String? get status; String? get createdBy;
+ String get id; String get word; String? get ipa; DifficultyLevel get level; List<WordMeaning> get meanings; String? get topic; List<String> get tags; DateTime? get createdAt; DateTime? get updatedAt; String? get status; String? get createdBy;
 /// Create a copy of WordEntry
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -48,7 +48,7 @@ abstract mixin class $WordEntryCopyWith<$Res>  {
   factory $WordEntryCopyWith(WordEntry value, $Res Function(WordEntry) _then) = _$WordEntryCopyWithImpl;
 @useResult
 $Res call({
- String id, String word, String? ipa, DifficultyLevel level, List<WordMeaning> meanings, String? topic, List<String> tags, DateTime createdAt, DateTime? updatedAt, String? status, String? createdBy
+ String id, String word, String? ipa, DifficultyLevel level, List<WordMeaning> meanings, String? topic, List<String> tags, DateTime? createdAt, DateTime? updatedAt, String? status, String? createdBy
 });
 
 
@@ -65,7 +65,7 @@ class _$WordEntryCopyWithImpl<$Res>
 
 /// Create a copy of WordEntry
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? word = null,Object? ipa = freezed,Object? level = null,Object? meanings = null,Object? topic = freezed,Object? tags = null,Object? createdAt = null,Object? updatedAt = freezed,Object? status = freezed,Object? createdBy = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? word = null,Object? ipa = freezed,Object? level = null,Object? meanings = null,Object? topic = freezed,Object? tags = null,Object? createdAt = freezed,Object? updatedAt = freezed,Object? status = freezed,Object? createdBy = freezed,}) {
   return _then(_self.copyWith(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,word: null == word ? _self.word : word // ignore: cast_nullable_to_non_nullable
@@ -74,8 +74,8 @@ as String?,level: null == level ? _self.level : level // ignore: cast_nullable_t
 as DifficultyLevel,meanings: null == meanings ? _self.meanings : meanings // ignore: cast_nullable_to_non_nullable
 as List<WordMeaning>,topic: freezed == topic ? _self.topic : topic // ignore: cast_nullable_to_non_nullable
 as String?,tags: null == tags ? _self.tags : tags // ignore: cast_nullable_to_non_nullable
-as List<String>,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
-as DateTime,updatedAt: freezed == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
+as List<String>,createdAt: freezed == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
+as DateTime?,updatedAt: freezed == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
 as DateTime?,status: freezed == status ? _self.status : status // ignore: cast_nullable_to_non_nullable
 as String?,createdBy: freezed == createdBy ? _self.createdBy : createdBy // ignore: cast_nullable_to_non_nullable
 as String?,
@@ -163,7 +163,7 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String word,  String? ipa,  DifficultyLevel level,  List<WordMeaning> meanings,  String? topic,  List<String> tags,  DateTime createdAt,  DateTime? updatedAt,  String? status,  String? createdBy)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String word,  String? ipa,  DifficultyLevel level,  List<WordMeaning> meanings,  String? topic,  List<String> tags,  DateTime? createdAt,  DateTime? updatedAt,  String? status,  String? createdBy)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _WordEntry() when $default != null:
 return $default(_that.id,_that.word,_that.ipa,_that.level,_that.meanings,_that.topic,_that.tags,_that.createdAt,_that.updatedAt,_that.status,_that.createdBy);case _:
@@ -184,7 +184,7 @@ return $default(_that.id,_that.word,_that.ipa,_that.level,_that.meanings,_that.t
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String word,  String? ipa,  DifficultyLevel level,  List<WordMeaning> meanings,  String? topic,  List<String> tags,  DateTime createdAt,  DateTime? updatedAt,  String? status,  String? createdBy)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String word,  String? ipa,  DifficultyLevel level,  List<WordMeaning> meanings,  String? topic,  List<String> tags,  DateTime? createdAt,  DateTime? updatedAt,  String? status,  String? createdBy)  $default,) {final _that = this;
 switch (_that) {
 case _WordEntry():
 return $default(_that.id,_that.word,_that.ipa,_that.level,_that.meanings,_that.topic,_that.tags,_that.createdAt,_that.updatedAt,_that.status,_that.createdBy);case _:
@@ -204,7 +204,7 @@ return $default(_that.id,_that.word,_that.ipa,_that.level,_that.meanings,_that.t
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String word,  String? ipa,  DifficultyLevel level,  List<WordMeaning> meanings,  String? topic,  List<String> tags,  DateTime createdAt,  DateTime? updatedAt,  String? status,  String? createdBy)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String word,  String? ipa,  DifficultyLevel level,  List<WordMeaning> meanings,  String? topic,  List<String> tags,  DateTime? createdAt,  DateTime? updatedAt,  String? status,  String? createdBy)?  $default,) {final _that = this;
 switch (_that) {
 case _WordEntry() when $default != null:
 return $default(_that.id,_that.word,_that.ipa,_that.level,_that.meanings,_that.topic,_that.tags,_that.createdAt,_that.updatedAt,_that.status,_that.createdBy);case _:
@@ -219,7 +219,7 @@ return $default(_that.id,_that.word,_that.ipa,_that.level,_that.meanings,_that.t
 @JsonSerializable()
 
 class _WordEntry extends WordEntry {
-  const _WordEntry({required this.id, required this.word, this.ipa, required this.level, required final  List<WordMeaning> meanings, this.topic, final  List<String> tags = const <String>[], required this.createdAt, this.updatedAt, this.status, this.createdBy}): _meanings = meanings,_tags = tags,super._();
+  const _WordEntry({required this.id, required this.word, this.ipa, required this.level, required final  List<WordMeaning> meanings, this.topic, final  List<String> tags = const <String>[], this.createdAt, this.updatedAt, this.status, this.createdBy}): _meanings = meanings,_tags = tags,super._();
   factory _WordEntry.fromJson(Map<String, dynamic> json) => _$WordEntryFromJson(json);
 
 @override final  String id;
@@ -241,7 +241,7 @@ class _WordEntry extends WordEntry {
   return EqualUnmodifiableListView(_tags);
 }
 
-@override final  DateTime createdAt;
+@override final  DateTime? createdAt;
 @override final  DateTime? updatedAt;
 @override final  String? status;
 @override final  String? createdBy;
@@ -279,7 +279,7 @@ abstract mixin class _$WordEntryCopyWith<$Res> implements $WordEntryCopyWith<$Re
   factory _$WordEntryCopyWith(_WordEntry value, $Res Function(_WordEntry) _then) = __$WordEntryCopyWithImpl;
 @override @useResult
 $Res call({
- String id, String word, String? ipa, DifficultyLevel level, List<WordMeaning> meanings, String? topic, List<String> tags, DateTime createdAt, DateTime? updatedAt, String? status, String? createdBy
+ String id, String word, String? ipa, DifficultyLevel level, List<WordMeaning> meanings, String? topic, List<String> tags, DateTime? createdAt, DateTime? updatedAt, String? status, String? createdBy
 });
 
 
@@ -296,7 +296,7 @@ class __$WordEntryCopyWithImpl<$Res>
 
 /// Create a copy of WordEntry
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? word = null,Object? ipa = freezed,Object? level = null,Object? meanings = null,Object? topic = freezed,Object? tags = null,Object? createdAt = null,Object? updatedAt = freezed,Object? status = freezed,Object? createdBy = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? word = null,Object? ipa = freezed,Object? level = null,Object? meanings = null,Object? topic = freezed,Object? tags = null,Object? createdAt = freezed,Object? updatedAt = freezed,Object? status = freezed,Object? createdBy = freezed,}) {
   return _then(_WordEntry(
 id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
 as String,word: null == word ? _self.word : word // ignore: cast_nullable_to_non_nullable
@@ -305,8 +305,8 @@ as String?,level: null == level ? _self.level : level // ignore: cast_nullable_t
 as DifficultyLevel,meanings: null == meanings ? _self._meanings : meanings // ignore: cast_nullable_to_non_nullable
 as List<WordMeaning>,topic: freezed == topic ? _self.topic : topic // ignore: cast_nullable_to_non_nullable
 as String?,tags: null == tags ? _self._tags : tags // ignore: cast_nullable_to_non_nullable
-as List<String>,createdAt: null == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
-as DateTime,updatedAt: freezed == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
+as List<String>,createdAt: freezed == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
+as DateTime?,updatedAt: freezed == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
 as DateTime?,status: freezed == status ? _self.status : status // ignore: cast_nullable_to_non_nullable
 as String?,createdBy: freezed == createdBy ? _self.createdBy : createdBy // ignore: cast_nullable_to_non_nullable
 as String?,

@@ -86,6 +86,69 @@ void main() {
       expect(entry.primaryTranslation, 'кошка');
     });
 
+    test('creates with null createdAt (asset words)', () {
+      final entry = WordEntry(
+        id: 'b1_ability',
+        word: 'ability',
+        level: DifficultyLevel.b1,
+        meanings: const [
+          WordMeaning(
+            partOfSpeech: PartOfSpeech.noun,
+            translation: 'способность',
+            exampleEn: 'She has the ability to learn quickly.',
+            exampleRu: 'Она обладает способностью быстро учиться.',
+          ),
+        ],
+      );
+      expect(entry.createdAt, isNull);
+      expect(entry.word, 'ability');
+    });
+
+    test('JSON round-trip with null createdAt', () {
+      final entry = WordEntry(
+        id: 'b1_ability',
+        word: 'ability',
+        level: DifficultyLevel.b1,
+        meanings: const [
+          WordMeaning(
+            partOfSpeech: PartOfSpeech.noun,
+            translation: 'способность',
+            exampleEn: 'She has the ability to learn quickly.',
+            exampleRu: 'Она обладает способностью быстро учиться.',
+          ),
+        ],
+      );
+      final json = entry.toJson();
+      expect(json['created_at'], isNull);
+
+      final restored = WordEntry.fromJson(json);
+      expect(restored.createdAt, isNull);
+      expect(restored.word, 'ability');
+      expect(restored.id, 'b1_ability');
+    });
+
+    test('fromJson with null created_at (asset format)', () {
+      final json = {
+        'id': 'b1_ability',
+        'word': 'ability',
+        'level': 'b1',
+        'meanings': [
+          {
+            'part_of_speech': 'noun',
+            'translation': 'способность',
+            'alternative_translations': <String>[],
+            'example_en': 'She has the ability to learn quickly.',
+            'example_ru': 'Она обладает способностью быстро учиться.',
+          },
+        ],
+        'tags': <String>[],
+        'created_at': null,
+      };
+      final entry = WordEntry.fromJson(json);
+      expect(entry.createdAt, isNull);
+      expect(entry.word, 'ability');
+    });
+
     test('keeps non-meaning fields intact', () {
       final entry = createTestEntry();
       expect(entry.id, 'test-id');

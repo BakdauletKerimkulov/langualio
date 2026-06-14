@@ -18,7 +18,7 @@ abstract class WordEntry with _$WordEntry {
     required List<WordMeaning> meanings,
     String? topic,
     @Default(<String>[]) List<String> tags,
-    required DateTime createdAt,
+    DateTime? createdAt,
     DateTime? updatedAt,
     String? status,
     String? createdBy,

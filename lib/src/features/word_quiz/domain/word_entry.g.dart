@@ -18,7 +18,9 @@ _WordEntry _$WordEntryFromJson(Map<String, dynamic> json) => _WordEntry(
   tags:
       (json['tags'] as List<dynamic>?)?.map((e) => e as String).toList() ??
       const <String>[],
-  createdAt: DateTime.parse(json['created_at'] as String),
+  createdAt: json['created_at'] == null
+      ? null
+      : DateTime.parse(json['created_at'] as String),
   updatedAt: json['updated_at'] == null
       ? null
       : DateTime.parse(json['updated_at'] as String),
@@ -35,7 +37,7 @@ Map<String, dynamic> _$WordEntryToJson(_WordEntry instance) =>
       'meanings': instance.meanings.map((e) => e.toJson()).toList(),
       'topic': instance.topic,
       'tags': instance.tags,
-      'created_at': instance.createdAt.toIso8601String(),
+      'created_at': instance.createdAt?.toIso8601String(),
       'updated_at': instance.updatedAt?.toIso8601String(),
       'status': instance.status,
       'created_by': instance.createdBy,
