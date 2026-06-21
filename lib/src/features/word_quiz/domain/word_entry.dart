@@ -6,7 +6,7 @@ import 'word_meaning.dart';
 part 'word_entry.freezed.dart';
 part 'word_entry.g.dart';
 
-enum WordSource { asset, server }
+enum WordSource { asset, user }
 
 @freezed
 abstract class WordEntry with _$WordEntry {

@@ -4,12 +4,12 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../../core/local_storage/storage_provider.dart';
 import '../../../core/utils/logger.dart';
-import '../data/local/asset_word_repository.dart';
-import '../data/remote/word_quiz_repository.dart';
+import '../data/quiz_attempt_repository.dart';
 import '../domain/quiz_day_util.dart';
 import '../domain/quiz_session.dart';
 import '../domain/word_entry.dart';
 import '../domain/word_quiz_attempt.dart';
+import 'word_pool_provider.dart';
 
 part 'word_quiz_notifier.g.dart';
 
@@ -18,7 +18,8 @@ class WordQuizNotifier extends _$WordQuizNotifier {
   static const _directionKey = 'word_quiz_direction';
   static const _answeredIdsKey = 'word_quiz_answered_ids';
 
-  WordQuizRepository get _repo => ref.read(wordQuizRepositoryProvider);
+  QuizAttemptRepository get _attemptRepo =>
+      ref.read(quizAttemptRepositoryProvider);
 
   @override
   Future<QuizSession> build() async {
@@ -30,48 +31,19 @@ class WordQuizNotifier extends _$WordQuizNotifier {
 
     final quizDay = getQuizDay();
 
-    // Load asset words as base pool
-    List<WordEntry> assetWords;
-    try {
-      assetWords = await ref.read(assetWordsProvider.future);
-    } catch (e) {
-      log('Failed to load asset words: $e', name: 'WordQuizNotifier');
-      assetWords = [];
-    }
-
-    // Try server words, merge with asset pool (server overrides by id)
+    // Load words from local pool (asset + user Drift words)
     List<WordEntry> words;
     try {
-      final serverWords = await _repo.fetchTodaysWords();
-      final tagged = serverWords
-          .map((w) => w.copyWith(source: WordSource.server))
-          .toList();
-      final serverIds = tagged.map((w) => w.id).toSet();
-      final assetOnly = assetWords.where((w) => !serverIds.contains(w.id));
-      words = [...tagged, ...assetOnly];
+      words = await ref.read(wordPoolProvider.future);
     } catch (e) {
-      log(
-        'Failed to fetch server words, using asset words: $e',
-        name: 'WordQuizNotifier',
-      );
-      // Fallback: try cache, then asset-only
-      final cached = _repo.getCachedTodaysWords();
-      if (cached != null && cached.isNotEmpty) {
-        final tagged = cached
-            .map((w) => w.copyWith(source: WordSource.server))
-            .toList();
-        final cachedIds = tagged.map((w) => w.id).toSet();
-        final assetOnly = assetWords.where((w) => !cachedIds.contains(w.id));
-        words = [...tagged, ...assetOnly];
-      } else {
-        words = assetWords;
-      }
+      log('Failed to load word pool: $e', name: 'WordQuizNotifier');
+      words = [];
     }
 
     // Load today's attempts for current direction
     List<WordQuizAttempt> attempts;
     try {
-      attempts = await _repo.fetchTodayAttempts(direction);
+      attempts = await _attemptRepo.fetchTodayAttempts(direction);
     } catch (e) {
       log('Failed to fetch today attempts: $e', name: 'WordQuizNotifier');
       attempts = [];
@@ -132,8 +104,6 @@ class WordQuizNotifier extends _$WordQuizNotifier {
     pool.shuffle(random);
     final distractors = pool.take(3).toList();
 
-    // If we don't have enough distractors, the pool is too small
-    // This shouldn't happen with 20 words, but handle gracefully
     if (distractors.length < 3) {
       log(
         'Warning: only ${distractors.length} distractors available',
@@ -168,12 +138,15 @@ class WordQuizNotifier extends _$WordQuizNotifier {
       answeredAt: DateTime.now(),
     );
 
-    // Save attempt (queues locally on failure)
-    await _repo.saveAttempt(attempt);
+    // Save attempt to Supabase
+    await _attemptRepo.saveAttempt(attempt);
 
     // Update learning progress if correct
     if (isCorrect) {
-      await _repo.updateLearningProgress(wordId: wordId, correctDate: quizDay);
+      await _attemptRepo.updateLearningProgress(
+        wordId: wordId,
+        correctDate: quizDay,
+      );
     }
 
     // Update session state

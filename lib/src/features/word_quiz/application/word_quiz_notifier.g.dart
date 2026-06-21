@@ -6,7 +6,7 @@ part of 'word_quiz_notifier.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$wordQuizNotifierHash() => r'e2cd241955e0d4d64b50a8ed48aa5709b16a5e90';
+String _$wordQuizNotifierHash() => r'b7dde971e89dfc5012abd0be716e1498a0bcf6f5';
 
 /// See also [WordQuizNotifier].
 @ProviderFor(WordQuizNotifier)

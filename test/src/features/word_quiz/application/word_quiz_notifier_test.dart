@@ -1,9 +1,12 @@
+import 'package:drift/native.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:langualio/src/core/local_storage/drift.dart';
 import 'package:langualio/src/core/local_storage/storage_provider.dart';
+import 'package:langualio/src/features/word_quiz/application/word_pool_provider.dart';
 import 'package:langualio/src/features/word_quiz/application/word_quiz_notifier.dart';
 import 'package:langualio/src/features/word_quiz/data/local/asset_word_repository.dart';
-import 'package:langualio/src/features/word_quiz/data/remote/word_quiz_repository.dart';
+import 'package:langualio/src/features/word_quiz/data/quiz_attempt_repository.dart';
 import 'package:langualio/src/features/word_quiz/domain/part_of_speech.dart';
 import 'package:langualio/src/features/word_quiz/domain/quiz_session.dart';
 import 'package:langualio/src/features/word_quiz/domain/word_entry.dart';
@@ -63,7 +66,6 @@ void main() {
 
     /// Helper: manually injects a session state into the notifier.
     void injectSession(QuizSession session) {
-      // Override the provider with a pre-built session
       container = ProviderContainer(
         overrides: [
           wordQuizNotifierProvider.overrideWith(
@@ -73,7 +75,8 @@ void main() {
       );
     }
 
-    test('en→ru: correct answer is selected meaning translation (index 1)', () async {
+    test('en→ru: correct answer is selected meaning translation (index 1)',
+        () async {
       final multiWord = _makeMultiMeaningWord();
       final distractorWords = [
         _makeSingleMeaningWord('cat-id', 'cat', 'кошка'),
@@ -86,20 +89,19 @@ void main() {
         todayWords: allWords,
         quizDay: DateTime.utc(2026, 6, 1),
         languageDirection: LanguageDirection.enToRu,
-        selectedMeaningIndexes: const {'run-id': 1}, // noun: пробежка
+        selectedMeaningIndexes: const {'run-id': 1},
       );
       injectSession(session);
 
-      // Wait for the async build to complete
       await container.read(wordQuizNotifierProvider.future);
       final notifier = container.read(wordQuizNotifierProvider.notifier);
       final options = notifier.generateOptions(multiWord);
 
-      // Correct answer must be 'пробежка' (index 1), not 'бежать' (index 0)
       expect(options, contains('пробежка'));
     });
 
-    test('en→ru: correct answer is selected meaning translation (index 0)', () async {
+    test('en→ru: correct answer is selected meaning translation (index 0)',
+        () async {
       final multiWord = _makeMultiMeaningWord();
       final distractorWords = [
         _makeSingleMeaningWord('cat-id', 'cat', 'кошка'),
@@ -112,7 +114,7 @@ void main() {
         todayWords: allWords,
         quizDay: DateTime.utc(2026, 6, 1),
         languageDirection: LanguageDirection.enToRu,
-        selectedMeaningIndexes: const {'run-id': 0}, // verb: бежать
+        selectedMeaningIndexes: const {'run-id': 0},
       );
       injectSession(session);
 
@@ -147,7 +149,8 @@ void main() {
       expect(options, contains('run'));
     });
 
-    test('defaults to index 0 when word not in selectedMeaningIndexes', () async {
+    test('defaults to index 0 when word not in selectedMeaningIndexes',
+        () async {
       final multiWord = _makeMultiMeaningWord();
       final distractorWords = [
         _makeSingleMeaningWord('cat-id', 'cat', 'кошка'),
@@ -160,7 +163,7 @@ void main() {
         todayWords: allWords,
         quizDay: DateTime.utc(2026, 6, 1),
         languageDirection: LanguageDirection.enToRu,
-        selectedMeaningIndexes: const {}, // empty — should default to 0
+        selectedMeaningIndexes: const {},
       );
       injectSession(session);
 
@@ -172,30 +175,35 @@ void main() {
     });
   });
 
-  group('WordQuizNotifier.build — asset word fallback', () {
+  group('WordQuizNotifier.build — local word pool', () {
     List<WordEntry> makeAssetWords() => [
-      _makeSingleMeaningWord('b1_ability', 'ability', 'способность'),
-      _makeSingleMeaningWord('b1_achieve', 'achieve', 'достигать'),
-      _makeSingleMeaningWord('b1_advantage', 'advantage', 'преимущество'),
-      _makeSingleMeaningWord('b1_afford', 'afford', 'позволить себе'),
-      _makeSingleMeaningWord('b1_agree', 'agree', 'соглашаться'),
-    ];
+          _makeSingleMeaningWord('b1_ability', 'ability', 'способность'),
+          _makeSingleMeaningWord('b1_achieve', 'achieve', 'достигать'),
+          _makeSingleMeaningWord('b1_advantage', 'advantage', 'преимущество'),
+          _makeSingleMeaningWord('b1_afford', 'afford', 'позволить себе'),
+          _makeSingleMeaningWord('b1_agree', 'agree', 'соглашаться'),
+        ];
 
-    test('falls back to asset words when server fetch throws', () async {
+    test('loads words from word pool provider (asset + user words)', () async {
       SharedPreferences.setMockInitialValues({});
       final prefs = await SharedPreferences.getInstance();
       final assetWords = makeAssetWords();
+      final db = AppDatabase(NativeDatabase.memory());
 
       final container = ProviderContainer(
         overrides: [
           sharedPreferencesProvider.overrideWithValue(prefs),
           assetWordsProvider.overrideWith((ref) async => assetWords),
-          wordQuizRepositoryProvider.overrideWithValue(
-            _ThrowingWordQuizRepository(),
+          appDatabaseProvider.overrideWithValue(db),
+          quizAttemptRepositoryProvider.overrideWithValue(
+            _FakeQuizAttemptRepository(),
           ),
         ],
       );
-      addTearDown(container.dispose);
+      addTearDown(() async {
+        container.dispose();
+        await db.close();
+      });
 
       final session = await container.read(wordQuizNotifierProvider.future);
 
@@ -203,35 +211,18 @@ void main() {
       expect(session.todayWords.first.id, 'b1_ability');
     });
 
-    test('merges server and asset words, server overrides by id', () async {
+    test('falls back to empty list when word pool fails', () async {
       SharedPreferences.setMockInitialValues({});
       final prefs = await SharedPreferences.getInstance();
-      final assetWords = makeAssetWords();
-      // Server has one word with same id as asset, one unique
-      final serverWords = [
-        WordEntry(
-          id: 'b1_ability', // overlaps with asset
-          word: 'ability',
-          level: DifficultyLevel.b1,
-          meanings: const [
-            WordMeaning(
-              partOfSpeech: PartOfSpeech.noun,
-              translation: 'способность (обновл.)',
-              exampleEn: 'Updated.',
-              exampleRu: 'Обновлено.',
-            ),
-          ],
-          createdAt: DateTime.utc(2026, 6, 14),
-        ),
-        _makeSingleMeaningWord('server_new', 'brave', 'смелый'),
-      ];
 
       final container = ProviderContainer(
         overrides: [
           sharedPreferencesProvider.overrideWithValue(prefs),
-          assetWordsProvider.overrideWith((ref) async => assetWords),
-          wordQuizRepositoryProvider.overrideWithValue(
-            _FakeWordQuizRepository(serverWords),
+          wordPoolProvider.overrideWith(
+            (ref) async => throw Exception('Pool failed'),
+          ),
+          quizAttemptRepositoryProvider.overrideWithValue(
+            _FakeQuizAttemptRepository(),
           ),
         ],
       );
@@ -239,18 +230,13 @@ void main() {
 
       final session = await container.read(wordQuizNotifierProvider.future);
 
-      // Server words (2) + non-overlapping asset words (4)
-      expect(session.todayWords, hasLength(6));
-
-      // Server version of b1_ability should win
-      final ability = session.todayWords.firstWhere((w) => w.id == 'b1_ability');
-      expect(ability.primaryTranslation, 'способность (обновл.)');
+      expect(session.todayWords, isEmpty);
     });
   });
 
   group('WordQuizNotifier.generateOptions — asset words only', () {
-    test('returns 4 options with asset-style words (sufficient pool)', () async {
-      // 5 asset words with null createdAt
+    test('returns 4 options with asset-style words (sufficient pool)',
+        () async {
       final assetWords = [
         _makeSingleMeaningWord('b1_ability', 'ability', 'способность'),
         _makeSingleMeaningWord('b1_achieve', 'achieve', 'достигать'),
@@ -285,17 +271,11 @@ void main() {
   });
 }
 
-/// Mock repository that always throws (simulates offline/server error).
-class _ThrowingWordQuizRepository implements WordQuizRepository {
+/// Fake attempt repository that returns empty results.
+class _FakeQuizAttemptRepository implements QuizAttemptRepository {
   @override
-  Future<List<WordEntry>> fetchTodaysWords() =>
-      throw Exception('Server unreachable');
-
-  @override
-  List<WordEntry>? getCachedTodaysWords() => null;
-
-  @override
-  Future<List<WordQuizAttempt>> fetchTodayAttempts(LanguageDirection d) async =>
+  Future<List<WordQuizAttempt>> fetchTodayAttempts(
+          LanguageDirection d) async =>
       [];
 
   @override
@@ -306,38 +286,6 @@ class _ThrowingWordQuizRepository implements WordQuizRepository {
     required String wordId,
     required DateTime correctDate,
   }) async {}
-
-  @override
-  Future<List<WordEntry>> fetchAllWords() async => [];
-}
-
-/// Fake repository that returns pre-set server words.
-class _FakeWordQuizRepository implements WordQuizRepository {
-  _FakeWordQuizRepository(this._serverWords);
-
-  final List<WordEntry> _serverWords;
-
-  @override
-  Future<List<WordEntry>> fetchTodaysWords() async => _serverWords;
-
-  @override
-  List<WordEntry>? getCachedTodaysWords() => null;
-
-  @override
-  Future<List<WordQuizAttempt>> fetchTodayAttempts(LanguageDirection d) async =>
-      [];
-
-  @override
-  Future<void> saveAttempt(WordQuizAttempt attempt) async {}
-
-  @override
-  Future<void> updateLearningProgress({
-    required String wordId,
-    required DateTime correctDate,
-  }) async {}
-
-  @override
-  Future<List<WordEntry>> fetchAllWords() async => [];
 }
 
 /// Test-only subclass that skips the async build() and injects state directly.

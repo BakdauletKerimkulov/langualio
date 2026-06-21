@@ -58,5 +58,5 @@ const _$DifficultyLevelEnumMap = {
 
 const _$WordSourceEnumMap = {
   WordSource.asset: 'asset',
-  WordSource.server: 'server',
+  WordSource.user: 'user',
 };

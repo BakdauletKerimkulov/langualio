@@ -38,11 +38,11 @@ Remove the remote word-fetching layer (`WordQuizRepository`), replace with a loc
 ### Phase 2 — Cleanup: delete remote repo, stub, and SharedPrefs cache keys
 **Goal:** Remove dead code and SharedPreferences caching keys related to remote words.
 
-- [ ] Delete `lib/src/features/word_quiz/data/remote/word_quiz_repository.dart` + `.g.dart`
-- [ ] Delete `lib/src/features/word_quiz/data/local/local_word_quiz_repo.dart` + `.g.dart`
-- [ ] Remove SharedPreferences keys `word_quiz_today_words`, `word_quiz_today_day`, `word_quiz_pending_attempts` usage from codebase (verify no remaining references)
-- [ ] Fix all broken imports across codebase (grep for deleted files)
-- [ ] Verify: `dart run build_runner build --delete-conflicting-outputs && dart analyze && flutter test`
+- [x] Delete `lib/src/features/word_quiz/data/remote/word_quiz_repository.dart` + `.g.dart`
+- [x] Delete `lib/src/features/word_quiz/data/local/local_word_quiz_repo.dart` + `.g.dart`
+- [x] Remove SharedPreferences keys `word_quiz_today_words`, `word_quiz_today_day`, `word_quiz_pending_attempts` usage from codebase (verify no remaining references)
+- [x] Fix all broken imports across codebase (grep for deleted files)
+- [x] Verify: `dart run build_runner build --delete-conflicting-outputs && dart analyze && flutter test`
 
 ### Phase 3 — Word generation service + AddWordNotifier
 **Goal:** Extract shared word generation logic and build the add-word state machine.
