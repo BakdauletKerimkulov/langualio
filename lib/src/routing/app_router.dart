@@ -11,7 +11,9 @@ import '../features/grammar/presentation/grammar_screen.dart';
 import '../features/word_quiz/presentation/word_quiz_home_screen.dart';
 import '../features/word_quiz/presentation/word_quiz_screen.dart';
 import '../features/word_quiz/presentation/add_word_screen.dart';
+import '../features/admin/presentation/admin_word_list_screen.dart';
 import '../features/profile/presentation/profile_screen.dart';
+import '../features/profile/settings/presentation/settings_screen.dart';
 import 'scaffold_with_nav.dart';
 
 part 'app_router.g.dart';
@@ -26,6 +28,8 @@ enum AppRoute {
   chat,
   quiz,
   addWord,
+  admin,
+  settings,
 }
 
 @riverpod
@@ -112,6 +116,20 @@ GoRouter goRouter(Ref ref) {
         name: AppRoute.addWord.name,
         pageBuilder: (context, state) => const MaterialPage(
           child: AddWordScreen(),
+        ),
+      ),
+      GoRoute(
+        path: '/admin',
+        name: AppRoute.admin.name,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: AdminWordListScreen(),
+        ),
+      ),
+      GoRoute(
+        path: '/settings',
+        name: AppRoute.settings.name,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: SettingsScreen(),
         ),
       ),
     ],

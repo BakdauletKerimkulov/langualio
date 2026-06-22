@@ -82,7 +82,7 @@ class _ProfileBody extends StatelessWidget {
       child: Column(
         children: [
           ProfileHeader(
-            nickname: profile.nickname,
+            name: profile.nickname,
             level: profile.level,
             title: profile.title,
             avatarUrl: profile.avatarUrl,

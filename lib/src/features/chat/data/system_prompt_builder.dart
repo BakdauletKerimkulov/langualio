@@ -11,7 +11,7 @@ class SystemPromptBuilder {
     buffer.writeln('Your role is to help the user learn English in a friendly and encouraging way.');
     buffer.writeln();
     buffer.writeln('## User Profile');
-    buffer.writeln('- Name: ${progress.name}');
+    buffer.writeln('- Name: ${progress.nickname}');
     buffer.writeln('- Level: ${progress.level}');
     buffer.writeln('- Current XP: ${progress.currentXp}/${progress.targetXp}');
     buffer.writeln('- Streak: ${progress.streakDays} days');

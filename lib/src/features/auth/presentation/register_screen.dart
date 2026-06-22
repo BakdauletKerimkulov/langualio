@@ -57,7 +57,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
 
     ref
         .read(authNotifierProvider.notifier)
-        .signUp(email: email, password: password, nickname: nickname);
+        .signUp(email: email, password: password, name: nickname);
   }
 
   @override
