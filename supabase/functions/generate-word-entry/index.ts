@@ -8,6 +8,7 @@ const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 const CLAUDE_API_URL = "https://api.anthropic.com/v1/messages";
 const CLAUDE_MODEL = "claude-sonnet-4-20250514";
 const MAX_TOKENS = 2048;
+const DAILY_GENERATION_LIMIT = 10;
 
 const SYSTEM_PROMPT = `You are a linguistic expert that generates structured vocabulary entries for an English learning app.
 
@@ -60,9 +61,26 @@ serve(async (req) => {
       return jsonResponse({ error: "Unauthorized" }, 401);
     }
 
-    // 2. Check admin role
-    if (user.app_metadata?.role !== "admin") {
-      return jsonResponse({ error: "Forbidden" }, 403);
+    // 2. Check per-user rate limit (10 generations/day)
+    const today = new Date().toISOString().split("T")[0];
+    const { data: usageData } = await supabase
+      .from("user_daily_usage")
+      .select("generation_count")
+      .eq("user_id", user.id)
+      .eq("date", today)
+      .single();
+
+    const currentGenerations = usageData?.generation_count ?? 0;
+
+    if (currentGenerations >= DAILY_GENERATION_LIMIT) {
+      return jsonResponse(
+        {
+          error: "Daily generation limit reached",
+          remaining: 0,
+          limit: DAILY_GENERATION_LIMIT,
+        },
+        429
+      );
     }
 
     // 3. Parse and validate request
@@ -133,7 +151,17 @@ serve(async (req) => {
       );
     }
 
-    // 8. Return the generated entry
+    // 8. Increment generation count
+    await supabase.from("user_daily_usage").upsert(
+      {
+        user_id: user.id,
+        date: today,
+        generation_count: currentGenerations + 1,
+      },
+      { onConflict: "user_id,date" }
+    );
+
+    // 9. Return the generated entry
     return jsonResponse({ data: wordEntry }, 200);
   } catch (error) {
     console.error("Edge function error:", error);

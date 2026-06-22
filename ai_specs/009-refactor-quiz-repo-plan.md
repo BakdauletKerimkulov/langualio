@@ -64,9 +64,9 @@ Remove the remote word-fetching layer (`WordQuizRepository`), replace with a loc
 ### Phase 5 — Edge Function: remove admin check + add rate limiting
 **Goal:** Any authenticated user can generate words, with 10/day rate limit.
 
-- [ ] `supabase/functions/generate-word-entry/index.ts` — remove admin role check (keep auth check). Add per-user rate limiting: query `user_daily_usage` for today's `generation_count`, return 429 if ≥ 10, increment after successful generation
-- [ ] `lib/src/features/word_quiz/application/add_word_notifier.dart` — handle 401, 429, 502 error codes from Edge Function with appropriate user-facing error messages
-- [ ] Verify: deploy Edge Function to staging, manual test with non-admin user
+- [x] `supabase/functions/generate-word-entry/index.ts` — remove admin role check (keep auth check). Add per-user rate limiting: query `user_daily_usage` for today's `generation_count`, return 429 if ≥ 10, increment after successful generation
+- [x] `lib/src/features/word_quiz/application/add_word_notifier.dart` — handle 401, 429, 502 error codes from Edge Function with appropriate user-facing error messages (already implemented in Phase 3)
+- [x] Verify: deploy Edge Function to staging, manual test with non-admin user
 
 ### Phase 6 — Nice-to-haves (optional)
 **Goal:** User word count display and visual distinction in quiz.
