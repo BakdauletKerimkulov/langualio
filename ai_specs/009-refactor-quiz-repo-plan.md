@@ -47,11 +47,11 @@ Remove the remote word-fetching layer (`WordQuizRepository`), replace with a loc
 ### Phase 3 — Word generation service + AddWordNotifier
 **Goal:** Extract shared word generation logic and build the add-word state machine.
 
-- [ ] `lib/src/features/word_quiz/data/word_generation_service.dart` — extract `generateWordEntry(String word)` from `AdminRepository` into a shared service. Inject `SupabaseClient`. Both `AdminRepository` and `AddWordNotifier` will consume this
-- [ ] `lib/src/features/admin/data/admin_repository.dart` — refactor to delegate to `WordGenerationService` instead of inline Edge Function call
-- [ ] `lib/src/features/word_quiz/application/add_word_notifier.dart` — create `AddWordNotifier` (auto-dispose `@riverpod` class, Pattern 2). `AddWordState` with: `WordEntry? preview`, `bool isGenerating`, `bool isSaving`, `String? error`, `bool saved`. Methods: `generate(word)` calls `WordGenerationService`, checks duplicates in both Drift and asset pool; `save()` inserts into Drift via `UserWordRepository`
-- [ ] TDD: `AddWordNotifier` state transitions: initial → generating → preview → saving → saved; duplicate word detected → error state; generation failure → error with retry possible
-- [ ] Verify: `dart run build_runner build --delete-conflicting-outputs && dart analyze && flutter test`
+- [x] `lib/src/features/word_quiz/data/word_generation_service.dart` — extract `generateWordEntry(String word)` from `AdminRepository` into a shared service. Inject `SupabaseClient`. Both `AdminRepository` and `AddWordNotifier` will consume this
+- [x] `lib/src/features/admin/data/admin_repository.dart` — refactor to delegate to `WordGenerationService` instead of inline Edge Function call
+- [x] `lib/src/features/word_quiz/application/add_word_notifier.dart` — create `AddWordNotifier` (auto-dispose `@riverpod` class, Pattern 2). `AddWordState` with: `WordEntry? preview`, `bool isGenerating`, `bool isSaving`, `String? error`, `bool saved`. Methods: `generate(word)` calls `WordGenerationService`, checks duplicates in both Drift and asset pool; `save()` inserts into Drift via `UserWordRepository`
+- [x] TDD: `AddWordNotifier` state transitions: initial → generating → preview → saving → saved; duplicate word detected → error state; generation failure → error with retry possible
+- [x] Verify: `dart run build_runner build --delete-conflicting-outputs && dart analyze && flutter test`
 
 ### Phase 4 — Add-word screen + navigation
 **Goal:** User-facing UI for adding custom words, wired into quiz home.

@@ -1,27 +1,28 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'admin_repository.dart';
+part of 'word_generation_service.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$adminRepositoryHash() => r'665ba27fb4e0a9eb19b1dc8e4d0259e14d1918ce';
+String _$wordGenerationServiceHash() =>
+    r'88cc7011b87667fd3ddf0adb6bc94a877c7866e6';
 
-/// See also [adminRepository].
-@ProviderFor(adminRepository)
-final adminRepositoryProvider = Provider<AdminRepository>.internal(
-  adminRepository,
-  name: r'adminRepositoryProvider',
+/// See also [wordGenerationService].
+@ProviderFor(wordGenerationService)
+final wordGenerationServiceProvider = Provider<WordGenerationService>.internal(
+  wordGenerationService,
+  name: r'wordGenerationServiceProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
-      : _$adminRepositoryHash,
+      : _$wordGenerationServiceHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
-typedef AdminRepositoryRef = ProviderRef<AdminRepository>;
+typedef WordGenerationServiceRef = ProviderRef<WordGenerationService>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
