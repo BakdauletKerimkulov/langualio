@@ -56,10 +56,10 @@ Remove the remote word-fetching layer (`WordQuizRepository`), replace with a loc
 ### Phase 4 — Add-word screen + navigation
 **Goal:** User-facing UI for adding custom words, wired into quiz home.
 
-- [ ] `lib/src/routing/app_router.dart` — add `AppRoute.addWord` enum value, route `/practice/add-word` nested or standalone, builder for `AddWordScreen`
-- [ ] `lib/src/features/word_quiz/presentation/add_word_screen.dart` — text field, "Generate" button, loading state, preview card (word, IPA, level, meanings with translations/examples), "Save" button. Error states with retry. All strings `.hardcoded`
-- [ ] `lib/src/features/word_quiz/presentation/word_quiz_home_screen.dart` — add "Add word" button/FAB navigating to `AppRoute.addWord`
-- [ ] Verify: `dart run build_runner build --delete-conflicting-outputs && dart analyze && flutter test`
+- [x] `lib/src/routing/app_router.dart` — add `AppRoute.addWord` enum value, route `/practice/add-word` nested or standalone, builder for `AddWordScreen`
+- [x] `lib/src/features/word_quiz/presentation/add_word_screen.dart` — text field, "Generate" button, loading state, preview card (word, IPA, level, meanings with translations/examples), "Save" button. Error states with retry. All strings `.hardcoded`
+- [x] `lib/src/features/word_quiz/presentation/word_quiz_home_screen.dart` — add "Add word" button/FAB navigating to `AppRoute.addWord`
+- [x] Verify: `dart run build_runner build --delete-conflicting-outputs && dart analyze && flutter test`
 
 ### Phase 5 — Edge Function: remove admin check + add rate limiting
 **Goal:** Any authenticated user can generate words, with 10/day rate limit.

@@ -10,12 +10,23 @@ import '../features/home/presentation/home_screen.dart';
 import '../features/grammar/presentation/grammar_screen.dart';
 import '../features/word_quiz/presentation/word_quiz_home_screen.dart';
 import '../features/word_quiz/presentation/word_quiz_screen.dart';
+import '../features/word_quiz/presentation/add_word_screen.dart';
 import '../features/profile/presentation/profile_screen.dart';
 import 'scaffold_with_nav.dart';
 
 part 'app_router.g.dart';
 
-enum AppRoute { login, register, home, grammar, practice, profile, chat, quiz }
+enum AppRoute {
+  login,
+  register,
+  home,
+  grammar,
+  practice,
+  profile,
+  chat,
+  quiz,
+  addWord,
+}
 
 @riverpod
 GoRouter goRouter(Ref ref) {
@@ -94,6 +105,13 @@ GoRouter goRouter(Ref ref) {
         name: AppRoute.quiz.name,
         pageBuilder: (context, state) => const MaterialPage(
           child: WordQuizScreen(),
+        ),
+      ),
+      GoRoute(
+        path: '/practice/add-word',
+        name: AppRoute.addWord.name,
+        pageBuilder: (context, state) => const MaterialPage(
+          child: AddWordScreen(),
         ),
       ),
     ],

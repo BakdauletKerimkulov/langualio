@@ -126,6 +126,20 @@ class _QuizHomeContent extends ConsumerWidget {
             progress: progress,
           ),
           const Spacer(),
+          OutlinedButton.icon(
+            onPressed: () => context.pushNamed(AppRoute.addWord.name),
+            icon: const Icon(Icons.add),
+            label: const Text('Добавить слово'),
+            style: OutlinedButton.styleFrom(
+              foregroundColor: AppColors.primary,
+              side: const BorderSide(color: AppColors.primary),
+              padding: const EdgeInsets.symmetric(vertical: Sizes.p12),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(Sizes.p16),
+              ),
+            ),
+          ),
+          gapH12,
           FilledButton(
             onPressed: () => context.pushNamed(AppRoute.quiz.name),
             style: FilledButton.styleFrom(
