@@ -71,9 +71,9 @@ Remove the remote word-fetching layer (`WordQuizRepository`), replace with a loc
 ### Phase 6 — Nice-to-haves (optional)
 **Goal:** User word count display and visual distinction in quiz.
 
-- [ ] `lib/src/features/word_quiz/presentation/word_quiz_home_screen.dart` — show user word count (N1: "12 custom words")
-- [ ] Quiz word card — visual badge/accent for `WordSource.user` words (N2)
-- [ ] Verify: `dart run build_runner build --delete-conflicting-outputs && dart analyze && flutter test`
+- [x] `lib/src/features/word_quiz/presentation/word_quiz_home_screen.dart` — show user word count (N1: "12 custom words")
+- [x] Quiz word card — visual badge/accent for `WordSource.user` words (N2)
+- [x] Verify: `dart run build_runner build --delete-conflicting-outputs && dart analyze && flutter test`
 
 ## Data layer changes
 - No new Drift migrations — `WordEntriesTable` already exists with all required columns

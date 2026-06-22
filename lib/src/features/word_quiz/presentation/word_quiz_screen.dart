@@ -154,6 +154,7 @@ class _WordQuizScreenState extends ConsumerState<WordQuizScreen> {
 
             return _QuizPlayContent(
               questionWord: questionWord,
+              isUserWord: word.source == WordSource.user,
               answeredCount: session.answeredCount,
               totalWords: session.totalWords,
               options: _options,
@@ -173,6 +174,7 @@ class _WordQuizScreenState extends ConsumerState<WordQuizScreen> {
 class _QuizPlayContent extends StatelessWidget {
   const _QuizPlayContent({
     required this.questionWord,
+    required this.isUserWord,
     required this.answeredCount,
     required this.totalWords,
     required this.options,
@@ -182,6 +184,7 @@ class _QuizPlayContent extends StatelessWidget {
   });
 
   final String questionWord;
+  final bool isUserWord;
   final int answeredCount;
   final int totalWords;
   final List<String> options;
@@ -242,13 +245,40 @@ class _QuizPlayContent extends StatelessWidget {
 
           // Question word
           Center(
-            child: Text(
-              questionWord,
-              style: Theme.of(context).textTheme.displaySmall?.copyWith(
-                fontWeight: FontWeight.w800,
-                color: AppColors.textPrimary,
-              ),
-              textAlign: TextAlign.center,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  questionWord,
+                  style: Theme.of(context).textTheme.displaySmall?.copyWith(
+                    fontWeight: FontWeight.w800,
+                    color: AppColors.textPrimary,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                if (isUserWord) ...[
+                  gapH8,
+                  Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: Sizes.p12,
+                      vertical: Sizes.p4,
+                    ),
+                    decoration: BoxDecoration(
+                      color: AppColors.primaryLight,
+                      borderRadius: BorderRadius.circular(Sizes.p12),
+                      border: Border.all(color: AppColors.primaryBorder),
+                    ),
+                    child: Text(
+                      'Моё слово',
+                      style:
+                          Theme.of(context).textTheme.labelSmall?.copyWith(
+                        color: AppColors.primary,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+                ],
+              ],
             ),
           ),
           const Spacer(flex: 3),
