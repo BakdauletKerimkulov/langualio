@@ -1,0 +1,2401 @@
+[
+  {
+    "id": "b1_by_accident",
+    "word": "by accident",
+    "ipa": "/baɪ ˈæksɪdənt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "phrase",
+        "translation": "случайно",
+        "alternative_translations": ["по случайности", "ненароком"],
+        "definition_en": "Without intention; happening as a result of chance",
+        "definition_ru": "Без намерения; в результате случайного стечения обстоятельств",
+        "example_en": "I deleted the file by accident.",
+        "example_ru": "Я случайно удалил файл."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_by_hand",
+    "word": "by hand",
+    "ipa": "/baɪ hænd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "phrase",
+        "translation": "вручную",
+        "alternative_translations": ["руками", "ручным способом"],
+        "definition_en": "Done using the hands rather than a machine",
+        "definition_ru": "Сделанный руками, а не с помощью машины",
+        "example_en": "This sweater was knitted by hand.",
+        "example_ru": "Этот свитер был связан вручную."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_by_mistake",
+    "word": "by mistake",
+    "ipa": "/baɪ mɪˈsteɪk/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "phrase",
+        "translation": "по ошибке",
+        "alternative_translations": ["ошибочно", "случайно"],
+        "definition_en": "As a result of an error; not intentionally",
+        "definition_ru": "В результате ошибки; не намеренно",
+        "example_en": "I took your bag by mistake.",
+        "example_ru": "Я взял твою сумку по ошибке."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_by_name",
+    "word": "by name",
+    "ipa": "/baɪ neɪm/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "phrase",
+        "translation": "по имени",
+        "alternative_translations": ["поимённо"],
+        "definition_en": "Using a person's name to identify or address them",
+        "definition_ru": "Используя чьё-либо имя для идентификации или обращения",
+        "example_en": "The teacher knows all her students by name.",
+        "example_ru": "Учительница знает всех своих учеников по имени."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_bye",
+    "word": "bye",
+    "ipa": "/baɪ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "interjection",
+        "translation": "пока",
+        "alternative_translations": ["до свидания", "прощай"],
+        "definition_en": "Used to say goodbye to someone",
+        "definition_ru": "Используется для прощания с кем-либо",
+        "example_en": "Bye! See you tomorrow.",
+        "example_ru": "Пока! Увидимся завтра."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_cab",
+    "word": "cab",
+    "ipa": "/kæb/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "такси",
+        "alternative_translations": ["кэб", "наёмный экипаж"],
+        "definition_en": "A taxi; a vehicle for hire with a driver",
+        "definition_ru": "Такси; транспортное средство с водителем, предоставляемое за плату",
+        "example_en": "We took a cab to the airport.",
+        "example_ru": "Мы взяли такси до аэропорта."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_cabbage",
+    "word": "cabbage",
+    "ipa": "/ˈkæbɪdʒ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "капуста",
+        "alternative_translations": [],
+        "definition_en": "A round vegetable with thick green or purple leaves",
+        "definition_ru": "Круглый овощ с плотными зелёными или фиолетовыми листьями",
+        "example_en": "She made a salad with cabbage and carrots.",
+        "example_ru": "Она приготовила салат из капусты и моркови."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_cabin",
+    "word": "cabin",
+    "ipa": "/ˈkæbɪn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "каюта",
+        "alternative_translations": ["хижина", "кабина"],
+        "definition_en": "A small room on a ship or aircraft; a small simple house in the countryside",
+        "definition_ru": "Небольшая комната на корабле или самолёте; небольшой простой дом в сельской местности",
+        "example_en": "We stayed in a log cabin in the mountains.",
+        "example_ru": "Мы остановились в бревенчатой хижине в горах."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_cabinet",
+    "word": "cabinet",
+    "ipa": "/ˈkæbɪnɪt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "шкаф",
+        "alternative_translations": ["кабинет (министров)", "витрина"],
+        "definition_en": "A piece of furniture with shelves or drawers for storing things; a group of senior government ministers",
+        "definition_ru": "Предмет мебели с полками или ящиками для хранения вещей; группа старших министров правительства",
+        "example_en": "The medicine cabinet is in the bathroom.",
+        "example_ru": "Аптечный шкаф находится в ванной."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_cable",
+    "word": "cable",
+    "ipa": "/ˈkeɪbl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "кабель",
+        "alternative_translations": ["провод", "трос"],
+        "definition_en": "A thick wire or bundle of wires used for electricity or data transmission",
+        "definition_ru": "Толстый провод или пучок проводов, используемый для передачи электричества или данных",
+        "example_en": "I need a cable to connect my laptop to the TV.",
+        "example_ru": "Мне нужен кабель, чтобы подключить ноутбук к телевизору."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_cafeteria",
+    "word": "cafeteria",
+    "ipa": "/ˌkæfəˈtɪəriə/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "кафетерий",
+        "alternative_translations": ["столовая"],
+        "definition_en": "A restaurant or dining room where people serve themselves from a counter",
+        "definition_ru": "Ресторан или столовая, где люди сами обслуживают себя у стойки",
+        "example_en": "We had lunch in the school cafeteria.",
+        "example_ru": "Мы пообедали в школьной столовой."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_cafe_cafe",
+    "word": "café/cafe",
+    "ipa": "/ˈkæfeɪ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "кафе",
+        "alternative_translations": ["кофейня"],
+        "definition_en": "A small restaurant where you can buy drinks and light meals",
+        "definition_ru": "Небольшое заведение, где можно купить напитки и лёгкие закуски",
+        "example_en": "Let's meet at the café on the corner.",
+        "example_ru": "Давай встретимся в кафе на углу."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_cake",
+    "word": "cake",
+    "ipa": "/keɪk/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "торт",
+        "alternative_translations": ["пирог", "пирожное"],
+        "definition_en": "A sweet baked food made from flour, sugar, eggs, and butter",
+        "definition_ru": "Сладкая выпечка из муки, сахара, яиц и масла",
+        "example_en": "She baked a chocolate cake for my birthday.",
+        "example_ru": "Она испекла шоколадный торт на мой день рождения."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_calculator",
+    "word": "calculator",
+    "ipa": "/ˈkælkjʊleɪtə/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "калькулятор",
+        "alternative_translations": [],
+        "definition_en": "A small electronic device used for doing mathematical calculations",
+        "definition_ru": "Небольшое электронное устройство для выполнения математических вычислений",
+        "example_en": "Can I borrow your calculator for the maths test?",
+        "example_ru": "Можно взять твой калькулятор для контрольной по математике?"
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_calendar",
+    "word": "calendar",
+    "ipa": "/ˈkælɪndə/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "календарь",
+        "alternative_translations": [],
+        "definition_en": "A chart or system that shows the days, weeks, and months of the year",
+        "definition_ru": "Таблица или система, отображающая дни, недели и месяцы года",
+        "example_en": "I marked the meeting on my calendar.",
+        "example_ru": "Я отметил встречу в своём календаре."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_calf",
+    "word": "calf",
+    "ipa": "/kɑːf/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "телёнок",
+        "alternative_translations": ["икра (ноги)"],
+        "definition_en": "A young cow or bull; also the back part of the lower leg",
+        "definition_ru": "Молодая корова или бык; также задняя часть нижней ноги",
+        "example_en": "The calf stayed close to its mother.",
+        "example_ru": "Телёнок держался рядом со своей матерью."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_call",
+    "word": "call",
+    "ipa": "/kɔːl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "звонок",
+        "alternative_translations": ["вызов", "крик"],
+        "definition_en": "An act of telephoning someone; a shout or cry",
+        "definition_ru": "Акт звонка по телефону; крик или возглас",
+        "example_en": "I got a call from my sister this morning.",
+        "example_ru": "Сегодня утром мне позвонила сестра."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "звонить",
+        "alternative_translations": ["называть", "звать", "кричать"],
+        "definition_en": "To telephone someone; to give a name to someone or something; to shout",
+        "definition_ru": "Позвонить кому-либо по телефону; дать кому-либо или чему-либо имя; кричать",
+        "example_en": "Please call me when you arrive.",
+        "example_ru": "Пожалуйста, позвони мне, когда приедешь."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_call_for",
+    "word": "call for",
+    "ipa": "/kɔːl fɔː/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "phrase",
+        "translation": "требовать",
+        "alternative_translations": ["заходить за (кем-то)", "призывать к"],
+        "definition_en": "To require or demand something; to collect someone from a place",
+        "definition_ru": "Требовать чего-либо; заходить за кем-либо в какое-либо место",
+        "example_en": "The situation calls for immediate action.",
+        "example_ru": "Ситуация требует немедленных действий."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_call_in",
+    "word": "call in",
+    "ipa": "/kɔːl ɪn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "phrase",
+        "translation": "заходить",
+        "alternative_translations": ["звонить (на работу)", "вызывать"],
+        "definition_en": "To make a short visit; to telephone a place such as a workplace",
+        "definition_ru": "Ненадолго зайти; позвонить в какое-либо место, например на работу",
+        "example_en": "She called in sick because she had a fever.",
+        "example_ru": "Она позвонила на работу и сообщила о болезни, так как у неё была температура."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_calm",
+    "word": "calm",
+    "ipa": "/kɑːm/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "спокойный",
+        "alternative_translations": ["тихий", "безмятежный"],
+        "definition_en": "Not showing or feeling nervousness, anger, or other emotions; not windy",
+        "definition_ru": "Не проявляющий и не испытывающий нервозности, злости или других эмоций; безветренный",
+        "example_en": "Try to stay calm during the interview.",
+        "example_ru": "Постарайся оставаться спокойным во время интервью."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_camel",
+    "word": "camel",
+    "ipa": "/ˈkæməl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "верблюд",
+        "alternative_translations": [],
+        "definition_en": "A large animal with one or two humps on its back, used for transport in deserts",
+        "definition_ru": "Крупное животное с одним или двумя горбами на спине, используемое для перевозок в пустынях",
+        "example_en": "We rode a camel across the desert.",
+        "example_ru": "Мы ехали на верблюде через пустыню."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_camera",
+    "word": "camera",
+    "ipa": "/ˈkæmərə/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "фотоаппарат",
+        "alternative_translations": ["камера"],
+        "definition_en": "A device for taking photographs or recording videos",
+        "definition_ru": "Устройство для фотографирования или записи видео",
+        "example_en": "She took a photo with her new camera.",
+        "example_ru": "Она сфотографировала своей новой камерой."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_camp",
+    "word": "camp",
+    "ipa": "/kæmp/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "лагерь",
+        "alternative_translations": ["стоянка", "палаточный городок"],
+        "definition_en": "A place where people stay in tents or temporary shelters, especially for holidays",
+        "definition_ru": "Место, где люди живут в палатках или временных укрытиях, особенно во время отдыха",
+        "example_en": "The summer camp was by a beautiful lake.",
+        "example_ru": "Летний лагерь находился рядом с красивым озером."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "ночевать в палатке",
+        "alternative_translations": ["разбивать лагерь", "жить в палатке"],
+        "definition_en": "To stay in a tent or outdoor shelter for a period of time",
+        "definition_ru": "Жить в палатке или под открытым небом в течение некоторого времени",
+        "example_en": "We camped in the forest for three nights.",
+        "example_ru": "Мы ночевали в лесу три ночи."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_camping",
+    "word": "camping",
+    "ipa": "/ˈkæmpɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "кемпинг",
+        "alternative_translations": ["туризм с палаткой"],
+        "definition_en": "The activity of spending a holiday living in tents outdoors",
+        "definition_ru": "Деятельность, связанная с проведением отпуска в палатках на природе",
+        "example_en": "We love going camping in the summer.",
+        "example_ru": "Мы любим ходить в поход летом."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_campsite",
+    "word": "campsite",
+    "ipa": "/ˈkæmpsaɪt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "место для кемпинга",
+        "alternative_translations": ["кемпинг", "стоянка"],
+        "definition_en": "A place where people can stay in tents, usually with basic facilities",
+        "definition_ru": "Место, где люди могут жить в палатках, обычно с базовыми удобствами",
+        "example_en": "The campsite had showers and toilets.",
+        "example_ru": "На кемпинге были душевые и туалеты."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_can",
+    "word": "can",
+    "ipa": "/kæn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "банка",
+        "alternative_translations": ["консервная банка", "канистра"],
+        "definition_en": "A metal container in which food or drink is preserved",
+        "definition_ru": "Металлический контейнер, в котором хранятся еда или напитки",
+        "example_en": "I opened a can of tomatoes.",
+        "example_ru": "Я открыл банку томатов."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "мочь",
+        "alternative_translations": ["уметь", "иметь возможность"],
+        "definition_en": "To be able to; to have the ability or permission to do something",
+        "definition_ru": "Быть в состоянии; иметь возможность или разрешение что-либо делать",
+        "example_en": "She can speak three languages.",
+        "example_ru": "Она умеет говорить на трёх языках."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_canal",
+    "word": "canal",
+    "ipa": "/kəˈnæl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "канал",
+        "alternative_translations": ["водный канал"],
+        "definition_en": "An artificial waterway built for boats or irrigation",
+        "definition_ru": "Искусственный водный путь, созданный для судоходства или орошения",
+        "example_en": "We took a boat trip along the canal.",
+        "example_ru": "Мы прокатились на лодке по каналу."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_cancel",
+    "word": "cancel",
+    "ipa": "/ˈkænsəl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "отменять",
+        "alternative_translations": ["аннулировать"],
+        "definition_en": "To decide that something planned will not happen",
+        "definition_ru": "Решить, что запланированное событие не состоится",
+        "example_en": "The concert was cancelled due to bad weather.",
+        "example_ru": "Концерт был отменён из-за плохой погоды."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_candidate",
+    "word": "candidate",
+    "ipa": "/ˈkændɪdət/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "кандидат",
+        "alternative_translations": ["претендент", "соискатель"],
+        "definition_en": "A person who applies for a job or is nominated for an election",
+        "definition_ru": "Человек, претендующий на должность или выдвинутый на выборах",
+        "example_en": "There were five candidates for the position.",
+        "example_ru": "На эту должность было пять кандидатов."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_candle",
+    "word": "candle",
+    "ipa": "/ˈkændl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "свеча",
+        "alternative_translations": [],
+        "definition_en": "A stick of wax with a wick through the middle that is lit to give light",
+        "definition_ru": "Восковой цилиндр с фитилём внутри, который поджигают для освещения",
+        "example_en": "She lit a candle when the electricity went out.",
+        "example_ru": "Она зажгла свечу, когда отключили электричество."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_candy",
+    "word": "candy",
+    "ipa": "/ˈkændi/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "конфета",
+        "alternative_translations": ["сладость", "леденец"],
+        "definition_en": "A sweet food made with sugar; sweets",
+        "definition_ru": "Сладкая еда из сахара; конфеты",
+        "example_en": "The children asked for candy on Halloween.",
+        "example_ru": "Дети просили конфеты на Хэллоуин."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_canteen",
+    "word": "canteen",
+    "ipa": "/kænˈtiːn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "столовая",
+        "alternative_translations": ["буфет", "фляга"],
+        "definition_en": "A restaurant in a workplace, school, or institution where employees or students eat",
+        "definition_ru": "Столовая на рабочем месте, в школе или учреждении, где едят сотрудники или учащиеся",
+        "example_en": "I usually have lunch in the office canteen.",
+        "example_ru": "Обычно я обедаю в офисной столовой."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_cap",
+    "word": "cap",
+    "ipa": "/kæp/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "кепка",
+        "alternative_translations": ["шапка", "крышка", "колпачок"],
+        "definition_en": "A flat hat, often with a peak; a lid or cover for a bottle or pen",
+        "definition_ru": "Плоская шапка, часто с козырьком; крышка или колпачок для бутылки или ручки",
+        "example_en": "He wore a baseball cap to protect his head from the sun.",
+        "example_ru": "Он надел бейсболку, чтобы защитить голову от солнца."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_capital",
+    "word": "capital",
+    "ipa": "/ˈkæpɪtl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "главный",
+        "alternative_translations": ["столичный", "заглавный"],
+        "definition_en": "Most important; relating to a capital city; written in the form of a large letter",
+        "definition_ru": "Наиболее важный; относящийся к столице; написанный в форме большой буквы",
+        "example_en": "Write your name in capital letters.",
+        "example_ru": "Напишите своё имя заглавными буквами."
+      },
+      {
+        "part_of_speech": "noun",
+        "translation": "столица",
+        "alternative_translations": ["капитал", "заглавная буква"],
+        "definition_en": "The city that is the centre of government of a country; money used to start a business",
+        "definition_ru": "Город, являющийся центром правительства страны; деньги, используемые для открытия бизнеса",
+        "example_en": "Paris is the capital of France.",
+        "example_ru": "Париж — столица Франции."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_captain",
+    "word": "captain",
+    "ipa": "/ˈkæptɪn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "капитан",
+        "alternative_translations": ["командир", "вожак"],
+        "definition_en": "The person in charge of a ship, aircraft, or sports team",
+        "definition_ru": "Человек, командующий кораблём, самолётом или спортивной командой",
+        "example_en": "The captain welcomed passengers aboard the plane.",
+        "example_ru": "Капитан приветствовал пассажиров на борту самолёта."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_car",
+    "word": "car",
+    "ipa": "/kɑː/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "автомобиль",
+        "alternative_translations": ["машина", "вагон"],
+        "definition_en": "A road vehicle with an engine and typically four wheels, used for transport",
+        "definition_ru": "Дорожное транспортное средство с двигателем и обычно четырьмя колёсами, используемое для перевозки",
+        "example_en": "We drove to the beach in my dad's car.",
+        "example_ru": "Мы поехали на пляж на папиной машине."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_car_park",
+    "word": "car park",
+    "ipa": "/ˈkɑː pɑːk/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "автостоянка",
+        "alternative_translations": ["парковка"],
+        "definition_en": "An area or building where vehicles can be left temporarily",
+        "definition_ru": "Территория или здание, где транспортные средства можно оставить на время",
+        "example_en": "The car park near the shopping centre is always full.",
+        "example_ru": "Парковка рядом с торговым центром всегда полна."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_card",
+    "word": "card",
+    "ipa": "/kɑːd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "карточка",
+        "alternative_translations": ["открытка", "карта", "визитка"],
+        "definition_en": "A small piece of stiff paper used for writing messages or for identification; a playing card",
+        "definition_ru": "Небольшой кусочек плотной бумаги для написания сообщений или идентификации; игральная карта",
+        "example_en": "I sent her a birthday card.",
+        "example_ru": "Я отправил ей открытку с днём рождения."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_cardboard",
+    "word": "cardboard",
+    "ipa": "/ˈkɑːdbɔːd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "картонный",
+        "alternative_translations": [],
+        "definition_en": "Made of cardboard; thin or lacking depth",
+        "definition_ru": "Сделанный из картона; тонкий или лишённый глубины",
+        "example_en": "He built a cardboard model of the castle.",
+        "example_ru": "Он построил картонную модель замка."
+      },
+      {
+        "part_of_speech": "noun",
+        "translation": "картон",
+        "alternative_translations": ["гофрокартон"],
+        "definition_en": "Stiff thick paper used for making boxes and packaging",
+        "definition_ru": "Плотная толстая бумага, используемая для изготовления коробок и упаковки",
+        "example_en": "The books were packed in cardboard boxes.",
+        "example_ru": "Книги были упакованы в картонные коробки."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_care",
+    "word": "care",
+    "ipa": "/keə/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "забота",
+        "alternative_translations": ["уход", "внимание", "осторожность"],
+        "definition_en": "The process of looking after someone or something; attention and caution",
+        "definition_ru": "Процесс ухода за кем-либо или чем-либо; внимание и осторожность",
+        "example_en": "Handle the glass with care.",
+        "example_ru": "Обращайся со стеклом осторожно."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "заботиться",
+        "alternative_translations": ["беспокоиться", "переживать"],
+        "definition_en": "To feel concern or interest about someone or something",
+        "definition_ru": "Испытывать беспокойство или интерес к кому-либо или чему-либо",
+        "example_en": "She really cares about her friends.",
+        "example_ru": "Она действительно заботится о своих друзьях."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_career",
+    "word": "career",
+    "ipa": "/kəˈrɪə/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "карьера",
+        "alternative_translations": ["профессиональный путь", "род деятельности"],
+        "definition_en": "The series of jobs that a person has in a particular area of work during their life",
+        "definition_ru": "Ряд должностей, которые человек занимает в определённой сфере деятельности на протяжении жизни",
+        "example_en": "She had a successful career in medicine.",
+        "example_ru": "У неё была успешная карьера в медицине."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_careful",
+    "word": "careful",
+    "ipa": "/ˈkeəfl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "осторожный",
+        "alternative_translations": ["аккуратный", "внимательный"],
+        "definition_en": "Taking care to avoid problems or mistakes; giving attention to detail",
+        "definition_ru": "Принимающий меры предосторожности для избежания проблем или ошибок; внимательный к деталям",
+        "example_en": "Be careful when crossing the road.",
+        "example_ru": "Будь осторожен при переходе дороги."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_carefully",
+    "word": "carefully",
+    "ipa": "/ˈkeəfəli/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adverb",
+        "translation": "осторожно",
+        "alternative_translations": ["аккуратно", "тщательно"],
+        "definition_en": "In a way that gives attention to detail and avoids mistakes or risk",
+        "definition_ru": "Способом, уделяющим внимание деталям и избегающим ошибок или риска",
+        "example_en": "Read the instructions carefully before you start.",
+        "example_ru": "Внимательно прочитайте инструкции перед началом."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_careless",
+    "word": "careless",
+    "ipa": "/ˈkeələs/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "небрежный",
+        "alternative_translations": ["неосторожный", "беспечный"],
+        "definition_en": "Not giving enough attention or thought to what you are doing",
+        "definition_ru": "Не уделяющий достаточного внимания тому, что вы делаете",
+        "example_en": "The accident was caused by a careless driver.",
+        "example_ru": "Авария была вызвана неосторожным водителем."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_carpet",
+    "word": "carpet",
+    "ipa": "/ˈkɑːpɪt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "ковёр",
+        "alternative_translations": ["ковровое покрытие"],
+        "definition_en": "A thick fabric covering for a floor",
+        "definition_ru": "Толстое тканевое покрытие для пола",
+        "example_en": "The living room has a red carpet.",
+        "example_ru": "В гостиной красный ковёр."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_carrot",
+    "word": "carrot",
+    "ipa": "/ˈkærət/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "морковь",
+        "alternative_translations": [],
+        "definition_en": "A long orange root vegetable",
+        "definition_ru": "Длинный оранжевый корнеплод",
+        "example_en": "I added carrots to the soup.",
+        "example_ru": "Я добавил морковь в суп."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_carry",
+    "word": "carry",
+    "ipa": "/ˈkæri/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "нести",
+        "alternative_translations": ["носить", "перевозить", "везти"],
+        "definition_en": "To hold something and take it from one place to another",
+        "definition_ru": "Держать что-либо и перемещать это из одного места в другое",
+        "example_en": "Can you carry this bag for me?",
+        "example_ru": "Ты можешь понести эту сумку для меня?"
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_carry_on",
+    "word": "carry on",
+    "ipa": "/ˈkæri ɒn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "phrase",
+        "translation": "продолжать",
+        "alternative_translations": ["не останавливаться"],
+        "definition_en": "To continue doing something",
+        "definition_ru": "Продолжать делать что-либо",
+        "example_en": "Please carry on with your work.",
+        "example_ru": "Пожалуйста, продолжайте свою работу."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_carry_out",
+    "word": "carry out",
+    "ipa": "/ˈkæri aʊt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "phrase",
+        "translation": "выполнять",
+        "alternative_translations": ["осуществлять", "проводить"],
+        "definition_en": "To do or complete a task or plan",
+        "definition_ru": "Выполнять или завершать задачу или план",
+        "example_en": "The team carried out the experiment successfully.",
+        "example_ru": "Команда успешно провела эксперимент."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_cartoon",
+    "word": "cartoon",
+    "ipa": "/kɑːˈtuːn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "мультфильм",
+        "alternative_translations": ["карикатура", "комикс"],
+        "definition_en": "An animated film or TV programme; a humorous drawing in a newspaper or magazine",
+        "definition_ru": "Анимационный фильм или телепрограмма; юмористический рисунок в газете или журнале",
+        "example_en": "The children watched cartoons on Saturday morning.",
+        "example_ru": "Дети смотрели мультфильмы в субботу утром."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_case",
+    "word": "case",
+    "ipa": "/keɪs/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "случай",
+        "alternative_translations": ["дело", "чемодан", "ящик"],
+        "definition_en": "A particular situation or example of something; a legal matter; a container",
+        "definition_ru": "Конкретная ситуация или пример чего-либо; юридическое дело; контейнер",
+        "example_en": "In that case, we should leave early.",
+        "example_ru": "В таком случае нам следует уйти пораньше."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_cash",
+    "word": "cash",
+    "ipa": "/kæʃ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "наличные деньги",
+        "alternative_translations": ["наличность"],
+        "definition_en": "Money in the form of coins and banknotes",
+        "definition_ru": "Деньги в виде монет и банкнот",
+        "example_en": "Do you have any cash? The card machine is broken.",
+        "example_ru": "У тебя есть наличные? Карточный терминал сломан."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_cash_machine",
+    "word": "cash machine",
+    "ipa": "/kæʃ məˈʃiːn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "банкомат",
+        "alternative_translations": ["ATM"],
+        "definition_en": "A machine from which you can withdraw cash using a bank card",
+        "definition_ru": "Машина, из которой можно снять наличные с помощью банковской карты",
+        "example_en": "Is there a cash machine near here?",
+        "example_ru": "Есть ли рядом банкомат?"
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_cashpoint",
+    "word": "cashpoint",
+    "ipa": "/ˈkæʃpɔɪnt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "банкомат",
+        "alternative_translations": [],
+        "definition_en": "A machine (ATM) where you can withdraw money using a bank card",
+        "definition_ru": "Машина (банкомат), где можно снять деньги с помощью банковской карты",
+        "example_en": "I need to find a cashpoint to get some money.",
+        "example_ru": "Мне нужно найти банкомат, чтобы снять деньги."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_castle",
+    "word": "castle",
+    "ipa": "/ˈkɑːsl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "замок",
+        "alternative_translations": ["крепость"],
+        "definition_en": "A large medieval building with thick stone walls, built to protect against attack",
+        "definition_ru": "Крупное средневековое здание с толстыми каменными стенами, построенное для защиты от нападения",
+        "example_en": "We visited an old castle on our trip to Scotland.",
+        "example_ru": "Мы посетили старый замок во время поездки в Шотландию."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_casual",
+    "word": "casual",
+    "ipa": "/ˈkæʒuəl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "повседневный",
+        "alternative_translations": ["непринуждённый", "случайный", "неформальный"],
+        "definition_en": "Relaxed and informal; not formal or serious; happening by chance",
+        "definition_ru": "Расслабленный и неформальный; не официальный или серьёзный; происходящий случайно",
+        "example_en": "The office has a casual dress code on Fridays.",
+        "example_ru": "В офисе пятница — день повседневной одежды."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_cat",
+    "word": "cat",
+    "ipa": "/kæt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "кошка",
+        "alternative_translations": ["кот"],
+        "definition_en": "A small furry animal kept as a pet, which purrs and meows",
+        "definition_ru": "Небольшое пушистое животное, содержимое как домашний питомец, которое мурчит и мяукает",
+        "example_en": "Our cat likes to sleep on the sofa.",
+        "example_ru": "Наш кот любит спать на диване."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_catch",
+    "word": "catch",
+    "ipa": "/kætʃ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "ловить",
+        "alternative_translations": ["поймать", "схватить", "успеть на (автобус)"],
+        "definition_en": "To seize and hold something that is moving; to be in time for a bus or train; to get an illness",
+        "definition_ru": "Схватить и удержать что-то движущееся; успеть на автобус или поезд; заболеть",
+        "example_en": "He managed to catch the ball.",
+        "example_ru": "Ему удалось поймать мяч."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_cathedral",
+    "word": "cathedral",
+    "ipa": "/kəˈθiːdrəl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "собор",
+        "alternative_translations": ["кафедральный собор"],
+        "definition_en": "A large and important church, usually the main church of a diocese",
+        "definition_ru": "Большая и важная церковь, обычно главная церковь епархии",
+        "example_en": "We visited the famous cathedral in the city centre.",
+        "example_ru": "Мы посетили знаменитый собор в центре города."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_cattle",
+    "word": "cattle",
+    "ipa": "/ˈkætl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "крупный рогатый скот",
+        "alternative_translations": ["скот"],
+        "definition_en": "Cows and bulls kept on a farm for milk or meat",
+        "definition_ru": "Коровы и быки, содержащиеся на ферме ради молока или мяса",
+        "example_en": "The farmer has two hundred cattle on his land.",
+        "example_ru": "У фермера двести голов скота на его земле."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_cave",
+    "word": "cave",
+    "ipa": "/keɪv/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "пещера",
+        "alternative_translations": [],
+        "definition_en": "A large natural hollow space in the side of a cliff or hill, or underground",
+        "definition_ru": "Большое естественное полое пространство в склоне скалы или холма, или под землёй",
+        "example_en": "The explorers found ancient paintings inside the cave.",
+        "example_ru": "Исследователи нашли древние рисунки внутри пещеры."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_cd",
+    "word": "CD",
+    "ipa": "/ˌsiː ˈdiː/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "компакт-диск",
+        "alternative_translations": ["CD-диск"],
+        "definition_en": "A compact disc used to store music or data",
+        "definition_ru": "Компакт-диск для хранения музыки или данных",
+        "example_en": "She bought the album on CD.",
+        "example_ru": "Она купила альбом на компакт-диске."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_cd_player",
+    "word": "CD player",
+    "ipa": "/ˌsiː ˈdiː ˌpleɪə/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "CD-плеер",
+        "alternative_translations": ["проигрыватель компакт-дисков"],
+        "definition_en": "A device for playing compact discs",
+        "definition_ru": "Устройство для воспроизведения компакт-дисков",
+        "example_en": "The old CD player in the kitchen still works.",
+        "example_ru": "Старый CD-плеер на кухне всё ещё работает."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_ceiling",
+    "word": "ceiling",
+    "ipa": "/ˈsiːlɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "потолок",
+        "alternative_translations": ["верхний предел"],
+        "definition_en": "The upper surface of a room; an upper limit",
+        "definition_ru": "Верхняя поверхность комнаты; верхний предел",
+        "example_en": "The ceiling in this room is very high.",
+        "example_ru": "Потолок в этой комнате очень высокий."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_celebrate",
+    "word": "celebrate",
+    "ipa": "/ˈselɪbreɪt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "праздновать",
+        "alternative_translations": ["отмечать"],
+        "definition_en": "To do something special to mark a happy event or occasion",
+        "definition_ru": "Делать что-то особенное в честь радостного события или случая",
+        "example_en": "We celebrated her graduation with a party.",
+        "example_ru": "Мы отпраздновали её окончание учёбы вечеринкой."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_celebration",
+    "word": "celebration",
+    "ipa": "/ˌselɪˈbreɪʃn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "празднование",
+        "alternative_translations": ["торжество", "праздник"],
+        "definition_en": "The act of doing something enjoyable to mark a special occasion",
+        "definition_ru": "Акт совершения чего-то приятного в честь особого случая",
+        "example_en": "The birthday celebration was a great success.",
+        "example_ru": "Празднование дня рождения прошло очень успешно."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_celebrity",
+    "word": "celebrity",
+    "ipa": "/səˈlebrɪti/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "знаменитость",
+        "alternative_translations": ["звезда", "известная личность"],
+        "definition_en": "A famous and well-known person, especially in entertainment",
+        "definition_ru": "Известный и знаменитый человек, особенно в сфере развлечений",
+        "example_en": "She became a celebrity after appearing on a TV show.",
+        "example_ru": "Она стала знаменитостью после появления в телешоу."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_cell_phone",
+    "word": "cell phone",
+    "ipa": "/sel fəʊn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "мобильный телефон",
+        "alternative_translations": ["сотовый телефон"],
+        "definition_en": "A portable telephone that works using a network of radio signals",
+        "definition_ru": "Портативный телефон, работающий с использованием сети радиосигналов",
+        "example_en": "Please turn off your cell phone in the cinema.",
+        "example_ru": "Пожалуйста, выключите мобильный телефон в кинотеатре."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_cent",
+    "word": "cent",
+    "ipa": "/sent/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "цент",
+        "alternative_translations": [],
+        "definition_en": "A unit of money equal to one hundredth of a dollar or euro",
+        "definition_ru": "Денежная единица, равная одной сотой доллара или евро",
+        "example_en": "It only cost fifty cents.",
+        "example_ru": "Это стоило всего пятьдесят центов."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_centimetre_cm",
+    "word": "centimetre (cm)",
+    "ipa": "/ˈsentɪmiːtə/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "сантиметр",
+        "alternative_translations": ["см"],
+        "definition_en": "A unit of length equal to one hundredth of a metre",
+        "definition_ru": "Единица длины, равная одной сотой метра",
+        "example_en": "The book is about 25 centimetres long.",
+        "example_ru": "Книга длиной около 25 сантиметров."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_central",
+    "word": "central",
+    "ipa": "/ˈsentrəl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "центральный",
+        "alternative_translations": ["главный", "основной"],
+        "definition_en": "In or near the centre; most important",
+        "definition_ru": "В центре или рядом с ним; наиболее важный",
+        "example_en": "The hotel is in a central location near the station.",
+        "example_ru": "Отель находится в центральном месте рядом со станцией."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_central_heating",
+    "word": "central heating",
+    "ipa": "/ˌsentrəl ˈhiːtɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "центральное отопление",
+        "alternative_translations": [],
+        "definition_en": "A system for heating buildings in which heat is produced at one point and distributed through pipes and radiators",
+        "definition_ru": "Система отопления зданий, при которой тепло производится в одной точке и распределяется по трубам и радиаторам",
+        "example_en": "The house has central heating so it's always warm.",
+        "example_ru": "В доме есть центральное отопление, поэтому там всегда тепло."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_centre_center",
+    "word": "centre/center",
+    "ipa": "/ˈsentə/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "центр",
+        "alternative_translations": ["середина"],
+        "definition_en": "The middle point or part of something; a place where activities are concentrated",
+        "definition_ru": "Средняя точка или часть чего-либо; место, где сосредоточены виды деятельности",
+        "example_en": "The shopping centre is in the middle of town.",
+        "example_ru": "Торговый центр находится в центре города."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_century",
+    "word": "century",
+    "ipa": "/ˈsentʃəri/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "век",
+        "alternative_translations": ["столетие"],
+        "definition_en": "A period of one hundred years",
+        "definition_ru": "Период в сто лет",
+        "example_en": "This building was constructed in the nineteenth century.",
+        "example_ru": "Это здание было построено в девятнадцатом веке."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_cereal",
+    "word": "cereal",
+    "ipa": "/ˈsɪəriəl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "хлопья",
+        "alternative_translations": ["злак", "зерновые"],
+        "definition_en": "A breakfast food made from grains; a grain plant such as wheat, rice, or corn",
+        "definition_ru": "Продукт для завтрака из зерна; зерновое растение, такое как пшеница, рис или кукуруза",
+        "example_en": "I have cereal and milk for breakfast every morning.",
+        "example_ru": "Я ем хлопья с молоком на завтрак каждое утро."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_ceremony",
+    "word": "ceremony",
+    "ipa": "/ˈserɪməni/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "церемония",
+        "alternative_translations": ["обряд", "торжество"],
+        "definition_en": "A formal public or religious event, usually to mark an important occasion",
+        "definition_ru": "Официальное публичное или религиозное мероприятие, обычно для отметки важного события",
+        "example_en": "The graduation ceremony took place in the main hall.",
+        "example_ru": "Церемония выпуска проходила в главном зале."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_certain",
+    "word": "certain",
+    "ipa": "/ˈsɜːtn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "определённый",
+        "alternative_translations": ["уверенный", "некоторый"],
+        "definition_en": "Known for sure; having no doubt; specific but not named",
+        "definition_ru": "Точно известный; не сомневающийся; конкретный, но не названный",
+        "example_en": "I'm certain that I left my keys on the table.",
+        "example_ru": "Я уверен, что оставил ключи на столе."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_certainly_not",
+    "word": "certainly (not)",
+    "ipa": "/ˈsɜːtnli (nɒt)/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adverb",
+        "translation": "конечно (нет)",
+        "alternative_translations": ["определённо", "безусловно"],
+        "definition_en": "Used to say that something is definitely true or will definitely happen; used to agree or disagree strongly",
+        "definition_ru": "Используется для подтверждения того, что что-то определённо верно или обязательно произойдёт; для выражения сильного согласия или несогласия",
+        "example_en": "I will certainly help you with that.",
+        "example_ru": "Я обязательно помогу тебе с этим."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_certificate",
+    "word": "certificate",
+    "ipa": "/səˈtɪfɪkɪt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "сертификат",
+        "alternative_translations": ["свидетельство", "удостоверение"],
+        "definition_en": "An official document that proves something is true or that you have achieved something",
+        "definition_ru": "Официальный документ, подтверждающий правдивость чего-либо или то, что вы чего-то достигли",
+        "example_en": "She received a certificate for completing the course.",
+        "example_ru": "Она получила сертификат за прохождение курса."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_chain",
+    "word": "chain",
+    "ipa": "/tʃeɪn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "цепь",
+        "alternative_translations": ["цепочка", "сеть (магазинов)"],
+        "definition_en": "A series of connected metal rings; a group of stores or restaurants under the same name",
+        "definition_ru": "Серия соединённых металлических колец; группа магазинов или ресторанов под одним названием",
+        "example_en": "The dog was tied to the fence with a chain.",
+        "example_ru": "Собака была привязана к забору цепью."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_chair",
+    "word": "chair",
+    "ipa": "/tʃeə/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "стул",
+        "alternative_translations": ["кресло", "председатель"],
+        "definition_en": "A separate seat for one person, with a back and usually four legs",
+        "definition_ru": "Отдельное сиденье для одного человека со спинкой и обычно четырьмя ножками",
+        "example_en": "Please pull up a chair and sit down.",
+        "example_ru": "Пожалуйста, возьмите стул и садитесь."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_challenge",
+    "word": "challenge",
+    "ipa": "/ˈtʃælɪndʒ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "вызов",
+        "alternative_translations": ["трудность", "испытание"],
+        "definition_en": "Something that requires great effort and tests one's abilities",
+        "definition_ru": "Нечто, требующее больших усилий и проверяющее способности человека",
+        "example_en": "Learning a new language is a real challenge.",
+        "example_ru": "Изучение нового языка — это настоящий вызов."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "оспаривать",
+        "alternative_translations": ["бросать вызов", "проверять"],
+        "definition_en": "To question or dispute something; to invite someone to compete",
+        "definition_ru": "Ставить под сомнение или оспаривать что-либо; приглашать кого-либо к соревнованию",
+        "example_en": "She challenged him to a race.",
+        "example_ru": "Она бросила ему вызов на гонку."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_challenging",
+    "word": "challenging",
+    "ipa": "/ˈtʃælɪndʒɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "сложный",
+        "alternative_translations": ["трудный", "требующий усилий"],
+        "definition_en": "Difficult in a way that tests your abilities and requires effort",
+        "definition_ru": "Трудный в том смысле, что проверяет ваши способности и требует усилий",
+        "example_en": "The exam was very challenging but I passed.",
+        "example_ru": "Экзамен был очень сложным, но я сдал."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_champion",
+    "word": "champion",
+    "ipa": "/ˈtʃæmpiən/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "чемпион",
+        "alternative_translations": ["победитель", "защитник"],
+        "definition_en": "A person or team who has won a competition",
+        "definition_ru": "Человек или команда, выигравшие соревнование",
+        "example_en": "She became the national swimming champion.",
+        "example_ru": "Она стала национальным чемпионом по плаванию."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_championship",
+    "word": "championship",
+    "ipa": "/ˈtʃæmpiənʃɪp/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "чемпионат",
+        "alternative_translations": ["первенство"],
+        "definition_en": "A competition to find the best player or team in a sport",
+        "definition_ru": "Соревнование для определения лучшего игрока или команды в спорте",
+        "example_en": "Our team won the national championship last year.",
+        "example_ru": "Наша команда выиграла национальный чемпионат в прошлом году."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_chance",
+    "word": "chance",
+    "ipa": "/tʃɑːns/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "шанс",
+        "alternative_translations": ["возможность", "случай", "вероятность"],
+        "definition_en": "A possibility of something happening; an opportunity to do something",
+        "definition_ru": "Возможность того, что что-то произойдёт; возможность сделать что-то",
+        "example_en": "You should take the chance to travel while you're young.",
+        "example_ru": "Тебе следует воспользоваться возможностью путешествовать, пока ты молод."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_change",
+    "word": "change",
+    "ipa": "/tʃeɪndʒ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "изменение",
+        "alternative_translations": ["перемена", "сдача (деньги)", "смена"],
+        "definition_en": "The act of making something different; money returned when you pay more than the price",
+        "definition_ru": "Акт изменения чего-либо; деньги, возвращённые, когда вы платите больше цены",
+        "example_en": "There have been many changes in technology recently.",
+        "example_ru": "В последнее время произошло много изменений в технологиях."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "изменять",
+        "alternative_translations": ["менять", "меняться"],
+        "definition_en": "To make something different; to become different",
+        "definition_ru": "Сделать что-то другим; стать другим",
+        "example_en": "She changed her hairstyle last week.",
+        "example_ru": "На прошлой неделе она изменила причёску."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_changing_room",
+    "word": "changing room",
+    "ipa": "/ˈtʃeɪndʒɪŋ ruːm/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "примерочная",
+        "alternative_translations": ["раздевалка"],
+        "definition_en": "A room in a shop where you try on clothes; a room at a sports facility where you change clothes",
+        "definition_ru": "Комната в магазине, где вы примеряете одежду; комната в спортивном учреждении, где вы переодеваетесь",
+        "example_en": "Can I use the changing room to try on this dress?",
+        "example_ru": "Можно мне воспользоваться примерочной, чтобы примерить это платье?"
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_channel",
+    "word": "channel",
+    "ipa": "/ˈtʃænl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "канал",
+        "alternative_translations": ["пролив", "путь", "телеканал"],
+        "definition_en": "A television or radio station; a narrow stretch of water; a method of communication",
+        "definition_ru": "Телевизионная или радиостанция; узкий водный путь; метод коммуникации",
+        "example_en": "What channel is the football match on?",
+        "example_ru": "На каком канале матч по футболу?"
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_chapter",
+    "word": "chapter",
+    "ipa": "/ˈtʃæptə/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "глава",
+        "alternative_translations": ["раздел", "глава (книги)"],
+        "definition_en": "A main division of a book or other written work",
+        "definition_ru": "Основное подразделение книги или другого письменного произведения",
+        "example_en": "I read three chapters of the novel before going to sleep.",
+        "example_ru": "Я прочитал три главы романа перед сном."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_character",
+    "word": "character",
+    "ipa": "/ˈkærəktə/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "персонаж",
+        "alternative_translations": ["характер", "символ"],
+        "definition_en": "A person in a story, film, or play; the qualities that make someone who they are",
+        "definition_ru": "Персонаж в рассказе, фильме или пьесе; качества, делающие человека тем, кто он есть",
+        "example_en": "My favourite character in the book is the detective.",
+        "example_ru": "Мой любимый персонаж в книге — детектив."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_charge",
+    "word": "charge",
+    "ipa": "/tʃɑːdʒ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "плата",
+        "alternative_translations": ["обвинение", "заряд", "ответственность"],
+        "definition_en": "An amount of money asked for goods or services; a formal accusation; responsibility",
+        "definition_ru": "Сумма денег, запрашиваемая за товары или услуги; официальное обвинение; ответственность",
+        "example_en": "Is there a charge for using the swimming pool?",
+        "example_ru": "Взимается ли плата за пользование бассейном?"
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "заряжать",
+        "alternative_translations": ["взимать плату", "обвинять", "мчаться"],
+        "definition_en": "To ask money for a service; to put electricity into a battery; to accuse someone officially",
+        "definition_ru": "Просить деньги за услугу; заряжать аккумулятор электричеством; официально обвинять кого-либо",
+        "example_en": "I need to charge my phone before we leave.",
+        "example_ru": "Мне нужно зарядить телефон перед отъездом."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_charity",
+    "word": "charity",
+    "ipa": "/ˈtʃærɪti/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "благотворительность",
+        "alternative_translations": ["благотворительная организация", "милосердие"],
+        "definition_en": "An organisation that helps people in need; the act of giving money or help to those in need",
+        "definition_ru": "Организация, помогающая нуждающимся; акт передачи денег или помощи нуждающимся",
+        "example_en": "She donates money to a local charity every month.",
+        "example_ru": "Она ежемесячно жертвует деньги в местный благотворительный фонд."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_charming",
+    "word": "charming",
+    "ipa": "/ˈtʃɑːmɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "очаровательный",
+        "alternative_translations": ["обаятельный", "привлекательный"],
+        "definition_en": "Very pleasant and attractive; having the power to please people",
+        "definition_ru": "Очень приятный и привлекательный; обладающий способностью нравиться людям",
+        "example_en": "He was a charming and funny host.",
+        "example_ru": "Он был очаровательным и смешным хозяином."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_chat",
+    "word": "chat",
+    "ipa": "/tʃæt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "болтовня",
+        "alternative_translations": ["разговор", "беседа"],
+        "definition_en": "An informal conversation",
+        "definition_ru": "Неформальный разговор",
+        "example_en": "We had a nice chat over coffee.",
+        "example_ru": "Мы приятно поболтали за кофе."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "болтать",
+        "alternative_translations": ["общаться", "переписываться"],
+        "definition_en": "To talk in a friendly and informal way",
+        "definition_ru": "Разговаривать дружески и неформально",
+        "example_en": "We chatted for hours about everything.",
+        "example_ru": "Мы часами болтали обо всём."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_chat_show",
+    "word": "chat show",
+    "ipa": "/ˈtʃæt ʃəʊ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "ток-шоу",
+        "alternative_translations": [],
+        "definition_en": "A TV or radio programme where a host interviews celebrities and other guests",
+        "definition_ru": "Телевизионная или радиопрограмма, в которой ведущий берёт интервью у знаменитостей и других гостей",
+        "example_en": "She was a guest on a popular chat show.",
+        "example_ru": "Она была гостьей на популярном ток-шоу."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_chatroom",
+    "word": "chatroom",
+    "ipa": "/ˈtʃætruːm/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "чат-комната",
+        "alternative_translations": ["онлайн-чат"],
+        "definition_en": "An online space where people can have conversations by typing messages",
+        "definition_ru": "Онлайн-пространство, где люди могут общаться, печатая сообщения",
+        "example_en": "He met his friend in a chatroom ten years ago.",
+        "example_ru": "Он познакомился с другом в чате десять лет назад."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_cheap",
+    "word": "cheap",
+    "ipa": "/tʃiːp/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "дешёвый",
+        "alternative_translations": ["недорогой", "скупой"],
+        "definition_en": "Low in price; not expensive",
+        "definition_ru": "Низкий по цене; недорогой",
+        "example_en": "The tickets were surprisingly cheap.",
+        "example_ru": "Билеты были удивительно дешёвыми."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_cheat",
+    "word": "cheat",
+    "ipa": "/tʃiːt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "жульничать",
+        "alternative_translations": ["обманывать", "мошенничать"],
+        "definition_en": "To behave dishonestly in order to gain an advantage; to deceive someone",
+        "definition_ru": "Вести себя нечестно ради получения преимущества; обманывать кого-либо",
+        "example_en": "He was caught cheating in the exam.",
+        "example_ru": "Его поймали на списывании на экзамене."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_check",
+    "word": "check",
+    "ipa": "/tʃek/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "проверка",
+        "alternative_translations": ["чек", "счёт (в ресторане)", "шах (в шахматах)"],
+        "definition_en": "An examination to make sure something is correct; a written order to a bank to pay money",
+        "definition_ru": "Проверка правильности чего-либо; письменное распоряжение банку выплатить деньги",
+        "example_en": "The doctor gave me a routine health check.",
+        "example_ru": "Врач провёл мне плановую проверку здоровья."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "проверять",
+        "alternative_translations": ["убеждаться", "сверять"],
+        "definition_en": "To examine something to make sure it is correct or in good condition",
+        "definition_ru": "Проверить что-либо, чтобы убедиться, что оно правильное или в хорошем состоянии",
+        "example_en": "Always check your work before handing it in.",
+        "example_ru": "Всегда проверяй свою работу перед сдачей."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  }
+]

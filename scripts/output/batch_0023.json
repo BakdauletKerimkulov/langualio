@@ -1,0 +1,2428 @@
+[
+  {
+    "id": "b1_robot",
+    "word": "robot",
+    "ipa": "/ˈroʊbɑːt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "робот",
+        "alternative_translations": ["автомат", "механизм"],
+        "definition_en": "A machine that can perform complex tasks automatically",
+        "definition_ru": "Механизм, способный автоматически выполнять сложные задачи",
+        "example_en": "The factory uses robots to assemble cars.",
+        "example_ru": "Завод использует роботов для сборки автомобилей."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_rock",
+    "word": "rock",
+    "ipa": "/rɑːk/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "скала",
+        "alternative_translations": ["камень", "горная порода"],
+        "definition_en": "A large natural mass of stone forming a hill or cliff",
+        "definition_ru": "Большая природная масса камня, образующая холм или утес",
+        "example_en": "Climbers were scaling the rocky rock face.",
+        "example_ru": "Альпинисты взбирались по скалистой скале."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_rocket",
+    "word": "rocket",
+    "ipa": "/ˈrɑːkɪt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "ракета",
+        "alternative_translations": ["снаряд"],
+        "definition_en": "A projectile powered by expulsion of hot gases, used for space travel",
+        "definition_ru": "Снаряд, движимый выбросом горячих газов, используется для космических полетов",
+        "example_en": "The rocket launched successfully into orbit.",
+        "example_ru": "Ракета успешно запустилась на орбиту."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_role",
+    "word": "role",
+    "ipa": "/roʊl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "роль",
+        "alternative_translations": ["функция", "задача"],
+        "definition_en": "A part or function played by someone in a particular situation",
+        "definition_ru": "Часть или функция, выполняемая кем-то в определенной ситуации",
+        "example_en": "She plays an important role in the company's success.",
+        "example_ru": "Она играет важную роль в успехе компании."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_roll",
+    "word": "roll",
+    "ipa": "/roʊl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "булочка",
+        "alternative_translations": ["рулон", "валик"],
+        "definition_en": "A small loaf of bread or a cylinder of something",
+        "definition_ru": "Небольшой хлебец или цилиндр из чего-то",
+        "example_en": "She bought fresh rolls at the bakery.",
+        "example_ru": "Она купила свежие булочки в пекарне."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_romance",
+    "word": "romance",
+    "ipa": "/roʊˈmæns/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "романтика",
+        "alternative_translations": ["любовный роман", "увлечение"],
+        "definition_en": "A love affair or a story about love between people",
+        "definition_ru": "Любовный роман или история о любви между людьми",
+        "example_en": "Their romance began at university.",
+        "example_ru": "Их романтика началась в университете."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_romantic",
+    "word": "romantic",
+    "ipa": "/roʊˈmæntɪk/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "романтичный",
+        "alternative_translations": ["романтический", "любовный"],
+        "definition_en": "Expressing love or showing feelings of romance",
+        "definition_ru": "Выражающий любовь или показывающий чувства романтики",
+        "example_en": "He planned a romantic dinner for her birthday.",
+        "example_ru": "Он спланировал романтический ужин для ее дня рождения."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_roof",
+    "word": "roof",
+    "ipa": "/ruːf/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "крыша",
+        "alternative_translations": ["кровля"],
+        "definition_en": "The upper outer covering of a building",
+        "definition_ru": "Верхнее наружное покрытие здания",
+        "example_en": "We sat on the roof to watch the sunset.",
+        "example_ru": "Мы сидели на крыше, чтобы посмотреть закат."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_room",
+    "word": "room",
+    "ipa": "/ruːm/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "комната",
+        "alternative_translations": ["помещение", "зал"],
+        "definition_en": "A space inside a building enclosed by walls and a door",
+        "definition_ru": "Пространство внутри здания, огороженное стенами и дверью",
+        "example_en": "The hotel has comfortable rooms for guests.",
+        "example_ru": "В отеле есть удобные номера для гостей."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_roommate",
+    "word": "roommate",
+    "ipa": "/ˈruːmmeɪt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "сосед по комнате",
+        "alternative_translations": ["соседка"],
+        "definition_en": "A person who shares a room with you",
+        "definition_ru": "Человек, который делит с вами комнату",
+        "example_en": "My roommate and I study together most evenings.",
+        "example_ru": "Мой сосед по комнате и я занимаемся вместе большинство вечеров."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_rope",
+    "word": "rope",
+    "ipa": "/roʊp/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "веревка",
+        "alternative_translations": ["канат", "шнур"],
+        "definition_en": "A thick cord made by twisting strands together",
+        "definition_ru": "Толстый шнур, изготовленный путем скручивания прядей",
+        "example_en": "The sailor tied the rope securely around the post.",
+        "example_ru": "Моряк крепко привязал веревку к столбу."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_rose",
+    "word": "rose",
+    "ipa": "/roʊz/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "роза",
+        "alternative_translations": ["роза (цветок)"],
+        "definition_en": "A beautiful flower with a sweet smell and thorny stem",
+        "definition_ru": "Красивый цветок с приятным запахом и шипастым стеблем",
+        "example_en": "He gave her a dozen red roses on Valentine's Day.",
+        "example_ru": "Он подарил ей дюжину красных роз на День святого Валентина."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_rough",
+    "word": "rough",
+    "ipa": "/rʌf/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "грубый",
+        "alternative_translations": ["шероховатый", "неровный"],
+        "definition_en": "Having an uneven or bumpy surface",
+        "definition_ru": "Имеющий неровную или бугристую поверхность",
+        "example_en": "The rough texture of the sandpaper helps with sanding.",
+        "example_ru": "Шероховатая текстура наждачной бумаги помогает при шлифовании."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_round",
+    "word": "round",
+    "ipa": "/raʊnd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "круглый",
+        "alternative_translations": ["округлый"],
+        "definition_en": "Shaped like a circle or sphere",
+        "definition_ru": "Имеющий форму круга или сферы",
+        "example_en": "The table is round and seats eight people.",
+        "example_ru": "Стол круглый и вмещает восемь человек."
+      },
+      {
+        "part_of_speech": "adverb",
+        "translation": "вокруг",
+        "alternative_translations": ["по кругу"],
+        "definition_en": "In a circle or circular direction",
+        "definition_ru": "В круге или круговом направлении",
+        "example_en": "The children danced round and round.",
+        "example_ru": "Дети танцевали по кругу."
+      },
+      {
+        "part_of_speech": "preposition",
+        "translation": "вокруг",
+        "alternative_translations": ["около"],
+        "definition_en": "On all sides of something",
+        "definition_ru": "Со всех сторон чего-то",
+        "example_en": "We sat round the campfire.",
+        "example_ru": "Мы сидели вокруг костра."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_roundabout",
+    "word": "roundabout",
+    "ipa": "/ˈraʊndəbaʊt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "круговое движение",
+        "alternative_translations": ["карусель", "ротонда"],
+        "definition_en": "A circular intersection where traffic moves in one direction",
+        "definition_ru": "Круговой перекресток, где движение идет в одном направлении",
+        "example_en": "Take the first exit at the roundabout.",
+        "example_ru": "Возьмите первый выезд на круговом движении."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_route",
+    "word": "route",
+    "ipa": "/ruːt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "маршрут",
+        "alternative_translations": ["путь", "дорога"],
+        "definition_en": "A way or road for getting from one place to another",
+        "definition_ru": "Путь или дорога для перемещения из одного места в другое",
+        "example_en": "The bus follows the same route every day.",
+        "example_ru": "Автобус следует одному и тому же маршруту каждый день."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_routine",
+    "word": "routine",
+    "ipa": "/ruːˈtiːn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "распорядок",
+        "alternative_translations": ["рутина", "привычка"],
+        "definition_en": "A regular sequence of activities or habits",
+        "definition_ru": "Регулярная последовательность действий или привычек",
+        "example_en": "She has a morning routine of exercise and meditation.",
+        "example_ru": "У нее есть утренний распорядок упражнений и медитации."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_row",
+    "word": "row",
+    "ipa": "/roʊ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "ряд",
+        "alternative_translations": ["линия", "строка"],
+        "definition_en": "A line of things or people arranged one behind the other",
+        "definition_ru": "Линия вещей или людей, расположенных один за другим",
+        "example_en": "The students sat in a row during the assembly.",
+        "example_ru": "Студенты сидели в ряд на собрании."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_rubber",
+    "word": "rubber",
+    "ipa": "/ˈrʌbər/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "резина",
+        "alternative_translations": ["каучук", "ластик"],
+        "definition_en": "A elastic material used to make many products",
+        "definition_ru": "Эластичный материал, используемый для изготовления многих изделий",
+        "example_en": "The tires are made of rubber.",
+        "example_ru": "Шины сделаны из резины."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_rubbish",
+    "word": "rubbish",
+    "ipa": "/ˈrʌbɪʃ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "мусор",
+        "alternative_translations": ["отходы", "хлам"],
+        "definition_en": "Waste material or garbage to be discarded",
+        "definition_ru": "Отходы или мусор, подлежащие утилизации",
+        "example_en": "Please put the rubbish in the bin.",
+        "example_ru": "Пожалуйста, положите мусор в контейнер."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_rude",
+    "word": "rude",
+    "ipa": "/ruːd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "грубый",
+        "alternative_translations": ["невежливый", "дерзкий"],
+        "definition_en": "Impolite or disrespectful in behavior",
+        "definition_ru": "Невежливый или неуважительный в поведении",
+        "example_en": "It's rude to interrupt someone while they're speaking.",
+        "example_ru": "Грубо перебивать кого-то, пока они говорят."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_rug",
+    "word": "rug",
+    "ipa": "/rʌg/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "ковер",
+        "alternative_translations": ["ковровое покрытие"],
+        "definition_en": "A piece of thick material used to cover part of a floor",
+        "definition_ru": "Кусок толстого материала, используемый для покрытия части пола",
+        "example_en": "There is a soft rug in front of the fireplace.",
+        "example_ru": "Перед камином лежит мягкий ковер."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_rugby",
+    "word": "rugby",
+    "ipa": "/ˈrʌɡbi/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "регби",
+        "alternative_translations": [],
+        "definition_en": "A team sport played with an oval ball where players tackle each other",
+        "definition_ru": "Командный вид спорта с овальным мячом, где игроки борются друг с другом",
+        "example_en": "The rugby team practices every Wednesday.",
+        "example_ru": "Команда регби тренируется каждую среду."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_ruin",
+    "word": "ruin",
+    "ipa": "/ˈruːɪn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "руины",
+        "alternative_translations": ["развалины"],
+        "definition_en": "The remains of something that has been destroyed or decayed",
+        "definition_ru": "Остатки чего-то, что было разрушено или пришло в упадок",
+        "example_en": "The ancient Roman ruins attracted many tourists.",
+        "example_ru": "Древние римские руины привлекали многих туристов."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_rule",
+    "word": "rule",
+    "ipa": "/ruːl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "правило",
+        "alternative_translations": ["норма", "закон"],
+        "definition_en": "An official instruction or law that must be followed",
+        "definition_ru": "Официальное указание или закон, который должен соблюдаться",
+        "example_en": "The school has strict rules about uniforms.",
+        "example_ru": "В школе есть строгие правила относительно форменной одежды."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "управлять",
+        "alternative_translations": ["царствовать", "доминировать"],
+        "definition_en": "To govern or have control over something",
+        "definition_ru": "Управлять или иметь контроль над чем-то",
+        "example_en": "The king ruled the country for forty years.",
+        "example_ru": "Король правил страной сорок лет."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_ruler",
+    "word": "ruler",
+    "ipa": "/ˈruːlər/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "линейка",
+        "alternative_translations": ["правитель"],
+        "definition_en": "A flat straight instrument used for measuring or drawing straight lines",
+        "definition_ru": "Плоский прямой инструмент, используемый для измерения или рисования прямых линий",
+        "example_en": "Use a ruler to draw straight lines in your drawing.",
+        "example_ru": "Используйте линейку для рисования прямых линий в вашем рисунке."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_run",
+    "word": "run",
+    "ipa": "/rʌn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "пробежка",
+        "alternative_translations": ["прогон", "серия"],
+        "definition_en": "An act of running or a continuous series of something",
+        "definition_ru": "Акт бега или непрерывная серия чего-то",
+        "example_en": "She goes for a run every morning.",
+        "example_ru": "Она бегает каждое утро."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "бегать",
+        "alternative_translations": ["работать", "управлять"],
+        "definition_en": "To move quickly on foot or to operate something",
+        "definition_ru": "Быстро двигаться пешком или управлять чем-то",
+        "example_en": "The children run in the park after school.",
+        "example_ru": "Дети бегают в парке после школы."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_run_out",
+    "word": "run out",
+    "ipa": "/rʌn aʊt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "phrase",
+        "translation": "закончиться",
+        "alternative_translations": ["кончиться", "исчерпаться"],
+        "definition_en": "To use up all of something or to have no more left",
+        "definition_ru": "Использовать все что-то или не иметь больше",
+        "example_en": "We ran out of milk, so I need to buy more.",
+        "example_ru": "У нас закончилось молоко, поэтому мне нужно купить еще."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_runner",
+    "word": "runner",
+    "ipa": "/ˈrʌnər/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "бегун",
+        "alternative_translations": ["спортсмен"],
+        "definition_en": "A person who runs, especially in races or for sport",
+        "definition_ru": "Человек, который бегает, особенно в гонках или в спорте",
+        "example_en": "The runner finished the marathon in three hours.",
+        "example_ru": "Бегун финишировал марафон за три часа."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_running",
+    "word": "running",
+    "ipa": "/ˈrʌnɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "бег",
+        "alternative_translations": ["трусца"],
+        "definition_en": "The activity of moving quickly on foot as exercise",
+        "definition_ru": "Деятельность быстрого движения пешком в качестве упражнения",
+        "example_en": "Running is good exercise for your heart.",
+        "example_ru": "Бег - хорошее упражнение для вашего сердца."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sad",
+    "word": "sad",
+    "ipa": "/sæd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "грустный",
+        "alternative_translations": ["печальный", "унылый"],
+        "definition_en": "Feeling or expressing sorrow or unhappiness",
+        "definition_ru": "Чувствовать или выражать горе или несчастье",
+        "example_en": "She felt sad when her friend moved away.",
+        "example_ru": "Она чувствовала грусть, когда ее друг переехал."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_safe",
+    "word": "safe",
+    "ipa": "/seɪf/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "безопасный",
+        "alternative_translations": ["надежный", "в безопасности"],
+        "definition_en": "Protected from harm or danger",
+        "definition_ru": "Защищенный от вреда или опасности",
+        "example_en": "The bridge is safe to cross now.",
+        "example_ru": "Мост теперь безопасен для перехода."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_safely",
+    "word": "safely",
+    "ipa": "/ˈseɪfli/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adverb",
+        "translation": "безопасно",
+        "alternative_translations": ["благополучно"],
+        "definition_en": "In a way that is protected from danger or risk",
+        "definition_ru": "Способом, защищающим от опасности или риска",
+        "example_en": "The plane landed safely despite the storm.",
+        "example_ru": "Самолет безопасно приземлился несмотря на шторм."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sail",
+    "word": "sail",
+    "ipa": "/seɪl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "парус",
+        "alternative_translations": ["пламя"],
+        "definition_en": "A large piece of fabric on a boat or ship that catches the wind",
+        "definition_ru": "Большой кусок ткани на лодке или корабле, который ловит ветер",
+        "example_en": "The sailboat has white sails.",
+        "example_ru": "Парусная лодка имеет белые паруса."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "плыть",
+        "alternative_translations": ["парусить"],
+        "definition_en": "To travel over water in a boat or ship",
+        "definition_ru": "Путешествовать по воде на лодке или корабле",
+        "example_en": "They sail to the Caribbean every summer.",
+        "example_ru": "Они плывут в Карибское море каждое лето."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sailing",
+    "word": "sailing",
+    "ipa": "/ˈseɪlɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "парусный спорт",
+        "alternative_translations": ["плавание", "парусина"],
+        "definition_en": "The sport or activity of traveling by boat with sails",
+        "definition_ru": "Спорт или деятельность путешествия на лодке с парусами",
+        "example_en": "Sailing is a popular sport at the seaside.",
+        "example_ru": "Парусный спорт популярен у побережья."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sailor",
+    "word": "sailor",
+    "ipa": "/ˈseɪlər/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "моряк",
+        "alternative_translations": ["мореход"],
+        "definition_en": "A person who works on a ship or sails boats",
+        "definition_ru": "Человек, который работает на корабле или управляет лодками",
+        "example_en": "The sailor navigated the ship through rough waters.",
+        "example_ru": "Моряк провел корабль через бурные воды."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_salad",
+    "word": "salad",
+    "ipa": "/ˈsæləd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "салат",
+        "alternative_translations": ["овощной салат"],
+        "definition_en": "A dish of raw or cooked vegetables often mixed with dressing",
+        "definition_ru": "Блюдо из сырых или вареных овощей часто смешанное с соусом",
+        "example_en": "She ordered a fresh green salad for lunch.",
+        "example_ru": "Она заказала свежий зеленый салат на обед."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_salary",
+    "word": "salary",
+    "ipa": "/ˈsæləri/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "зарплата",
+        "alternative_translations": ["оклад", "жалованье"],
+        "definition_en": "Regular payment for work done",
+        "definition_ru": "Регулярная оплата за проделанную работу",
+        "example_en": "He negotiated a higher salary with his employer.",
+        "example_ru": "Он договорился о более высокой зарплате со своим работодателем."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sale",
+    "word": "sale",
+    "ipa": "/seɪl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "распродажа",
+        "alternative_translations": ["продажа", "скидка"],
+        "definition_en": "The selling of goods, especially at reduced prices",
+        "definition_ru": "Продажа товаров, особенно по сниженным ценам",
+        "example_en": "The clothing store is having a summer sale.",
+        "example_ru": "Магазин одежды проводит летнюю распродажу."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_salesman_saleswoman",
+    "word": "salesman/saleswoman",
+    "ipa": "/ˈseɪlzmən/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "продавец",
+        "alternative_translations": ["торговец", "менеджер по продажам"],
+        "definition_en": "A person employed to sell goods or services",
+        "definition_ru": "Человек, нанятый для продажи товаров или услуг",
+        "example_en": "The salesman helped us choose the right car.",
+        "example_ru": "Продавец помогал нам выбрать правильный автомобиль."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_salmon",
+    "word": "salmon",
+    "ipa": "/ˈsæmən/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "лосось",
+        "alternative_translations": ["сёмга"],
+        "definition_en": "A large fish with pink flesh that lives in rivers and oceans",
+        "definition_ru": "Крупная рыба с розовым мясом, живущая в реках и океанах",
+        "example_en": "We grilled salmon for dinner.",
+        "example_ru": "Мы готовили лосось на гриле к ужину."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_salt",
+    "word": "salt",
+    "ipa": "/sɔːlt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "соль",
+        "alternative_translations": ["поваренная соль"],
+        "definition_en": "A white crystalline substance used for flavoring food",
+        "definition_ru": "Белое кристаллическое вещество, используемое для приправки пищи",
+        "example_en": "Add a pinch of salt to the soup.",
+        "example_ru": "Добавьте щепотку соли в суп."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_same",
+    "word": "same",
+    "ipa": "/seɪm/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "одинаковый",
+        "alternative_translations": ["тот же", "тождественный"],
+        "definition_en": "Exactly alike or identical",
+        "definition_ru": "Совершенно похожий или идентичный",
+        "example_en": "We have the same opinions about politics.",
+        "example_ru": "У нас одинаковые мнения о политике."
+      },
+      {
+        "part_of_speech": "adverb",
+        "translation": "так же",
+        "alternative_translations": ["подобно"],
+        "definition_en": "In the same way or manner",
+        "definition_ru": "Таким же образом или манерой",
+        "example_en": "She dances the same as her mother.",
+        "example_ru": "Она танцует так же, как ее мать."
+      },
+      {
+        "part_of_speech": "pronoun",
+        "translation": "то же самое",
+        "alternative_translations": ["то же"],
+        "definition_en": "The identical person or thing",
+        "definition_ru": "Идентичный человек или вещь",
+        "example_en": "I'll have the same as you.",
+        "example_ru": "Я возьму то же самое, что и вы."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sand",
+    "word": "sand",
+    "ipa": "/sænd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "песок",
+        "alternative_translations": ["песочек"],
+        "definition_en": "Fine particles of rock found on beaches and deserts",
+        "definition_ru": "Мелкие частицы горной породы, найденные на пляжах и пустынях",
+        "example_en": "The children played in the sand at the beach.",
+        "example_ru": "Дети играли в песке на пляже."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sandal",
+    "word": "sandal",
+    "ipa": "/ˈsændəl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "сандалия",
+        "alternative_translations": ["босоножка"],
+        "definition_en": "A light shoe with straps, worn in warm weather",
+        "definition_ru": "Легкая обувь с ремнями, носится в теплую погоду",
+        "example_en": "She wore sandals on the beach.",
+        "example_ru": "Она носила сандалии на пляже."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sandwich",
+    "word": "sandwich",
+    "ipa": "/ˈsænwɪdʒ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "сандвич",
+        "alternative_translations": ["бутерброд"],
+        "definition_en": "Two slices of bread with a filling between them",
+        "definition_ru": "Два ломтика хлеба с начинкой между ними",
+        "example_en": "I made a ham and cheese sandwich for lunch.",
+        "example_ru": "Я сделал ветчину и сыр сандвич на обед."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_satisfactory",
+    "word": "satisfactory",
+    "ipa": "/ˌsætɪsˈfæktəri/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "удовлетворительный",
+        "alternative_translations": ["приемлемый", "хороший"],
+        "definition_en": "Adequate or acceptable in quality",
+        "definition_ru": "Адекватный или приемлемый по качеству",
+        "example_en": "His test results were satisfactory but not excellent.",
+        "example_ru": "Его результаты тестов были удовлетворительными, но не отличными."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_satisfied",
+    "word": "satisfied",
+    "ipa": "/ˈsætɪsfaɪd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "довольный",
+        "alternative_translations": ["удовлетворенный"],
+        "definition_en": "Pleased or content with something",
+        "definition_ru": "Доволен или доволен чем-то",
+        "example_en": "The customer was satisfied with the service.",
+        "example_ru": "Клиент был доволен обслуживанием."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sauce",
+    "word": "sauce",
+    "ipa": "/sɔːs/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "соус",
+        "alternative_translations": ["подлив"],
+        "definition_en": "A liquid or semi-liquid substance served with food",
+        "definition_ru": "Жидкое или полужидкое вещество, подаваемое к пище",
+        "example_en": "The pasta came with a delicious tomato sauce.",
+        "example_ru": "Паста подавалась с вкусным томатным соусом."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_saucepan",
+    "word": "saucepan",
+    "ipa": "/ˈsɔːspæn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "кастрюля",
+        "alternative_translations": ["сотейник"],
+        "definition_en": "A cooking pot with a handle, used on the stove",
+        "definition_ru": "Кастрюля с ручкой, используемая на плите",
+        "example_en": "She heated the milk in a saucepan.",
+        "example_ru": "Она нагревала молоко в кастрюле."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_saucer",
+    "word": "saucer",
+    "ipa": "/ˈsɔːsər/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "блюдце",
+        "alternative_translations": ["чашечка"],
+        "definition_en": "A shallow dish placed under a cup to catch spills",
+        "definition_ru": "Мелкое блюдце, помещаемое под чашку, чтобы ловить пролитое",
+        "example_en": "She placed the cup and saucer on the table.",
+        "example_ru": "Она поставила чашку и блюдце на стол."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sausage",
+    "word": "sausage",
+    "ipa": "/ˈsɔːsɪdʒ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "колбаса",
+        "alternative_translations": ["сосиски"],
+        "definition_en": "Meat mixed with spices and put into a skin casing",
+        "definition_ru": "Мясо, смешанное со специями и помещенное в оболочку из кишок",
+        "example_en": "We had sausages and eggs for breakfast.",
+        "example_ru": "На завтрак у нас была колбаса и яйца."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_save",
+    "word": "save",
+    "ipa": "/seɪv/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "спасать",
+        "alternative_translations": ["сохранять", "откладывать"],
+        "definition_en": "To rescue from danger or to store something for later use",
+        "definition_ru": "Спасать от опасности или хранить что-то для последующего использования",
+        "example_en": "The lifeguard saved the drowning swimmer.",
+        "example_ru": "Спасатель спас тонущего пловца."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_say",
+    "word": "say",
+    "ipa": "/seɪ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "говорить",
+        "alternative_translations": ["сказать", "произносить"],
+        "definition_en": "To express something in words or to speak",
+        "definition_ru": "Выразить что-то словами или говорить",
+        "example_en": "She said goodbye and left the room.",
+        "example_ru": "Она сказала пока и вышла из комнаты."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_scared",
+    "word": "scared",
+    "ipa": "/skeərd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "напуганный",
+        "alternative_translations": ["испуганный", "испугавшийся"],
+        "definition_en": "Feeling fear or fright",
+        "definition_ru": "Чувство страха или испуга",
+        "example_en": "The child was scared of the dark.",
+        "example_ru": "Ребенок боялся темноты."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_scarf",
+    "word": "scarf",
+    "ipa": "/skɑːrf/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "шарф",
+        "alternative_translations": ["платок"],
+        "definition_en": "A piece of fabric worn around the neck or head for warmth or fashion",
+        "definition_ru": "Кусок ткани, носимый вокруг шеи или головы для тепла или моды",
+        "example_en": "She wrapped a warm scarf around her neck in winter.",
+        "example_ru": "Она обмотала теплый шарф вокруг шеи зимой."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_scary",
+    "word": "scary",
+    "ipa": "/ˈskeəri/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "страшный",
+        "alternative_translations": ["пугающий", "ужасающий"],
+        "definition_en": "Causing fear or fright",
+        "definition_ru": "Вызывающий страх или испуг",
+        "example_en": "The horror movie was very scary.",
+        "example_ru": "Фильм ужасов был очень страшным."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_scene",
+    "word": "scene",
+    "ipa": "/siːn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "сцена",
+        "alternative_translations": ["вид", "место действия"],
+        "definition_en": "A part of a play or film or a view of a place",
+        "definition_ru": "Часть пьесы или фильма или вид места",
+        "example_en": "The romantic scene was filmed on a beach.",
+        "example_ru": "Романтическая сцена была снята на пляже."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_scenery",
+    "word": "scenery",
+    "ipa": "/ˈsiːnəri/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "пейзаж",
+        "alternative_translations": ["декорации", "вид"],
+        "definition_en": "Natural features of a landscape, especially when picturesque",
+        "definition_ru": "Естественные черты пейзажа, особенно когда живописны",
+        "example_en": "The mountain scenery was breathtaking.",
+        "example_ru": "Горный пейзаж был захватывающим."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_school",
+    "word": "school",
+    "ipa": "/skuːl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "школа",
+        "alternative_translations": ["учебное заведение"],
+        "definition_en": "An institution for teaching children or students",
+        "definition_ru": "Учреждение для обучения детей или учеников",
+        "example_en": "My daughter attends a primary school nearby.",
+        "example_ru": "Моя дочь ходит в начальную школу рядом."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_schoolchild",
+    "word": "schoolchild",
+    "ipa": "/ˈskuːltʃaɪld/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "школьник",
+        "alternative_translations": ["ученик"],
+        "definition_en": "A child attending school",
+        "definition_ru": "Ребенок, посещающий школу",
+        "example_en": "The schoolchildren walked to school in groups.",
+        "example_ru": "Школьники ходили в школу группами."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_science",
+    "word": "science",
+    "ipa": "/ˈsaɪəns/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "наука",
+        "alternative_translations": ["естественные науки"],
+        "definition_en": "The study of physical and natural phenomena through observation and experiment",
+        "definition_ru": "Изучение физических и естественных явлений через наблюдение и эксперименты",
+        "example_en": "Biology is a branch of science.",
+        "example_ru": "Биология - это раздел науки."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_science_fiction",
+    "word": "science fiction",
+    "ipa": "/ˈsaɪəns ˈfɪkʃən/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "научная фантастика",
+        "alternative_translations": ["фантастика"],
+        "definition_en": "Stories about imaginary future worlds and technologies",
+        "definition_ru": "Истории о воображаемых будущих мирах и технологиях",
+        "example_en": "She loves reading science fiction novels.",
+        "example_ru": "Она любит читать научно-фантастические романы."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_scientific",
+    "word": "scientific",
+    "ipa": "/ˌsaɪənˈtɪfɪk/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "научный",
+        "alternative_translations": ["научно-технический"],
+        "definition_en": "Related to or based on science",
+        "definition_ru": "Связанный с наукой или основанный на науке",
+        "example_en": "The researcher conducted scientific experiments.",
+        "example_ru": "Исследователь проводил научные эксперименты."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_scientist",
+    "word": "scientist",
+    "ipa": "/ˈsaɪəntɪst/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "ученый",
+        "alternative_translations": ["исследователь"],
+        "definition_en": "A person who works in science and conducts research",
+        "definition_ru": "Человек, который работает в науке и проводит исследования",
+        "example_en": "The scientist discovered a new species.",
+        "example_ru": "Ученый открыл новый вид."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_scissors",
+    "word": "scissors",
+    "ipa": "/ˈsɪzəz/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "ножницы",
+        "alternative_translations": [],
+        "definition_en": "A cutting tool with two blades operated by hand",
+        "definition_ru": "Инструмент для резки с двумя лезвиями, управляемый вручную",
+        "example_en": "She used scissors to cut the paper.",
+        "example_ru": "Она использовала ножницы, чтобы вырезать бумагу."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_scooter",
+    "word": "scooter",
+    "ipa": "/ˈskuːtər/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "самокат",
+        "alternative_translations": ["мотоцикл"],
+        "definition_en": "A vehicle with a small engine or powered by foot",
+        "definition_ru": "Транспортное средство с небольшим двигателем или приводимое в движение ногой",
+        "example_en": "Kids ride their scooters in the park.",
+        "example_ru": "Дети катаются на самокатах в парке."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_score",
+    "word": "score",
+    "ipa": "/skɔːr/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "счет",
+        "alternative_translations": ["очко", "оценка"],
+        "definition_en": "The result or points in a game or test",
+        "definition_ru": "Результат или очки в игре или тесте",
+        "example_en": "The final score was 3-2 in favor of our team.",
+        "example_ru": "Финальный счет был 3-2 в пользу нашей команды."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "забивать",
+        "alternative_translations": ["набирать очки"],
+        "definition_en": "To gain points in a game or test",
+        "definition_ru": "Набирать очки в игре или тесте",
+        "example_en": "He scored a goal in the first half.",
+        "example_ru": "Он забил гол в первом тайме."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_scream",
+    "word": "scream",
+    "ipa": "/skriːm/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "крик",
+        "alternative_translations": ["пронзительный вопль"],
+        "definition_en": "A loud sharp cry expressing fear or pain",
+        "definition_ru": "Громкий острый крик, выражающий страх или боль",
+        "example_en": "A scream came from the haunted house.",
+        "example_ru": "Из дома с привидениями раздался крик."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "кричать",
+        "alternative_translations": ["вопить"],
+        "definition_en": "To make a loud sharp cry",
+        "definition_ru": "Издавать громкий острый крик",
+        "example_en": "She screamed when she saw the mouse.",
+        "example_ru": "Она закричала, когда увидела мышь."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_screen",
+    "word": "screen",
+    "ipa": "/skriːn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "экран",
+        "alternative_translations": ["монитор", "ширма"],
+        "definition_en": "A flat display surface on a device or a partition",
+        "definition_ru": "Плоская поверхность отображения на устройстве или перегородка",
+        "example_en": "The movie was shown on a large screen.",
+        "example_ru": "Фильм был показан на большом экране."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sculpture",
+    "word": "sculpture",
+    "ipa": "/ˈskʌlptʃər/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "скульптура",
+        "alternative_translations": ["ваяние"],
+        "definition_en": "An artwork carved or shaped from stone, wood, or metal",
+        "definition_ru": "Произведение искусства, вырезанное или вылепленное из камня, дерева или металла",
+        "example_en": "The museum has many beautiful sculptures.",
+        "example_ru": "В музее много красивых скульптур."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sea",
+    "word": "sea",
+    "ipa": "/siː/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "море",
+        "alternative_translations": ["морской"],
+        "definition_en": "A large body of salt water",
+        "definition_ru": "Большой водоем с соленой водой",
+        "example_en": "We took a cruise across the sea.",
+        "example_ru": "Мы совершили круиз по морю."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_search",
+    "word": "search",
+    "ipa": "/sɜːrtʃ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "поиск",
+        "alternative_translations": ["обыск"],
+        "definition_en": "An attempt to find something by looking carefully",
+        "definition_ru": "Попытка найти что-то, внимательно глядя",
+        "example_en": "The search for the missing person continued.",
+        "example_ru": "Поиск пропавшего человека продолжался."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "искать",
+        "alternative_translations": ["обыскивать"],
+        "definition_en": "To look for something carefully",
+        "definition_ru": "Искать что-то внимательно",
+        "example_en": "I searched for my keys everywhere.",
+        "example_ru": "Я искал свои ключи везде."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_seaside",
+    "word": "seaside",
+    "ipa": "/ˈsiːsaɪd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "побережье",
+        "alternative_translations": ["морской берег", "приморье"],
+        "definition_en": "The shore of the sea or ocean",
+        "definition_ru": "Побережье моря или океана",
+        "example_en": "We spent our vacation at the seaside.",
+        "example_ru": "Мы провели отпуск на побережье."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_season",
+    "word": "season",
+    "ipa": "/ˈsiːzən/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "сезон",
+        "alternative_translations": ["время года"],
+        "definition_en": "One of the four periods of the year (spring, summer, fall, winter)",
+        "definition_ru": "Один из четырех периодов года (весна, лето, осень, зима)",
+        "example_en": "Summer is my favorite season.",
+        "example_ru": "Лето - мой любимый сезон."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_seat",
+    "word": "seat",
+    "ipa": "/siːt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "место",
+        "alternative_translations": ["сиденье", "кресло"],
+        "definition_en": "A place to sit, like a chair",
+        "definition_ru": "Место для сидения, как стул",
+        "example_en": "She found a seat near the window.",
+        "example_ru": "Она нашла место рядом с окном."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_seat_belt",
+    "word": "seat belt",
+    "ipa": "/ˈsiːt belt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "ремень безопасности",
+        "alternative_translations": ["сидячий ремень"],
+        "definition_en": "A safety device worn over the body in a vehicle",
+        "definition_ru": "Устройство безопасности, надевается на тело в транспортном средстве",
+        "example_en": "Always wear your seat belt when driving.",
+        "example_ru": "Всегда пристегивайтесь ремнем безопасности при вождении."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_second",
+    "word": "second",
+    "ipa": "/ˈsekənd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adverb",
+        "translation": "во-вторых",
+        "alternative_translations": ["вторым"],
+        "definition_en": "In the second place or coming next after the first",
+        "definition_ru": "На втором месте или следующий после первого",
+        "example_en": "First, we need planning. Second, we need money.",
+        "example_ru": "Во-первых, нам нужно планирование. Во-вторых, нам нужны деньги."
+      },
+      {
+        "part_of_speech": "noun",
+        "translation": "секунда",
+        "alternative_translations": ["мгновение"],
+        "definition_en": "A unit of time equal to one-sixtieth of a minute",
+        "definition_ru": "Единица времени, равная одной шестидесятой минуты",
+        "example_en": "Wait a second, I'll be right there.",
+        "example_ru": "Подождите секунду, я сейчас приду."
+      },
+      {
+        "part_of_speech": "pronoun",
+        "translation": "второй",
+        "alternative_translations": ["другой"],
+        "definition_en": "The person or thing that comes after the first",
+        "definition_ru": "Человек или вещь, которые идут после первого",
+        "example_en": "The first was good, but the second was better.",
+        "example_ru": "Первый был хорош, но второй был лучше."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_second_hand",
+    "word": "second-hand",
+    "ipa": "/ˌsekənd ˈhænd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "подержанный",
+        "alternative_translations": ["бывший в употреблении"],
+        "definition_en": "Previously owned or used by someone else",
+        "definition_ru": "Ранее принадлежавший или используемый кем-то другим",
+        "example_en": "She bought a second-hand car from the dealership.",
+        "example_ru": "Она купила подержанный автомобиль у дилера."
+      },
+      {
+        "part_of_speech": "adverb",
+        "translation": "из вторых рук",
+        "alternative_translations": ["окольным путем"],
+        "definition_en": "Not directly or from an original source",
+        "definition_ru": "Не непосредственно или из оригинального источника",
+        "example_en": "I heard about it second-hand from a friend.",
+        "example_ru": "Я услышал об этом из вторых рук от друга."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_secondary",
+    "word": "secondary",
+    "ipa": "/ˈsekənderi/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "вторичный",
+        "alternative_translations": ["среднее образование"],
+        "definition_en": "Of less importance than something else; coming after the first",
+        "definition_ru": "Менее важный, чем что-то другое; идущий после первого",
+        "example_en": "Secondary education comes after primary school.",
+        "example_ru": "Среднее образование приходит после начальной школы."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_secret",
+    "word": "secret",
+    "ipa": "/ˈsiːkrɪt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "секретный",
+        "alternative_translations": ["тайный", "скрытый"],
+        "definition_en": "Not known or seen by others; kept hidden",
+        "definition_ru": "Неизвестный или не видимый другим; держится в тайне",
+        "example_en": "The government kept the plan secret.",
+        "example_ru": "Правительство держало план в тайне."
+      },
+      {
+        "part_of_speech": "noun",
+        "translation": "секрет",
+        "alternative_translations": ["тайна"],
+        "definition_en": "Something hidden or not known by others",
+        "definition_ru": "Что-то скрытое или неизвестное другим",
+        "example_en": "Can you keep a secret?",
+        "example_ru": "Ты можешь хранить секрет?"
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_secretary",
+    "word": "secretary",
+    "ipa": "/ˈsekrətri/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "секретарь",
+        "alternative_translations": ["помощник"],
+        "definition_en": "A person employed to handle office work and administrative tasks",
+        "definition_ru": "Человек, нанятый для выполнения офисной работы и административных задач",
+        "example_en": "The secretary scheduled the meeting.",
+        "example_ru": "Секретарь назначил встречу."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_section",
+    "word": "section",
+    "ipa": "/ˈsekʃən/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "раздел",
+        "alternative_translations": ["часть", "сегмент"],
+        "definition_en": "A distinct part of something",
+        "definition_ru": "Отдельная часть чего-то",
+        "example_en": "The first section of the book is about history.",
+        "example_ru": "Первый раздел книги посвящен истории."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_security",
+    "word": "security",
+    "ipa": "/sɪˈkjʊrɪti/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "безопасность",
+        "alternative_translations": ["охрана", "защита"],
+        "definition_en": "Protection from harm or danger",
+        "definition_ru": "Защита от вреда или опасности",
+        "example_en": "Home security is important.",
+        "example_ru": "Безопасность дома важна."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_security_guard",
+    "word": "security guard",
+    "ipa": "/sɪˈkjʊrɪti ɡɑːrd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "охранник",
+        "alternative_translations": ["вооруженная охрана"],
+        "definition_en": "A person employed to protect a place or people",
+        "definition_ru": "Человек, нанятый для защиты места или людей",
+        "example_en": "The security guard checked our bags at the entrance.",
+        "example_ru": "Охранник проверил наши сумки у входа."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_see",
+    "word": "see",
+    "ipa": "/siː/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "видеть",
+        "alternative_translations": ["смотреть", "встречаться"],
+        "definition_en": "To perceive with the eyes or to understand",
+        "definition_ru": "Воспринимать глазами или понимать",
+        "example_en": "Can you see the mountain from here?",
+        "example_ru": "Ты видишь гору отсюда?"
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_seem",
+    "word": "seem",
+    "ipa": "/siːm/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "казаться",
+        "alternative_translations": ["представляться", "выглядеть"],
+        "definition_en": "To appear to be or give the impression of being",
+        "definition_ru": "Казаться или производить впечатление",
+        "example_en": "The weather seems nice today.",
+        "example_ru": "Сегодня погода кажется хорошей."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_select",
+    "word": "select",
+    "ipa": "/sɪˈlekt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "выбирать",
+        "alternative_translations": ["отбирать"],
+        "definition_en": "To pick or choose something from a group",
+        "definition_ru": "Выбирать или выбирать что-то из группы",
+        "example_en": "Select your favorite color from the options.",
+        "example_ru": "Выберите свой любимый цвет из вариантов."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_self_service",
+    "word": "self-service",
+    "ipa": "/ˌself ˈsɜːrvɪs/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "самообслуживание",
+        "alternative_translations": ["самостоятельное обслуживание"],
+        "definition_en": "Where customers serve themselves rather than being served",
+        "definition_ru": "Где клиенты сами себя обслуживают, а не их обслуживают",
+        "example_en": "This is a self-service restaurant.",
+        "example_ru": "Это ресторан самообслуживания."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_selfie",
+    "word": "selfie",
+    "ipa": "/ˈselfi/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "селфи",
+        "alternative_translations": ["самофотография"],
+        "definition_en": "A photograph taken of oneself usually with a mobile phone",
+        "definition_ru": "Фотография, сделанная самого себя обычно с мобильного телефона",
+        "example_en": "She took a selfie with her friends.",
+        "example_ru": "Она сделала селфи со своими друзьями."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_selfish",
+    "word": "selfish",
+    "ipa": "/ˈselfɪʃ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "эгоистичный",
+        "alternative_translations": ["корыстный"],
+        "definition_en": "Thinking of yourself more than others",
+        "definition_ru": "Думать о себе больше, чем о других",
+        "example_en": "It was selfish of him not to share.",
+        "example_ru": "Было эгоистично с его стороны не делиться."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sell",
+    "word": "sell",
+    "ipa": "/sel/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "продавать",
+        "alternative_translations": ["реализовать"],
+        "definition_en": "To give something in exchange for money",
+        "definition_ru": "Отдать что-то в обмен на деньги",
+        "example_en": "The store sells fresh vegetables.",
+        "example_ru": "Магазин продает свежие овощи."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_send",
+    "word": "send",
+    "ipa": "/send/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "отправлять",
+        "alternative_translations": ["послать", "отослать"],
+        "definition_en": "To arrange for something to go to another place",
+        "definition_ru": "Расположить что-то для отправки в другое место",
+        "example_en": "I will send you an email.",
+        "example_ru": "Я отправлю вам электронное письмо."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sense",
+    "word": "sense",
+    "ipa": "/sens/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "смысл",
+        "alternative_translations": ["чувство", "разум"],
+        "definition_en": "The ability to perceive or understand something",
+        "definition_ru": "Способность воспринимать или понимать что-то",
+        "example_en": "She has a good sense of humor.",
+        "example_ru": "У нее хорошее чувство юмора."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sensible",
+    "word": "sensible",
+    "ipa": "/ˈsensəbəl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "разумный",
+        "alternative_translations": ["здравомыслящий", "благоразумный"],
+        "definition_en": "Showing good judgment and practical wisdom",
+        "definition_ru": "Показывающий хорошее суждение и практическую мудрость",
+        "example_en": "It's sensible to wear a seatbelt.",
+        "example_ru": "Разумно пристегиваться ремнем безопасности."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sentence",
+    "word": "sentence",
+    "ipa": "/ˈsentəns/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "предложение",
+        "alternative_translations": ["приговор"],
+        "definition_en": "A group of words that forms a complete thought",
+        "definition_ru": "Группа слов, которая образует полную мысль",
+        "example_en": "Write a sentence in English.",
+        "example_ru": "Напишите предложение на английском языке."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_separate",
+    "word": "separate",
+    "ipa": "/ˈsepərət/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "отдельный",
+        "alternative_translations": ["раздельный"],
+        "definition_en": "Not joined or connected; distinct",
+        "definition_ru": "Не соединенный или связанный; отдельный",
+        "example_en": "Each child has a separate room.",
+        "example_ru": "У каждого ребенка есть отдельная комната."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_series",
+    "word": "series",
+    "ipa": "/ˈsɪriz/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "серия",
+        "alternative_translations": ["цепь", "последовательность"],
+        "definition_en": "A number of things or events following each other",
+        "definition_ru": "Количество вещей или событий, следующих друг за другом",
+        "example_en": "The TV series has five seasons.",
+        "example_ru": "Телесериал имеет пять сезонов."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_serious",
+    "word": "serious",
+    "ipa": "/ˈsɪriəs/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "серьезный",
+        "alternative_translations": ["важный", "опасный"],
+        "definition_en": "Grave or important in manner or nature",
+        "definition_ru": "Серьезный или важный по характеру или природе",
+        "example_en": "This is a serious health issue.",
+        "example_ru": "Это серьезная проблема со здоровьем."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_seriously",
+    "word": "seriously",
+    "ipa": "/ˈsɪriəsli/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adverb",
+        "translation": "серьезно",
+        "alternative_translations": ["на самом деле", "всерьез"],
+        "definition_en": "In a grave or earnest manner",
+        "definition_ru": "Серьезным или искренним образом",
+        "example_en": "She spoke seriously about the problem.",
+        "example_ru": "Она серьезно говорила о проблеме."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  }
+]

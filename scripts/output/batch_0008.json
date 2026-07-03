@@ -1,0 +1,2473 @@
+[
+  {
+    "id": "b1_dive",
+    "word": "dive",
+    "ipa": "/daɪv/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "нырять",
+        "alternative_translations": ["прыгать в воду", "пикировать"],
+        "definition_en": "To jump or plunge head first into water, or to move downward through water or air.",
+        "definition_ru": "Прыгать или бросаться головой вперёд в воду, или двигаться вниз сквозь воду или воздух.",
+        "example_en": "She dived into the pool and swam to the other side.",
+        "example_ru": "Она нырнула в бассейн и доплыла до другого края."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_diver",
+    "word": "diver",
+    "ipa": "/ˈdaɪvər/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "водолаз",
+        "alternative_translations": ["ныряльщик", "прыгун в воду"],
+        "definition_en": "A person who dives into water or works underwater, especially wearing special equipment.",
+        "definition_ru": "Человек, который ныряет в воду или работает под водой, особенно в специальном снаряжении.",
+        "example_en": "The diver explored the coral reef with a camera.",
+        "example_ru": "Водолаз исследовал коралловый риф с фотоаппаратом."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_divide",
+    "word": "divide",
+    "ipa": "/dɪˈvaɪd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "делить",
+        "alternative_translations": ["разделять", "разбивать на части"],
+        "definition_en": "To separate something into parts, or to share something among a group of people.",
+        "definition_ru": "Разделять что-либо на части или распределять что-либо между группой людей.",
+        "example_en": "They divided the project into three separate tasks.",
+        "example_ru": "Они разделили проект на три отдельные задачи."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_diving",
+    "word": "diving",
+    "ipa": "/ˈdaɪvɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "дайвинг",
+        "alternative_translations": ["ныряние", "прыжки в воду"],
+        "definition_en": "The sport or activity of swimming underwater, often using breathing equipment.",
+        "definition_ru": "Вид спорта или занятие плаванием под водой, часто с использованием дыхательного оборудования.",
+        "example_en": "He took up diving as a hobby after visiting the Caribbean.",
+        "example_ru": "Он начал заниматься дайвингом как хобби после посещения Карибского моря."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_do",
+    "word": "do",
+    "ipa": "/duː/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "делать",
+        "alternative_translations": ["выполнять", "совершать"],
+        "definition_en": "To perform an action, carry out a task, or complete an activity.",
+        "definition_ru": "Выполнять действие, осуществлять задачу или завершать деятельность.",
+        "example_en": "I need to do the dishes before we leave.",
+        "example_ru": "Мне нужно вымыть посуду, прежде чем мы уйдём."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_doctor_dr",
+    "word": "doctor / Dr",
+    "ipa": "/ˈdɒktər/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "врач",
+        "alternative_translations": ["доктор", "терапевт"],
+        "definition_en": "A person who is qualified to practise medicine and treats sick people.",
+        "definition_ru": "Человек, имеющий квалификацию для занятия медициной и лечащий больных людей.",
+        "example_en": "She made an appointment to see the doctor about her headaches.",
+        "example_ru": "Она записалась на приём к врачу по поводу головных болей."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_document",
+    "word": "document",
+    "ipa": "/ˈdɒkjumənt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "документ",
+        "alternative_translations": ["бумага", "файл"],
+        "definition_en": "An official piece of paper or digital file that provides information or evidence.",
+        "definition_ru": "Официальный бумажный или цифровой файл, содержащий информацию или доказательства.",
+        "example_en": "Please sign the document and return it by Friday.",
+        "example_ru": "Пожалуйста, подпишите документ и верните его до пятницы."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_documentary",
+    "word": "documentary",
+    "ipa": "/ˌdɒkjuˈmentri/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "документальный фильм",
+        "alternative_translations": ["документалка"],
+        "definition_en": "A film or television programme that gives facts and information about a real subject.",
+        "definition_ru": "Фильм или телевизионная программа, содержащие факты и информацию о реальной теме.",
+        "example_en": "We watched a fascinating documentary about ocean life.",
+        "example_ru": "Мы посмотрели увлекательный документальный фильм о жизни океана."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_dog",
+    "word": "dog",
+    "ipa": "/dɒɡ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "собака",
+        "alternative_translations": ["пёс"],
+        "definition_en": "A common domestic animal kept as a pet or used for work, such as guarding or hunting.",
+        "definition_ru": "Распространённое домашнее животное, которое держат как питомца или используют для работы, например охраны или охоты.",
+        "example_en": "Their dog barks every time someone knocks on the door.",
+        "example_ru": "Их собака лает каждый раз, когда кто-то стучит в дверь."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_doll",
+    "word": "doll",
+    "ipa": "/dɒl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "кукла",
+        "alternative_translations": [],
+        "definition_en": "A small model of a human figure, especially one used as a child's toy.",
+        "definition_ru": "Небольшая модель человеческой фигуры, особенно используемая как детская игрушка.",
+        "example_en": "She received a beautiful porcelain doll for her birthday.",
+        "example_ru": "На день рождения она получила красивую фарфоровую куклу."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_dollar",
+    "word": "dollar",
+    "ipa": "/ˈdɒlər/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "доллар",
+        "alternative_translations": [],
+        "definition_en": "The basic unit of money used in the USA and several other countries.",
+        "definition_ru": "Основная денежная единица, используемая в США и ряде других стран.",
+        "example_en": "The book costs fifteen dollars at the campus bookstore.",
+        "example_ru": "Книга стоит пятнадцать долларов в книжном магазине на кампусе."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_dolphin",
+    "word": "dolphin",
+    "ipa": "/ˈdɒlfɪn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "дельфин",
+        "alternative_translations": [],
+        "definition_en": "A highly intelligent sea mammal that lives in groups and is known for its playful behaviour.",
+        "definition_ru": "Высокоинтеллектуальное морское млекопитающее, живущее группами и известное своим игривым поведением.",
+        "example_en": "We were lucky to see dolphins jumping near our boat.",
+        "example_ru": "Нам повезло увидеть дельфинов, прыгающих рядом с нашей лодкой."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_donkey",
+    "word": "donkey",
+    "ipa": "/ˈdɒŋki/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "осёл",
+        "alternative_translations": ["ишак"],
+        "definition_en": "A domesticated animal related to the horse, with long ears, used for carrying loads.",
+        "definition_ru": "Одомашненное животное, родственное лошади, с длинными ушами, используемое для перевозки грузов.",
+        "example_en": "The farmer used a donkey to carry supplies up the mountain path.",
+        "example_ru": "Фермер использовал осла для перевозки припасов по горной тропе."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_door",
+    "word": "door",
+    "ipa": "/dɔːr/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "дверь",
+        "alternative_translations": ["дверца"],
+        "definition_en": "A movable barrier used to open and close the entrance to a building, room, or vehicle.",
+        "definition_ru": "Подвижная преграда для открытия и закрытия входа в здание, комнату или транспортное средство.",
+        "example_en": "Please close the door quietly so you don't wake the baby.",
+        "example_ru": "Пожалуйста, тихо закройте дверь, чтобы не разбудить ребёнка."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_dot",
+    "word": "dot",
+    "ipa": "/dɒt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "точка",
+        "alternative_translations": ["пятнышко", "кружок"],
+        "definition_en": "A small round mark or spot.",
+        "definition_ru": "Маленькая круглая метка или пятно.",
+        "example_en": "The map showed the town as a small dot in the valley.",
+        "example_ru": "На карте город был обозначен маленькой точкой в долине."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_double",
+    "word": "double",
+    "ipa": "/ˈdʌbl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "двойной",
+        "alternative_translations": ["вдвое больший", "двукратный"],
+        "definition_en": "Consisting of two equal or similar parts, or twice as much or as many.",
+        "definition_ru": "Состоящий из двух равных или похожих частей, или вдвое больший по количеству.",
+        "example_en": "We booked a double room at the hotel for the weekend.",
+        "example_ru": "Мы забронировали двухместный номер в отеле на выходные."
+      },
+      {
+        "part_of_speech": "pronoun",
+        "translation": "двойное количество",
+        "alternative_translations": ["вдвое больше"],
+        "definition_en": "Twice the number or amount of something.",
+        "definition_ru": "Вдвое больше числа или количества чего-либо.",
+        "example_en": "He earns double what I make in the same job.",
+        "example_ru": "Он зарабатывает вдвое больше, чем я, на той же работе."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_doubt",
+    "word": "doubt",
+    "ipa": "/daʊt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "сомнение",
+        "alternative_translations": ["неуверенность", "недоверие"],
+        "definition_en": "A feeling of uncertainty or lack of conviction about something.",
+        "definition_ru": "Чувство неопределённости или отсутствия уверенности в чём-либо.",
+        "example_en": "She had serious doubts about whether the plan would work.",
+        "example_ru": "У неё были серьёзные сомнения в том, сработает ли этот план."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "сомневаться",
+        "alternative_translations": ["не доверять", "подвергать сомнению"],
+        "definition_en": "To feel uncertain about something or someone, or to not fully believe something.",
+        "definition_ru": "Чувствовать неуверенность в чём-либо или ком-либо, или не полностью верить чему-либо.",
+        "example_en": "I doubt that we will finish the report before the deadline.",
+        "example_ru": "Я сомневаюсь, что мы закончим отчёт до дедлайна."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_down",
+    "word": "down",
+    "ipa": "/daʊn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adverb",
+        "translation": "вниз",
+        "alternative_translations": ["внизу", "книзу"],
+        "definition_en": "Towards or in a lower position or level.",
+        "definition_ru": "В направлении более низкого положения или уровня.",
+        "example_en": "The temperature has gone down significantly this week.",
+        "example_ru": "Температура значительно упала на этой неделе."
+      },
+      {
+        "part_of_speech": "preposition",
+        "translation": "вниз по",
+        "alternative_translations": ["по (направлению)"],
+        "definition_en": "From a higher to a lower point along something.",
+        "definition_ru": "От более высокой точки к более низкой вдоль чего-либо.",
+        "example_en": "She walked slowly down the stairs carrying her luggage.",
+        "example_ru": "Она медленно спускалась по лестнице с багажом."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_download",
+    "word": "download",
+    "ipa": "/ˈdaʊnləʊd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "загрузка",
+        "alternative_translations": ["скачивание", "файл для скачивания"],
+        "definition_en": "A file or data that has been or can be transferred from the internet to a computer or device.",
+        "definition_ru": "Файл или данные, которые были или могут быть переданы из интернета на компьютер или устройство.",
+        "example_en": "The software is available as a free download on their website.",
+        "example_ru": "Программа доступна для бесплатной загрузки на их сайте."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "скачивать",
+        "alternative_translations": ["загружать", "закачивать"],
+        "definition_en": "To transfer data or a file from the internet or a network to a computer or device.",
+        "definition_ru": "Передавать данные или файл из интернета или сети на компьютер или устройство.",
+        "example_en": "You can download the app from the official store for free.",
+        "example_ru": "Приложение можно бесплатно скачать из официального магазина."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_downstairs",
+    "word": "downstairs",
+    "ipa": "/ˌdaʊnˈsteəz/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "нижний",
+        "alternative_translations": ["находящийся внизу"],
+        "definition_en": "Located on a lower floor of a building.",
+        "definition_ru": "Расположенный на нижнем этаже здания.",
+        "example_en": "The downstairs bathroom is being renovated this month.",
+        "example_ru": "Туалет на нижнем этаже ремонтируется в этом месяце."
+      },
+      {
+        "part_of_speech": "adverb",
+        "translation": "внизу",
+        "alternative_translations": ["на нижнем этаже", "вниз по лестнице"],
+        "definition_en": "On or to a lower floor of a building.",
+        "definition_ru": "На нижнем этаже здания или в направлении нижнего этажа.",
+        "example_en": "Come downstairs for breakfast — it's ready!",
+        "example_ru": "Спускайся вниз завтракать — всё готово!"
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_dozen",
+    "word": "dozen",
+    "ipa": "/ˈdʌzn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "дюжина",
+        "alternative_translations": ["двенадцать"],
+        "definition_en": "A group of twelve of something.",
+        "definition_ru": "Группа из двенадцати чего-либо.",
+        "example_en": "She bought a dozen eggs at the market this morning.",
+        "example_ru": "Она купила дюжину яиц на рынке этим утром."
+      },
+      {
+        "part_of_speech": "pronoun",
+        "translation": "двенадцать",
+        "alternative_translations": ["дюжина"],
+        "definition_en": "Twelve in number, used to refer to a set of twelve things.",
+        "definition_ru": "Двенадцать штук, используется для обозначения набора из двенадцати предметов.",
+        "example_en": "I need a dozen for the party — can you bring them?",
+        "example_ru": "Мне нужна дюжина для вечеринки — ты можешь их принести?"
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_dr_doctor",
+    "word": "Dr / doctor",
+    "ipa": "/ˈdɒktər/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "доктор",
+        "alternative_translations": ["врач"],
+        "definition_en": "A title used before the name of a person who has a medical degree or a doctorate.",
+        "definition_ru": "Титул, используемый перед именем человека, имеющего медицинскую степень или степень доктора наук.",
+        "example_en": "Dr Smith will see you now — please go into the consulting room.",
+        "example_ru": "Доктор Смит примет вас сейчас — пожалуйста, пройдите в кабинет."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_drag",
+    "word": "drag",
+    "ipa": "/dræɡ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "тащить",
+        "alternative_translations": ["волочить", "тянуть"],
+        "definition_en": "To pull something or someone along the ground with effort, or to move something slowly and with difficulty.",
+        "definition_ru": "Тянуть что-либо или кого-либо по земле с усилием, или медленно и с трудом перемещать что-либо.",
+        "example_en": "He had to drag the heavy suitcase up the stairs.",
+        "example_ru": "Ему пришлось тащить тяжёлый чемодан вверх по лестнице."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_drama",
+    "word": "drama",
+    "ipa": "/ˈdrɑːmə/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "драма",
+        "alternative_translations": ["пьеса", "театральное искусство"],
+        "definition_en": "A play for theatre, television, or radio, or an exciting and emotional series of events.",
+        "definition_ru": "Пьеса для театра, телевидения или радио, а также захватывающая и эмоциональная череда событий.",
+        "example_en": "The school put on a drama about the history of the city.",
+        "example_ru": "Школа поставила драму об истории города."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_draw",
+    "word": "draw",
+    "ipa": "/drɔː/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "рисовать",
+        "alternative_translations": ["чертить", "тянуть", "привлекать"],
+        "definition_en": "To make a picture or diagram using a pen, pencil, or similar tool.",
+        "definition_ru": "Создавать рисунок или схему с помощью ручки, карандаша или подобного инструмента.",
+        "example_en": "Can you draw a map of how to get to your house?",
+        "example_ru": "Ты можешь нарисовать карту, как добраться до твоего дома?"
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_drawer",
+    "word": "drawer",
+    "ipa": "/drɔːr/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "ящик",
+        "alternative_translations": ["выдвижной ящик"],
+        "definition_en": "A box-shaped container that slides in and out of a piece of furniture such as a desk or chest.",
+        "definition_ru": "Коробкообразный контейнер, который выдвигается из предмета мебели, например письменного стола или комода.",
+        "example_en": "The scissors are in the top drawer of the kitchen cabinet.",
+        "example_ru": "Ножницы лежат в верхнем ящике кухонного шкафа."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_drawing",
+    "word": "drawing",
+    "ipa": "/ˈdrɔːɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "рисунок",
+        "alternative_translations": ["чертёж", "рисование"],
+        "definition_en": "A picture or diagram made with a pen or pencil rather than paint.",
+        "definition_ru": "Рисунок или схема, выполненные ручкой или карандашом, а не красками.",
+        "example_en": "She pinned her drawing of a horse on the classroom wall.",
+        "example_ru": "Она прикрепила свой рисунок лошади на стену класса."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_dream",
+    "word": "dream",
+    "ipa": "/driːm/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "мечта",
+        "alternative_translations": ["сон", "греза"],
+        "definition_en": "A series of images or events in the mind during sleep, or a wish or hope for the future.",
+        "definition_ru": "Серия образов или событий в уме во время сна, или желание и надежда на будущее.",
+        "example_en": "Her dream is to travel across South America one day.",
+        "example_ru": "Её мечта — однажды путешествовать по Южной Америке."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "мечтать",
+        "alternative_translations": ["видеть сны", "грезить"],
+        "definition_en": "To have images and experiences in your mind while you are sleeping, or to imagine something you want in the future.",
+        "definition_ru": "Видеть образы и переживать события в уме во время сна, или воображать то, чего хочешь в будущем.",
+        "example_en": "I often dream about living by the sea and working from home.",
+        "example_ru": "Я часто мечтаю о жизни у моря и работе из дома."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_dress",
+    "word": "dress",
+    "ipa": "/dres/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "платье",
+        "alternative_translations": ["одежда"],
+        "definition_en": "A piece of clothing worn by a woman or girl that covers the body and extends down over the legs.",
+        "definition_ru": "Предмет одежды, который носят женщины или девочки; покрывает тело и спускается вниз по ногам.",
+        "example_en": "She wore a blue dress to the wedding ceremony.",
+        "example_ru": "Она надела голубое платье на свадебную церемонию."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "одеваться",
+        "alternative_translations": ["одевать", "наряжаться"],
+        "definition_en": "To put on clothes, or to put clothes on someone else.",
+        "definition_ru": "Надевать одежду или одевать кого-то другого.",
+        "example_en": "He dressed quickly and rushed out to catch the bus.",
+        "example_ru": "Он быстро оделся и выбежал, чтобы успеть на автобус."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_dressed",
+    "word": "dressed",
+    "ipa": "/drest/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "одетый",
+        "alternative_translations": ["наряженный"],
+        "definition_en": "Wearing clothes, especially in a particular way or style.",
+        "definition_ru": "В одежде, особенно определённым образом или в определённом стиле.",
+        "example_en": "Are you dressed and ready to leave? We're going to be late.",
+        "example_ru": "Ты уже оделся и готов идти? Мы опаздываем."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_drink",
+    "word": "drink",
+    "ipa": "/drɪŋk/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "напиток",
+        "alternative_translations": ["выпивка"],
+        "definition_en": "A liquid that you can swallow, such as water, juice, or alcohol.",
+        "definition_ru": "Жидкость, которую можно выпить, например вода, сок или алкоголь.",
+        "example_en": "Would you like a cold drink while you wait?",
+        "example_ru": "Хотите холодный напиток, пока вы ждёте?"
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "пить",
+        "alternative_translations": ["выпивать"],
+        "definition_en": "To take liquid into your mouth and swallow it.",
+        "definition_ru": "Принимать жидкость в рот и глотать её.",
+        "example_en": "You should drink at least two litres of water a day.",
+        "example_ru": "Вам следует пить не менее двух литров воды в день."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_drive",
+    "word": "drive",
+    "ipa": "/draɪv/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "поездка",
+        "alternative_translations": ["езда на машине", "привод"],
+        "definition_en": "A journey made in a vehicle, or a road leading to a house.",
+        "definition_ru": "Поездка на транспортном средстве или дорога, ведущая к дому.",
+        "example_en": "It's about a two-hour drive from here to the city centre.",
+        "example_ru": "Отсюда до центра города примерно два часа езды."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "ехать",
+        "alternative_translations": ["водить машину", "везти"],
+        "definition_en": "To operate a vehicle and control its movement.",
+        "definition_ru": "Управлять транспортным средством и контролировать его движение.",
+        "example_en": "She drives to work every morning to avoid the crowded trains.",
+        "example_ru": "Каждое утро она едет на работу на машине, чтобы избежать переполненных поездов."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_driver",
+    "word": "driver",
+    "ipa": "/ˈdraɪvər/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "водитель",
+        "alternative_translations": ["шофёр"],
+        "definition_en": "A person who drives a vehicle.",
+        "definition_ru": "Человек, который управляет транспортным средством.",
+        "example_en": "The taxi driver knew all the back streets in the city.",
+        "example_ru": "Таксист знал все переулки в городе."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_driving_licence",
+    "word": "driving licence",
+    "ipa": "/ˈdraɪvɪŋ ˌlaɪsns/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "водительское удостоверение",
+        "alternative_translations": ["права"],
+        "definition_en": "An official document that allows a person to legally drive a vehicle on public roads.",
+        "definition_ru": "Официальный документ, позволяющий человеку законно управлять транспортным средством на дорогах общего пользования.",
+        "example_en": "You must carry your driving licence whenever you are operating a vehicle.",
+        "example_ru": "Вы должны иметь при себе водительское удостоверение, когда управляете транспортным средством."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_drop",
+    "word": "drop",
+    "ipa": "/drɒp/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "капля",
+        "alternative_translations": ["падение", "снижение"],
+        "definition_en": "A small round amount of liquid, or a fall or decrease in the level of something.",
+        "definition_ru": "Небольшое круглое количество жидкости, или падение либо снижение уровня чего-либо.",
+        "example_en": "There was a sharp drop in temperature overnight.",
+        "example_ru": "Ночью температура резко упала."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "ронять",
+        "alternative_translations": ["падать", "снижаться", "опускать"],
+        "definition_en": "To let something fall, or to fall or become lower.",
+        "definition_ru": "Уронить что-либо, или падать, или снижаться.",
+        "example_en": "Be careful not to drop the glasses — they're very fragile.",
+        "example_ru": "Осторожно, не урони бокалы — они очень хрупкие."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_drugstore",
+    "word": "drugstore",
+    "ipa": "/ˈdrʌɡstɔːr/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "аптека",
+        "alternative_translations": ["аптечный магазин"],
+        "definition_en": "A shop (especially in North America) that sells medicines, cosmetics, and other goods.",
+        "definition_ru": "Магазин (особенно в Северной Америке), где продаются лекарства, косметика и другие товары.",
+        "example_en": "I stopped at the drugstore to pick up some cough medicine.",
+        "example_ru": "Я зашёл в аптеку купить средство от кашля."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_drum",
+    "word": "drum",
+    "ipa": "/drʌm/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "барабан",
+        "alternative_translations": [],
+        "definition_en": "A musical instrument consisting of a hollow round frame with a skin stretched tightly over it, played by hitting it with sticks or your hands.",
+        "definition_ru": "Музыкальный инструмент, состоящий из полого круглого корпуса с натянутой на него кожей, в который бьют палочками или руками.",
+        "example_en": "He plays the drums in a band that performs at local venues.",
+        "example_ru": "Он играет на барабанах в группе, которая выступает на местных площадках."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_dry",
+    "word": "dry",
+    "ipa": "/draɪ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "сухой",
+        "alternative_translations": ["засушливый", "пресный"],
+        "definition_en": "Not wet or containing no water or moisture.",
+        "definition_ru": "Не влажный или не содержащий воды или влаги.",
+        "example_en": "Make sure the surface is completely dry before you paint it.",
+        "example_ru": "Убедитесь, что поверхность полностью сухая, прежде чем красить её."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "сушить",
+        "alternative_translations": ["высыхать", "обсыхать"],
+        "definition_en": "To remove moisture from something, or to become dry.",
+        "definition_ru": "Удалить влагу с чего-либо или стать сухим.",
+        "example_en": "She dried her hair with a towel after the shower.",
+        "example_ru": "Она вытерла волосы полотенцем после душа."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_duck",
+    "word": "duck",
+    "ipa": "/dʌk/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "утка",
+        "alternative_translations": ["утёнок"],
+        "definition_en": "A common water bird with a flat bill, short legs, and webbed feet.",
+        "definition_ru": "Распространённая водоплавающая птица с плоским клювом, короткими ногами и перепончатыми лапами.",
+        "example_en": "The children enjoyed feeding the ducks at the park pond.",
+        "example_ru": "Дети с удовольствием кормили уток в пруду парка."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_due",
+    "word": "due",
+    "ipa": "/djuː/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "должный",
+        "alternative_translations": ["ожидаемый", "подлежащий оплате"],
+        "definition_en": "Expected to happen or arrive at a particular time, or owed as a debt or obligation.",
+        "definition_ru": "Ожидаемый в определённое время или причитающийся в качестве долга или обязательства.",
+        "example_en": "The assignment is due next Monday, so you have a week.",
+        "example_ru": "Задание нужно сдать в следующий понедельник, так что у тебя есть неделя."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_due_to",
+    "word": "due to",
+    "ipa": "/ˈdjuː tuː/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "phrase",
+        "translation": "из-за",
+        "alternative_translations": ["вследствие", "по причине"],
+        "definition_en": "Because of something; as a result of a particular cause.",
+        "definition_ru": "Из-за чего-либо; в результате определённой причины.",
+        "example_en": "The flight was delayed due to bad weather conditions.",
+        "example_ru": "Рейс задержали из-за плохих погодных условий."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_dull",
+    "word": "dull",
+    "ipa": "/dʌl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "скучный",
+        "alternative_translations": ["тусклый", "пасмурный", "тупой"],
+        "definition_en": "Not interesting or exciting; also used to describe dull colours or weather.",
+        "definition_ru": "Неинтересный или невозбуждающий; также используется для описания тусклых цветов или пасмурной погоды.",
+        "example_en": "The lecture was so dull that several students fell asleep.",
+        "example_ru": "Лекция была настолько скучной, что несколько студентов заснули."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_during",
+    "word": "during",
+    "ipa": "/ˈdjʊərɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "preposition",
+        "translation": "во время",
+        "alternative_translations": ["в течение", "на протяжении"],
+        "definition_en": "Throughout the whole of a period of time, or at some point within a period of time.",
+        "definition_ru": "На протяжении всего периода времени или в какой-то момент в течение периода времени.",
+        "example_en": "Please turn off your mobile phones during the performance.",
+        "example_ru": "Пожалуйста, выключите мобильные телефоны во время выступления."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_dust",
+    "word": "dust",
+    "ipa": "/dʌst/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "пыль",
+        "alternative_translations": [],
+        "definition_en": "Fine dry particles of dirt or other material that settle on surfaces.",
+        "definition_ru": "Мелкие сухие частицы грязи или другого вещества, оседающие на поверхностях.",
+        "example_en": "There was a thick layer of dust on the old books in the attic.",
+        "example_ru": "На старых книгах на чердаке лежал толстый слой пыли."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_dustbin",
+    "word": "dustbin",
+    "ipa": "/ˈdʌstbɪn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "мусорное ведро",
+        "alternative_translations": ["мусорный бак", "урна"],
+        "definition_en": "A large container kept outside a house for holding waste material until it is collected.",
+        "definition_ru": "Большой контейнер, хранящийся снаружи дома для сбора мусора до его вывоза.",
+        "example_en": "Please put the empty bottles in the dustbin outside.",
+        "example_ru": "Пожалуйста, выбросьте пустые бутылки в мусорный бак на улице."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_dusty",
+    "word": "dusty",
+    "ipa": "/ˈdʌsti/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "пыльный",
+        "alternative_translations": ["запылённый"],
+        "definition_en": "Covered with or full of dust.",
+        "definition_ru": "Покрытый пылью или наполненный пылью.",
+        "example_en": "The dusty shelves in the old library hadn't been cleaned for years.",
+        "example_ru": "Пыльные полки в старой библиотеке не чистили много лет."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_duty",
+    "word": "duty",
+    "ipa": "/ˈdjuːti/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "обязанность",
+        "alternative_translations": ["долг", "пошлина"],
+        "definition_en": "Something that you must do because it is morally right or because it is your job.",
+        "definition_ru": "То, что нужно делать, потому что это морально правильно или это является частью работы.",
+        "example_en": "It is your duty to report any safety problems to the manager.",
+        "example_ru": "Ваша обязанность — сообщать менеджеру о любых проблемах с безопасностью."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_duty-free",
+    "word": "duty-free",
+    "ipa": "/ˌdjuːti ˈfriː/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "беспошлинный",
+        "alternative_translations": [],
+        "definition_en": "Goods that are sold without tax, typically at airports or on aeroplanes.",
+        "definition_ru": "Товары, продаваемые без налога, как правило, в аэропортах или на самолётах.",
+        "example_en": "She bought some duty-free perfume at the airport before boarding.",
+        "example_ru": "Она купила беспошлинные духи в аэропорту перед посадкой."
+      },
+      {
+        "part_of_speech": "noun",
+        "translation": "беспошлинный магазин",
+        "alternative_translations": ["дьюти-фри"],
+        "definition_en": "A shop or area in an airport or ferry terminal where goods can be bought without paying tax.",
+        "definition_ru": "Магазин или зона в аэропорту или морском терминале, где можно купить товары без уплаты налога.",
+        "example_en": "We stopped at the duty-free to pick up some chocolates and wine.",
+        "example_ru": "Мы зашли в дьюти-фри, чтобы купить шоколад и вино."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_duvet",
+    "word": "duvet",
+    "ipa": "/ˈduːveɪ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "пуховое одеяло",
+        "alternative_translations": ["одеяло", "пуховик"],
+        "definition_en": "A large bag filled with feathers or a warm synthetic material, used as a bed covering instead of a sheet and blankets.",
+        "definition_ru": "Большой мешок, набитый перьями или тёплым синтетическим материалом, используемый как постельное покрывало вместо простыни и одеял.",
+        "example_en": "In winter she sleeps under a thick duvet to stay warm.",
+        "example_ru": "Зимой она спит под толстым пуховым одеялом, чтобы не замёрзнуть."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_dvd",
+    "word": "DVD",
+    "ipa": "/ˌdiː viː ˈdiː/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "DVD-диск",
+        "alternative_translations": ["ДВД"],
+        "definition_en": "A disc used for storing films, music, or data, similar to a CD but with greater storage capacity.",
+        "definition_ru": "Диск для хранения фильмов, музыки или данных, похожий на компакт-диск, но с большей ёмкостью.",
+        "example_en": "We rented a DVD of the film and watched it at home.",
+        "example_ru": "Мы взяли напрокат DVD с фильмом и посмотрели его дома."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_dvd_player",
+    "word": "DVD player",
+    "ipa": "/ˌdiː viː ˈdiː ˌpleɪər/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "DVD-проигрыватель",
+        "alternative_translations": ["проигрыватель DVD"],
+        "definition_en": "A device used to play DVDs on a television screen.",
+        "definition_ru": "Устройство для воспроизведения DVD на экране телевизора.",
+        "example_en": "The old DVD player in the living room stopped working last week.",
+        "example_ru": "Старый DVD-проигрыватель в гостиной перестал работать на прошлой неделе."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_each",
+    "word": "each",
+    "ipa": "/iːtʃ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "pronoun",
+        "translation": "каждый",
+        "alternative_translations": ["каждая", "каждое"],
+        "definition_en": "Every one of two or more people or things considered separately.",
+        "definition_ru": "Каждый из двух и более людей или предметов, рассматриваемых по отдельности.",
+        "example_en": "Each of the students received a certificate at the end of the course.",
+        "example_ru": "Каждый студент получил сертификат по окончании курса."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_ear",
+    "word": "ear",
+    "ipa": "/ɪər/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "ухо",
+        "alternative_translations": [],
+        "definition_en": "One of the two organs of hearing on either side of the head.",
+        "definition_ru": "Один из двух органов слуха по обеим сторонам головы.",
+        "example_en": "She put on headphones and pressed them gently over her ears.",
+        "example_ru": "Она надела наушники и мягко прижала их к ушам."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_earache",
+    "word": "earache",
+    "ipa": "/ˈɪəreɪk/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "боль в ухе",
+        "alternative_translations": ["отит"],
+        "definition_en": "A pain inside the ear, often caused by infection.",
+        "definition_ru": "Боль внутри уха, часто вызванная инфекцией.",
+        "example_en": "The child had a bad earache, so we took her to the doctor.",
+        "example_ru": "У ребёнка сильно болело ухо, поэтому мы отвели её к врачу."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_early",
+    "word": "early",
+    "ipa": "/ˈɜːli/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "ранний",
+        "alternative_translations": ["早 (начальный)"],
+        "definition_en": "Happening or done before the usual or expected time.",
+        "definition_ru": "Происходящий или сделанный раньше обычного или ожидаемого времени.",
+        "example_en": "We caught an early train to avoid the rush-hour crowds.",
+        "example_ru": "Мы сели на ранний поезд, чтобы избежать толпы в часы пик."
+      },
+      {
+        "part_of_speech": "adverb",
+        "translation": "рано",
+        "alternative_translations": ["заблаговременно"],
+        "definition_en": "Before the usual or expected time.",
+        "definition_ru": "Раньше обычного или ожидаемого времени.",
+        "example_en": "She arrived early and helped set up the room for the meeting.",
+        "example_ru": "Она пришла рано и помогла подготовить комнату к встрече."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_earn",
+    "word": "earn",
+    "ipa": "/ɜːn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "зарабатывать",
+        "alternative_translations": ["получать (деньги)", "заслуживать"],
+        "definition_en": "To receive money as payment for work that you do, or to deserve something through your actions.",
+        "definition_ru": "Получать деньги в качестве оплаты за выполненную работу или заслуживать что-либо своими действиями.",
+        "example_en": "She earns enough to rent a flat in the city centre.",
+        "example_ru": "Она зарабатывает достаточно, чтобы снимать квартиру в центре города."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_earring",
+    "word": "earring",
+    "ipa": "/ˈɪərɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "серьга",
+        "alternative_translations": ["серёжка"],
+        "definition_en": "A piece of jewellery worn on or through the earlobe.",
+        "definition_ru": "Украшение, которое носят на или через мочку уха.",
+        "example_en": "She wore gold earrings that matched her necklace perfectly.",
+        "example_ru": "Она носила золотые серьги, которые идеально сочетались с её колье."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_earth",
+    "word": "earth",
+    "ipa": "/ɜːθ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "земля",
+        "alternative_translations": ["Земля (планета)", "почва"],
+        "definition_en": "The planet on which we live, or the substance that forms the ground.",
+        "definition_ru": "Планета, на которой мы живём, или вещество, из которого состоит почва.",
+        "example_en": "The Earth travels around the Sun once every 365 days.",
+        "example_ru": "Земля совершает оборот вокруг Солнца раз в 365 дней."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_easily",
+    "word": "easily",
+    "ipa": "/ˈiːzɪli/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adverb",
+        "translation": "легко",
+        "alternative_translations": ["без труда", "свободно"],
+        "definition_en": "Without difficulty or effort.",
+        "definition_ru": "Без трудностей или усилий.",
+        "example_en": "She passed the exam easily because she had studied well.",
+        "example_ru": "Она легко сдала экзамен, потому что хорошо подготовилась."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_east",
+    "word": "east",
+    "ipa": "/iːst/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "восток",
+        "alternative_translations": [],
+        "definition_en": "The direction towards the place where the sun rises, or the part of a place that faces this direction.",
+        "definition_ru": "Направление к месту восхода солнца, или часть места, обращённая в этом направлении.",
+        "example_en": "The sun rises in the east and sets in the west.",
+        "example_ru": "Солнце восходит на востоке и заходит на западе."
+      },
+      {
+        "part_of_speech": "adjective",
+        "translation": "восточный",
+        "alternative_translations": [],
+        "definition_en": "Located in or towards the east part of something.",
+        "definition_ru": "Расположенный в восточной части чего-либо или направленный на восток.",
+        "example_en": "They moved to the east coast to be closer to their family.",
+        "example_ru": "Они переехали на восточное побережье, чтобы быть ближе к семье."
+      },
+      {
+        "part_of_speech": "adverb",
+        "translation": "на восток",
+        "alternative_translations": ["к востоку"],
+        "definition_en": "Towards the east; in an easterly direction.",
+        "definition_ru": "В направлении востока; в восточном направлении.",
+        "example_en": "Drive east for about twenty kilometres and you'll see the sign.",
+        "example_ru": "Езжайте на восток около двадцати километров, и вы увидите указатель."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_eastern",
+    "word": "eastern",
+    "ipa": "/ˈiːstən/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "восточный",
+        "alternative_translations": [],
+        "definition_en": "Situated in, coming from, or facing the east.",
+        "definition_ru": "Расположенный на востоке, происходящий оттуда или обращённый на восток.",
+        "example_en": "Eastern Europe has many beautiful historic cities worth visiting.",
+        "example_ru": "В Восточной Европе есть много красивых исторических городов, которые стоит посетить."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_easy",
+    "word": "easy",
+    "ipa": "/ˈiːzi/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "лёгкий",
+        "alternative_translations": ["простой", "несложный"],
+        "definition_en": "Not difficult; achieved or done without a lot of effort.",
+        "definition_ru": "Нетрудный; достигаемый или выполняемый без особых усилий.",
+        "example_en": "The first chapter of the book was easy to understand.",
+        "example_ru": "Первая глава книги была лёгкой для понимания."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_easygoing",
+    "word": "easygoing",
+    "ipa": "/ˌiːziˈɡəʊɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "спокойный",
+        "alternative_translations": ["покладистый", "беззаботный"],
+        "definition_en": "Relaxed and not easily worried or upset; happy to accept things as they are.",
+        "definition_ru": "Расслабленный и не склонный беспокоиться или расстраиваться; готовый принимать вещи такими, какие они есть.",
+        "example_en": "He is a very easygoing person who rarely gets stressed.",
+        "example_ru": "Он очень спокойный человек, которого редко что выводит из себя."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_eat",
+    "word": "eat",
+    "ipa": "/iːt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "есть",
+        "alternative_translations": ["кушать", "питаться"],
+        "definition_en": "To put food in your mouth, chew it, and swallow it.",
+        "definition_ru": "Класть еду в рот, жевать и глотать её.",
+        "example_en": "We usually eat dinner together as a family at 7 p.m.",
+        "example_ru": "Обычно мы ужинаем вместе всей семьёй в 7 вечера."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_economics",
+    "word": "economics",
+    "ipa": "/ˌiːkəˈnɒmɪks/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "экономика",
+        "alternative_translations": ["экономические науки"],
+        "definition_en": "The study of the way in which money, industry, and trade are organised in society.",
+        "definition_ru": "Изучение того, как деньги, промышленность и торговля организованы в обществе.",
+        "example_en": "She is studying economics at university and hopes to work in finance.",
+        "example_ru": "Она изучает экономику в университете и надеется работать в финансовой сфере."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_edge",
+    "word": "edge",
+    "ipa": "/edʒ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "край",
+        "alternative_translations": ["кромка", "грань"],
+        "definition_en": "The border or line where one thing ends and another begins, or the sharp side of a blade.",
+        "definition_ru": "Граница или линия, где одно заканчивается и начинается другое, или острая сторона лезвия.",
+        "example_en": "He stood nervously at the edge of the cliff and looked down.",
+        "example_ru": "Он нервно стоял на краю скалы и смотрел вниз."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_education",
+    "word": "education",
+    "ipa": "/ˌedʒuˈkeɪʃn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "образование",
+        "alternative_translations": ["обучение", "просвещение"],
+        "definition_en": "The process of learning and gaining knowledge, especially in a school or university.",
+        "definition_ru": "Процесс обучения и получения знаний, особенно в школе или университете.",
+        "example_en": "A good education can open many doors in terms of career opportunities.",
+        "example_ru": "Хорошее образование может открыть много дверей в плане карьерных возможностей."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_effect",
+    "word": "effect",
+    "ipa": "/ɪˈfekt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "эффект",
+        "alternative_translations": ["последствие", "результат", "воздействие"],
+        "definition_en": "A change that is caused by something, or the result or outcome of an action.",
+        "definition_ru": "Изменение, вызванное чем-либо, или результат какого-либо действия.",
+        "example_en": "The new policy has had a positive effect on employee morale.",
+        "example_ru": "Новая политика положительно повлияла на моральный дух сотрудников."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_efficient",
+    "word": "efficient",
+    "ipa": "/ɪˈfɪʃnt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "эффективный",
+        "alternative_translations": ["продуктивный", "экономичный"],
+        "definition_en": "Working well and not wasting time or resources.",
+        "definition_ru": "Работающий хорошо и не тратящий время или ресурсы впустую.",
+        "example_en": "The new software made the whole process much more efficient.",
+        "example_ru": "Новое программное обеспечение сделало весь процесс значительно более эффективным."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_effort",
+    "word": "effort",
+    "ipa": "/ˈefət/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "усилие",
+        "alternative_translations": ["старание", "труд"],
+        "definition_en": "Physical or mental energy needed to do something, or a serious attempt to do something.",
+        "definition_ru": "Физическая или умственная энергия, необходимая для чего-либо, или серьёзная попытка сделать что-либо.",
+        "example_en": "It takes a lot of effort to learn a new language fluently.",
+        "example_ru": "Требуется много усилий, чтобы свободно выучить новый язык."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_egg",
+    "word": "egg",
+    "ipa": "/eɡ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "яйцо",
+        "alternative_translations": [],
+        "definition_en": "An oval object with a hard shell produced by a bird, especially a chicken, and used as food.",
+        "definition_ru": "Овальный объект с твёрдой скорлупой, откладываемый птицей, особенно курицей, и используемый в пищу.",
+        "example_en": "He had two fried eggs on toast for breakfast this morning.",
+        "example_ru": "Сегодня утром на завтрак у него было два яйца на тосте."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_either",
+    "word": "either",
+    "ipa": "/ˈaɪðər/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adverb",
+        "translation": "тоже",
+        "alternative_translations": ["также (в отрицательных предложениях)"],
+        "definition_en": "Used in negative sentences to mean 'also'.",
+        "definition_ru": "Используется в отрицательных предложениях в значении «тоже» или «также».",
+        "example_en": "I don't like spicy food, and he doesn't either.",
+        "example_ru": "Я не люблю острую еду, и он тоже."
+      },
+      {
+        "part_of_speech": "pronoun",
+        "translation": "любой из двух",
+        "alternative_translations": ["тот или другой", "каждый из двух"],
+        "definition_en": "One or the other of two people or things.",
+        "definition_ru": "Один или другой из двух людей или предметов.",
+        "example_en": "Either day works for me — just let me know which you prefer.",
+        "example_ru": "Любой из этих дней мне подходит — просто скажи, который тебе больше нравится."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_elbow",
+    "word": "elbow",
+    "ipa": "/ˈelbəʊ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "локоть",
+        "alternative_translations": [],
+        "definition_en": "The joint between the upper arm and the lower arm.",
+        "definition_ru": "Сустав между верхней и нижней частью руки.",
+        "example_en": "He bumped his elbow against the table and winced in pain.",
+        "example_ru": "Он ударился локтем о стол и поморщился от боли."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_elder",
+    "word": "elder",
+    "ipa": "/ˈeldər/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "старший",
+        "alternative_translations": ["более старший"],
+        "definition_en": "Older than another person, especially when referring to members of a family.",
+        "definition_ru": "Старше другого человека, особенно когда речь идёт о членах семьи.",
+        "example_en": "Her elder brother helped her prepare for the university entrance exam.",
+        "example_ru": "Её старший брат помог ей подготовиться к вступительному экзамену в университет."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_elderly",
+    "word": "elderly",
+    "ipa": "/ˈeldəli/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "пожилой",
+        "alternative_translations": ["старший (о человеке)", "немолодой"],
+        "definition_en": "Used as a polite way of referring to old people.",
+        "definition_ru": "Вежливый способ обозначить пожилых людей.",
+        "example_en": "The programme provides support for elderly people living alone.",
+        "example_ru": "Программа оказывает поддержку пожилым людям, живущим одним."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_election",
+    "word": "election",
+    "ipa": "/ɪˈlekʃn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "выборы",
+        "alternative_translations": ["избрание"],
+        "definition_en": "A formal process in which people vote to choose a person or group to hold a position or office.",
+        "definition_ru": "Официальный процесс, в котором люди голосуют, чтобы выбрать человека или группу для занятия должности.",
+        "example_en": "The general election will take place in the spring of next year.",
+        "example_ru": "Всеобщие выборы состоятся весной следующего года."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_electric",
+    "word": "electric",
+    "ipa": "/ɪˈlektrɪk/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "электрический",
+        "alternative_translations": [],
+        "definition_en": "Powered by or producing electricity.",
+        "definition_ru": "Работающий на электричестве или производящий электричество.",
+        "example_en": "She drives an electric car to reduce her carbon footprint.",
+        "example_ru": "Она ездит на электромобиле, чтобы сократить углеродный след."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_electrical",
+    "word": "electrical",
+    "ipa": "/ɪˈlektrɪkl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "электрический",
+        "alternative_translations": ["электротехнический"],
+        "definition_en": "Relating to electricity, or connected with the science and use of electricity.",
+        "definition_ru": "Относящийся к электричеству или связанный с наукой об электричестве и его применением.",
+        "example_en": "There was an electrical fault in the building, so the power went off.",
+        "example_ru": "В здании произошла электрическая неисправность, и электричество отключилось."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_electricity",
+    "word": "electricity",
+    "ipa": "/ɪˌlekˈtrɪsəti/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "электричество",
+        "alternative_translations": [],
+        "definition_en": "A form of energy that is carried by wires and used for lighting, heating, and powering equipment.",
+        "definition_ru": "Форма энергии, передаваемая по проводам и используемая для освещения, отопления и работы оборудования.",
+        "example_en": "The electricity bill went up significantly during the cold winter months.",
+        "example_ru": "Счёт за электричество значительно вырос в холодные зимние месяцы."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_electronic",
+    "word": "electronic",
+    "ipa": "/ɪˌlekˈtrɒnɪk/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "электронный",
+        "alternative_translations": [],
+        "definition_en": "Using or relating to electronic systems, especially computers and digital technology.",
+        "definition_ru": "Использующий электронные системы или относящийся к ним, особенно компьютеры и цифровые технологии.",
+        "example_en": "He prefers reading electronic books on his tablet to paper ones.",
+        "example_ru": "Он предпочитает читать электронные книги на планшете, а не бумажные."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_elementary",
+    "word": "elementary",
+    "ipa": "/ˌelɪˈmentri/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "элементарный",
+        "alternative_translations": ["начальный", "базовый"],
+        "definition_en": "At a basic or introductory level; relating to the earliest stages of learning.",
+        "definition_ru": "На базовом или вводном уровне; относящийся к начальным этапам обучения.",
+        "example_en": "She started with an elementary course before moving to the advanced level.",
+        "example_ru": "Она начала с элементарного курса, прежде чем перейти на продвинутый уровень."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_elephant",
+    "word": "elephant",
+    "ipa": "/ˈelɪfənt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "слон",
+        "alternative_translations": [],
+        "definition_en": "A very large grey mammal with a long trunk, large ears, and ivory tusks, found in Africa and Asia.",
+        "definition_ru": "Очень крупное серое млекопитающее с длинным хоботом, большими ушами и бивнями из слоновой кости, обитающее в Африке и Азии.",
+        "example_en": "We watched elephants drink from the river during the safari.",
+        "example_ru": "Во время сафари мы наблюдали, как слоны пьют воду из реки."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_elevator",
+    "word": "elevator",
+    "ipa": "/ˈelɪveɪtər/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "лифт",
+        "alternative_translations": [],
+        "definition_en": "A machine in a building that carries people or goods up and down between floors.",
+        "definition_ru": "Машина в здании, перевозящая людей или грузы вверх и вниз между этажами.",
+        "example_en": "Take the elevator to the eighth floor and turn left.",
+        "example_ru": "Поднимитесь на лифте на восьмой этаж и поверните налево."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_else",
+    "word": "else",
+    "ipa": "/els/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adverb",
+        "translation": "ещё",
+        "alternative_translations": ["другой", "иначе"],
+        "definition_en": "Used after pronouns and adverbs to mean 'other', 'another', or 'instead'.",
+        "definition_ru": "Используется после местоимений и наречий в значении «другой», «иной» или «вместо этого».",
+        "example_en": "Is there anything else I can help you with today?",
+        "example_ru": "Есть ли ещё что-нибудь, с чем я могу вам помочь сегодня?"
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_email",
+    "word": "email",
+    "ipa": "/ˈiːmeɪl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "электронная почта",
+        "alternative_translations": ["имейл", "письмо по электронной почте"],
+        "definition_en": "A system for sending messages electronically over the internet, or a message sent this way.",
+        "definition_ru": "Система отправки сообщений в электронном виде через интернет, или сообщение, отправленное таким образом.",
+        "example_en": "I'll send you the details by email as soon as the meeting ends.",
+        "example_ru": "Я отправлю вам детали по электронной почте, как только встреча закончится."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "отправлять по электронной почте",
+        "alternative_translations": ["писать письмо"],
+        "definition_en": "To send a message to someone using email.",
+        "definition_ru": "Отправлять сообщение кому-либо по электронной почте.",
+        "example_en": "Please email me your CV and I'll forward it to the manager.",
+        "example_ru": "Пожалуйста, отправьте мне своё резюме по электронной почте, и я перешлю его менеджеру."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_embarrassed",
+    "word": "embarrassed",
+    "ipa": "/ɪmˈbærəst/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "смущённый",
+        "alternative_translations": ["сконфуженный", "стыдящийся"],
+        "definition_en": "Feeling ashamed or self-conscious because of something you have done.",
+        "definition_ru": "Чувствующий стыд или неловкость из-за чего-то, что вы сделали.",
+        "example_en": "She felt embarrassed when she spilled coffee on her shirt at the meeting.",
+        "example_ru": "Она почувствовала смущение, когда пролила кофе на рубашку во время встречи."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_embarrassing",
+    "word": "embarrassing",
+    "ipa": "/ɪmˈbærəsɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "неловкий",
+        "alternative_translations": ["смущающий", "конфузный"],
+        "definition_en": "Making you feel ashamed or self-conscious.",
+        "definition_ru": "Вызывающий чувство стыда или неловкости.",
+        "example_en": "It was embarrassing when I forgot the name of my new colleague.",
+        "example_ru": "Было неловко, когда я забыл имя своего нового коллеги."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_embassy",
+    "word": "embassy",
+    "ipa": "/ˈembəsi/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "посольство",
+        "alternative_translations": [],
+        "definition_en": "The official offices of a country's ambassador in a foreign country.",
+        "definition_ru": "Официальное представительство посла страны в иностранном государстве.",
+        "example_en": "She had to visit the embassy to apply for a visa.",
+        "example_ru": "Ей пришлось посетить посольство, чтобы подать заявление на визу."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_emergency",
+    "word": "emergency",
+    "ipa": "/ɪˈmɜːdʒənsi/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "чрезвычайная ситуация",
+        "alternative_translations": ["экстренный случай", "аварийная ситуация"],
+        "definition_en": "A sudden serious situation that requires immediate action.",
+        "definition_ru": "Внезапная серьёзная ситуация, требующая немедленных действий.",
+        "example_en": "In case of emergency, call 999 and explain what has happened.",
+        "example_ru": "В случае чрезвычайной ситуации позвоните 999 и объясните, что произошло."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_employ",
+    "word": "employ",
+    "ipa": "/ɪmˈplɔɪ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "нанимать",
+        "alternative_translations": ["трудоустраивать", "использовать"],
+        "definition_en": "To pay someone to work for you, or to make use of something.",
+        "definition_ru": "Платить кому-либо за работу на вас, или использовать что-либо.",
+        "example_en": "The company employs over two hundred people at its main office.",
+        "example_ru": "Компания нанимает более двухсот человек в своём главном офисе."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_employee",
+    "word": "employee",
+    "ipa": "/ɪmˈplɔɪiː/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "сотрудник",
+        "alternative_translations": ["работник", "служащий"],
+        "definition_en": "A person who is paid to work for an organisation or another person.",
+        "definition_ru": "Человек, которому платят за работу в организации или на другого человека.",
+        "example_en": "All employees must complete the health and safety training by Friday.",
+        "example_ru": "Все сотрудники должны пройти обучение по охране труда до пятницы."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_employer",
+    "word": "employer",
+    "ipa": "/ɪmˈplɔɪər/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "работодатель",
+        "alternative_translations": ["наниматель"],
+        "definition_en": "A person or organisation that pays people to work for them.",
+        "definition_ru": "Человек или организация, которая платит людям за работу на них.",
+        "example_en": "Her employer offered her a pay rise after six months of excellent work.",
+        "example_ru": "Её работодатель предложил ей повышение зарплаты после шести месяцев отличной работы."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_employment",
+    "word": "employment",
+    "ipa": "/ɪmˈplɔɪmənt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "занятость",
+        "alternative_translations": ["трудоустройство", "работа"],
+        "definition_en": "The state of having a paid job, or the activity of paying people to work.",
+        "definition_ru": "Состояние наличия оплачиваемой работы, или деятельность по выплате людям заработной платы.",
+        "example_en": "The government is trying to increase employment in rural areas.",
+        "example_ru": "Правительство пытается повысить занятость в сельских районах."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_empty",
+    "word": "empty",
+    "ipa": "/ˈempti/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "пустой",
+        "alternative_translations": ["незаполненный", "свободный"],
+        "definition_en": "Containing nothing, or having no people or things inside.",
+        "definition_ru": "Ничего не содержащий, или в котором нет людей или вещей.",
+        "example_en": "The office was completely empty when I arrived at seven in the morning.",
+        "example_ru": "Офис был совершенно пустым, когда я пришёл в семь утра."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_encourage",
+    "word": "encourage",
+    "ipa": "/ɪnˈkʌrɪdʒ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "поощрять",
+        "alternative_translations": ["вдохновлять", "поддерживать", "побуждать"],
+        "definition_en": "To give someone confidence or hope so that they will do something.",
+        "definition_ru": "Давать кому-либо уверенность или надежду, чтобы они сделали что-то.",
+        "example_en": "Her teacher encouraged her to apply for the scholarship.",
+        "example_ru": "Её учитель поощрял её подавать заявление на стипендию."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_end",
+    "word": "end",
+    "ipa": "/end/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "конец",
+        "alternative_translations": ["окончание", "край"],
+        "definition_en": "The final part or point of something in time or space.",
+        "definition_ru": "Последняя часть или точка чего-либо во времени или пространстве.",
+        "example_en": "By the end of the film, I had completely changed my opinion.",
+        "example_ru": "К концу фильма я полностью изменил своё мнение."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "заканчиваться",
+        "alternative_translations": ["завершать", "прекращать"],
+        "definition_en": "To finish or come to a final point, or to cause something to stop.",
+        "definition_ru": "Завершаться или достигать конечной точки, или заставлять что-либо остановиться.",
+        "example_en": "The conference ended with a speech from the director.",
+        "example_ru": "Конференция завершилась речью директора."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_end_up",
+    "word": "end up",
+    "ipa": "/ˌend ˈʌp/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "phrase",
+        "translation": "оказаться в итоге",
+        "alternative_translations": ["в конечном итоге стать", "в итоге попасть"],
+        "definition_en": "To finally be in a particular place or situation, often unexpectedly.",
+        "definition_ru": "В итоге оказаться в определённом месте или ситуации, часто неожиданно.",
+        "example_en": "We got lost and ended up in a completely different part of the city.",
+        "example_ru": "Мы заблудились и в итоге оказались в совершенно другой части города."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_ending",
+    "word": "ending",
+    "ipa": "/ˈendɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "концовка",
+        "alternative_translations": ["окончание", "конец"],
+        "definition_en": "The final part of a story, film, or event.",
+        "definition_ru": "Финальная часть истории, фильма или события.",
+        "example_en": "I loved the book but found the ending a little disappointing.",
+        "example_ru": "Книга мне очень понравилась, но концовка показалась немного разочаровывающей."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_enemy",
+    "word": "enemy",
+    "ipa": "/ˈenəmi/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "враг",
+        "alternative_translations": ["противник", "неприятель"],
+        "definition_en": "A person who feels hatred for, opposes, or is in conflict with another person or group.",
+        "definition_ru": "Человек, который испытывает ненависть, противостоит или находится в конфликте с другим человеком или группой.",
+        "example_en": "In the story, the hero must defeat his enemy to save the kingdom.",
+        "example_ru": "В истории герой должен победить своего врага, чтобы спасти королевство."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_energy",
+    "word": "energy",
+    "ipa": "/ˈenədʒi/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "энергия",
+        "alternative_translations": ["силы", "бодрость"],
+        "definition_en": "The physical and mental strength to do activities, or power from natural resources used to provide heat and electricity.",
+        "definition_ru": "Физические и умственные силы для выполнения деятельности, или мощность из природных ресурсов, используемая для обеспечения тепла и электричества.",
+        "example_en": "She has so much energy that she goes for a run every morning before work.",
+        "example_ru": "У неё столько энергии, что она каждое утро бегает перед работой."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  }
+]

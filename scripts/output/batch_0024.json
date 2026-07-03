@@ -1,0 +1,2446 @@
+[
+  {
+    "id": "b1_serve",
+    "word": "serve",
+    "ipa": "/sɜːv/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "подавать, служить",
+        "alternative_translations": ["работать", "давать услугу"],
+        "definition_en": "to provide food or drink to someone",
+        "definition_ru": "предоставлять пищу или напиток кому-либо",
+        "example_en": "The waiter served us delicious meals.",
+        "example_ru": "Официант подал нам вкусные блюда."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_server",
+    "word": "server",
+    "ipa": "/ˈsɜːvə(r)/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "сервер, официант",
+        "alternative_translations": ["подающий", "вычислительная машина"],
+        "definition_en": "a computer or person that provides a service",
+        "definition_ru": "компьютер или человек, предоставляющий услугу",
+        "example_en": "The web server hosts all the website files.",
+        "example_ru": "Веб-сервер хранит все файлы сайта."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_service",
+    "word": "service",
+    "ipa": "/ˈsɜːvɪs/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "обслуживание, услуга",
+        "alternative_translations": ["сервис", "служба"],
+        "definition_en": "a system or organization that provides help to people",
+        "definition_ru": "система или организация, которая оказывает помощь людям",
+        "example_en": "The hotel provides excellent customer service.",
+        "example_ru": "Отель предоставляет отличное обслуживание клиентов."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_session",
+    "word": "session",
+    "ipa": "/ˈseʃn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "сеанс, занятие",
+        "alternative_translations": ["период работы", "встреча"],
+        "definition_en": "a period of time spent doing a particular activity",
+        "definition_ru": "период времени, затраченный на определенную деятельность",
+        "example_en": "We had a training session yesterday.",
+        "example_ru": "Вчера у нас было тренировочное занятие."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_set",
+    "word": "set",
+    "ipa": "/set/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "набор, комплект",
+        "alternative_translations": ["коллекция", "группа"],
+        "definition_en": "a collection of things that belong together",
+        "definition_ru": "коллекция вещей, которые принадлежат друг другу",
+        "example_en": "I bought a new chess set.",
+        "example_ru": "Я купил новый набор для шахмат."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "устанавливать, ставить",
+        "alternative_translations": ["размещать", "определять"],
+        "definition_en": "to put something in a particular position",
+        "definition_ru": "положить что-либо в определенное место",
+        "example_en": "Set the table for dinner.",
+        "example_ru": "Сервируй стол к ужину."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_set_off",
+    "word": "set off",
+    "ipa": "/ˌset ˈɔf/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "phrase",
+        "translation": "отправиться, начать путешествие",
+        "alternative_translations": ["спровоцировать", "вызвать"],
+        "definition_en": "to start a journey or trigger something",
+        "definition_ru": "начать путешествие или вызвать что-либо",
+        "example_en": "We set off early in the morning.",
+        "example_ru": "Мы отправились рано с утра."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_set_out",
+    "word": "set out",
+    "ipa": "/ˌset ˈaʊt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "phrase",
+        "translation": "отправляться, начинать",
+        "alternative_translations": ["расставлять", "устраивать"],
+        "definition_en": "to start a journey or begin to do something",
+        "definition_ru": "начать путешествие или начать делать что-либо",
+        "example_en": "She set out to prove her theory.",
+        "example_ru": "Она отправилась доказать свою теорию."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_set_up",
+    "word": "set up",
+    "ipa": "/ˌset ˈʌp/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "phrase",
+        "translation": "установить, организовать",
+        "alternative_translations": ["подготовить", "создать"],
+        "definition_en": "to arrange or prepare something for use",
+        "definition_ru": "расположить или подготовить что-либо к использованию",
+        "example_en": "We need to set up the equipment before the meeting.",
+        "example_ru": "Нам нужно установить оборудование перед встречей."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_several",
+    "word": "several",
+    "ipa": "/ˈsevrəl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "pronoun",
+        "translation": "несколько",
+        "alternative_translations": ["разные", "различные"],
+        "definition_en": "more than two but not very many",
+        "definition_ru": "больше двух, но не очень много",
+        "example_en": "I've visited Paris several times.",
+        "example_ru": "Я посетил Париж несколько раз."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sew",
+    "word": "sew",
+    "ipa": "/səʊ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "шить",
+        "alternative_translations": ["пришивать", "зашивать"],
+        "definition_en": "to join pieces of material with a needle and thread",
+        "definition_ru": "соединять куски материала иглой и нитью",
+        "example_en": "My grandmother sewed her own clothes.",
+        "example_ru": "Моя бабушка шила свою одежду."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sex",
+    "word": "sex",
+    "ipa": "/seks/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "пол, половая принадлежность",
+        "alternative_translations": ["половая связь"],
+        "definition_en": "the biological characteristic of being male or female",
+        "definition_ru": "биологическая характеристика быть мужчиной или женщиной",
+        "example_en": "The form asks for your sex: male or female.",
+        "example_ru": "Форма просит указать ваш пол: мужской или женский."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_shade",
+    "word": "shade",
+    "ipa": "/ʃeɪd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "тень, оттенок",
+        "alternative_translations": ["полутьма", "завеса"],
+        "definition_en": "darkness or a particular color variety",
+        "definition_ru": "тьма или определенное разнообразие цветов",
+        "example_en": "Sit in the shade on a hot day.",
+        "example_ru": "Сидите в тени в жаркий день."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_shadow",
+    "word": "shadow",
+    "ipa": "/ˈʃædəʊ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "тень, силуэт",
+        "alternative_translations": ["отражение", "контур"],
+        "definition_en": "a dark shape or area caused by blocking light",
+        "definition_ru": "темная форма или область, вызванная перекрытием света",
+        "example_en": "The tree cast a long shadow.",
+        "example_ru": "Дерево отбросило длинную тень."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_shake",
+    "word": "shake",
+    "ipa": "/ʃeɪk/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "трясти, колебаться",
+        "alternative_translations": ["дрожать", "встряхивать"],
+        "definition_en": "to move rapidly back and forth",
+        "definition_ru": "быстро двигаться взад и вперед",
+        "example_en": "She shook her head in disagreement.",
+        "example_ru": "Она потрясла головой в знак несогласия."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_shall",
+    "word": "shall",
+    "ipa": "/ʃæl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "буду, будем (будущее время)",
+        "alternative_translations": ["должен", "положено"],
+        "definition_en": "used to form the future tense or to make suggestions",
+        "definition_ru": "используется для образования будущего времени или предложений",
+        "example_en": "Shall we go to the cinema?",
+        "example_ru": "Пойдем ли мы в кино?"
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_shame",
+    "word": "shame",
+    "ipa": "/ʃeɪm/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "стыд, позор",
+        "alternative_translations": ["обида", "беда"],
+        "definition_en": "a feeling of embarrassment or dishonor",
+        "definition_ru": "чувство смущения или позора",
+        "example_en": "He felt shame after his mistake.",
+        "example_ru": "Он чувствовал стыд после своей ошибки."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_shampoo",
+    "word": "shampoo",
+    "ipa": "/ʃæmˈpuː/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "шампунь",
+        "alternative_translations": ["моющее средство для волос"],
+        "definition_en": "a liquid used for washing hair",
+        "definition_ru": "жидкость, используемая для мытья волос",
+        "example_en": "I use this shampoo every day.",
+        "example_ru": "Я использую этот шампунь каждый день."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_shape",
+    "word": "shape",
+    "ipa": "/ʃeɪp/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "форма, очертание",
+        "alternative_translations": ["контур", "фигура"],
+        "definition_en": "the outline or form of something",
+        "definition_ru": "контур или форма чего-либо",
+        "example_en": "The cloud had the shape of a dog.",
+        "example_ru": "Облако имело форму собаки."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_share",
+    "word": "share",
+    "ipa": "/ʃeə(r)/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "делиться, делить",
+        "alternative_translations": ["использовать совместно"],
+        "definition_en": "to use or have something together with others",
+        "definition_ru": "использовать или иметь что-либо вместе с другими",
+        "example_en": "We shared the pizza with our friends.",
+        "example_ru": "Мы поделились пиццей с нашими друзьями."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_shark",
+    "word": "shark",
+    "ipa": "/ʃɑːk/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "акула",
+        "alternative_translations": ["морской хищник"],
+        "definition_en": "a large fish that is a dangerous predator",
+        "definition_ru": "большая рыба, которая является опасным хищником",
+        "example_en": "Great white sharks are found in the ocean.",
+        "example_ru": "Белые акулы встречаются в океане."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sharp",
+    "word": "sharp",
+    "ipa": "/ʃɑːp/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "острый, резкий",
+        "alternative_translations": ["острой края", "пронзительный"],
+        "definition_en": "having a thin edge or point that cuts easily",
+        "definition_ru": "имеющий острый край или острие, которое легко режет",
+        "example_en": "Be careful, this knife is very sharp.",
+        "example_ru": "Будьте осторожны, этот нож очень острый."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_shave",
+    "word": "shave",
+    "ipa": "/ʃeɪv/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "бриться, брить",
+        "alternative_translations": ["сбривать"],
+        "definition_en": "to cut hair very close to the skin",
+        "definition_ru": "срезать волосы очень близко к коже",
+        "example_en": "He shaves every morning.",
+        "example_ru": "Он бреется каждое утро."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_she",
+    "word": "she",
+    "ipa": "/ʃi:/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "pronoun",
+        "translation": "она",
+        "alternative_translations": [],
+        "definition_en": "a female person or animal",
+        "definition_ru": "женщина или самка животного",
+        "example_en": "She is my best friend.",
+        "example_ru": "Она моя лучшая подруга."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sheep",
+    "word": "sheep",
+    "ipa": "/ʃiːp/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "овца, баран",
+        "alternative_translations": ["овечка"],
+        "definition_en": "a farm animal with wool used for clothing",
+        "definition_ru": "сельскохозяйственное животное с шерстью, используемой для одежды",
+        "example_en": "The farmer has hundreds of sheep.",
+        "example_ru": "Фермер имеет сотни овец."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sheet",
+    "word": "sheet",
+    "ipa": "/ʃiːt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "простыня, лист",
+        "alternative_translations": ["пласт", "полотно"],
+        "definition_en": "a thin flat piece of material used on a bed or paper",
+        "definition_ru": "тонкий плоский кусок материала, используемый на кровати или бумаги",
+        "example_en": "I washed my bed sheets yesterday.",
+        "example_ru": "Я вчера стирал свои простыни."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_shelf",
+    "word": "shelf",
+    "ipa": "/ʃelf/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "полка",
+        "alternative_translations": ["выступ"],
+        "definition_en": "a flat surface fixed to a wall used for storing things",
+        "definition_ru": "плоская поверхность, закрепленная на стене, используемая для хранения вещей",
+        "example_en": "Put the books on the shelf.",
+        "example_ru": "Положите книги на полку."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_shine",
+    "word": "shine",
+    "ipa": "/ʃaɪn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "светить, блестеть",
+        "alternative_translations": ["сияние", "свеченье"],
+        "definition_en": "to emit or reflect light brightly",
+        "definition_ru": "излучать или отражать свет ярко",
+        "example_en": "The sun shines brightly in the sky.",
+        "example_ru": "Солнце ярко светит на небе."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_shiny",
+    "word": "shiny",
+    "ipa": "/ˈʃaɪni/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "блестящий, сияющий",
+        "alternative_translations": ["полированный", "глянцевый"],
+        "definition_en": "reflecting light brightly",
+        "definition_ru": "ярко отражающий свет",
+        "example_en": "She wore a shiny dress to the party.",
+        "example_ru": "Она надела блестящее платье на вечеринку."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_ship",
+    "word": "ship",
+    "ipa": "/ʃɪp/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "корабль, судно",
+        "alternative_translations": ["баржа", "лайнер"],
+        "definition_en": "a large boat for traveling on the sea",
+        "definition_ru": "большой корабль для путешествия по морю",
+        "example_en": "The ship sailed across the ocean.",
+        "example_ru": "Корабль плыл через океан."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_shirt",
+    "word": "shirt",
+    "ipa": "/ʃɜːt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "рубашка, сорочка",
+        "alternative_translations": ["майка"],
+        "definition_en": "a piece of clothing worn on the upper body",
+        "definition_ru": "предмет одежды, носимый на верхней части тела",
+        "example_en": "He wore a blue shirt to work.",
+        "example_ru": "Он надел синюю рубашку на работу."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_shock",
+    "word": "shock",
+    "ipa": "/ʃɒk/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "шок, потрясение",
+        "alternative_translations": ["удар", "толчок"],
+        "definition_en": "a sudden surprising or disturbing event",
+        "definition_ru": "неожиданное удивительное или тревожное событие",
+        "example_en": "The news was a shock to everyone.",
+        "example_ru": "Новость была шоком для всех."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_shocked",
+    "word": "shocked",
+    "ipa": "/ʃɒkt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "шокирован, потрясен",
+        "alternative_translations": ["ошеломлен", "удивлен"],
+        "definition_en": "feeling sudden surprise or distress",
+        "definition_ru": "испытывающий внезапное удивление или стресс",
+        "example_en": "She was shocked by his sudden appearance.",
+        "example_ru": "Она была потрясена его внезапным появлением."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_shocking",
+    "word": "shocking",
+    "ipa": "/ˈʃɒkɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "шокирующий, потрясающий",
+        "alternative_translations": ["возмущающий", "скандальный"],
+        "definition_en": "causing shock or surprise",
+        "definition_ru": "вызывающий шок или удивление",
+        "example_en": "The story was shocking and disturbing.",
+        "example_ru": "История была потрясающей и беспокоящей."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_shoe",
+    "word": "shoe",
+    "ipa": "/ʃuː/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "туфля, обувь",
+        "alternative_translations": ["ботинок", "тапок"],
+        "definition_en": "a piece of footwear",
+        "definition_ru": "предмет обуви",
+        "example_en": "I need new shoes for the winter.",
+        "example_ru": "Мне нужна новая обувь на зиму."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_shoot",
+    "word": "shoot",
+    "ipa": "/ʃuːt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "стрелять, снимать",
+        "alternative_translations": ["выпустить", "запустить"],
+        "definition_en": "to fire a gun or photograph something",
+        "definition_ru": "стрелять из пушки или фотографировать что-либо",
+        "example_en": "The photographer will shoot the wedding.",
+        "example_ru": "Фотограф будет снимать свадьбу."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_shop",
+    "word": "shop",
+    "ipa": "/ʃɒp/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "магазин, лавка",
+        "alternative_translations": ["торговля", "торговое помещение"],
+        "definition_en": "a store where you can buy things",
+        "definition_ru": "место, где вы можете купить вещи",
+        "example_en": "Let's go to the shop to buy some groceries.",
+        "example_ru": "Давайте пойдем в магазин, чтобы купить продукты."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "делать покупки, ходить по магазинам",
+        "alternative_translations": ["покупать"],
+        "definition_en": "to go to shops and buy things",
+        "definition_ru": "ходить по магазинам и покупать вещи",
+        "example_en": "She shops for clothes every weekend.",
+        "example_ru": "Она делает покупки одежды каждый выходной."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_shop_assistant",
+    "word": "shop assistant",
+    "ipa": "/ˌʃɒp əˈsɪstənt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "продавец, помощник магазина",
+        "alternative_translations": ["консультант", "работник магазина"],
+        "definition_en": "a person who works in a shop and helps customers",
+        "definition_ru": "человек, который работает в магазине и помогает покупателям",
+        "example_en": "The shop assistant helped me find the right size.",
+        "example_ru": "Продавец помог мне найти правильный размер."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_shopper",
+    "word": "shopper",
+    "ipa": "/ˈʃɒpə(r)/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "покупатель, шопер",
+        "alternative_translations": ["посетитель магазина"],
+        "definition_en": "a person who buys things from shops",
+        "definition_ru": "человек, который покупает вещи в магазинах",
+        "example_en": "There were many shoppers in the mall.",
+        "example_ru": "В торговом центре было много покупателей."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_shopping",
+    "word": "shopping",
+    "ipa": "/ˈʃɒpɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "покупки, шопинг",
+        "alternative_translations": ["посещение магазинов"],
+        "definition_en": "the activity of buying things from shops",
+        "definition_ru": "деятельность по покупке вещей в магазинах",
+        "example_en": "I enjoy shopping on weekends.",
+        "example_ru": "Мне нравится делать покупки по выходным."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_shore",
+    "word": "shore",
+    "ipa": "/ʃɔː(r)/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "берег, побережье",
+        "alternative_translations": ["край", "берег моря"],
+        "definition_en": "the edge of a sea or lake",
+        "definition_ru": "край моря или озера",
+        "example_en": "We walked along the shore of the lake.",
+        "example_ru": "Мы прошлись по берегу озера."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_short",
+    "word": "short",
+    "ipa": "/ʃɔːt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "короткий, низкий",
+        "alternative_translations": ["небольшой", "кратковременный"],
+        "definition_en": "not long in distance or duration",
+        "definition_ru": "не длинный по расстоянию или продолжительности",
+        "example_en": "The meeting was short but productive.",
+        "example_ru": "Встреча была короткой, но продуктивной."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_shortly",
+    "word": "shortly",
+    "ipa": "/ˈʃɔːtli/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adverb",
+        "translation": "вскоре, в ближайшее время",
+        "alternative_translations": ["кратко", "вскорости"],
+        "definition_en": "soon or in a few moments",
+        "definition_ru": "вскоре или в течение нескольких моментов",
+        "example_en": "He will arrive shortly.",
+        "example_ru": "Он прибудет вскоре."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_shorts",
+    "word": "shorts",
+    "ipa": "/ʃɔːts/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "шорты",
+        "alternative_translations": ["короткие штаны"],
+        "definition_en": "short trousers that end above the knee",
+        "definition_ru": "короткие брюки, которые заканчиваются выше колена",
+        "example_en": "I wear shorts in the summer.",
+        "example_ru": "Я ношу шорты летом."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_should",
+    "word": "should",
+    "ipa": "/ʃəd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "должен, следует",
+        "alternative_translations": ["надо", "обязан"],
+        "definition_en": "used to indicate what is advisable or duty",
+        "definition_ru": "используется для указания на то, что желательно или обязано",
+        "example_en": "You should study hard for the exam.",
+        "example_ru": "Вы должны усердно учиться к экзамену."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_shoulder",
+    "word": "shoulder",
+    "ipa": "/ˈʃəʊldə(r)/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "плечо, край дороги",
+        "alternative_translations": ["обочина"],
+        "definition_en": "the part of the body where the arm connects",
+        "definition_ru": "часть тела, где рука соединяется",
+        "example_en": "She carried the bag on her shoulder.",
+        "example_ru": "Она несла сумку на плече."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_shout",
+    "word": "shout",
+    "ipa": "/ʃaʊt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "крик, вопль",
+        "alternative_translations": ["возглас"],
+        "definition_en": "a loud cry or call",
+        "definition_ru": "громкий крик или зов",
+        "example_en": "I heard a shout from outside.",
+        "example_ru": "Я услышал крик снаружи."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "кричать, вопить",
+        "alternative_translations": ["возглашать"],
+        "definition_en": "to speak or say something very loudly",
+        "definition_ru": "говорить или говорить что-либо очень громко",
+        "example_en": "Don't shout at me!",
+        "example_ru": "Не кричи на меня!"
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_show",
+    "word": "show",
+    "ipa": "/ʃəʊ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "шоу, представление",
+        "alternative_translations": ["телепередача", "концерт"],
+        "definition_en": "a performance or television program",
+        "definition_ru": "представление или телепередача",
+        "example_en": "Did you watch the show last night?",
+        "example_ru": "Вы смотрели шоу вчера вечером?"
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "показать, демонстрировать",
+        "alternative_translations": ["обнаруживать"],
+        "definition_en": "to make something visible or known",
+        "definition_ru": "сделать что-либо видимым или известным",
+        "example_en": "Can you show me how it works?",
+        "example_ru": "Можете ли вы показать мне, как это работает?"
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_show_up",
+    "word": "show up",
+    "ipa": "/ˌʃəʊ ˈʌp/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "phrase",
+        "translation": "появиться, показаться",
+        "alternative_translations": ["прибыть", "приехать"],
+        "definition_en": "to arrive or appear somewhere",
+        "definition_ru": "прибыть или появиться где-либо",
+        "example_en": "He didn't show up for the meeting.",
+        "example_ru": "Он не появился на встречу."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_shower",
+    "word": "shower",
+    "ipa": "/ˈʃaʊə(r)/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "душ, ливень",
+        "alternative_translations": ["кратковременный дождь"],
+        "definition_en": "a place to wash or a brief rainfall",
+        "definition_ru": "место для мытья или кратковременный дождь",
+        "example_en": "I take a shower every morning.",
+        "example_ru": "Я принимаю душ каждое утро."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_shut",
+    "word": "shut",
+    "ipa": "/ʃʌt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "закрытый, затворенный",
+        "alternative_translations": [],
+        "definition_en": "closed or not open",
+        "definition_ru": "закрытый или не открытый",
+        "example_en": "The door is shut.",
+        "example_ru": "Дверь закрыта."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "закрывать, затворять",
+        "alternative_translations": ["запирать"],
+        "definition_en": "to close something",
+        "definition_ru": "закрыть что-либо",
+        "example_en": "Please shut the window.",
+        "example_ru": "Пожалуйста, закройте окно."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_shy",
+    "word": "shy",
+    "ipa": "/ʃaɪ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "застенчивый, робкий",
+        "alternative_translations": ["скромный", "боязливый"],
+        "definition_en": "nervous or uncomfortable in social situations",
+        "definition_ru": "нервный или неудобный в социальных ситуациях",
+        "example_en": "She is shy and doesn't talk much.",
+        "example_ru": "Она застенчива и не много говорит."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sick",
+    "word": "sick",
+    "ipa": "/sɪk/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "больной, болезненный",
+        "alternative_translations": ["нездоровый", "тошнотворный"],
+        "definition_en": "suffering from illness or disease",
+        "definition_ru": "страдающий от болезни или заболевания",
+        "example_en": "I feel sick today.",
+        "example_ru": "Я чувствую себя плохо сегодня."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_side",
+    "word": "side",
+    "ipa": "/saɪd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "сторона, бок",
+        "alternative_translations": ["край", "фланг"],
+        "definition_en": "the left or right part of something",
+        "definition_ru": "левая или правая часть чего-либо",
+        "example_en": "I sleep on my side.",
+        "example_ru": "Я сплю на боку."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sight",
+    "word": "sight",
+    "ipa": "/saɪt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "зрение, вид",
+        "alternative_translations": ["достопримечательность", "видение"],
+        "definition_en": "the ability to see or something seen",
+        "definition_ru": "способность видеть или что-то увиденное",
+        "example_en": "The sight of the mountains was beautiful.",
+        "example_ru": "Вид гор был красивым."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sightseeing",
+    "word": "sightseeing",
+    "ipa": "/ˈsaɪtsiːɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "осмотр достопримечательностей, туризм",
+        "alternative_translations": ["экскурсия"],
+        "definition_en": "visiting interesting places as a tourist",
+        "definition_ru": "посещение интересных мест в качестве туриста",
+        "example_en": "We spent the day sightseeing in Paris.",
+        "example_ru": "Мы провели день, осматривая достопримечательности Парижа."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sign",
+    "word": "sign",
+    "ipa": "/saɪn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "знак, вывеска",
+        "alternative_translations": ["символ", "указание"],
+        "definition_en": "a mark or board showing information",
+        "definition_ru": "знак или доска, показывающая информацию",
+        "example_en": "The sign said 'No Parking'.",
+        "example_ru": "На вывеске было написано 'Не парковаться'."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "подписывать, расписываться",
+        "alternative_translations": ["делать знак"],
+        "definition_en": "to write your name as a signature",
+        "definition_ru": "написать свое имя в качестве подписи",
+        "example_en": "Please sign the document.",
+        "example_ru": "Пожалуйста, подпишите документ."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sign_up",
+    "word": "sign up",
+    "ipa": "/ˌsaɪn ˈʌp/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "зарегистрироваться, подписаться",
+        "alternative_translations": ["записаться"],
+        "definition_en": "to register or enroll for something",
+        "definition_ru": "зарегистрироваться или записаться на что-либо",
+        "example_en": "I signed up for the yoga class.",
+        "example_ru": "Я зарегистрировался для класса йоги."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_signal",
+    "word": "signal",
+    "ipa": "/ˈsɪɡnəl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "сигнал, знак",
+        "alternative_translations": ["световой сигнал"],
+        "definition_en": "a sign or gesture that conveys a message",
+        "definition_ru": "знак или жест, который передает сообщение",
+        "example_en": "Wait for the traffic signal to turn green.",
+        "example_ru": "Ждите, пока светофор не станет зеленым."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "давать сигнал, подавать знак",
+        "alternative_translations": [],
+        "definition_en": "to make a signal to communicate",
+        "definition_ru": "подать сигнал для общения",
+        "example_en": "He signaled for the waiter.",
+        "example_ru": "Он подал сигнал официанту."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_signature",
+    "word": "signature",
+    "ipa": "/ˈsɪɡnətʃə(r)/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "подпись, автограф",
+        "alternative_translations": ["эмблема"],
+        "definition_en": "a person's name written in their own way",
+        "definition_ru": "имя человека, написанное его собственным способом",
+        "example_en": "I need your signature on this form.",
+        "example_ru": "Мне нужна ваша подпись на этой форме."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_signpost",
+    "word": "signpost",
+    "ipa": "/ˈsaɪnpəʊst/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "дорожный указатель, столб",
+        "alternative_translations": ["веха", "путеводитель"],
+        "definition_en": "a post with signs showing directions",
+        "definition_ru": "столб с указателями, показывающими направления",
+        "example_en": "The signpost pointed toward the village.",
+        "example_ru": "Указатель указывал на деревню."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_silence",
+    "word": "silence",
+    "ipa": "/ˈsaɪləns/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "тишина, молчание",
+        "alternative_translations": ["безмолвие"],
+        "definition_en": "the absence of sound",
+        "definition_ru": "отсутствие звука",
+        "example_en": "The silence in the room was uncomfortable.",
+        "example_ru": "Тишина в комнате была неудобной."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_silent",
+    "word": "silent",
+    "ipa": "/ˈsaɪlənt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "молчаливый, беззвучный",
+        "alternative_translations": ["тихий"],
+        "definition_en": "making no sound",
+        "definition_ru": "не издающий звука",
+        "example_en": "She remained silent during the meeting.",
+        "example_ru": "Она молчала во время встречи."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_silk",
+    "word": "silk",
+    "ipa": "/sɪlk/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "шелковый",
+        "alternative_translations": [],
+        "definition_en": "made of silk material",
+        "definition_ru": "сделано из шелковой ткани",
+        "example_en": "She wore a silk dress.",
+        "example_ru": "Она надела шелковое платье."
+      },
+      {
+        "part_of_speech": "noun",
+        "translation": "шелк",
+        "alternative_translations": ["шелковая ткань"],
+        "definition_en": "a smooth soft fabric",
+        "definition_ru": "гладкая мягкая ткань",
+        "example_en": "This shirt is made of silk.",
+        "example_ru": "Эта рубашка сделана из шелка."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_silly",
+    "word": "silly",
+    "ipa": "/ˈsɪli/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "глупый, смешной",
+        "alternative_translations": ["бессмысленный", "дурацкий"],
+        "definition_en": "not sensible or wise",
+        "definition_ru": "не разумный или не мудрый",
+        "example_en": "That's a silly question.",
+        "example_ru": "Это глупый вопрос."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_silver",
+    "word": "silver",
+    "ipa": "/ˈsɪlvə(r)/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "серебряный, серебристый",
+        "alternative_translations": ["блеклый"],
+        "definition_en": "made of silver or having a silver color",
+        "definition_ru": "сделано из серебра или имеет серебристый цвет",
+        "example_en": "She wore silver jewelry.",
+        "example_ru": "Она носила серебряные украшения."
+      },
+      {
+        "part_of_speech": "noun",
+        "translation": "серебро",
+        "alternative_translations": ["серебряный цвет"],
+        "definition_en": "a precious metal",
+        "definition_ru": "драгоценный металл",
+        "example_en": "This ring is made of silver.",
+        "example_ru": "Это кольцо сделано из серебра."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_similar",
+    "word": "similar",
+    "ipa": "/ˈsɪmələ(r)/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "похожий, подобный",
+        "alternative_translations": ["сходный"],
+        "definition_en": "having some of the same qualities",
+        "definition_ru": "имеющий некоторые из одинаковых качеств",
+        "example_en": "These two books are similar in style.",
+        "example_ru": "Эти две книги похожи по стилю."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_simple",
+    "word": "simple",
+    "ipa": "/ˈsɪmpl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "простой, несложный",
+        "alternative_translations": ["элементарный", "чистый"],
+        "definition_en": "easy to understand or do",
+        "definition_ru": "легко понять или сделать",
+        "example_en": "The instructions are simple to follow.",
+        "example_ru": "Инструкции просто следовать."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_since",
+    "word": "since",
+    "ipa": "/sɪns/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "conjunction",
+        "translation": "так как, поскольку",
+        "alternative_translations": ["ибо"],
+        "definition_en": "because or from a past time until now",
+        "definition_ru": "потому что или от прошлого времени до сих пор",
+        "example_en": "Since you're here, let's start the meeting.",
+        "example_ru": "Поскольку вы здесь, давайте начнем встречу."
+      },
+      {
+        "part_of_speech": "preposition",
+        "translation": "со времени, с",
+        "alternative_translations": ["начиная с"],
+        "definition_en": "from a time in the past until now",
+        "definition_ru": "с момента в прошлом до сих пор",
+        "example_en": "I've lived here since 2010.",
+        "example_ru": "Я живу здесь с 2010 года."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sincerely",
+    "word": "sincerely",
+    "ipa": "/sɪnˈsɪəli/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adverb",
+        "translation": "искренне, честно",
+        "alternative_translations": ["правдиво", "чистосердечно"],
+        "definition_en": "in an honest and sincere manner",
+        "definition_ru": "в честной и искренней манере",
+        "example_en": "Yours sincerely, John.",
+        "example_ru": "С искренним уважением, Джон."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sing",
+    "word": "sing",
+    "ipa": "/sɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "петь, напевать",
+        "alternative_translations": ["напевание"],
+        "definition_en": "to produce musical sounds with your voice",
+        "definition_ru": "производить музыкальные звуки своим голосом",
+        "example_en": "She loves to sing in the shower.",
+        "example_ru": "Она любит петь в душе."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_singer",
+    "word": "singer",
+    "ipa": "/ˈsɪŋə(r)/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "певец, певица",
+        "alternative_translations": ["певец пения"],
+        "definition_en": "a person who sings",
+        "definition_ru": "человек, который поет",
+        "example_en": "She is a famous singer.",
+        "example_ru": "Она известная певица."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_singing",
+    "word": "singing",
+    "ipa": "/ˈsɪŋɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "пение, пение песен",
+        "alternative_translations": ["исполнение песен"],
+        "definition_en": "the act of producing musical sounds with voice",
+        "definition_ru": "акт производства музыкальных звуков голосом",
+        "example_en": "Her singing is beautiful.",
+        "example_ru": "Ее пение красиво."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_single",
+    "word": "single",
+    "ipa": "/ˈsɪŋɡl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "одиночный, неженатый",
+        "alternative_translations": ["холостой", "один"],
+        "definition_en": "alone or not married",
+        "definition_ru": "один или не женат",
+        "example_en": "She is single and not dating anyone.",
+        "example_ru": "Она одна и не встречается ни с кем."
+      },
+      {
+        "part_of_speech": "noun",
+        "translation": "одиноко живущий человек, одиночка",
+        "alternative_translations": ["холостяк"],
+        "definition_en": "a person who is not married",
+        "definition_ru": "человек, который не женат",
+        "example_en": "Many singles live in this area.",
+        "example_ru": "Много одиноких людей живут в этой области."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sink",
+    "word": "sink",
+    "ipa": "/sɪŋk/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "раковина, мойка",
+        "alternative_translations": ["умывальник"],
+        "definition_en": "a basin fixed in a wall for washing",
+        "definition_ru": "чаша, закрепленная в стене для мытья",
+        "example_en": "I washed my hands in the sink.",
+        "example_ru": "Я вымыл руки в раковине."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "тонуть, погружаться",
+        "alternative_translations": ["погрузиться", "опускаться"],
+        "definition_en": "to go down into water",
+        "definition_ru": "спуститься вниз в воду",
+        "example_en": "The ship began to sink.",
+        "example_ru": "Корабль начал тонуть."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sir",
+    "word": "sir",
+    "ipa": "/sɜː(r)/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "сэр, господин",
+        "alternative_translations": ["монсеньёр"],
+        "definition_en": "a form of address for a man",
+        "definition_ru": "форма обращения к мужчине",
+        "example_en": "Sir, how can I help you?",
+        "example_ru": "Господин, чем я могу вам помочь?"
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sister",
+    "word": "sister",
+    "ipa": "/ˈsɪstə(r)/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "сестра",
+        "alternative_translations": ["членница sisterhood"],
+        "definition_en": "a female child of the same parents",
+        "definition_ru": "дочь от одних и тех же родителей",
+        "example_en": "My sister is three years younger than me.",
+        "example_ru": "Моя сестра на три года младше меня."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sit",
+    "word": "sit",
+    "ipa": "/sɪt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "сидеть, сесть",
+        "alternative_translations": ["занимать место"],
+        "definition_en": "to be in a sitting position",
+        "definition_ru": "находиться в положении сидя",
+        "example_en": "Please sit down.",
+        "example_ru": "Пожалуйста, сядьте."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sit_down",
+    "word": "sit down",
+    "ipa": "/ˌsɪt ˈdaʊn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "phrase",
+        "translation": "садиться, сесть",
+        "alternative_translations": [],
+        "definition_en": "to move from standing to sitting position",
+        "definition_ru": "перейти из положения стоя в положение сидя",
+        "example_en": "Let's sit down for a chat.",
+        "example_ru": "Давайте сядем и поговорим."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_site",
+    "word": "site",
+    "ipa": "/saɪt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "сайт, место",
+        "alternative_translations": ["участок", "местонахождение"],
+        "definition_en": "a place where something is built or located",
+        "definition_ru": "место, где что-либо строится или расположено",
+        "example_en": "We visited the construction site.",
+        "example_ru": "Мы посетили строительную площадку."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sitting_room",
+    "word": "sitting room",
+    "ipa": "/ˌsɪtɪŋ ˈruːm/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "гостиная, гостиная комната",
+        "alternative_translations": ["салон", "жилая комната"],
+        "definition_en": "a room in a house used for relaxing",
+        "definition_ru": "комната в доме, используемая для отдыха",
+        "example_en": "We sat in the sitting room and watched TV.",
+        "example_ru": "Мы сидели в гостиной и смотрели телевизор."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_situated",
+    "word": "situated",
+    "ipa": "/ˈsɪtʃueɪtɪd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "расположенный, находящийся",
+        "alternative_translations": ["размещенный"],
+        "definition_en": "located in a particular place or position",
+        "definition_ru": "расположенный в определенном месте или положении",
+        "example_en": "The house is situated near the beach.",
+        "example_ru": "Дом расположен рядом с пляжем."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_situation",
+    "word": "situation",
+    "ipa": "/ˌsɪtʃuˈeɪʃn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "ситуация, положение",
+        "alternative_translations": ["обстановка", "обстоятельства"],
+        "definition_en": "a set of circumstances at a particular time",
+        "definition_ru": "набор обстоятельств в определенное время",
+        "example_en": "The situation is getting worse.",
+        "example_ru": "Ситуация становится хуже."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_size",
+    "word": "size",
+    "ipa": "/saɪz/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "размер, величина",
+        "alternative_translations": ["объем"],
+        "definition_en": "how large or small something is",
+        "definition_ru": "как большие или маленькие что-либо",
+        "example_en": "What size shoes do you wear?",
+        "example_ru": "Какой размер обуви вы носите?"
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_skate",
+    "word": "skate",
+    "ipa": "/skeɪt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "коньки, ролик",
+        "alternative_translations": ["скейт"],
+        "definition_en": "shoes with blades or wheels for sliding on ice or ground",
+        "definition_ru": "обувь с лезвиями или колесами для скольжения по льду или земле",
+        "example_en": "I bought new ice skates.",
+        "example_ru": "Я купил новые коньки."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "кататься на коньках, кататься на скейте",
+        "alternative_translations": [],
+        "definition_en": "to move on skates",
+        "definition_ru": "двигаться на коньках",
+        "example_en": "We skate in the park every winter.",
+        "example_ru": "Мы катаемся на коньках в парке каждую зиму."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_skateboard",
+    "word": "skateboard",
+    "ipa": "/ˈskeɪtbɔːd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "скейтборд, доска для катания",
+        "alternative_translations": ["роликовая доска"],
+        "definition_en": "a board with wheels used for riding",
+        "definition_ru": "доска с колесами, используемая для катания",
+        "example_en": "He rides his skateboard to school.",
+        "example_ru": "Он едет на скейтборде в школу."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "кататься на скейтборде",
+        "alternative_translations": [],
+        "definition_en": "to ride on a skateboard",
+        "definition_ru": "кататься на скейтборде",
+        "example_en": "They skateboard in the park.",
+        "example_ru": "Они катаются на скейтборде в парке."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_skateboarding",
+    "word": "skateboarding",
+    "ipa": "/ˈskeɪtbɔːdɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "скейтбординг, катание на скейтборде",
+        "alternative_translations": ["滑板运动"],
+        "definition_en": "the sport or activity of riding a skateboard",
+        "definition_ru": "спорт или деятельность катания на скейтборде",
+        "example_en": "Skateboarding is his favorite hobby.",
+        "example_ru": "Скейтбординг его любимое хобби."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_skating",
+    "word": "skating",
+    "ipa": "/ˈskeɪtɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "катание на коньках",
+        "alternative_translations": ["фигурное катание"],
+        "definition_en": "the sport or activity of moving on skates",
+        "definition_ru": "спорт или деятельность движения на коньках",
+        "example_en": "Ice skating is popular in winter.",
+        "example_ru": "Катание на коньках популярно зимой."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_ski",
+    "word": "ski",
+    "ipa": "/skiː/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "лыжа",
+        "alternative_translations": ["горнолыжный спорт"],
+        "definition_en": "a long runner worn on the foot for sliding on snow",
+        "definition_ru": "длинный полоз, надеваемый на ногу для скольжения по снегу",
+        "example_en": "I bought new skis for the winter.",
+        "example_ru": "Я купил новые лыжи на зиму."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "кататься на лыжах",
+        "alternative_translations": ["ходить на лыжах"],
+        "definition_en": "to move on skis",
+        "definition_ru": "двигаться на лыжах",
+        "example_en": "We ski in the mountains.",
+        "example_ru": "Мы катаемся на лыжах в горах."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_skiing",
+    "word": "skiing",
+    "ipa": "/ˈskiːɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "горные лыжи, катание на лыжах",
+        "alternative_translations": ["лыжный спорт"],
+        "definition_en": "the sport of moving on skis",
+        "definition_ru": "спорт движения на лыжах",
+        "example_en": "Skiing is my favorite winter sport.",
+        "example_ru": "Катание на лыжах мой любимый зимний спорт."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_skill",
+    "word": "skill",
+    "ipa": "/skɪl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "навык, умение",
+        "alternative_translations": ["мастерство", "компетенция"],
+        "definition_en": "the ability to do something well",
+        "definition_ru": "способность хорошо делать что-либо",
+        "example_en": "She has excellent writing skills.",
+        "example_ru": "У нее отличные навыки письма."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_skin",
+    "word": "skin",
+    "ipa": "/skɪn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "кожа, шкура",
+        "alternative_translations": ["оболочка"],
+        "definition_en": "the outer covering of the human body",
+        "definition_ru": "наружное покрытие человеческого тела",
+        "example_en": "The sun damages the skin.",
+        "example_ru": "Солнце повреждает кожу."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_skirt",
+    "word": "skirt",
+    "ipa": "/skɜːt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "юбка",
+        "alternative_translations": ["платье"],
+        "definition_en": "a piece of clothing worn around the waist",
+        "definition_ru": "предмет одежды, носимый вокруг талии",
+        "example_en": "She wore a long skirt.",
+        "example_ru": "Она надела длинную юбку."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sky",
+    "word": "sky",
+    "ipa": "/skaɪ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "небо, небосвод",
+        "alternative_translations": ["воздушное пространство"],
+        "definition_en": "the area above the earth where clouds and sun appear",
+        "definition_ru": "область над землей, где появляются облака и солнце",
+        "example_en": "The sky is blue today.",
+        "example_ru": "Небо сегодня голубое."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sleep",
+    "word": "sleep",
+    "ipa": "/sliːp/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "сон, спанье",
+        "alternative_translations": ["дремота"],
+        "definition_en": "a state of rest when not conscious",
+        "definition_ru": "состояние отдыха, когда не в сознании",
+        "example_en": "I need more sleep.",
+        "example_ru": "Мне нужно больше спать."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "спать, дремать",
+        "alternative_translations": [],
+        "definition_en": "to be in a state of sleep",
+        "definition_ru": "находиться в состоянии сна",
+        "example_en": "She sleeps eight hours a night.",
+        "example_ru": "Она спит восемь часов в ночь."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sleepy",
+    "word": "sleepy",
+    "ipa": "/ˈsliːpi/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "сонный, сонливый",
+        "alternative_translations": ["усталый"],
+        "definition_en": "feeling a need to sleep",
+        "definition_ru": "чувствующий необходимость спать",
+        "example_en": "I feel sleepy after lunch.",
+        "example_ru": "Я чувствую сонливость после обеда."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sleeve",
+    "word": "sleeve",
+    "ipa": "/sliːv/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "рукав, рукавица",
+        "alternative_translations": ["обшлаг"],
+        "definition_en": "the part of a garment that covers the arm",
+        "definition_ru": "часть одежды, которая покрывает руку",
+        "example_en": "The shirt has long sleeves.",
+        "example_ru": "Рубашка имеет длинные рукава."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_sleeveless",
+    "word": "sleeveless",
+    "ipa": "/ˈsliːvləs/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "без рукавов, без рукавов",
+        "alternative_translations": [],
+        "definition_en": "having no sleeves",
+        "definition_ru": "не имеющий рукавов",
+        "example_en": "She wore a sleeveless dress.",
+        "example_ru": "Она надела платье без рукавов."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_slice",
+    "word": "slice",
+    "ipa": "/slaɪs/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "ломтик, кусок",
+        "alternative_translations": ["срез", "долька"],
+        "definition_en": "a thin piece cut from something larger",
+        "definition_ru": "тонкий кусок, отрезанный от чего-либо большего",
+        "example_en": "Would you like a slice of pie?",
+        "example_ru": "Хотели бы вы ломтик пирога?"
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_slide",
+    "word": "slide",
+    "ipa": "/slaɪd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "горка, скат",
+        "alternative_translations": ["слайд", "оползень"],
+        "definition_en": "a structure for sliding down or a transparent picture",
+        "definition_ru": "конструкция для скольжения вниз или прозрачное изображение",
+        "example_en": "The children played on the slide.",
+        "example_ru": "Дети играли на горке."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_slightly",
+    "word": "slightly",
+    "ipa": "/ˈslaɪtli/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adverb",
+        "translation": "немного, слегка",
+        "alternative_translations": ["чуть", "вкус"],
+        "definition_en": "in a small degree or amount",
+        "definition_ru": "в небольшой степени или количестве",
+        "example_en": "The temperature is slightly warmer today.",
+        "example_ru": "Температура сегодня немного выше."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  }
+]
