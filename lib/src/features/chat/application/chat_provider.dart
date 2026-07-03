@@ -1,7 +1,4 @@
-import 'dart:convert';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:supabase_flutter/supabase_flutter.dart' hide LocalStorage;
-import '../../../core/supabase/supabase_client.dart';
 import '../../../core/utils/logger.dart';
 import '../data/chat_repository.dart';
 import '../domain/chat_message.dart';
@@ -74,7 +71,6 @@ class ChatNotifier extends _$ChatNotifier {
     return const ChatState();
   }
 
-  SupabaseClient get _supabase => ref.read(supabaseClientProvider);
   ChatRepository get _repository => ref.read(chatRepositoryProvider);
 
   Future<void> _refreshFromServer() async {
@@ -130,30 +126,19 @@ class ChatNotifier extends _$ChatNotifier {
     await _repository.saveMessages(state.messages);
 
     try {
-      final response = await _supabase.functions.invoke(
-        'chat',
-        body: {
-          'message': text.trim(),
-          'context_source': contextSource,
-          'context_payload': contextPayload,
-        },
+      final response = await _repository.sendChatMessage(
+        message: text.trim(),
+        contextSource: contextSource,
+        contextPayload: contextPayload,
       );
 
-      final limit = int.tryParse(
-              response.data?['_headers']?['x-daily-limit'] ?? '') ??
-          state.dailyLimit;
-      final remaining = int.tryParse(
-              response.data?['_headers']?['x-daily-remaining'] ?? '') ??
-          state.dailyRemaining;
+      final data = response.data as Map<String, dynamic>? ?? {};
 
       if (response.status == 429) {
-        final data = response.data is String
-            ? jsonDecode(response.data as String)
-            : response.data;
+        final limit = data['daily_limit'] as int? ?? state.dailyLimit;
         state = state.copyWith(
           isLoading: false,
-          error:
-              'Дневной лимит исчерпан (${data?['limit'] ?? limit} сообщений). Попробуй завтра!',
+          error: 'Дневной лимит исчерпан ($limit сообщений). Попробуй завтра!',
           dailyRemaining: 0,
         );
         return;
@@ -168,7 +153,9 @@ class ChatNotifier extends _$ChatNotifier {
         return;
       }
 
-      final responseText = _parseSSEResponse(response.data);
+      final responseText = data['text'] as String? ?? '';
+      final limit = data['daily_limit'] as int? ?? state.dailyLimit;
+      final remaining = data['daily_remaining'] as int? ?? state.dailyRemaining;
 
       state = state.copyWith(
         dailyLimit: limit,
@@ -184,30 +171,6 @@ class ChatNotifier extends _$ChatNotifier {
         clearStreaming: true,
       );
     }
-  }
-
-  String _parseSSEResponse(dynamic data) {
-    if (data is String) {
-      final buffer = StringBuffer();
-      for (final line in data.split('\n')) {
-        if (!line.startsWith('data: ')) continue;
-        final payload = line.substring(6);
-        if (payload == '[DONE]') break;
-        try {
-          final json = jsonDecode(payload) as Map<String, dynamic>;
-          if (json['type'] == 'content_block_delta') {
-            final text =
-                (json['delta'] as Map<String, dynamic>?)?['text'] as String?;
-            if (text != null) buffer.write(text);
-          }
-        } catch (_) {}
-      }
-      return buffer.toString();
-    }
-    if (data is Map && data.containsKey('text')) {
-      return data['text'] as String;
-    }
-    return data?.toString() ?? '';
   }
 
   void _addAssistantMessage(String text) {

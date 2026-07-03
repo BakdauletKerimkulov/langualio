@@ -37,12 +37,12 @@ Fix the AI chat feature: replace broken SSE streaming with reliable JSON respons
 ### Phase 2 — Client: JSON parsing + limit badge fix (R2, R7, R8)
 **Goal:** Client correctly parses the new JSON response, daily limit badge updates from response body, dead code removed.
 
-- [ ] TDD: sending a message parses JSON `{ text, daily_limit, daily_remaining }` → state has correct `dailyLimit`, `dailyRemaining`, and assistant message text
-- [ ] `lib/src/features/chat/application/chat_provider.dart` — rewrite `sendMessage`: parse response body as JSON (`response.data` → `text`, `daily_limit`, `daily_remaining`); remove `_parseSSEResponse` method and header-based limit parsing (R2)
-- [ ] TDD: 429 response sets `isLimitReached = true` with error message; 502 response sets error
-- [ ] `lib/src/core/api/claude_api_client.dart` — delete file (R7)
-- [ ] `lib/src/features/chat/data/system_prompt_builder.dart` — delete file (R8)
-- [ ] Verify: `dart analyze && flutter test`
+- [x] TDD: sending a message parses JSON `{ text, daily_limit, daily_remaining }` → state has correct `dailyLimit`, `dailyRemaining`, and assistant message text
+- [x] `lib/src/features/chat/application/chat_provider.dart` — rewrite `sendMessage`: parse response body as JSON (`response.data` → `text`, `daily_limit`, `daily_remaining`); remove `_parseSSEResponse` method and header-based limit parsing (R2)
+- [x] TDD: 429 response sets `isLimitReached = true` with error message; 502 response sets error
+- [x] `lib/src/core/api/claude_api_client.dart` — delete file (R7)
+- [x] `lib/src/features/chat/data/system_prompt_builder.dart` — delete file (R8)
+- [x] Verify: `flutter analyze && flutter test`
 
 ### Phase 3 — .env.example + final validation (R9)
 **Goal:** Environment variable documentation and end-to-end sanity check.
