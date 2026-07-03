@@ -1,13 +1,20 @@
 import { serve } from "https://deno.land/std@0.177.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
-const CLAUDE_API_KEY = Deno.env.get("CLAUDE_API_KEY")!;
-const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
-const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-
 const CLAUDE_API_URL = "https://api.anthropic.com/v1/messages";
 const CLAUDE_MODEL = "claude-sonnet-4-20250514";
 const MAX_TOKENS = 1024;
+const MAX_MESSAGE_LENGTH = 10_000;
+const MAX_CONTEXT_PAYLOAD_LENGTH = 500;
+
+// CEFR level mapping: DB int → human-readable label
+const CEFR_LABELS: Record<number, string> = {
+  1: "A1",
+  2: "A2",
+  3: "B1",
+  4: "B2",
+  5: "C1",
+};
 
 serve(async (req) => {
   // CORS
@@ -15,9 +22,19 @@ serve(async (req) => {
     return new Response("ok", {
       headers: {
         "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers": "authorization, content-type, x-client-info, apikey",
+        "Access-Control-Allow-Headers":
+          "authorization, content-type, x-client-info, apikey",
       },
     });
+  }
+
+  // Env var guards (R6)
+  const CLAUDE_API_KEY = Deno.env.get("CLAUDE_API_KEY");
+  const SUPABASE_URL = Deno.env.get("SUPABASE_URL");
+  const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
+
+  if (!CLAUDE_API_KEY || !SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
+    return jsonResponse({ error: "Service not configured" }, 500);
   }
 
   try {
@@ -29,7 +46,10 @@ serve(async (req) => {
 
     const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
     const token = authHeader.replace("Bearer ", "");
-    const { data: { user }, error: authError } = await supabase.auth.getUser(token);
+    const {
+      data: { user },
+      error: authError,
+    } = await supabase.auth.getUser(token);
 
     if (authError || !user) {
       return jsonResponse({ error: "Unauthorized" }, 401);
@@ -39,6 +59,11 @@ serve(async (req) => {
     const { message, context_source, context_payload } = await req.json();
     if (!message || typeof message !== "string") {
       return jsonResponse({ error: "Message is required" }, 400);
+    }
+
+    // Input validation: message length (R4)
+    if (message.length > MAX_MESSAGE_LENGTH) {
+      return jsonResponse({ error: "Message too long" }, 400);
     }
 
     // 3. Check daily limit
@@ -52,7 +77,6 @@ serve(async (req) => {
 
     const dailyLimit = parseInt(configData?.value ?? "20");
 
-    // Upsert daily usage
     const { data: usageData } = await supabase
       .from("user_daily_usage")
       .select("message_count")
@@ -64,9 +88,12 @@ serve(async (req) => {
 
     if (currentCount >= dailyLimit) {
       return jsonResponse(
-        { error: "Daily message limit reached", remaining: 0, limit: dailyLimit },
-        429,
-        { "X-Daily-Limit": String(dailyLimit), "X-Daily-Remaining": "0" }
+        {
+          error: "Daily message limit reached",
+          daily_remaining: 0,
+          daily_limit: dailyLimit,
+        },
+        429
       );
     }
 
@@ -93,8 +120,9 @@ serve(async (req) => {
     // Add current message
     messages.push({ role: "user", content: message });
 
-    // 6. Build system prompt
-    const systemPrompt = buildSystemPrompt(profile, context_payload);
+    // 6. Sanitize context_payload (R5) and build system prompt
+    const sanitizedContext = sanitizeContextPayload(context_payload);
+    const systemPrompt = buildSystemPrompt(profile, sanitizedContext);
 
     // 7. Save user message
     await supabase.from("chat_messages").insert({
@@ -105,7 +133,7 @@ serve(async (req) => {
       context_payload: context_payload ?? null,
     });
 
-    // 8. Call Claude API with streaming
+    // 8. Call Claude API (non-streaming JSON mode, R1)
     const claudeResponse = await fetch(CLAUDE_API_URL, {
       method: "POST",
       headers: {
@@ -116,7 +144,6 @@ serve(async (req) => {
       body: JSON.stringify({
         model: CLAUDE_MODEL,
         max_tokens: MAX_TOKENS,
-        stream: true,
         system: systemPrompt,
         messages,
       }),
@@ -128,83 +155,75 @@ serve(async (req) => {
       return jsonResponse({ error: "AI service error" }, 502);
     }
 
-    // 9. Stream response back, collecting full text
-    const reader = claudeResponse.body!.getReader();
-    const decoder = new TextDecoder();
-    let fullResponse = "";
+    const claudeData = await claudeResponse.json();
+    const responseText =
+      claudeData.content?.[0]?.text ?? "";
 
     const remaining = dailyLimit - currentCount - 1;
 
-    const stream = new ReadableStream({
-      async start(controller) {
-        const encoder = new TextEncoder();
-        try {
-          while (true) {
-            const { done, value } = await reader.read();
-            if (done) break;
-
-            const chunk = decoder.decode(value, { stream: true });
-            controller.enqueue(encoder.encode(chunk));
-
-            // Parse SSE to collect full text
-            for (const line of chunk.split("\n")) {
-              if (!line.startsWith("data: ")) continue;
-              const data = line.substring(6);
-              if (data === "[DONE]") continue;
-              try {
-                const json = JSON.parse(data);
-                if (json.type === "content_block_delta" && json.delta?.text) {
-                  fullResponse += json.delta.text;
-                }
-              } catch { /* skip */ }
-            }
-          }
-        } finally {
-          // 10. Save assistant message and update usage
-          await supabase.from("chat_messages").insert({
-            user_id: user.id,
-            role: "assistant",
-            text: fullResponse,
-          });
-
-          // Upsert daily usage
-          await supabase.from("user_daily_usage").upsert(
-            {
-              user_id: user.id,
-              date: today,
-              message_count: currentCount + 1,
-            },
-            { onConflict: "user_id,date" }
-          );
-
-          controller.close();
-        }
-      },
+    // 9. Save assistant message and update usage
+    await supabase.from("chat_messages").insert({
+      user_id: user.id,
+      role: "assistant",
+      text: responseText,
     });
 
-    return new Response(stream, {
-      headers: {
-        "Content-Type": "text/event-stream",
-        "Cache-Control": "no-cache",
-        "X-Daily-Limit": String(dailyLimit),
-        "X-Daily-Remaining": String(remaining),
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Expose-Headers": "X-Daily-Limit, X-Daily-Remaining",
+    await supabase.from("user_daily_usage").upsert(
+      {
+        user_id: user.id,
+        date: today,
+        message_count: currentCount + 1,
       },
-    });
+      { onConflict: "user_id,date" }
+    );
+
+    // 10. Return JSON response (R1)
+    return jsonResponse(
+      {
+        text: responseText,
+        daily_limit: dailyLimit,
+        daily_remaining: remaining,
+      },
+      200
+    );
   } catch (error) {
     console.error("Edge function error:", error);
     return jsonResponse({ error: "Internal server error" }, 500);
   }
 });
 
-function buildSystemPrompt(profile: any, contextPrompt?: string): string {
+/// Sanitize context_payload (R5): truncate, strip control chars, escape delimiters
+function sanitizeContextPayload(
+  payload: string | undefined | null
+): string | undefined {
+  if (!payload || typeof payload !== "string") return undefined;
+
+  let sanitized = payload.slice(0, MAX_CONTEXT_PAYLOAD_LENGTH);
+
+  // Strip ASCII control characters (0x00–0x1F) except newline (0x0A) and tab (0x09)
+  sanitized = sanitized.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, "");
+
+  // Escape prompt section delimiters
+  sanitized = sanitized.replace(/^## /gm, "\\## ");
+  sanitized = sanitized.replace(/^---$/gm, "\\---");
+
+  return sanitized;
+}
+
+function buildSystemPrompt(
+  profile: any,
+  contextPrompt?: string
+): string {
+  const cefrLevel = profile?.cefr_level as number | null;
+  const cefrLabel = cefrLevel ? (CEFR_LABELS[cefrLevel] ?? "beginner") : "beginner";
+
   const lines = [
     'You are an AI English tutor called "AI Tutor" in the Langualio app.',
     "Your role is to help the user learn English in a friendly and encouraging way.",
     "",
     "## User Profile",
-    `- Name: ${profile?.name ?? "Learner"}`,
+    `- Name: ${profile?.nickname ?? "Learner"}`,
+    `- CEFR Level: ${cefrLabel}`,
     `- Level: ${profile?.level ?? 1}`,
     `- Current XP: ${profile?.current_xp ?? 0}/${profile?.target_xp ?? 500}`,
     `- Streak: ${profile?.streak_days ?? 0} days`,
@@ -215,7 +234,7 @@ function buildSystemPrompt(profile: any, contextPrompt?: string): string {
     "- When the user makes a mistake, give a hint first, not the answer.",
     "- Do NOT translate large texts — teach the user to break them down.",
     "- Stay on topic: English learning only. Politely redirect off-topic questions.",
-    `- Adapt difficulty to the user's level (${profile?.level ?? 1}).`,
+    `- Adapt difficulty to the user's CEFR level (${cefrLabel}).`,
     "- Use emoji sparingly for encouragement.",
   ];
 
@@ -233,15 +252,13 @@ function buildSystemPrompt(profile: any, contextPrompt?: string): string {
 
 function jsonResponse(
   body: Record<string, unknown>,
-  status: number,
-  extraHeaders?: Record<string, string>
+  status: number
 ) {
   return new Response(JSON.stringify(body), {
     status,
     headers: {
       "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "*",
-      ...extraHeaders,
     },
   });
 }
