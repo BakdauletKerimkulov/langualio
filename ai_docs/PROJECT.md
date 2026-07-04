@@ -170,8 +170,6 @@ GoRouter redirect is synchronous. To guard routes based on async server state (e
 | Supabase Edge Functions | Бэкенд-логика чата | `SUPABASE_SERVICE_ROLE_KEY` (env) |
 | Anthropic Claude API | AI-чат | `CLAUDE_API_KEY` (env в Edge Function) |
 
-**Примечание:** в проекте есть `ClaudeApiClient` (`lib/src/core/api/claude_api_client.dart`) для прямого вызова Claude API, но основной путь — через Edge Function.
-
 ---
 
 ## Текущее состояние (MVP)
@@ -205,7 +203,6 @@ GoRouter redirect is synchronous. To guard routes based on async server state (e
 ```
 lib/src/
 ├── core/                           # Инфраструктура
-│   ├── api/claude_api_client.dart  # Прямой клиент Claude API
 │   ├── storage/                    # LocalStorage + providers
 │   ├── supabase/                   # Инициализация Supabase
 │   └── utils/logger.dart           # Логирование

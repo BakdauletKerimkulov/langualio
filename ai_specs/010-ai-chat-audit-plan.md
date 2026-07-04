@@ -2,7 +2,7 @@
 
 Source: `ai_specs/010-ai-chat-audit-spec.md`
 Created: 2026-07-04
-Status: in-progress
+Status: complete
 
 ## Overview
 Fix the AI chat feature: replace broken SSE streaming with reliable JSON responses (Phase 1), add input validation and security hardening to the Edge Function, fix daily limit parsing on the client, add `cefr_level` to the system prompt, and remove dead code (`ClaudeApiClient`, `SystemPromptBuilder`). Phase 2 (real streaming) is out of scope for this plan.
@@ -47,10 +47,10 @@ Fix the AI chat feature: replace broken SSE streaming with reliable JSON respons
 ### Phase 3 — .env.example + final validation (R9)
 **Goal:** Environment variable documentation and end-to-end sanity check.
 
-- [ ] `supabase/functions/.env.example` — create with `CLAUDE_API_KEY`, `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY` and descriptions (R9)
-- [ ] TDD: `ChatState.copyWith` — test `clearError`, `clearStreaming`, field defaults, `isLimitReached` computed getter
-- [ ] `ai_docs/PROJECT.md` — remove reference to `ClaudeApiClient` in architecture section (line ~173, ~209)
-- [ ] Verify: `dart analyze && flutter test`
+- [x] `supabase/functions/.env.example` — create with `CLAUDE_API_KEY`, `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY` and descriptions (R9)
+- [x] TDD: `ChatState.copyWith` — test `clearError`, `clearStreaming`, field defaults, `isLimitReached` computed getter (already implemented)
+- [x] `ai_docs/PROJECT.md` — remove reference to `ClaudeApiClient` in architecture section (line ~173, ~209)
+- [x] Verify: `dart analyze && flutter test`
 
 ## Data layer changes
 _None._ Existing tables (`chat_messages`, `user_daily_usage`, `app_config`, `profiles`) are sufficient. No new migrations.
