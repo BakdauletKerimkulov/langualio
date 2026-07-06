@@ -1,0 +1,2464 @@
+[
+  {
+    "id": "b1_react",
+    "word": "react",
+    "ipa": "/rɪˈækt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "реагировать",
+        "alternative_translations": ["ответить", "отреагировать"],
+        "definition_en": "to respond to something that has happened or been said",
+        "definition_ru": "ответить на что-либо действием или словами",
+        "example_en": "How did she react to the news?",
+        "example_ru": "Как она отреагировала на эту новость?"
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_read",
+    "word": "read",
+    "ipa": "/riːd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "читать",
+        "alternative_translations": ["прочитать", "изучать"],
+        "definition_en": "to look at written or printed words and understand them",
+        "definition_ru": "смотреть на письменные слова и понимать их значение",
+        "example_en": "I read a book every evening.",
+        "example_ru": "Я читаю книгу каждый вечер."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_reader",
+    "word": "reader",
+    "ipa": "/ˈriːdə(r)/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "читатель",
+        "alternative_translations": ["читательница"],
+        "definition_en": "a person who reads",
+        "definition_ru": "человек, который читает",
+        "example_en": "She is an avid reader of science fiction.",
+        "example_ru": "Она заядлая читательница научной фантастики."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_reading",
+    "word": "reading",
+    "ipa": "/ˈriːdɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "чтение",
+        "alternative_translations": ["литература", "показания"],
+        "definition_en": "the activity of looking at and understanding written words",
+        "definition_ru": "деятельность чтения и понимания написанных слов",
+        "example_en": "Reading is my favorite hobby.",
+        "example_ru": "Чтение — моё любимое хобби."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_ready",
+    "word": "ready",
+    "ipa": "/ˈredi/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "готовый",
+        "alternative_translations": ["подготовленный", "расположенный"],
+        "definition_en": "prepared or willing to do something",
+        "definition_ru": "подготовленный или желающий что-либо сделать",
+        "example_en": "Are you ready for the exam?",
+        "example_ru": "Ты готов к экзамену?"
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_real",
+    "word": "real",
+    "ipa": "/ˈriːəl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "настоящий",
+        "alternative_translations": ["реальный", "подлинный"],
+        "definition_en": "actually existing or happening; not imaginary",
+        "definition_ru": "фактически существующий или происходящий; не воображаемый",
+        "example_en": "Is this a real diamond or fake?",
+        "example_ru": "Это настоящий алмаз или подделка?"
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_realise",
+    "word": "realise",
+    "ipa": "/ˈriːəlaɪz/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "понимать",
+        "alternative_translations": ["осознавать", "достигать"],
+        "definition_en": "to become aware of something; to achieve a goal",
+        "definition_ru": "осознать что-либо; достичь цели",
+        "example_en": "I suddenly realised I had forgotten my keys.",
+        "example_ru": "Я вдруг понял, что забыл свои ключи."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_realistic",
+    "word": "realistic",
+    "ipa": "/ˌriːəˈlɪstɪk/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "реалистичный",
+        "alternative_translations": ["правдоподобный", "практичный"],
+        "definition_en": "representing things in a way that is accurate and practical",
+        "definition_ru": "представляющий вещи точным и практичным образом",
+        "example_en": "We need to set realistic goals for this project.",
+        "example_ru": "Нам нужно установить реалистичные цели для этого проекта."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_reality",
+    "word": "reality",
+    "ipa": "/riːˈæləti/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "реальность",
+        "alternative_translations": ["действительность", "факт"],
+        "definition_en": "the state of things as they actually exist",
+        "definition_ru": "состояние вещей такими, какими они существуют на самом деле",
+        "example_en": "The reality is that we don't have enough money.",
+        "example_ru": "Реальность такова, что у нас недостаточно денег."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_really",
+    "word": "really",
+    "ipa": "/ˈriːəli/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adverb",
+        "translation": "действительно",
+        "alternative_translations": ["на самом деле", "очень"],
+        "definition_en": "in actual fact; used to emphasize something",
+        "definition_ru": "в действительности; используется для подчёркивания чего-либо",
+        "example_en": "That film was really good.",
+        "example_ru": "Этот фильм был действительно хорошим."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_reason",
+    "word": "reason",
+    "ipa": "/ˈriːzn̩/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "причина",
+        "alternative_translations": ["основание", "мотив"],
+        "definition_en": "a cause or explanation for something",
+        "definition_ru": "причина или объяснение чего-либо",
+        "example_en": "The main reason I came here was to meet you.",
+        "example_ru": "Главная причина, по которой я пришёл, была встретиться с тобой."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_reasonable",
+    "word": "reasonable",
+    "ipa": "/ˈriːzənəbl̩/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "разумный",
+        "alternative_translations": ["справедливый", "приемлемый"],
+        "definition_en": "fair, sensible, and acceptable",
+        "definition_ru": "справедливый, разумный и приемлемый",
+        "example_en": "That's a reasonable price for a good quality product.",
+        "example_ru": "Это разумная цена за качественный продукт."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_reasonably",
+    "word": "reasonably",
+    "ipa": "/ˈriːzənəbli/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adverb",
+        "translation": "довольно",
+        "alternative_translations": ["разумно", "справедливо"],
+        "definition_en": "in a way that is fair and sensible; fairly or quite",
+        "definition_ru": "справедливым и разумным образом; довольно или достаточно",
+        "example_en": "He plays tennis reasonably well.",
+        "example_ru": "Он играет в теннис довольно хорошо."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_rebuild",
+    "word": "rebuild",
+    "ipa": "/ˌriːˈbɪld/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "перестроить",
+        "alternative_translations": ["восстановить", "заново построить"],
+        "definition_en": "to build something again after it has been damaged or destroyed",
+        "definition_ru": "построить что-либо снова после того, как оно было повреждено или разрушено",
+        "example_en": "They had to rebuild the bridge after the flood.",
+        "example_ru": "Им пришлось перестроить мост после наводнения."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_receipt",
+    "word": "receipt",
+    "ipa": "/rɪˈsiːt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "квитанция",
+        "alternative_translations": ["чек", "расписка"],
+        "definition_en": "a document confirming that money has been paid or something has been received",
+        "definition_ru": "документ, подтверждающий, что деньги были уплачены или что-либо получено",
+        "example_en": "Keep your receipt in case you want to return the item.",
+        "example_ru": "Сохрани квитанцию на случай, если ты захочешь вернуть товар."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_receive",
+    "word": "receive",
+    "ipa": "/rɪˈsiːv/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "получать",
+        "alternative_translations": ["принимать", "получить"],
+        "definition_en": "to get or accept something that is given or sent to you",
+        "definition_ru": "получить или принять что-либо, что тебе дают или отправляют",
+        "example_en": "I received a letter from my friend yesterday.",
+        "example_ru": "Я получил письмо от своего друга вчера."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_recent",
+    "word": "recent",
+    "ipa": "/ˈriːsn̩t/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "недавний",
+        "alternative_translations": ["свежий", "новый"],
+        "definition_en": "happening or made not long ago",
+        "definition_ru": "произошедший или сделанный недавно",
+        "example_en": "I read an article about recent developments in technology.",
+        "example_ru": "Я прочитал статью о недавних разработках в области технологий."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_recently",
+    "word": "recently",
+    "ipa": "/ˈriːsn̩tli/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adverb",
+        "translation": "недавно",
+        "alternative_translations": ["в последнее время", "только что"],
+        "definition_en": "not long ago",
+        "definition_ru": "недавно, не так давно",
+        "example_en": "We recently moved to a new house.",
+        "example_ru": "Мы недавно переехали в новый дом."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_reception",
+    "word": "reception",
+    "ipa": "/rɪˈsepʃn̩/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "приём",
+        "alternative_translations": ["рецепция", "встреча"],
+        "definition_en": "a formal party or gathering; the area where visitors arrive at a place",
+        "definition_ru": "формальная вечеринка или собрание; место, где посетители приходят в учреждение",
+        "example_en": "The wedding reception was held at a hotel.",
+        "example_ru": "Свадебный приём был проведён в отеле."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_receptionist",
+    "word": "receptionist",
+    "ipa": "/rɪˈsepʃənɪst/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "администратор",
+        "alternative_translations": ["рецепционист", "секретарь"],
+        "definition_en": "a person whose job is to welcome visitors and answer phones at an office or hotel",
+        "definition_ru": "человек, чья работа приветствовать посетителей и отвечать на телефонные звонки в офисе или отеле",
+        "example_en": "The receptionist helped me schedule an appointment.",
+        "example_ru": "Администратор помогла мне назначить встречу."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_recipe",
+    "word": "recipe",
+    "ipa": "/ˈresəpi/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "рецепт",
+        "alternative_translations": ["рецептура", "способ приготовления"],
+        "definition_en": "a set of instructions for preparing and cooking food",
+        "definition_ru": "набор инструкций по подготовке и приготовлению пищи",
+        "example_en": "I found a delicious cake recipe online.",
+        "example_ru": "Я нашёл восхитительный рецепт торта в интернете."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_recognise",
+    "word": "recognise",
+    "ipa": "/ˈrekəɡnaɪz/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "узнавать",
+        "alternative_translations": ["распознавать", "признавать"],
+        "definition_en": "to know someone or something because you have seen them before; to acknowledge",
+        "definition_ru": "знать кого-либо или что-либо, потому что ты видел это раньше; признавать",
+        "example_en": "I didn't recognise him at first because he had lost weight.",
+        "example_ru": "Сначала я его не узнал, потому что он похудел."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_recommend",
+    "word": "recommend",
+    "ipa": "/ˌrekəˈmend/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "рекомендовать",
+        "alternative_translations": ["советовать", "предлагать"],
+        "definition_en": "to suggest that someone should do or try something because it is good",
+        "definition_ru": "предложить кому-либо делать или пробовать что-либо, потому что это хорошо",
+        "example_en": "I recommend this restaurant — the food is excellent.",
+        "example_ru": "Я рекомендую этот ресторан — еда здесь отличная."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_record",
+    "word": "record",
+    "ipa": "/ˈrekɔːd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "запись",
+        "alternative_translations": ["рекорд", "документ"],
+        "definition_en": "information or a document that is kept to show what has happened",
+        "definition_ru": "информация или документ, который ведётся, чтобы показать, что произошло",
+        "example_en": "Keep a record of all your expenses.",
+        "example_ru": "Ведите запись всех своих расходов."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "записывать",
+        "alternative_translations": ["фиксировать", "регистрировать"],
+        "definition_en": "to write down or make a note of something; to capture sound or video",
+        "definition_ru": "записать или отметить что-либо; захватить звук или видео",
+        "example_en": "We recorded the meeting so we could review it later.",
+        "example_ru": "Мы записали встречу, чтобы её потом пересмотреть."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_recording",
+    "word": "recording",
+    "ipa": "/rɪˈkɔːdɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "запись",
+        "alternative_translations": ["аудиозапись", "видеозапись"],
+        "definition_en": "a piece of video or audio that has been captured or stored",
+        "definition_ru": "часть видео или аудио, которая была захвачена или сохранена",
+        "example_en": "I listened to the recording of the lecture.",
+        "example_ru": "Я послушал запись лекции."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_recover",
+    "word": "recover",
+    "ipa": "/rɪˈkʌvə(r)/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "восстанавливаться",
+        "alternative_translations": ["выздоравливать", "вернуть"],
+        "definition_en": "to return to normal health or situation; to get something back",
+        "definition_ru": "вернуться в нормальное здоровье или ситуацию; вернуть что-либо",
+        "example_en": "After the surgery, it took him weeks to recover.",
+        "example_ru": "После операции ему потребовались недели на восстановление."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_recycle",
+    "word": "recycle",
+    "ipa": "/ˌriːˈsaɪkl̩/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "перерабатывать",
+        "alternative_translations": ["утилизировать", "использовать повторно"],
+        "definition_en": "to treat waste material so it can be used again",
+        "definition_ru": "обрабатывать отходы так, чтобы их можно было использовать снова",
+        "example_en": "We recycle paper, plastic, and glass at our office.",
+        "example_ru": "В нашем офисе мы перерабатываем бумагу, пластик и стекло."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_recycled",
+    "word": "recycled",
+    "ipa": "/ˌriːˈsaɪkl̩d/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "переработанный",
+        "alternative_translations": ["вторичный", "восстановленный"],
+        "definition_en": "made from material that has been treated for reuse",
+        "definition_ru": "сделанный из материала, который был обработан для повторного использования",
+        "example_en": "I always buy recycled paper products.",
+        "example_ru": "Я всегда покупаю переработанную бумажную продукцию."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_recycling",
+    "word": "recycling",
+    "ipa": "/ˌriːˈsaɪklɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "переработка",
+        "alternative_translations": ["утилизация", "вторичное использование"],
+        "definition_en": "the process of treating waste material so it can be used again",
+        "definition_ru": "процесс обработки отходов так, чтобы их можно было использовать снова",
+        "example_en": "Recycling is important for protecting the environment.",
+        "example_ru": "Переработка важна для защиты окружающей среды."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_red",
+    "word": "red",
+    "ipa": "/red/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "красный",
+        "alternative_translations": ["рыжий", "красновато-коричневый"],
+        "definition_en": "having the colour of blood or fire",
+        "definition_ru": "имеющий цвет крови или огня",
+        "example_en": "She wore a red dress to the party.",
+        "example_ru": "Она надела красное платье на вечеринку."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_reduce",
+    "word": "reduce",
+    "ipa": "/rɪˈdjuːs/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "уменьшать",
+        "alternative_translations": ["снижать", "сокращать"],
+        "definition_en": "to make something smaller in size or amount",
+        "definition_ru": "сделать что-либо меньшим по размеру или количеству",
+        "example_en": "We need to reduce our spending this month.",
+        "example_ru": "Нам нужно сократить наши расходы в этом месяце."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_reduced",
+    "word": "reduced",
+    "ipa": "/rɪˈdjuːst/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "сниженный",
+        "alternative_translations": ["уменьшенный", "пониженный"],
+        "definition_en": "made smaller in size or amount",
+        "definition_ru": "сделанный меньшим по размеру или количеству",
+        "example_en": "The shop is selling reduced prices this week.",
+        "example_ru": "Магазин продаёт товары по сниженным ценам на этой неделе."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_refreshments",
+    "word": "refreshments",
+    "ipa": "/rɪˈfreʃmənts/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "закуски и напитки",
+        "alternative_translations": ["угощение", "напитки"],
+        "definition_en": "light food and drinks served at a meeting or event",
+        "definition_ru": "лёгкая еда и напитки, подаваемые на встречу или мероприятие",
+        "example_en": "Refreshments will be served after the presentation.",
+        "example_ru": "Закуски и напитки будут поданы после презентации."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_refrigerator",
+    "word": "refrigerator",
+    "ipa": "/rɪˈfrɪdʒəreɪtə(r)/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "холодильник",
+        "alternative_translations": ["морозилка", "ледник"],
+        "definition_en": "an appliance for keeping food and drink cold",
+        "definition_ru": "прибор для охлаждения еды и напитков",
+        "example_en": "Please put the milk in the refrigerator.",
+        "example_ru": "Пожалуйста, поставь молоко в холодильник."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_refund",
+    "word": "refund",
+    "ipa": "/ˈriːfʌnd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "возмещение",
+        "alternative_translations": ["возврат денег", "компенсация"],
+        "definition_en": "money given back to you because a product wasn't good or was returned",
+        "definition_ru": "деньги, возвращённые вам, потому что продукт был некачественным или возвращён",
+        "example_en": "I requested a refund for the broken item.",
+        "example_ru": "Я потребовал возмещение за сломанный товар."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_refuse",
+    "word": "refuse",
+    "ipa": "/rɪˈfjuːz/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "отказываться",
+        "alternative_translations": ["отклонять", "не соглашаться"],
+        "definition_en": "to say you will not do or accept something",
+        "definition_ru": "сказать, что вы не будете что-либо делать или принимать",
+        "example_en": "He refused to answer the question.",
+        "example_ru": "Он отказался отвечать на вопрос."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_regarding",
+    "word": "regarding",
+    "ipa": "/rɪˈɡɑːdɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "preposition",
+        "translation": "относительно",
+        "alternative_translations": ["касаясь", "о"],
+        "definition_en": "concerning or about something",
+        "definition_ru": "касаясь или относительно чего-либо",
+        "example_en": "I have a question regarding your proposal.",
+        "example_ru": "У меня есть вопрос относительно твоего предложения."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_regards",
+    "word": "regards",
+    "ipa": "/rɪˈɡɑːdz/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "приветствия",
+        "alternative_translations": ["уважение", "соображение"],
+        "definition_en": "good wishes or respects; consideration",
+        "definition_ru": "добрые пожелания или уважение; внимание или учитывание",
+        "example_en": "Give my regards to your family.",
+        "example_ru": "Передай мои приветствия твоей семье."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_region",
+    "word": "region",
+    "ipa": "/ˈriːdʒən/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "область",
+        "alternative_translations": ["район", "регион"],
+        "definition_en": "a large area of land or space",
+        "definition_ru": "большая площадь земли или пространства",
+        "example_en": "This wine comes from the Tuscany region in Italy.",
+        "example_ru": "Это вино происходит из региона Тоскана в Италии."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_register",
+    "word": "register",
+    "ipa": "/ˈredʒɪstə(r)/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "регистрировать",
+        "alternative_translations": ["записываться", "зарегистрироваться"],
+        "definition_en": "to record your name officially for something; to record data",
+        "definition_ru": "официально записать своё имя для чего-либо; записать данные",
+        "example_en": "I need to register for the course before Friday.",
+        "example_ru": "Мне нужно зарегистрироваться на курс до пятницы."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_registration",
+    "word": "registration",
+    "ipa": "/ˌredʒɪˈstreɪʃn̩/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "регистрация",
+        "alternative_translations": ["запись", "записывание"],
+        "definition_en": "the process of recording your name officially for something",
+        "definition_ru": "процесс официальной записи вашего имени для чего-либо",
+        "example_en": "Registration for the event closes next Monday.",
+        "example_ru": "Регистрация на мероприятие закрывается в следующий понедельник."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_regret",
+    "word": "regret",
+    "ipa": "/rɪˈɡret/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "сожаление",
+        "alternative_translations": ["раскаяние", "сожаленье"],
+        "definition_en": "a feeling of sadness or disappointment about something",
+        "definition_ru": "чувство печали или разочарования по поводу чего-либо",
+        "example_en": "I have no regrets about my decision.",
+        "example_ru": "У меня нет сожалений о моём решении."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "сожалеть",
+        "alternative_translations": ["жалеть", "раскаиваться"],
+        "definition_en": "to feel sorry or disappointed about something",
+        "definition_ru": "чувствовать сожаление или разочарование по поводу чего-либо",
+        "example_en": "I regret not studying harder for the exam.",
+        "example_ru": "Я сожалею, что не учился усерднее к экзамену."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_regular",
+    "word": "regular",
+    "ipa": "/ˈreɡjələ(r)/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "регулярный",
+        "alternative_translations": ["обычный", "постоянный"],
+        "definition_en": "happening or done often or repeatedly; normal",
+        "definition_ru": "происходящий или делаемый часто или повторно; нормальный",
+        "example_en": "I have regular meetings with my manager every week.",
+        "example_ru": "У меня регулярные встречи с моим менеджером каждую неделю."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_regularly",
+    "word": "regularly",
+    "ipa": "/ˈreɡjələli/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adverb",
+        "translation": "регулярно",
+        "alternative_translations": ["постоянно", "обычно"],
+        "definition_en": "happening or done often or repeatedly",
+        "definition_ru": "происходящее или делаемое часто или повторно",
+        "example_en": "I exercise regularly to stay healthy.",
+        "example_ru": "Я регулярно упражняюсь, чтобы оставаться здоровым."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_relation",
+    "word": "relation",
+    "ipa": "/rɪˈleɪʃn̩/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "связь",
+        "alternative_translations": ["отношение", "родственник"],
+        "definition_en": "a connection or association between things; a family member",
+        "definition_ru": "связь или ассоциация между вещами; член семьи",
+        "example_en": "There is a clear relation between exercise and good health.",
+        "example_ru": "Существует явная связь между упражнениями и хорошим здоровьем."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_relationship",
+    "word": "relationship",
+    "ipa": "/rɪˈleɪʃnʃɪp/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "отношения",
+        "alternative_translations": ["взаимоотношение", "связь"],
+        "definition_en": "the way two people or things are connected or associated",
+        "definition_ru": "способ, которым два человека или вещи связаны или ассоциированы",
+        "example_en": "A good relationship is built on trust and communication.",
+        "example_ru": "Хорошие отношения строятся на доверии и общении."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_relative",
+    "word": "relative",
+    "ipa": "/ˈrelətɪv/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "родственник",
+        "alternative_translations": ["родственница", "член семьи"],
+        "definition_en": "a member of your family",
+        "definition_ru": "член вашей семьи",
+        "example_en": "My relatives are coming to visit next month.",
+        "example_ru": "Мои родственники приедят в гости в следующем месяце."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_relax",
+    "word": "relax",
+    "ipa": "/rɪˈlæks/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "расслабляться",
+        "alternative_translations": ["отдыхать", "ослабить"],
+        "definition_en": "to become less tense or anxious; to rest",
+        "definition_ru": "стать менее напряженным или беспокойным; отдохнуть",
+        "example_en": "After work, I relax by watching television.",
+        "example_ru": "После работы я расслабляюсь, смотря телевизор."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_relaxation",
+    "word": "relaxation",
+    "ipa": "/ˌriːlækˈseɪʃn̩/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "расслабление",
+        "alternative_translations": ["отдых", "релаксация"],
+        "definition_en": "the state of being relaxed or a method of relaxing",
+        "definition_ru": "состояние расслабления или способ расслабления",
+        "example_en": "Yoga is a good method for relaxation.",
+        "example_ru": "Йога — хороший способ расслабления."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_relaxed",
+    "word": "relaxed",
+    "ipa": "/rɪˈlækst/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "расслабленный",
+        "alternative_translations": ["спокойный", "непринужденный"],
+        "definition_en": "calm and not tense or worried",
+        "definition_ru": "спокойный и не напряженный или обеспокоенный",
+        "example_en": "She seemed relaxed despite the difficult situation.",
+        "example_ru": "Она казалась расслабленной, несмотря на сложную ситуацию."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_reliable",
+    "word": "reliable",
+    "ipa": "/rɪˈlaɪəbl̩/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "надежный",
+        "alternative_translations": ["верный", "заслуживающий доверия"],
+        "definition_en": "able to be trusted; working or functioning consistently",
+        "definition_ru": "который можно доверять; работающий или функционирующий последовательно",
+        "example_en": "This car has proven to be very reliable.",
+        "example_ru": "Этот автомобиль оказался очень надежным."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_relieved",
+    "word": "relieved",
+    "ipa": "/rɪˈliːvd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "облегченный",
+        "alternative_translations": ["довольный", "успокоенный"],
+        "definition_en": "feeling happy because something unpleasant has ended or hasn't happened",
+        "definition_ru": "чувствующий облегчение, потому что что-то неприятное закончилось или не произойдет",
+        "example_en": "I felt relieved when I heard the good news.",
+        "example_ru": "Я почувствовал облегчение, когда услышал хорошую новость."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_religion",
+    "word": "religion",
+    "ipa": "/rɪˈlɪdʒən/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "религия",
+        "alternative_translations": ["вера", "церковь"],
+        "definition_en": "a system of faith and worship",
+        "definition_ru": "система веры и поклонения",
+        "example_en": "Many people find comfort in religion.",
+        "example_ru": "Много людей находят утешение в религии."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_rely_on",
+    "word": "rely (on)",
+    "ipa": "/rɪˈlaɪ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "полагаться (на)",
+        "alternative_translations": ["зависеть (от)", "доверять"],
+        "definition_en": "to depend on someone or something; to trust",
+        "definition_ru": "зависеть от кого-либо или чего-либо; доверять",
+        "example_en": "You can rely on me to help you.",
+        "example_ru": "Ты можешь полагаться на меня, чтобы помочь тебе."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_remain",
+    "word": "remain",
+    "ipa": "/rɪˈmeɪn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "оставаться",
+        "alternative_translations": ["остаться", "сохраниться"],
+        "definition_en": "to stay in the same place or condition",
+        "definition_ru": "оставаться в том же месте или состоянии",
+        "example_en": "The museum remains closed on Mondays.",
+        "example_ru": "Музей остается закрытым по понедельникам."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_remember",
+    "word": "remember",
+    "ipa": "/rɪˈmembə(r)/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "помнить",
+        "alternative_translations": ["вспоминать", "припомнить"],
+        "definition_en": "to recall something from your memory",
+        "definition_ru": "восстановить что-либо из памяти",
+        "example_en": "I remember when we first met.",
+        "example_ru": "Я помню, когда мы впервые встретились."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_remind",
+    "word": "remind",
+    "ipa": "/rɪˈmaɪnd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "напоминать",
+        "alternative_translations": ["заставить вспомнить", "подсказать"],
+        "definition_en": "to help someone remember something",
+        "definition_ru": "помочь кому-либо вспомнить что-либо",
+        "example_en": "Remind me to call my mother tomorrow.",
+        "example_ru": "Напомни мне позвонить маме завтра."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_remote_control",
+    "word": "remote control",
+    "ipa": "/rɪˈməʊt kənˈtrəʊl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "пульт управления",
+        "alternative_translations": ["пульт дистанционного управления", "телевизионный пульт"],
+        "definition_en": "a device used to control something from a distance",
+        "definition_ru": "устройство, используемое для управления чем-либо на расстоянии",
+        "example_en": "I can't find the remote control for the TV.",
+        "example_ru": "Я не могу найти пульт управления для телевизора."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_remove",
+    "word": "remove",
+    "ipa": "/rɪˈmuːv/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "удалять",
+        "alternative_translations": ["убирать", "снимать"],
+        "definition_en": "to take away or get rid of something",
+        "definition_ru": "взять или избавиться от чего-либо",
+        "example_en": "Please remove your shoes when you enter the house.",
+        "example_ru": "Пожалуйста, снимите свои туфли, когда входите в дом."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_rent",
+    "word": "rent",
+    "ipa": "/rent/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "аренда",
+        "alternative_translations": ["плата за жилье", "рента"],
+        "definition_en": "money paid regularly for the use of a property",
+        "definition_ru": "деньги, выплачиваемые регулярно за использование собственности",
+        "example_en": "The monthly rent for this apartment is very high.",
+        "example_ru": "Ежемесячная аренда этой квартиры очень высока."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "арендовать",
+        "alternative_translations": ["сдавать в аренду", "снимать"],
+        "definition_en": "to pay to use someone else's property; to lease out",
+        "definition_ru": "платить за использование чужой собственности; сдавать в аренду",
+        "example_en": "We decided to rent a car for our road trip.",
+        "example_ru": "Мы решили арендовать автомобиль для нашей поездки."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_repair",
+    "word": "repair",
+    "ipa": "/rɪˈpeə(r)/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "ремонт",
+        "alternative_translations": ["исправление", "восстановление"],
+        "definition_en": "the act of fixing something that is broken or damaged",
+        "definition_ru": "действие по исправлению чего-либо, что сломано или повреждено",
+        "example_en": "The car needs a repair before it's safe to drive.",
+        "example_ru": "Автомобиль нуждается в ремонте, прежде чем его безопасно ездить."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "чинить",
+        "alternative_translations": ["ремонтировать", "исправлять"],
+        "definition_en": "to fix something that is broken or damaged",
+        "definition_ru": "исправить что-либо, что сломано или повреждено",
+        "example_en": "Can you repair my broken bicycle?",
+        "example_ru": "Ты можешь починить мой сломанный велосипед?"
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_repeat",
+    "word": "repeat",
+    "ipa": "/rɪˈpiːt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "повторять",
+        "alternative_translations": ["повторить", "воспроизвести"],
+        "definition_en": "to do or say something again",
+        "definition_ru": "делать или говорить что-либо снова",
+        "example_en": "Can you repeat that? I didn't hear you.",
+        "example_ru": "Ты можешь повторить? Я не услышал."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_replace",
+    "word": "replace",
+    "ipa": "/rɪˈpleɪs/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "заменять",
+        "alternative_translations": ["подменять", "заступить место"],
+        "definition_en": "to put something new in place of something old or broken",
+        "definition_ru": "положить что-то новое на место старого или сломанного",
+        "example_en": "I need to replace the broken window.",
+        "example_ru": "Мне нужно заменить сломанное окно."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_reply",
+    "word": "reply",
+    "ipa": "/rɪˈplaɪ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "ответ",
+        "alternative_translations": ["отклик", "отзыв"],
+        "definition_en": "a response to something said or written",
+        "definition_ru": "ответ на что-либо сказанное или написанное",
+        "example_en": "I'm still waiting for a reply to my email.",
+        "example_ru": "Я всё ещё жду ответ на моё письмо."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "отвечать",
+        "alternative_translations": ["ответить", "возражать"],
+        "definition_en": "to respond to something said or written",
+        "definition_ru": "ответить на что-либо сказанное или написанное",
+        "example_en": "She replied that she would be there at 5 PM.",
+        "example_ru": "Она ответила, что будет там в 5 вечера."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_report",
+    "word": "report",
+    "ipa": "/rɪˈpɔːt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "отчет",
+        "alternative_translations": ["сообщение", "доклад"],
+        "definition_en": "a detailed account of something that has happened",
+        "definition_ru": "подробный отчет о том, что произошло",
+        "example_en": "The report showed an improvement in sales.",
+        "example_ru": "Отчет показал улучшение в продажах."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "докладывать",
+        "alternative_translations": ["сообщать", "доносить"],
+        "definition_en": "to give an account of something; to tell someone officially",
+        "definition_ru": "дать отчет о чем-либо; официально сообщить кому-либо",
+        "example_en": "He reported the incident to the police.",
+        "example_ru": "Он доложил об инциденте полиции."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_reporter",
+    "word": "reporter",
+    "ipa": "/rɪˈpɔːtə(r)/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "репортер",
+        "alternative_translations": ["корреспондент", "журналист"],
+        "definition_en": "a person who writes about news or recent events for newspapers or broadcasts",
+        "definition_ru": "человек, который пишет о новостях или недавних событиях для газет или передач",
+        "example_en": "The reporter interviewed several witnesses at the scene.",
+        "example_ru": "Репортер интервьюировал нескольких свидетелей на месте."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_request",
+    "word": "request",
+    "ipa": "/rɪˈkwest/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "просьба",
+        "alternative_translations": ["запрос", "требование"],
+        "definition_en": "an act of politely or formally asking for something",
+        "definition_ru": "действие вежливого или официального прошения о чем-либо",
+        "example_en": "She made a request for time off next week.",
+        "example_ru": "Она подала просьбу об отпуске в следующую неделю."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "просить",
+        "alternative_translations": ["запрашивать", "требовать"],
+        "definition_en": "to politely or formally ask for something",
+        "definition_ru": "вежливо или официально просить о чем-либо",
+        "example_en": "They requested that we arrive early.",
+        "example_ru": "Они попросили, чтобы мы приехали рано."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_require",
+    "word": "require",
+    "ipa": "/rɪˈkwaɪə(r)/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "требовать",
+        "alternative_translations": ["нуждаться (в)", "необходимо"],
+        "definition_en": "to need something; to demand something officially",
+        "definition_ru": "нуждаться в чем-либо; официально требовать что-либо",
+        "example_en": "This job requires a lot of patience.",
+        "example_ru": "Эта работа требует много терпения."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_rescue",
+    "word": "rescue",
+    "ipa": "/ˈreskjuː/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "спасение",
+        "alternative_translations": ["избавление", "помощь"],
+        "definition_en": "an act of saving someone from danger or harm",
+        "definition_ru": "действие спасения кого-либо от опасности или вреда",
+        "example_en": "The rescue of the trapped miners took several hours.",
+        "example_ru": "Спасение запертых шахтеров заняло несколько часов."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "спасать",
+        "alternative_translations": ["избавлять", "помогать"],
+        "definition_en": "to save someone from danger or harm",
+        "definition_ru": "спасти кого-либо от опасности или вреда",
+        "example_en": "Firefighters rescued the family from the burning house.",
+        "example_ru": "Пожарные спасли семью из горящего дома."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_research",
+    "word": "research",
+    "ipa": "/ˈriːsɜːtʃ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "исследование",
+        "alternative_translations": ["научное исследование", "работа"],
+        "definition_en": "detailed study of something to discover new facts or information",
+        "definition_ru": "детальное изучение чего-либо для обнаружения новых фактов или информации",
+        "example_en": "She conducted research on the effects of coffee on sleep.",
+        "example_ru": "Она провела исследование влияния кофе на сон."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "исследовать",
+        "alternative_translations": ["изучать", "проводить исследования"],
+        "definition_en": "to study something carefully to discover new facts",
+        "definition_ru": "тщательно изучать что-либо для обнаружения новых фактов",
+        "example_en": "I need to research this topic before writing my essay.",
+        "example_ru": "Мне нужно исследовать эту тему перед написанием сочинения."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_reservation",
+    "word": "reservation",
+    "ipa": "/ˌrezəˈveɪʃn̩/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "бронирование",
+        "alternative_translations": ["резервирование", "предварительный заказ"],
+        "definition_en": "an arrangement to have something kept for you, such as a seat or hotel room",
+        "definition_ru": "договоренность о том, чтобы что-то было зарезервировано для вас, например место или номер отеля",
+        "example_en": "I made a reservation at the restaurant for 8 PM.",
+        "example_ru": "Я забронировал столик в ресторане на 8 вечера."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_reserve",
+    "word": "reserve",
+    "ipa": "/rɪˈzɜːv/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "запас",
+        "alternative_translations": ["резерв", "заповедник"],
+        "definition_en": "something kept for a special purpose or emergency; a protected area",
+        "definition_ru": "что-либо, сохраняемое для специальной цели или чрезвычайной ситуации; защищённая территория",
+        "example_en": "The nature reserve is home to many endangered species.",
+        "example_ru": "Природный заповедник является домом для многих вымирающих видов."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "зарезервировать",
+        "alternative_translations": ["забронировать", "сохранить"],
+        "definition_en": "to keep something for a special purpose; to book something in advance",
+        "definition_ru": "сохранить что-либо для специальной цели; забронировать что-либо заранее",
+        "example_en": "I'd like to reserve a table for two people.",
+        "example_ru": "Я хотел бы зарезервировать столик на двоих человек."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_resort",
+    "word": "resort",
+    "ipa": "/rɪˈzɔːt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "курорт",
+        "alternative_translations": ["отель", "место отдыха"],
+        "definition_en": "a place where people go for holidays with facilities for recreation",
+        "definition_ru": "место, куда люди ходят на праздники с удобствами для отдыха",
+        "example_en": "We spent our vacation at a beach resort.",
+        "example_ru": "Мы провели свой отпуск на пляжном курорте."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_respect",
+    "word": "respect",
+    "ipa": "/rɪˈspekt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "уважение",
+        "alternative_translations": ["почтение", "соображение"],
+        "definition_en": "admiration or esteem for someone or something",
+        "definition_ru": "восхищение или уважение к кому-либо или чему-либо",
+        "example_en": "I have a lot of respect for her achievements.",
+        "example_ru": "Я очень уважаю её достижения."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "уважать",
+        "alternative_translations": ["почитать", "соблюдать"],
+        "definition_en": "to admire or esteem someone or something; to treat with consideration",
+        "definition_ru": "восхищаться или уважать кого-либо или что-либо; относиться с вниманием",
+        "example_en": "We must respect the rights of others.",
+        "example_ru": "Мы должны уважать права других."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_responsible",
+    "word": "responsible",
+    "ipa": "/rɪˈspɒnsəbl̩/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "ответственный",
+        "alternative_translations": ["надежный", "обязанный"],
+        "definition_en": "accountable for your actions; reliable and trustworthy",
+        "definition_ru": "отвечающий за свои действия; надежный и заслуживающий доверия",
+        "example_en": "As a parent, I am responsible for my children's education.",
+        "example_ru": "Как родитель, я ответствен за образование моих детей."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_rest",
+    "word": "rest",
+    "ipa": "/rest/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "отдых",
+        "alternative_translations": ["покой", "остаток"],
+        "definition_en": "a period of relaxation or sleep; what is left",
+        "definition_ru": "период расслабления или сна; то, что осталось",
+        "example_en": "I need a rest after the long journey.",
+        "example_ru": "Мне нужен отдых после долгого пути."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "отдыхать",
+        "alternative_translations": ["лежать", "покоиться"],
+        "definition_en": "to relax and recover; to be in a position of inactivity",
+        "definition_ru": "расслабиться и восстановиться; быть в состоянии неподвижности",
+        "example_en": "After work, I like to rest on the sofa.",
+        "example_ru": "После работы я люблю отдохнуть на диване."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_restaurant",
+    "word": "restaurant",
+    "ipa": "/ˈrestərɑːnt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "ресторан",
+        "alternative_translations": ["кафе", "столовая"],
+        "definition_en": "a place where you can buy and eat food",
+        "definition_ru": "место, где вы можете купить и есть еду",
+        "example_en": "We went to a restaurant for dinner last night.",
+        "example_ru": "Мы ходили в ресторан на ужин вчера вечером."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_result",
+    "word": "result",
+    "ipa": "/rɪˈzʌlt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "результат",
+        "alternative_translations": ["исход", "следствие"],
+        "definition_en": "a consequence or outcome of something",
+        "definition_ru": "следствие или результат чего-либо",
+        "example_en": "The test results showed a significant improvement.",
+        "example_ru": "Результаты теста показали значительное улучшение."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_retire",
+    "word": "retire",
+    "ipa": "/rɪˈtaɪə(r)/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "выходить на пенсию",
+        "alternative_translations": ["уходить в отставку", "удаляться"],
+        "definition_en": "to stop working because of reaching a certain age",
+        "definition_ru": "прекратить работу из-за достижения определенного возраста",
+        "example_en": "My father will retire next year at age 65.",
+        "example_ru": "Мой отец выйдет на пенсию в следующем году в возрасте 65 лет."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_retirement",
+    "word": "retirement",
+    "ipa": "/rɪˈtaɪərmənt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "выход на пенсию",
+        "alternative_translations": ["пенсия", "отставка"],
+        "definition_en": "the act of stopping work because of reaching a certain age",
+        "definition_ru": "действие прекращения работы из-за достижения определенного возраста",
+        "example_en": "They are planning to travel during retirement.",
+        "example_ru": "Они планируют путешествовать во время выхода на пенсию."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_return",
+    "word": "return",
+    "ipa": "/rɪˈtɜːn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "возврат",
+        "alternative_translations": ["возвращение", "прибыль"],
+        "definition_en": "coming back to a place; giving something back",
+        "definition_ru": "возвращение на место; возврат чего-либо",
+        "example_en": "I'm looking forward to your return from vacation.",
+        "example_ru": "Я с нетерпением жду твоего возвращения из отпуска."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "возвращаться",
+        "alternative_translations": ["вернуть", "приносить обратно"],
+        "definition_en": "to come back to a place; to give something back",
+        "definition_ru": "вернуться на место; вернуть что-либо",
+        "example_en": "I need to return these books to the library.",
+        "example_ru": "Мне нужно вернуть эти книги в библиотеку."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_review",
+    "word": "review",
+    "ipa": "/rɪˈvjuː/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "обзор",
+        "alternative_translations": ["рецензия", "проверка"],
+        "definition_en": "a critical appraisal or examination of something; a formal evaluation",
+        "definition_ru": "критическая оценка или изучение чего-либо; официальная оценка",
+        "example_en": "The movie received excellent reviews from critics.",
+        "example_ru": "Фильм получил отличные рецензии от критиков."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_revise",
+    "word": "revise",
+    "ipa": "/rɪˈvaɪz/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "пересматривать",
+        "alternative_translations": ["переделать", "исправить"],
+        "definition_en": "to change or improve something based on new information; to study again",
+        "definition_ru": "изменить или улучшить что-либо на основе новой информации; изучить снова",
+        "example_en": "I need to revise my essay before submitting it.",
+        "example_ru": "Мне нужно пересмотреть своё сочинение перед подачей."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_revision",
+    "word": "revision",
+    "ipa": "/rɪˈvɪʒn̩/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "пересмотр",
+        "alternative_translations": ["исправление", "переделка"],
+        "definition_en": "a change or improvement made to something; the act of studying something again",
+        "definition_ru": "изменение или улучшение, сделанное в чем-либо; действие изучения чего-либо снова",
+        "example_en": "The revision of the contract took several weeks.",
+        "example_ru": "Пересмотр контракта занял несколько недель."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_reward",
+    "word": "reward",
+    "ipa": "/rɪˈwɔːd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "награда",
+        "alternative_translations": ["вознаграждение", "приз"],
+        "definition_en": "something given in recognition of good behavior or achievement",
+        "definition_ru": "что-то, отданное в знание хорошего поведения или достижения",
+        "example_en": "He received a reward for his bravery.",
+        "example_ru": "Он получил награду за его отвагу."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_rice",
+    "word": "rice",
+    "ipa": "/raɪs/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "рис",
+        "alternative_translations": ["рисовая крупа", "неотправленное письмо"],
+        "definition_en": "a grain that is a staple food, especially in Asia",
+        "definition_ru": "зерно, которое является основным продуктом, особенно в Азии",
+        "example_en": "I usually have rice with my meals.",
+        "example_ru": "Я обычно ем рис с едой."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_rich",
+    "word": "rich",
+    "ipa": "/rɪtʃ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "богатый",
+        "alternative_translations": ["состоятельный", "плодородный"],
+        "definition_en": "having a lot of money or possessions; containing much of a desired substance",
+        "definition_ru": "имеющий много денег или имущества; содержащий много желаемого вещества",
+        "example_en": "The rich man donated money to charity.",
+        "example_ru": "Богатый человек пожертвовал деньги на благотворительность."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_ride",
+    "word": "ride",
+    "ipa": "/raɪd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "поездка",
+        "alternative_translations": ["катание", "путешествие"],
+        "definition_en": "a journey in a vehicle or on an animal",
+        "definition_ru": "путешествие в транспортном средстве или на животном",
+        "example_en": "She enjoyed the ride on the roller coaster.",
+        "example_ru": "Ей понравилась поездка на американских горках."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "ездить",
+        "alternative_translations": ["кататься", "путешествовать"],
+        "definition_en": "to travel in a vehicle or on an animal",
+        "definition_ru": "путешествовать в транспортном средстве или на животном",
+        "example_en": "I like to ride my bicycle on the weekends.",
+        "example_ru": "Мне нравится ездить на велосипеде по выходным."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_rider",
+    "word": "rider",
+    "ipa": "/ˈraɪdə(r)/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "наездник",
+        "alternative_translations": ["всадник", "пассажир"],
+        "definition_en": "a person who rides a horse, bicycle, or motorcycle",
+        "definition_ru": "человек, который ездит на лошади, велосипеде или мотоцикле",
+        "example_en": "The rider galloped across the field.",
+        "example_ru": "Наездник галопировал через поле."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_riding",
+    "word": "riding",
+    "ipa": "/ˈraɪdɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "верховая езда",
+        "alternative_translations": ["катание", "путешествие"],
+        "definition_en": "the activity of traveling on a horse or vehicle",
+        "definition_ru": "деятельность путешествия на лошади или транспортном средстве",
+        "example_en": "I enjoy horse riding in the countryside.",
+        "example_ru": "Мне нравится верховая езда в деревне."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_right",
+    "word": "right",
+    "ipa": "/raɪt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "правильный",
+        "alternative_translations": ["верный", "надлежащий"],
+        "definition_en": "correct or accurate; not wrong",
+        "definition_ru": "правильный или точный; не неправильный",
+        "example_en": "That's the right answer.",
+        "example_ru": "Это правильный ответ."
+      },
+      {
+        "part_of_speech": "adverb",
+        "translation": "правильно",
+        "alternative_translations": ["совсем", "вполне"],
+        "definition_en": "in the correct way or direction",
+        "definition_ru": "правильным или правильным образом",
+        "example_en": "You did it right.",
+        "example_ru": "Ты сделал это правильно."
+      },
+      {
+        "part_of_speech": "noun",
+        "translation": "право",
+        "alternative_translations": ["правая сторона", "справедливость"],
+        "definition_en": "a legal or moral entitlement; the right side",
+        "definition_ru": "законное или моральное право; правая сторона",
+        "example_en": "Freedom of speech is a human right.",
+        "example_ru": "Свобода слова - это право человека."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_right_hand",
+    "word": "right-hand",
+    "ipa": "/ˌraɪt ˈhænd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "правый",
+        "alternative_translations": ["с правой стороны", "правостороннего"],
+        "definition_en": "located on or toward the right side",
+        "definition_ru": "расположенный на или в направлении правой стороны",
+        "example_en": "The right-hand door is the exit.",
+        "example_ru": "Дверь справа - это выход."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_ring",
+    "word": "ring",
+    "ipa": "/rɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "кольцо",
+        "alternative_translations": ["звонок", "круг"],
+        "definition_en": "a circular band worn on the finger; the sound of a bell",
+        "definition_ru": "круглая полоса, надеваемая на палец; звук звонка",
+        "example_en": "She wore a beautiful diamond ring.",
+        "example_ru": "Она носила красивое бриллиантовое кольцо."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "звонить",
+        "alternative_translations": ["позвонить", "издавать звон"],
+        "definition_en": "to make a sound like a bell; to call someone by phone",
+        "definition_ru": "издавать звук, похожий на звонок; позвонить кому-либо",
+        "example_en": "The bell rang at 8 o'clock.",
+        "example_ru": "Звонок прозвенел в 8 часов."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_ring_back",
+    "word": "ring back",
+    "ipa": "/rɪŋ bæk/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "phrase",
+        "translation": "перезвонить",
+        "alternative_translations": ["позвонить обратно", "звонить в ответ"],
+        "definition_en": "to call someone back on the phone",
+        "definition_ru": "позвонить кому-либо обратно по телефону",
+        "example_en": "I'll ring you back when I'm free.",
+        "example_ru": "Я перезвоню тебе, когда буду свободен."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_ring_up",
+    "word": "ring up",
+    "ipa": "/rɪŋ ʌp/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "phrase",
+        "translation": "позвонить",
+        "alternative_translations": ["звонить", "вызвать"],
+        "definition_en": "to call someone by phone",
+        "definition_ru": "позвонить кому-либо по телефону",
+        "example_en": "I need to ring up my colleague about the meeting.",
+        "example_ru": "Мне нужно позвонить моему коллеге о встречи."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_rise",
+    "word": "rise",
+    "ipa": "/raɪz/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "подниматься",
+        "alternative_translations": ["вставать", "восходить"],
+        "definition_en": "to move upward; to get up from bed or a seat",
+        "definition_ru": "двигаться вверх; встать с кровати или сиденья",
+        "example_en": "The sun rises in the east.",
+        "example_ru": "Солнце встает на востоке."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_river",
+    "word": "river",
+    "ipa": "/ˈrɪvə(r)/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "река",
+        "alternative_translations": ["поток", "течение"],
+        "definition_en": "a large natural flow of water that moves toward the ocean or a lake",
+        "definition_ru": "большой естественный поток воды, который движется в сторону океана или озера",
+        "example_en": "The Thames is a famous river in London.",
+        "example_ru": "Темза - знаменитая река в Лондоне."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_road",
+    "word": "road",
+    "ipa": "/rəʊd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "дорога",
+        "alternative_translations": ["путь", "проезжая часть"],
+        "definition_en": "a way or route for vehicles and people to travel",
+        "definition_ru": "путь или маршрут для путешествия транспортных средств и людей",
+        "example_en": "The road is under construction.",
+        "example_ru": "Дорога находится в стадии строительства."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_roast",
+    "word": "roast",
+    "ipa": "/rəʊst/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "жареный",
+        "alternative_translations": ["запеченный", "обожженный"],
+        "definition_en": "cooked with dry heat in an oven",
+        "definition_ru": "приготовленный сухой жарке в духовке",
+        "example_en": "We had roast chicken for dinner.",
+        "example_ru": "Мы ели жареную курицу на ужин."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "жарить",
+        "alternative_translations": ["запекать", "обжигать"],
+        "definition_en": "to cook with dry heat in an oven or over fire",
+        "definition_ru": "готовить с сухой жаркой в духовке или на огне",
+        "example_en": "I like to roast vegetables with olive oil.",
+        "example_ru": "Я люблю жарить овощи с оливковым маслом."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_rob",
+    "word": "rob",
+    "ipa": "/rɒb/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "грабить",
+        "alternative_translations": ["воровать", "отнимать"],
+        "definition_en": "to take something from someone illegally and by force",
+        "definition_ru": "взять что-либо у кого-либо незаконно и силой",
+        "example_en": "He was arrested for robbing a bank.",
+        "example_ru": "Его арестовали за ограбление банка."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  }
+]

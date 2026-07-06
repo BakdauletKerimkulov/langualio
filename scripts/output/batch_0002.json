@@ -1,0 +1,2419 @@
+[
+  {
+    "id": "b1_background",
+    "word": "background",
+    "ipa": "/ˈbækɡraʊnd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "фон",
+        "alternative_translations": ["задний план", "окружение"],
+        "definition_en": "The area or scenery behind the main object of attention",
+        "definition_ru": "Область или пространство позади главного объекта внимания",
+        "example_en": "The mountains in the background made the photo beautiful.",
+        "example_ru": "Горы на заднем плане сделали фотографию красивой."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_background_experience",
+    "word": "background (experience)",
+    "ipa": "/ˈbækɡraʊnd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "опыт",
+        "alternative_translations": ["образование", "происхождение"],
+        "definition_en": "A person's education, experience, and social circumstances",
+        "definition_ru": "Образование, опыт и социальные обстоятельства человека",
+        "example_en": "She has a strong background in science.",
+        "example_ru": "У неё хорошая база знаний в области науки."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_backpack",
+    "word": "backpack",
+    "ipa": "/ˈbækpæk/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "рюкзак",
+        "alternative_translations": [],
+        "definition_en": "A bag carried on the back, typically by straps over the shoulders",
+        "definition_ru": "Сумка, которую носят за спиной, как правило, на лямках через плечи",
+        "example_en": "She put her books in her backpack and left for school.",
+        "example_ru": "Она положила книги в рюкзак и пошла в школу."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_backpacker",
+    "word": "backpacker",
+    "ipa": "/ˈbækpækə/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "путешественник с рюкзаком",
+        "alternative_translations": ["бэкпекер"],
+        "definition_en": "A person who travels with a backpack, usually on a low budget",
+        "definition_ru": "Человек, который путешествует с рюкзаком, как правило, с небольшим бюджетом",
+        "example_en": "The hostel is popular with backpackers from around the world.",
+        "example_ru": "Хостел популярен среди путешественников с рюкзаками со всего мира."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_backpacking",
+    "word": "backpacking",
+    "ipa": "/ˈbækpækɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "путешествие с рюкзаком",
+        "alternative_translations": ["бэкпекинг"],
+        "definition_en": "Travelling or hiking while carrying belongings in a backpack",
+        "definition_ru": "Путешествие или поход с вещами в рюкзаке",
+        "example_en": "He spent the summer backpacking through Europe.",
+        "example_ru": "Он провёл лето, путешествуя с рюкзаком по Европе."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_backwards",
+    "word": "backwards",
+    "ipa": "/ˈbækwədz/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adverb",
+        "translation": "назад",
+        "alternative_translations": ["в обратном направлении"],
+        "definition_en": "In the direction behind you; in reverse",
+        "definition_ru": "В направлении позади себя; в обратном порядке",
+        "example_en": "She took a few steps backwards to get a better view.",
+        "example_ru": "Она сделала несколько шагов назад, чтобы лучше видеть."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_bad",
+    "word": "bad",
+    "ipa": "/bæd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "плохой",
+        "alternative_translations": ["нехороший", "вредный"],
+        "definition_en": "Of poor quality or a low standard; not good",
+        "definition_ru": "Низкого качества или уровня; нехороший",
+        "example_en": "The weather was really bad yesterday.",
+        "example_ru": "Вчера была очень плохая погода."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_badly",
+    "word": "badly",
+    "ipa": "/ˈbædli/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adverb",
+        "translation": "плохо",
+        "alternative_translations": ["серьёзно", "очень сильно"],
+        "definition_en": "In a way that is not good or satisfactory",
+        "definition_ru": "Неудовлетворительным образом; нехорошо",
+        "example_en": "He performed badly in the exam.",
+        "example_ru": "Он плохо выступил на экзамене."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_badminton",
+    "word": "badminton",
+    "ipa": "/ˈbædmɪntən/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "бадминтон",
+        "alternative_translations": [],
+        "definition_en": "A sport played with rackets and a shuttlecock across a net",
+        "definition_ru": "Вид спорта, в котором играют ракетками и воланом через сетку",
+        "example_en": "They played badminton in the park on Sunday.",
+        "example_ru": "В воскресенье они играли в бадминтон в парке."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_bag",
+    "word": "bag",
+    "ipa": "/bæɡ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "сумка",
+        "alternative_translations": ["мешок", "пакет"],
+        "definition_en": "A flexible container with an opening at the top, used for carrying things",
+        "definition_ru": "Гибкий контейнер с отверстием сверху, используемый для переноски вещей",
+        "example_en": "She put her shopping in a bag.",
+        "example_ru": "Она положила покупки в сумку."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_baggage",
+    "word": "baggage",
+    "ipa": "/ˈbæɡɪdʒ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "багаж",
+        "alternative_translations": [],
+        "definition_en": "Suitcases and bags containing personal belongings for travel",
+        "definition_ru": "Чемоданы и сумки с личными вещами для поездки",
+        "example_en": "Please collect your baggage at the carousel.",
+        "example_ru": "Пожалуйста, заберите свой багаж на ленте выдачи."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_bake",
+    "word": "bake",
+    "ipa": "/beɪk/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "печь",
+        "alternative_translations": ["выпекать"],
+        "definition_en": "To cook food by dry heat in an oven",
+        "definition_ru": "Готовить еду с помощью сухого жара в духовке",
+        "example_en": "She likes to bake bread on weekends.",
+        "example_ru": "Она любит печь хлеб по выходным."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_baker",
+    "word": "baker",
+    "ipa": "/ˈbeɪkə/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "пекарь",
+        "alternative_translations": ["булочник"],
+        "definition_en": "A person who makes and sells bread and cakes",
+        "definition_ru": "Человек, который изготавливает и продаёт хлеб и торты",
+        "example_en": "The baker opens his shop at six in the morning.",
+        "example_ru": "Пекарь открывает свой магазин в шесть утра."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_balcony",
+    "word": "balcony",
+    "ipa": "/ˈbælkəni/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "балкон",
+        "alternative_translations": [],
+        "definition_en": "A platform projecting from the wall of a building with a railing",
+        "definition_ru": "Площадка, выступающая из стены здания, с перилами",
+        "example_en": "They had breakfast on the balcony every morning.",
+        "example_ru": "Каждое утро они завтракали на балконе."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_bald",
+    "word": "bald",
+    "ipa": "/bɔːld/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "лысый",
+        "alternative_translations": ["плешивый"],
+        "definition_en": "Having little or no hair on the head",
+        "definition_ru": "Имеющий мало волос или совсем без волос на голове",
+        "example_en": "My uncle became bald when he was forty.",
+        "example_ru": "Мой дядя облысел, когда ему было сорок лет."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_ball",
+    "word": "ball",
+    "ipa": "/bɔːl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "мяч",
+        "alternative_translations": ["шар", "бал"],
+        "definition_en": "A round object used in games and sports",
+        "definition_ru": "Круглый предмет, используемый в играх и спорте",
+        "example_en": "The children kicked the ball around the garden.",
+        "example_ru": "Дети гоняли мяч по саду."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_ballet",
+    "word": "ballet",
+    "ipa": "/ˈbæleɪ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "балет",
+        "alternative_translations": [],
+        "definition_en": "A type of artistic dance performed to music, usually telling a story",
+        "definition_ru": "Вид художественного танца под музыку, обычно рассказывающий историю",
+        "example_en": "She has been taking ballet lessons since she was five.",
+        "example_ru": "Она занимается балетом с пяти лет."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_balloon",
+    "word": "balloon",
+    "ipa": "/bəˈluːn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "воздушный шар",
+        "alternative_translations": ["шарик"],
+        "definition_en": "A small rubber or plastic bag that is inflated with air or gas",
+        "definition_ru": "Небольшой резиновый или пластиковый мешок, надутый воздухом или газом",
+        "example_en": "The children were excited to get balloons at the party.",
+        "example_ru": "Дети были рады воздушным шарикам на вечеринке."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_banana",
+    "word": "banana",
+    "ipa": "/bəˈnɑːnə/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "банан",
+        "alternative_translations": [],
+        "definition_en": "A long curved fruit with a yellow skin",
+        "definition_ru": "Длинный изогнутый фрукт с жёлтой кожурой",
+        "example_en": "He eats a banana every morning for breakfast.",
+        "example_ru": "Каждое утро он ест банан на завтрак."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_band",
+    "word": "band",
+    "ipa": "/bænd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "группа",
+        "alternative_translations": ["лента", "полоса"],
+        "definition_en": "A group of musicians who play together",
+        "definition_ru": "Группа музыкантов, играющих вместе",
+        "example_en": "The band played at the local festival last summer.",
+        "example_ru": "Группа выступала на местном фестивале прошлым летом."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_bandage",
+    "word": "bandage",
+    "ipa": "/ˈbændɪdʒ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "бинт",
+        "alternative_translations": ["повязка"],
+        "definition_en": "A strip of cloth used to bind a wound or injured part of the body",
+        "definition_ru": "Полоска ткани, используемая для перевязки раны или повреждённой части тела",
+        "example_en": "The nurse wrapped a bandage around his injured hand.",
+        "example_ru": "Медсестра обмотала бинтом его повреждённую руку."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_bank",
+    "word": "bank",
+    "ipa": "/bæŋk/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "банк",
+        "alternative_translations": ["берег"],
+        "definition_en": "A financial institution that accepts deposits and lends money",
+        "definition_ru": "Финансовое учреждение, принимающее вклады и выдающее кредиты",
+        "example_en": "She went to the bank to withdraw some money.",
+        "example_ru": "Она пошла в банк, чтобы снять деньги."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_bank_account",
+    "word": "bank account",
+    "ipa": "/ˈbæŋk əˌkaʊnt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "банковский счёт",
+        "alternative_translations": [],
+        "definition_en": "An arrangement with a bank to keep your money there",
+        "definition_ru": "Договорённость с банком о хранении там ваших денег",
+        "example_en": "You need a bank account to receive your salary.",
+        "example_ru": "Для получения зарплаты вам нужен банковский счёт."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_banker",
+    "word": "banker",
+    "ipa": "/ˈbæŋkə/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "банкир",
+        "alternative_translations": [],
+        "definition_en": "A person who works in senior management at a bank",
+        "definition_ru": "Человек, работающий на руководящей должности в банке",
+        "example_en": "He works as an investment banker in the city.",
+        "example_ru": "Он работает инвестиционным банкиром в городе."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_banking",
+    "word": "banking",
+    "ipa": "/ˈbæŋkɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "банковское дело",
+        "alternative_translations": ["банкинг"],
+        "definition_en": "The business activity of banks",
+        "definition_ru": "Деловая деятельность банков",
+        "example_en": "Online banking has made managing money much easier.",
+        "example_ru": "Интернет-банкинг значительно упростил управление деньгами."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_bar",
+    "word": "bar",
+    "ipa": "/bɑː/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "бар",
+        "alternative_translations": ["перекладина", "плитка"],
+        "definition_en": "A place where alcoholic drinks are served",
+        "definition_ru": "Место, где подают алкогольные напитки",
+        "example_en": "They met their friends at the bar after work.",
+        "example_ru": "После работы они встретились с друзьями в баре."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_barbecue",
+    "word": "barbecue",
+    "ipa": "/ˈbɑːbɪkjuː/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "барбекю",
+        "alternative_translations": ["шашлык"],
+        "definition_en": "A meal or party at which food is cooked outdoors on a grill",
+        "definition_ru": "Еда или вечеринка, на которой еда готовится на улице на гриле",
+        "example_en": "We had a barbecue in the garden last Saturday.",
+        "example_ru": "В прошлую субботу мы устроили барбекю в саду."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "жарить на гриле",
+        "alternative_translations": ["готовить на барбекю"],
+        "definition_en": "To cook food on a barbecue",
+        "definition_ru": "Готовить еду на барбекю",
+        "example_en": "He loves to barbecue chicken in summer.",
+        "example_ru": "Он любит жарить курицу на гриле летом."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_barber",
+    "word": "barber",
+    "ipa": "/ˈbɑːbə/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "парикмахер",
+        "alternative_translations": ["цирюльник"],
+        "definition_en": "A person whose job is to cut men's hair",
+        "definition_ru": "Человек, чья работа — стричь волосы у мужчин",
+        "example_en": "He goes to the barber every three weeks.",
+        "example_ru": "Он ходит к парикмахеру каждые три недели."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_bargain",
+    "word": "bargain",
+    "ipa": "/ˈbɑːɡɪn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "выгодная сделка",
+        "alternative_translations": ["скидка", "удачная покупка"],
+        "definition_en": "Something bought for less than its usual price",
+        "definition_ru": "Что-то купленное дешевле обычной цены",
+        "example_en": "These shoes were a real bargain — only ten pounds!",
+        "example_ru": "Эта обувь — настоящая выгодная покупка — всего десять фунтов!"
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_base_on",
+    "word": "base on",
+    "ipa": "/beɪs ɒn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "phrase",
+        "translation": "основывать на",
+        "alternative_translations": ["базироваться на"],
+        "definition_en": "To use something as the foundation or starting point for something else",
+        "definition_ru": "Использовать что-то в качестве основы или отправной точки для чего-то другого",
+        "example_en": "The film is based on a true story.",
+        "example_ru": "Фильм основан на реальных событиях."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_baseball",
+    "word": "baseball",
+    "ipa": "/ˈbeɪsbɔːl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "бейсбол",
+        "alternative_translations": [],
+        "definition_en": "A team sport played with a bat and ball on a diamond-shaped field",
+        "definition_ru": "Командный вид спорта с битой и мячом на ромбовидном поле",
+        "example_en": "He played baseball every summer as a child.",
+        "example_ru": "В детстве он играл в бейсбол каждое лето."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_basic",
+    "word": "basic",
+    "ipa": "/ˈbeɪsɪk/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "основной",
+        "alternative_translations": ["базовый", "элементарный"],
+        "definition_en": "Forming the most important or essential part of something",
+        "definition_ru": "Образующий самую важную или существенную часть чего-либо",
+        "example_en": "The course covers basic English grammar.",
+        "example_ru": "На курсе изучается базовая грамматика английского языка."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_basin",
+    "word": "basin",
+    "ipa": "/ˈbeɪsɪn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "таз",
+        "alternative_translations": ["раковина", "бассейн"],
+        "definition_en": "A round open container used for washing or holding liquid",
+        "definition_ru": "Круглый открытый сосуд для мытья или хранения жидкости",
+        "example_en": "She filled the basin with warm water to wash her face.",
+        "example_ru": "Она наполнила таз тёплой водой, чтобы умыться."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_basket",
+    "word": "basket",
+    "ipa": "/ˈbɑːskɪt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "корзина",
+        "alternative_translations": [],
+        "definition_en": "A container made of woven material used for carrying or storing things",
+        "definition_ru": "Контейнер из плетёного материала для переноски или хранения вещей",
+        "example_en": "She carried a basket full of fruit from the market.",
+        "example_ru": "Она несла корзину, полную фруктов с рынка."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_basketball",
+    "word": "basketball",
+    "ipa": "/ˈbɑːskɪtbɔːl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "баскетбол",
+        "alternative_translations": [],
+        "definition_en": "A team sport in which players try to throw a ball through a high hoop",
+        "definition_ru": "Командный вид спорта, в котором игроки пытаются забросить мяч в высокое кольцо",
+        "example_en": "He practises basketball three times a week.",
+        "example_ru": "Он тренируется в баскетбол три раза в неделю."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_bat",
+    "word": "bat",
+    "ipa": "/bæt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "бита",
+        "alternative_translations": ["летучая мышь"],
+        "definition_en": "A wooden or metal stick used to hit a ball in sports",
+        "definition_ru": "Деревянная или металлическая палка для удара по мячу в спорте",
+        "example_en": "He swung the bat and hit the ball hard.",
+        "example_ru": "Он взмахнул битой и сильно ударил по мячу."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_bath",
+    "word": "bath",
+    "ipa": "/bɑːθ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "ванна",
+        "alternative_translations": ["купание"],
+        "definition_en": "An act of washing the body by sitting in water in a bathtub",
+        "definition_ru": "Процесс мытья тела, сидя в воде в ванне",
+        "example_en": "She takes a bath every evening before bed.",
+        "example_ru": "Каждый вечер перед сном она принимает ванну."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "купать",
+        "alternative_translations": ["мыть"],
+        "definition_en": "To wash someone in a bath",
+        "definition_ru": "Мыть кого-то в ванне",
+        "example_en": "She bathed the baby before putting him to bed.",
+        "example_ru": "Она искупала малыша перед тем, как уложить его спать."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_bathing_suit",
+    "word": "bathing suit",
+    "ipa": "/ˈbeɪðɪŋ suːt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "купальный костюм",
+        "alternative_translations": ["купальник"],
+        "definition_en": "A piece of clothing worn for swimming",
+        "definition_ru": "Предмет одежды, надеваемый для плавания",
+        "example_en": "Don't forget to pack your bathing suit for the beach.",
+        "example_ru": "Не забудь упаковать купальник для пляжа."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_bathroom",
+    "word": "bathroom",
+    "ipa": "/ˈbɑːθruːm/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "ванная комната",
+        "alternative_translations": ["туалет"],
+        "definition_en": "A room containing a bath or shower, and usually a toilet and washbasin",
+        "definition_ru": "Комната с ванной или душем, обычно также с туалетом и раковиной",
+        "example_en": "The bathroom is at the end of the corridor.",
+        "example_ru": "Ванная комната находится в конце коридора."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_bathtub",
+    "word": "bathtub",
+    "ipa": "/ˈbɑːθtʌb/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "ванна",
+        "alternative_translations": ["ванная"],
+        "definition_en": "A large container filled with water in which you sit to wash yourself",
+        "definition_ru": "Большой сосуд, наполненный водой, в котором сидят для мытья",
+        "example_en": "The bathtub needs cleaning after every use.",
+        "example_ru": "Ванну нужно мыть после каждого использования."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_battery",
+    "word": "battery",
+    "ipa": "/ˈbætəri/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "батарея",
+        "alternative_translations": ["аккумулятор", "батарейка"],
+        "definition_en": "A device that stores electrical energy and powers electronic devices",
+        "definition_ru": "Устройство, накапливающее электрическую энергию и питающее электронные устройства",
+        "example_en": "My phone battery is almost dead.",
+        "example_ru": "Батарея моего телефона почти разрядилась."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_battle",
+    "word": "battle",
+    "ipa": "/ˈbætl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "битва",
+        "alternative_translations": ["сражение", "борьба"],
+        "definition_en": "A fight between armed forces, or a difficult struggle",
+        "definition_ru": "Сражение между вооружёнными силами или тяжёлая борьба",
+        "example_en": "The soldiers fought a long battle to win the city.",
+        "example_ru": "Солдаты вели долгую битву за захват города."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_bay",
+    "word": "bay",
+    "ipa": "/beɪ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "бухта",
+        "alternative_translations": ["залив"],
+        "definition_en": "A broad inlet of the sea where the land curves inward",
+        "definition_ru": "Широкий залив моря, где суша изгибается внутрь",
+        "example_en": "The ship anchored in a quiet bay.",
+        "example_ru": "Корабль бросил якорь в тихой бухте."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_be",
+    "word": "be",
+    "ipa": "/biː/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "быть",
+        "alternative_translations": ["являться", "существовать"],
+        "definition_en": "To exist or have a particular quality or state",
+        "definition_ru": "Существовать или обладать определённым качеством или состоянием",
+        "example_en": "She wants to be a doctor when she grows up.",
+        "example_ru": "Она хочет стать врачом, когда вырастет."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_be_over",
+    "word": "be over",
+    "ipa": "/biː ˈəʊvə/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "phrase",
+        "translation": "закончиться",
+        "alternative_translations": ["завершиться"],
+        "definition_en": "To have finished or ended",
+        "definition_ru": "Завершиться или закончиться",
+        "example_en": "The meeting will be over by noon.",
+        "example_ru": "Встреча закончится к полудню."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_beach",
+    "word": "beach",
+    "ipa": "/biːtʃ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "пляж",
+        "alternative_translations": [],
+        "definition_en": "An area of sand or pebbles beside the sea or a lake",
+        "definition_ru": "Полоса песка или гальки у моря или озера",
+        "example_en": "We spent the whole day at the beach.",
+        "example_ru": "Мы провели весь день на пляже."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_bean",
+    "word": "bean",
+    "ipa": "/biːn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "фасоль",
+        "alternative_translations": ["боб"],
+        "definition_en": "A seed or pod from a climbing plant, used as a vegetable",
+        "definition_ru": "Семя или стручок вьющегося растения, используемый как овощ",
+        "example_en": "She added beans to the soup for extra protein.",
+        "example_ru": "Она добавила фасоль в суп для дополнительного белка."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_bear",
+    "word": "bear",
+    "ipa": "/beə/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "медведь",
+        "alternative_translations": [],
+        "definition_en": "A large, heavy wild animal with thick fur",
+        "definition_ru": "Крупное тяжёлое дикое животное с густым мехом",
+        "example_en": "We saw a bear in the forest during our hike.",
+        "example_ru": "Во время похода мы увидели медведя в лесу."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_beard",
+    "word": "beard",
+    "ipa": "/bɪəd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "борода",
+        "alternative_translations": [],
+        "definition_en": "Hair that grows on the lower part of a man's face",
+        "definition_ru": "Волосы, растущие на нижней части лица мужчины",
+        "example_en": "He decided to grow a beard last winter.",
+        "example_ru": "Прошлой зимой он решил отрастить бороду."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_beat",
+    "word": "beat",
+    "ipa": "/biːt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "победить",
+        "alternative_translations": ["бить", "колотить"],
+        "definition_en": "To defeat someone in a game or competition",
+        "definition_ru": "Победить кого-то в игре или соревновании",
+        "example_en": "Our team beat the other team three to one.",
+        "example_ru": "Наша команда победила другую команду со счётом три-один."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_beautiful",
+    "word": "beautiful",
+    "ipa": "/ˈbjuːtɪfl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "красивый",
+        "alternative_translations": ["прекрасный", "великолепный"],
+        "definition_en": "Pleasing to the senses; having great beauty",
+        "definition_ru": "Приятный для органов чувств; обладающий большой красотой",
+        "example_en": "The sunset over the lake was absolutely beautiful.",
+        "example_ru": "Закат над озером был абсолютно прекрасен."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_beauty",
+    "word": "beauty",
+    "ipa": "/ˈbjuːti/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "красота",
+        "alternative_translations": ["краса"],
+        "definition_en": "A combination of qualities that pleases the senses or mind",
+        "definition_ru": "Сочетание качеств, которое радует чувства или разум",
+        "example_en": "The beauty of the mountains took her breath away.",
+        "example_ru": "Красота гор захватила её дух."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_because",
+    "word": "because",
+    "ipa": "/bɪˈkɒz/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "conjunction",
+        "translation": "потому что",
+        "alternative_translations": ["так как", "поскольку"],
+        "definition_en": "For the reason that; since",
+        "definition_ru": "По причине того, что; так как",
+        "example_en": "She stayed home because she was feeling ill.",
+        "example_ru": "Она осталась дома, потому что чувствовала себя плохо."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_because_of",
+    "word": "because of",
+    "ipa": "/bɪˈkɒz ɒv/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "phrase",
+        "translation": "из-за",
+        "alternative_translations": ["вследствие", "по причине"],
+        "definition_en": "As a result of; by reason of",
+        "definition_ru": "В результате; по причине",
+        "example_en": "The match was cancelled because of the rain.",
+        "example_ru": "Матч был отменён из-за дождя."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_become",
+    "word": "become",
+    "ipa": "/bɪˈkʌm/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "становиться",
+        "alternative_translations": ["превращаться"],
+        "definition_en": "To begin to be something or develop into something",
+        "definition_ru": "Начать быть чем-то или превратиться в что-то",
+        "example_en": "She became a teacher after finishing university.",
+        "example_ru": "После окончания университета она стала учителем."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_bed",
+    "word": "bed",
+    "ipa": "/bed/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "кровать",
+        "alternative_translations": ["постель"],
+        "definition_en": "A piece of furniture for sleeping on",
+        "definition_ru": "Предмет мебели для сна",
+        "example_en": "He went to bed early because he was tired.",
+        "example_ru": "Он рано лёг в постель, потому что устал."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_bedroom",
+    "word": "bedroom",
+    "ipa": "/ˈbedrʊm/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "спальня",
+        "alternative_translations": [],
+        "definition_en": "A room used for sleeping",
+        "definition_ru": "Комната, предназначенная для сна",
+        "example_en": "Their house has three bedrooms.",
+        "example_ru": "В их доме три спальни."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_bee",
+    "word": "bee",
+    "ipa": "/biː/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "пчела",
+        "alternative_translations": [],
+        "definition_en": "A flying insect that collects nectar and makes honey",
+        "definition_ru": "Летающее насекомое, собирающее нектар и производящее мёд",
+        "example_en": "A bee stung her while she was in the garden.",
+        "example_ru": "Пчела ужалила её, пока она была в саду."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_beef",
+    "word": "beef",
+    "ipa": "/biːf/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "говядина",
+        "alternative_translations": [],
+        "definition_en": "The meat from a cow",
+        "definition_ru": "Мясо коровы",
+        "example_en": "She made a delicious beef stew for dinner.",
+        "example_ru": "Она приготовила вкусное тушёное мясо из говядины на ужин."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_before",
+    "word": "before",
+    "ipa": "/bɪˈfɔː/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adverb",
+        "translation": "раньше",
+        "alternative_translations": ["прежде", "ранее"],
+        "definition_en": "At an earlier time; previously",
+        "definition_ru": "В более ранее время; ранее",
+        "example_en": "I've been here before — it's a great place.",
+        "example_ru": "Я уже был здесь раньше — это прекрасное место."
+      },
+      {
+        "part_of_speech": "conjunction",
+        "translation": "прежде чем",
+        "alternative_translations": ["до того как"],
+        "definition_en": "Earlier than the time that",
+        "definition_ru": "Ранее времени, когда",
+        "example_en": "Wash your hands before you eat.",
+        "example_ru": "Вымой руки перед едой."
+      },
+      {
+        "part_of_speech": "preposition",
+        "translation": "перед",
+        "alternative_translations": ["до"],
+        "definition_en": "Earlier in time than; in front of",
+        "definition_ru": "Ранее по времени, чем; впереди",
+        "example_en": "Please arrive before nine o'clock.",
+        "example_ru": "Пожалуйста, прибудьте до девяти часов."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_begin",
+    "word": "begin",
+    "ipa": "/bɪˈɡɪn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "начинать",
+        "alternative_translations": ["приступать"],
+        "definition_en": "To start doing or being something",
+        "definition_ru": "Начать делать что-то или быть чем-то",
+        "example_en": "The lesson will begin at nine o'clock.",
+        "example_ru": "Урок начнётся в девять часов."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_beginner",
+    "word": "beginner",
+    "ipa": "/bɪˈɡɪnə/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "начинающий",
+        "alternative_translations": ["новичок"],
+        "definition_en": "A person who is just starting to learn something",
+        "definition_ru": "Человек, который только начинает что-то изучать",
+        "example_en": "This class is suitable for beginners.",
+        "example_ru": "Этот класс подходит для начинающих."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_beginning",
+    "word": "beginning",
+    "ipa": "/bɪˈɡɪnɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "начало",
+        "alternative_translations": ["старт"],
+        "definition_en": "The point in time or space at which something starts",
+        "definition_ru": "Точка во времени или пространстве, с которой что-то начинается",
+        "example_en": "At the beginning of the film, I didn't understand the story.",
+        "example_ru": "В начале фильма я не понял сюжет."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_behave",
+    "word": "behave",
+    "ipa": "/bɪˈheɪv/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "вести себя",
+        "alternative_translations": ["себя держать"],
+        "definition_en": "To act in a particular way",
+        "definition_ru": "Действовать определённым образом",
+        "example_en": "Please behave yourself at the dinner table.",
+        "example_ru": "Пожалуйста, веди себя прилично за обеденным столом."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_behaviour",
+    "word": "behaviour",
+    "ipa": "/bɪˈheɪvjə/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "поведение",
+        "alternative_translations": [],
+        "definition_en": "The way in which someone acts or conducts themselves",
+        "definition_ru": "Способ, которым кто-то действует или ведёт себя",
+        "example_en": "The teacher praised the children for their good behaviour.",
+        "example_ru": "Учитель похвалил детей за хорошее поведение."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_behind",
+    "word": "behind",
+    "ipa": "/bɪˈhaɪnd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adverb",
+        "translation": "позади",
+        "alternative_translations": ["сзади"],
+        "definition_en": "In, to, or at the back",
+        "definition_ru": "Сзади, в задней части",
+        "example_en": "The others walked ahead and he stayed behind.",
+        "example_ru": "Остальные шли вперёд, а он остался позади."
+      },
+      {
+        "part_of_speech": "preposition",
+        "translation": "за",
+        "alternative_translations": ["позади"],
+        "definition_en": "At or towards the back of someone or something",
+        "definition_ru": "В задней части или по направлению к задней части кого-то или чего-то",
+        "example_en": "There is a garden behind the house.",
+        "example_ru": "За домом есть сад."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_believe",
+    "word": "believe",
+    "ipa": "/bɪˈliːv/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "верить",
+        "alternative_translations": ["считать", "полагать"],
+        "definition_en": "To feel certain that something is true",
+        "definition_ru": "Быть уверенным в том, что что-то правда",
+        "example_en": "I believe she is telling the truth.",
+        "example_ru": "Я верю, что она говорит правду."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_bell",
+    "word": "bell",
+    "ipa": "/bel/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "колокол",
+        "alternative_translations": ["звонок", "колокольчик"],
+        "definition_en": "A hollow metal object that makes a ringing sound when struck",
+        "definition_ru": "Полый металлический предмет, издающий звон при ударе",
+        "example_en": "The school bell rang and the students went to class.",
+        "example_ru": "Школьный звонок прозвенел, и ученики пошли на урок."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_belong",
+    "word": "belong",
+    "ipa": "/bɪˈlɒŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "принадлежать",
+        "alternative_translations": ["относиться к"],
+        "definition_en": "To be the property of someone; to be a member of a group",
+        "definition_ru": "Быть чьей-то собственностью; быть членом группы",
+        "example_en": "This book belongs to my sister.",
+        "example_ru": "Эта книга принадлежит моей сестре."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_below",
+    "word": "below",
+    "ipa": "/bɪˈləʊ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adverb",
+        "translation": "ниже",
+        "alternative_translations": ["внизу"],
+        "definition_en": "At a lower level or position",
+        "definition_ru": "На более низком уровне или положении",
+        "example_en": "See the instructions below for more information.",
+        "example_ru": "Смотрите инструкции ниже для получения дополнительной информации."
+      },
+      {
+        "part_of_speech": "preposition",
+        "translation": "под",
+        "alternative_translations": ["ниже чем"],
+        "definition_en": "At a lower level than; underneath",
+        "definition_ru": "На более низком уровне, чем; под",
+        "example_en": "The temperature dropped below zero last night.",
+        "example_ru": "Прошлой ночью температура опустилась ниже нуля."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_belt",
+    "word": "belt",
+    "ipa": "/belt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "ремень",
+        "alternative_translations": ["пояс"],
+        "definition_en": "A strip of leather or fabric worn around the waist",
+        "definition_ru": "Полоска кожи или ткани, носимая вокруг талии",
+        "example_en": "He bought a new leather belt to go with his trousers.",
+        "example_ru": "Он купил новый кожаный ремень к своим брюкам."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_beneath",
+    "word": "beneath",
+    "ipa": "/bɪˈniːθ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "preposition",
+        "translation": "под",
+        "alternative_translations": ["ниже", "внизу"],
+        "definition_en": "Extending or directly below something",
+        "definition_ru": "Простирающийся или непосредственно под чем-то",
+        "example_en": "The treasure was hidden beneath the old oak tree.",
+        "example_ru": "Сокровище было спрятано под старым дубом."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_benefit",
+    "word": "benefit",
+    "ipa": "/ˈbenɪfɪt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "польза",
+        "alternative_translations": ["выгода", "преимущество"],
+        "definition_en": "An advantage or positive effect from something",
+        "definition_ru": "Преимущество или положительный эффект от чего-либо",
+        "example_en": "Exercise has many benefits for your health.",
+        "example_ru": "Упражнения приносят большую пользу для здоровья."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "приносить пользу",
+        "alternative_translations": ["выигрывать", "получать выгоду"],
+        "definition_en": "To receive an advantage from something",
+        "definition_ru": "Получать преимущество от чего-либо",
+        "example_en": "Everyone will benefit from this new law.",
+        "example_ru": "Все получат выгоду от этого нового закона."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_beside",
+    "word": "beside",
+    "ipa": "/bɪˈsaɪd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adverb",
+        "translation": "рядом",
+        "alternative_translations": ["сбоку"],
+        "definition_en": "At the side of; next to",
+        "definition_ru": "Рядом; сбоку от",
+        "example_en": "She sat beside him during the concert.",
+        "example_ru": "Во время концерта она сидела рядом с ним."
+      },
+      {
+        "part_of_speech": "preposition",
+        "translation": "рядом с",
+        "alternative_translations": ["около"],
+        "definition_en": "Next to; at the side of",
+        "definition_ru": "Рядом с; у края чего-то",
+        "example_en": "He put his bag beside the door.",
+        "example_ru": "Он поставил сумку рядом с дверью."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_besides",
+    "word": "besides",
+    "ipa": "/bɪˈsaɪdz/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "preposition",
+        "translation": "кроме",
+        "alternative_translations": ["помимо", "в дополнение к"],
+        "definition_en": "In addition to; apart from",
+        "definition_ru": "В дополнение к; помимо",
+        "example_en": "Besides English, she can speak French and Spanish.",
+        "example_ru": "Помимо английского, она говорит по-французски и по-испански."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_best",
+    "word": "best",
+    "ipa": "/best/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "лучший",
+        "alternative_translations": ["наилучший"],
+        "definition_en": "Of the highest quality or standard; most excellent",
+        "definition_ru": "Самого высокого качества или уровня; наиболее превосходный",
+        "example_en": "She is the best student in her class.",
+        "example_ru": "Она лучшая ученица в своём классе."
+      },
+      {
+        "part_of_speech": "adverb",
+        "translation": "лучше всего",
+        "alternative_translations": ["наилучшим образом"],
+        "definition_en": "In the most excellent way",
+        "definition_ru": "Наилучшим образом",
+        "example_en": "He works best in the morning.",
+        "example_ru": "Он лучше всего работает по утрам."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_bestseller",
+    "word": "bestseller",
+    "ipa": "/ˈbestselə/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "бестселлер",
+        "alternative_translations": ["хит продаж"],
+        "definition_en": "A book or other product that sells in very large numbers",
+        "definition_ru": "Книга или другой продукт, продающийся в очень больших количествах",
+        "example_en": "Her new novel became an international bestseller.",
+        "example_ru": "Её новый роман стал международным бестселлером."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_better",
+    "word": "better",
+    "ipa": "/ˈbetə/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "лучший",
+        "alternative_translations": ["более хороший"],
+        "definition_en": "Of a higher standard or quality than another",
+        "definition_ru": "Более высокого уровня или качества, чем другой",
+        "example_en": "This hotel is better than the last one we stayed at.",
+        "example_ru": "Этот отель лучше, чем тот, в котором мы останавливались в прошлый раз."
+      },
+      {
+        "part_of_speech": "adverb",
+        "translation": "лучше",
+        "alternative_translations": [],
+        "definition_en": "In a more excellent way; to a greater extent",
+        "definition_ru": "Более превосходным образом; в большей степени",
+        "example_en": "You should speak English better after this course.",
+        "example_ru": "После этого курса ты должен говорить по-английски лучше."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_between",
+    "word": "between",
+    "ipa": "/bɪˈtwiːn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adverb",
+        "translation": "между",
+        "alternative_translations": ["посередине"],
+        "definition_en": "In the space separating two things or people",
+        "definition_ru": "В пространстве, разделяющем два предмета или человека",
+        "example_en": "She sat between her two friends.",
+        "example_ru": "Она сидела между двумя своими подругами."
+      },
+      {
+        "part_of_speech": "preposition",
+        "translation": "между",
+        "alternative_translations": ["в промежутке от"],
+        "definition_en": "In or through the space separating two things",
+        "definition_ru": "В пространстве или через пространство между двумя вещами",
+        "example_en": "The shop is open between nine and five.",
+        "example_ru": "Магазин работает с девяти до пяти."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_beyond",
+    "word": "beyond",
+    "ipa": "/bɪˈjɒnd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adverb",
+        "translation": "дальше",
+        "alternative_translations": ["за пределами"],
+        "definition_en": "Further away; on the far side",
+        "definition_ru": "Дальше; на дальней стороне",
+        "example_en": "The road goes through the forest and beyond.",
+        "example_ru": "Дорога проходит через лес и продолжается дальше."
+      },
+      {
+        "part_of_speech": "preposition",
+        "translation": "за",
+        "alternative_translations": ["по ту сторону", "вне"],
+        "definition_en": "On the far side of; further than",
+        "definition_ru": "По ту сторону от; дальше чем",
+        "example_en": "The village is just beyond the hill.",
+        "example_ru": "Деревня находится сразу за холмом."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_bicycle",
+    "word": "bicycle",
+    "ipa": "/ˈbaɪsɪkl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "велосипед",
+        "alternative_translations": [],
+        "definition_en": "A vehicle with two wheels that you ride by pedalling",
+        "definition_ru": "Транспортное средство с двумя колёсами, на котором едут, крутя педали",
+        "example_en": "She rides her bicycle to work every day.",
+        "example_ru": "Она каждый день ездит на работу на велосипеде."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_big",
+    "word": "big",
+    "ipa": "/bɪɡ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "большой",
+        "alternative_translations": ["крупный"],
+        "definition_en": "Large in size, amount, or degree",
+        "definition_ru": "Большой по размеру, количеству или степени",
+        "example_en": "They live in a big house near the park.",
+        "example_ru": "Они живут в большом доме рядом с парком."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_bike",
+    "word": "bike",
+    "ipa": "/baɪk/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "велосипед",
+        "alternative_translations": ["мотоцикл"],
+        "definition_en": "A bicycle or motorcycle",
+        "definition_ru": "Велосипед или мотоцикл",
+        "example_en": "He borrowed his friend's bike to get to the station.",
+        "example_ru": "Он одолжил велосипед у друга, чтобы добраться до станции."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_bill",
+    "word": "bill",
+    "ipa": "/bɪl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "счёт",
+        "alternative_translations": ["купюра", "законопроект"],
+        "definition_en": "A written statement of money owed for goods or services",
+        "definition_ru": "Письменное требование об оплате за товары или услуги",
+        "example_en": "Can I have the bill, please?",
+        "example_ru": "Можно мне счёт, пожалуйста?"
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_bin",
+    "word": "bin",
+    "ipa": "/bɪn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "мусорное ведро",
+        "alternative_translations": ["корзина для мусора"],
+        "definition_en": "A container for putting rubbish or waste into",
+        "definition_ru": "Ёмкость для мусора или отходов",
+        "example_en": "Please throw your rubbish in the bin.",
+        "example_ru": "Пожалуйста, выбросьте мусор в ведро."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_biography",
+    "word": "biography",
+    "ipa": "/baɪˈɒɡrəfi/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "биография",
+        "alternative_translations": [],
+        "definition_en": "A book or account about someone's life written by another person",
+        "definition_ru": "Книга или рассказ о жизни кого-то, написанный другим человеком",
+        "example_en": "She read a biography of the famous musician.",
+        "example_ru": "Она прочитала биографию знаменитого музыканта."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_biology",
+    "word": "biology",
+    "ipa": "/baɪˈɒlədʒi/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "биология",
+        "alternative_translations": [],
+        "definition_en": "The scientific study of living things",
+        "definition_ru": "Научное изучение живых существ",
+        "example_en": "She is studying biology at university.",
+        "example_ru": "Она изучает биологию в университете."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_bird",
+    "word": "bird",
+    "ipa": "/bɜːd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "птица",
+        "alternative_translations": [],
+        "definition_en": "A warm-blooded animal with feathers and wings",
+        "definition_ru": "Теплокровное животное с перьями и крыльями",
+        "example_en": "A small bird was sitting on the branch outside the window.",
+        "example_ru": "На ветке за окном сидела маленькая птица."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_birth",
+    "word": "birth",
+    "ipa": "/bɜːθ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "рождение",
+        "alternative_translations": ["роды"],
+        "definition_en": "The process of being born or the time when someone is born",
+        "definition_ru": "Процесс появления на свет или момент, когда кто-то родился",
+        "example_en": "The birth of her baby was a wonderful moment.",
+        "example_ru": "Рождение её ребёнка было замечательным моментом."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_birthday",
+    "word": "birthday",
+    "ipa": "/ˈbɜːθdeɪ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "день рождения",
+        "alternative_translations": [],
+        "definition_en": "The anniversary of the day on which a person was born",
+        "definition_ru": "Годовщина дня, в который родился человек",
+        "example_en": "We are having a party to celebrate her birthday.",
+        "example_ru": "Мы устраиваем вечеринку в честь её дня рождения."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_biscuit",
+    "word": "biscuit",
+    "ipa": "/ˈbɪskɪt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "печенье",
+        "alternative_translations": ["бисквит"],
+        "definition_en": "A small, flat, baked sweet cake",
+        "definition_ru": "Небольшое плоское запечённое сладкое изделие",
+        "example_en": "She had a cup of tea and a biscuit in the afternoon.",
+        "example_ru": "Днём она выпила чашку чая и съела печенье."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_bit",
+    "word": "bit",
+    "ipa": "/bɪt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "кусочек",
+        "alternative_translations": ["немного", "чуть-чуть"],
+        "definition_en": "A small piece or quantity of something",
+        "definition_ru": "Небольшой кусок или количество чего-то",
+        "example_en": "Could I have a bit more sugar, please?",
+        "example_ru": "Можно мне ещё немного сахара, пожалуйста?"
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_bite",
+    "word": "bite",
+    "ipa": "/baɪt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "кусать",
+        "alternative_translations": ["укусить"],
+        "definition_en": "To cut into something with your teeth",
+        "definition_ru": "Врезаться зубами во что-то",
+        "example_en": "The dog bit him on the leg.",
+        "example_ru": "Собака укусила его за ногу."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_bitter",
+    "word": "bitter",
+    "ipa": "/ˈbɪtə/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "горький",
+        "alternative_translations": ["резкий", "обидный"],
+        "definition_en": "Having a sharp, unpleasant taste; feeling angry or resentful",
+        "definition_ru": "Имеющий острый неприятный вкус; чувствующий злость или обиду",
+        "example_en": "The medicine tasted very bitter.",
+        "example_ru": "Лекарство было очень горьким на вкус."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_black",
+    "word": "black",
+    "ipa": "/blæk/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "чёрный",
+        "alternative_translations": ["тёмный"],
+        "definition_en": "Of the darkest colour; having no colour",
+        "definition_ru": "Самого тёмного цвета; лишённый цвета",
+        "example_en": "She wore a black dress to the event.",
+        "example_ru": "На мероприятие она надела чёрное платье."
+      },
+      {
+        "part_of_speech": "noun",
+        "translation": "чёрный цвет",
+        "alternative_translations": ["чёрный"],
+        "definition_en": "The darkest colour, the result of the absence of light",
+        "definition_ru": "Самый тёмный цвет, результат отсутствия света",
+        "example_en": "She always wears black.",
+        "example_ru": "Она всегда носит чёрное."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_blackboard",
+    "word": "blackboard",
+    "ipa": "/ˈblækbɔːd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "классная доска",
+        "alternative_translations": ["доска"],
+        "definition_en": "A dark board used in classrooms for writing on with chalk",
+        "definition_ru": "Тёмная доска, используемая в классах для написания мелом",
+        "example_en": "The teacher wrote the new words on the blackboard.",
+        "example_ru": "Учитель написал новые слова на доске."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_blame",
+    "word": "blame",
+    "ipa": "/bleɪm/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "винить",
+        "alternative_translations": ["обвинять"],
+        "definition_en": "To say or think that someone is responsible for something bad",
+        "definition_ru": "Говорить или считать, что кто-то несёт ответственность за что-то плохое",
+        "example_en": "Don't blame me — it wasn't my fault.",
+        "example_ru": "Не вини меня — это была не моя вина."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_blank",
+    "word": "blank",
+    "ipa": "/blæŋk/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "пустой",
+        "alternative_translations": ["чистый", "незаполненный"],
+        "definition_en": "Not written or printed on; empty",
+        "definition_ru": "Без надписей или печати; пустой",
+        "example_en": "Fill in the blank spaces on the form.",
+        "example_ru": "Заполните пустые поля в форме."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_blanket",
+    "word": "blanket",
+    "ipa": "/ˈblæŋkɪt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "одеяло",
+        "alternative_translations": ["плед"],
+        "definition_en": "A large piece of warm fabric used as a bed covering",
+        "definition_ru": "Большой кусок тёплой ткани, используемый как постельное покрывало",
+        "example_en": "She wrapped herself in a blanket because she was cold.",
+        "example_ru": "Она завернулась в одеяло, потому что ей было холодно."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_bleed",
+    "word": "bleed",
+    "ipa": "/bliːd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "кровоточить",
+        "alternative_translations": ["истекать кровью"],
+        "definition_en": "To lose blood from the body",
+        "definition_ru": "Терять кровь из тела",
+        "example_en": "The cut on his finger was bleeding quite badly.",
+        "example_ru": "Порез на его пальце сильно кровоточил."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  }
+]

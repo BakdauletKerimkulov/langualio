@@ -1,0 +1,2419 @@
+[
+  {
+    "id": "b1_middle",
+    "word": "middle",
+    "ipa": "/ˈmɪd.əl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "середина",
+        "alternative_translations": ["центр", "средина"],
+        "definition_en": "The point or part that is equally distant from all edges or extremes.",
+        "definition_ru": "Точка или часть, равноудалённая от всех краёв или крайностей.",
+        "example_en": "She sat in the middle of the room and looked around.",
+        "example_ru": "Она сидела в середине комнаты и оглядывалась."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_middle-aged",
+    "word": "middle-aged",
+    "ipa": "/ˌmɪd.əlˈeɪdʒd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "среднего возраста",
+        "alternative_translations": ["зрелый"],
+        "definition_en": "Relating to the period of life between youth and old age, typically from about 45 to 65.",
+        "definition_ru": "Относящийся к периоду жизни между молодостью и старостью, обычно от 45 до 65 лет.",
+        "example_en": "A middle-aged man in a grey jacket was reading a newspaper.",
+        "example_ru": "Мужчина среднего возраста в сером пиджаке читал газету."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_midnight",
+    "word": "midnight",
+    "ipa": "/ˈmɪd.naɪt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "полночь",
+        "alternative_translations": [],
+        "definition_en": "Twelve o'clock at night; the middle of the night.",
+        "definition_ru": "Двенадцать часов ночи; середина ночи.",
+        "example_en": "The party went on until midnight and then everyone went home.",
+        "example_ru": "Вечеринка продолжалась до полуночи, а затем все разошлись по домам."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_might",
+    "word": "might",
+    "ipa": "/maɪt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "мочь",
+        "alternative_translations": ["возможно", "мог бы"],
+        "definition_en": "Used to express possibility or to make a polite suggestion.",
+        "definition_ru": "Используется для выражения возможности или вежливого предложения.",
+        "example_en": "It might rain later, so take an umbrella with you.",
+        "example_ru": "Возможно, позже пойдёт дождь, поэтому возьми зонтик."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_mild",
+    "word": "mild",
+    "ipa": "/maɪld/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "мягкий",
+        "alternative_translations": ["умеренный", "лёгкий"],
+        "definition_en": "Not severe, extreme, or strong; gentle or moderate.",
+        "definition_ru": "Не суровый, не крайний и не сильный; мягкий или умеренный.",
+        "example_en": "The weather was mild for November, so we went for a walk.",
+        "example_ru": "Погода была мягкой для ноября, поэтому мы пошли на прогулку."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_mile",
+    "word": "mile",
+    "ipa": "/maɪl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "миля",
+        "alternative_translations": [],
+        "definition_en": "A unit of distance equal to 1,760 yards or approximately 1.6 kilometres.",
+        "definition_ru": "Единица длины, равная 1760 ярдам или приблизительно 1,6 километра.",
+        "example_en": "The nearest town is about five miles from here.",
+        "example_ru": "Ближайший город находится примерно в пяти милях отсюда."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_milk",
+    "word": "milk",
+    "ipa": "/mɪlk/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "молоко",
+        "alternative_translations": [],
+        "definition_en": "A white liquid produced by female mammals for feeding their young, especially that of cows used as food.",
+        "definition_ru": "Белая жидкость, вырабатываемая самками млекопитающих для кормления детёнышей, особенно коровье молоко, используемое в пищу.",
+        "example_en": "She poured a glass of milk for her son before school.",
+        "example_ru": "Она налила сыну стакан молока перед школой."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_millimetre",
+    "word": "millimetre (mm)",
+    "ipa": "/ˈmɪl.ɪˌmiː.tər/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "миллиметр",
+        "alternative_translations": [],
+        "definition_en": "A unit of length equal to one thousandth of a metre.",
+        "definition_ru": "Единица длины, равная одной тысячной метра.",
+        "example_en": "The crack in the wall was only a few millimetres wide.",
+        "example_ru": "Трещина в стене была шириной всего несколько миллиметров."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_million",
+    "word": "million",
+    "ipa": "/ˈmɪl.jən/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "миллион",
+        "alternative_translations": [],
+        "definition_en": "The number 1,000,000.",
+        "definition_ru": "Число 1 000 000.",
+        "example_en": "More than a million people visited the exhibition last year.",
+        "example_ru": "В прошлом году выставку посетили более миллиона человек."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_mind",
+    "word": "mind",
+    "ipa": "/maɪnd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "разум",
+        "alternative_translations": ["ум", "мысль"],
+        "definition_en": "The part of a person that thinks, feels, and remembers.",
+        "definition_ru": "Часть человека, которая думает, чувствует и запоминает.",
+        "example_en": "She had a lot on her mind and couldn't concentrate on the lesson.",
+        "example_ru": "У неё было много мыслей в голове, и она не могла сосредоточиться на уроке."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "возражать",
+        "alternative_translations": ["беспокоиться", "следить"],
+        "definition_en": "To feel bothered or annoyed by something; to object to something.",
+        "definition_ru": "Чувствовать себя обеспокоенным или раздражённым чем-либо; возражать против чего-либо.",
+        "example_en": "Do you mind if I open the window? It's very warm in here.",
+        "example_ru": "Вы не возражаете, если я открою окно? Здесь очень тепло."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_mine",
+    "word": "mine",
+    "ipa": "/maɪn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "pronoun",
+        "translation": "мой",
+        "alternative_translations": ["моя", "моё", "мои"],
+        "definition_en": "Used to refer to something belonging to or associated with the speaker.",
+        "definition_ru": "Используется для указания на что-то, принадлежащее говорящему.",
+        "example_en": "That red bag over there is mine — I left it this morning.",
+        "example_ru": "Та красная сумка вон там моя — я оставила её утром."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_mineral_water",
+    "word": "mineral water",
+    "ipa": "/ˈmɪn.ər.əl ˌwɔː.tər/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "минеральная вода",
+        "alternative_translations": [],
+        "definition_en": "Water that comes from a natural spring and contains dissolved minerals.",
+        "definition_ru": "Вода из природного источника, содержащая растворённые минералы.",
+        "example_en": "She ordered a bottle of mineral water with her meal.",
+        "example_ru": "Она заказала бутылку минеральной воды к еде."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_minimum",
+    "word": "minimum",
+    "ipa": "/ˈmɪn.ɪ.məm/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "минимальный",
+        "alternative_translations": ["наименьший"],
+        "definition_en": "The smallest amount or level that is possible or required.",
+        "definition_ru": "Наименьшее возможное или необходимое количество или уровень.",
+        "example_en": "The minimum age to drive a car in this country is eighteen.",
+        "example_ru": "Минимальный возраст для управления автомобилем в этой стране — восемнадцать лет."
+      },
+      {
+        "part_of_speech": "noun",
+        "translation": "минимум",
+        "alternative_translations": [],
+        "definition_en": "The smallest possible amount or the lowest limit.",
+        "definition_ru": "Наименьшее возможное количество или нижняя граница.",
+        "example_en": "You need to spend a minimum of two hours on this assignment.",
+        "example_ru": "Вам нужно потратить на это задание не менее двух часов."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_minus",
+    "word": "minus",
+    "ipa": "/ˈmaɪ.nəs/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "preposition",
+        "translation": "минус",
+        "alternative_translations": ["без"],
+        "definition_en": "Used to indicate subtraction or a temperature below zero.",
+        "definition_ru": "Используется для обозначения вычитания или температуры ниже нуля.",
+        "example_en": "The temperature last night was minus ten degrees.",
+        "example_ru": "Температура прошлой ночью была минус десять градусов."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_minute",
+    "word": "minute",
+    "ipa": "/ˈmɪn.ɪt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "минута",
+        "alternative_translations": ["момент"],
+        "definition_en": "A unit of time equal to sixty seconds.",
+        "definition_ru": "Единица времени, равная шестидесяти секундам.",
+        "example_en": "The train arrives in five minutes, so we should hurry.",
+        "example_ru": "Поезд прибывает через пять минут, так что нам нужно поспешить."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_mirror",
+    "word": "mirror",
+    "ipa": "/ˈmɪr.ər/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "зеркало",
+        "alternative_translations": [],
+        "definition_en": "A flat piece of glass with a reflective backing, used to see a reflection.",
+        "definition_ru": "Плоский кусок стекла с отражающим покрытием, используемый для отражения.",
+        "example_en": "She looked in the mirror and fixed her hair before going out.",
+        "example_ru": "Она посмотрелась в зеркало и поправила волосы перед выходом."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_miserable",
+    "word": "miserable",
+    "ipa": "/ˈmɪz.ər.ə.bəl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "несчастный",
+        "alternative_translations": ["жалкий", "унылый"],
+        "definition_en": "Very unhappy or uncomfortable; causing unhappiness.",
+        "definition_ru": "Очень несчастный или неуютный; вызывающий несчастье.",
+        "example_en": "She felt miserable after failing the exam for the second time.",
+        "example_ru": "Она чувствовала себя несчастной после того, как во второй раз провалила экзамен."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_miss",
+    "word": "miss",
+    "ipa": "/mɪs/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "промах",
+        "alternative_translations": ["неудача"],
+        "definition_en": "A failure to hit, reach, or achieve something.",
+        "definition_ru": "Неудача в попытке попасть, достичь или добиться чего-либо.",
+        "example_en": "His shot was a miss — the ball went wide of the goal.",
+        "example_ru": "Его удар был мимо — мяч прошёл мимо ворот."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "скучать",
+        "alternative_translations": ["пропускать", "пропустить", "не попасть"],
+        "definition_en": "To feel sad because someone or something is absent; to fail to hit or catch something.",
+        "definition_ru": "Чувствовать грусть из-за отсутствия кого-то или чего-то; не попасть или не поймать что-либо.",
+        "example_en": "I really miss my friends from school — we don't see each other often.",
+        "example_ru": "Я очень скучаю по своим школьным друзьям — мы редко видимся."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_missing",
+    "word": "missing",
+    "ipa": "/ˈmɪs.ɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "пропавший",
+        "alternative_translations": ["отсутствующий", "недостающий"],
+        "definition_en": "Not present or not in its usual place; lost.",
+        "definition_ru": "Отсутствующий или не находящийся на своём обычном месте; потерявшийся.",
+        "example_en": "The police are looking for a missing child who disappeared yesterday.",
+        "example_ru": "Полиция ищет пропавшего ребёнка, который исчез вчера."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_mistake",
+    "word": "mistake",
+    "ipa": "/mɪˈsteɪk/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "ошибка",
+        "alternative_translations": ["погрешность", "просчёт"],
+        "definition_en": "An action or decision that is wrong or produces a bad result.",
+        "definition_ru": "Действие или решение, которое является неправильным или приводит к плохому результату.",
+        "example_en": "Everyone makes mistakes — the important thing is to learn from them.",
+        "example_ru": "Все совершают ошибки — главное — извлекать из них уроки."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_mix",
+    "word": "mix",
+    "ipa": "/mɪks/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "смесь",
+        "alternative_translations": ["сочетание"],
+        "definition_en": "A combination of different things.",
+        "definition_ru": "Совокупность разных вещей.",
+        "example_en": "The festival had a great mix of music, food, and art.",
+        "example_ru": "На фестивале было замечательное сочетание музыки, еды и искусства."
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "смешивать",
+        "alternative_translations": ["перемешивать"],
+        "definition_en": "To combine or blend different things together.",
+        "definition_ru": "Соединять или смешивать разные вещи вместе.",
+        "example_en": "Mix the flour, eggs, and milk together to make the batter.",
+        "example_ru": "Смешайте муку, яйца и молоко, чтобы приготовить тесто."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_mobile_phone",
+    "word": "mobile (phone)",
+    "ipa": "/ˈməʊ.baɪl fəʊn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "мобильный телефон",
+        "alternative_translations": ["сотовый телефон", "мобильник"],
+        "definition_en": "A portable telephone that does not require a fixed connection to a network.",
+        "definition_ru": "Переносной телефон, не требующий фиксированного подключения к сети.",
+        "example_en": "He forgot his mobile phone at home and couldn't call anyone.",
+        "example_ru": "Он забыл мобильный телефон дома и не мог никому позвонить."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_model",
+    "word": "model",
+    "ipa": "/ˈmɒd.əl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "модель",
+        "alternative_translations": ["образец", "манекенщица"],
+        "definition_en": "A representation of something; a person who poses for artists or wears clothes to display them.",
+        "definition_ru": "Изображение или представление чего-либо; человек, позирующий для художников или демонстрирующий одежду.",
+        "example_en": "She worked as a fashion model before starting her own clothing brand.",
+        "example_ru": "Она работала моделью в сфере моды, прежде чем открыла собственный бренд одежды."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_modern",
+    "word": "modern",
+    "ipa": "/ˈmɒd.ən/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "современный",
+        "alternative_translations": ["новый", "актуальный"],
+        "definition_en": "Relating to the present time or recent times; not old-fashioned.",
+        "definition_ru": "Относящийся к настоящему или недавнему времени; не устаревший.",
+        "example_en": "The city has a mix of ancient temples and modern skyscrapers.",
+        "example_ru": "В городе сочетаются старинные храмы и современные небоскрёбы."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_moment",
+    "word": "moment",
+    "ipa": "/ˈməʊ.mənt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "момент",
+        "alternative_translations": ["мгновение", "минута"],
+        "definition_en": "A very short period of time; a particular point in time.",
+        "definition_ru": "Очень короткий промежуток времени; конкретный момент времени.",
+        "example_en": "Can you wait a moment? I'll be ready in just a minute.",
+        "example_ru": "Можете подождать минутку? Я буду готова через минуту."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_money",
+    "word": "money",
+    "ipa": "/ˈmʌn.i/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "деньги",
+        "alternative_translations": ["средства", "капитал"],
+        "definition_en": "Coins and banknotes used as a medium of exchange.",
+        "definition_ru": "Монеты и банкноты, используемые как средство обмена.",
+        "example_en": "She saved enough money to travel to Japan for a month.",
+        "example_ru": "Она накопила достаточно денег, чтобы поехать в Японию на месяц."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_monkey",
+    "word": "monkey",
+    "ipa": "/ˈmʌŋ.ki/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "обезьяна",
+        "alternative_translations": [],
+        "definition_en": "A small to medium-sized primate that typically has a long tail.",
+        "definition_ru": "Небольшое или среднего размера примат, обычно с длинным хвостом.",
+        "example_en": "The children laughed as the monkey climbed the tree in the zoo.",
+        "example_ru": "Дети смеялись, когда обезьяна залезла на дерево в зоопарке."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_monster",
+    "word": "monster",
+    "ipa": "/ˈmɒn.stər/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "монстр",
+        "alternative_translations": ["чудовище", "страшилище"],
+        "definition_en": "A large, frightening, and often imaginary creature.",
+        "definition_ru": "Большое, устрашающее и часто воображаемое существо.",
+        "example_en": "The children were afraid there was a monster under the bed.",
+        "example_ru": "Дети боялись, что под кроватью прячется монстр."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_month",
+    "word": "month",
+    "ipa": "/mʌnθ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "месяц",
+        "alternative_translations": [],
+        "definition_en": "One of the twelve periods of time that a year is divided into.",
+        "definition_ru": "Один из двенадцати периодов, на которые делится год.",
+        "example_en": "She has been studying English for about six months now.",
+        "example_ru": "Она изучает английский язык уже около шести месяцев."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_monthly",
+    "word": "monthly",
+    "ipa": "/ˈmʌnθ.li/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "ежемесячный",
+        "alternative_translations": ["месячный"],
+        "definition_en": "Happening or produced once a month.",
+        "definition_ru": "Происходящий или производимый раз в месяц.",
+        "example_en": "She pays a monthly fee to use the gym near her office.",
+        "example_ru": "Она платит ежемесячный взнос за использование спортзала рядом с офисом."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_monument",
+    "word": "monument",
+    "ipa": "/ˈmɒn.jʊ.mənt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "памятник",
+        "alternative_translations": ["монумент", "мемориал"],
+        "definition_en": "A statue, building, or other structure built to commemorate a person or event.",
+        "definition_ru": "Статуя, здание или другое сооружение, возведённое в память о человеке или событии.",
+        "example_en": "The monument in the town square was built to honour soldiers from the war.",
+        "example_ru": "Памятник на городской площади был воздвигнут в честь солдат, павших на войне."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_mood",
+    "word": "mood",
+    "ipa": "/muːd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "настроение",
+        "alternative_translations": ["расположение духа"],
+        "definition_en": "The way a person feels at a particular time.",
+        "definition_ru": "То, как человек себя чувствует в определённый момент.",
+        "example_en": "He was in a great mood after hearing that he got the job.",
+        "example_ru": "Он был в прекрасном настроении, узнав, что получил работу."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_moon",
+    "word": "moon",
+    "ipa": "/muːn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "луна",
+        "alternative_translations": ["месяц"],
+        "definition_en": "The natural satellite of the Earth that orbits it and reflects the sun's light.",
+        "definition_ru": "Естественный спутник Земли, вращающийся вокруг неё и отражающий солнечный свет.",
+        "example_en": "On a clear night you can see the full moon reflected in the lake.",
+        "example_ru": "В ясную ночь полную луну можно увидеть в отражении озера."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_more",
+    "word": "more",
+    "ipa": "/mɔːr/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adverb",
+        "translation": "более",
+        "alternative_translations": ["больше", "ещё"],
+        "definition_en": "To a greater degree or extent.",
+        "definition_ru": "В большей степени или в большей мере.",
+        "example_en": "You need to study more if you want to pass the exam.",
+        "example_ru": "Тебе нужно больше учиться, если хочешь сдать экзамен."
+      },
+      {
+        "part_of_speech": "pronoun",
+        "translation": "больше",
+        "alternative_translations": ["ещё"],
+        "definition_en": "A greater or additional amount or number.",
+        "definition_ru": "Большее или дополнительное количество.",
+        "example_en": "Would you like more? There is plenty of food left.",
+        "example_ru": "Хотите ещё? Еды осталось предостаточно."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_morning",
+    "word": "morning",
+    "ipa": "/ˈmɔː.nɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "утро",
+        "alternative_translations": [],
+        "definition_en": "The early part of the day, from the time of first light until noon.",
+        "definition_ru": "Ранняя часть дня, от первого света до полудня.",
+        "example_en": "She likes to go for a run every morning before breakfast.",
+        "example_ru": "Она любит бегать каждое утро до завтрака."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_mosquito",
+    "word": "mosquito",
+    "ipa": "/məˈskiː.təʊ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "комар",
+        "alternative_translations": [],
+        "definition_en": "A small flying insect that bites people and animals and can transmit diseases.",
+        "definition_ru": "Маленькое летающее насекомое, которое кусает людей и животных и может переносить болезни.",
+        "example_en": "She put on insect repellent to protect herself from mosquito bites.",
+        "example_ru": "Она нанесла репеллент, чтобы защититься от укусов комаров."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_most",
+    "word": "most",
+    "ipa": "/məʊst/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adverb",
+        "translation": "наиболее",
+        "alternative_translations": ["больше всего", "самый"],
+        "definition_en": "To the greatest degree; used to form superlatives.",
+        "definition_ru": "В наибольшей степени; используется для образования превосходной степени.",
+        "example_en": "This is the most interesting book I've read this year.",
+        "example_ru": "Это самая интересная книга, которую я прочитал в этом году."
+      },
+      {
+        "part_of_speech": "pronoun",
+        "translation": "большинство",
+        "alternative_translations": ["большая часть"],
+        "definition_en": "The largest part or number of something.",
+        "definition_ru": "Наибольшая часть или количество чего-либо.",
+        "example_en": "Most of the students passed the test with good marks.",
+        "example_ru": "Большинство студентов сдали тест с хорошими оценками."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_mostly",
+    "word": "mostly",
+    "ipa": "/ˈməʊst.li/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adverb",
+        "translation": "в основном",
+        "alternative_translations": ["преимущественно", "главным образом"],
+        "definition_en": "For the most part; mainly.",
+        "definition_ru": "По большей части; главным образом.",
+        "example_en": "The guests at the party were mostly her colleagues from work.",
+        "example_ru": "Гости на вечеринке были в основном её коллегами по работе."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_mother",
+    "word": "mother",
+    "ipa": "/ˈmʌð.ər/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "мать",
+        "alternative_translations": ["мама", "матушка"],
+        "definition_en": "A female parent.",
+        "definition_ru": "Женщина-родитель.",
+        "example_en": "Her mother taught her how to cook traditional dishes.",
+        "example_ru": "Её мать научила её готовить традиционные блюда."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_motor-racing",
+    "word": "motor-racing",
+    "ipa": "/ˈməʊ.tər ˌreɪ.sɪŋ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "автогонки",
+        "alternative_translations": ["гонки на автомобилях"],
+        "definition_en": "The sport or activity of racing motor vehicles.",
+        "definition_ru": "Вид спорта или деятельности, связанный с гонками на моторных транспортных средствах.",
+        "example_en": "He has been passionate about motor-racing since he was a teenager.",
+        "example_ru": "Он увлечён автогонками с подросткового возраста."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_motorbike",
+    "word": "motorbike",
+    "ipa": "/ˈməʊ.tə.baɪk/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "мотоцикл",
+        "alternative_translations": ["мотик"],
+        "definition_en": "A two-wheeled vehicle powered by a motor engine.",
+        "definition_ru": "Двухколёсное транспортное средство с двигателем.",
+        "example_en": "He rode his motorbike to work every day to avoid traffic jams.",
+        "example_ru": "Он ездил на работу на мотоцикле каждый день, чтобы избежать пробок."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_motorcycle",
+    "word": "motorcycle",
+    "ipa": "/ˈməʊ.tə.saɪ.kəl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "мотоцикл",
+        "alternative_translations": [],
+        "definition_en": "A two-wheeled motor vehicle, typically larger and more powerful than a motorbike.",
+        "definition_ru": "Двухколёсное моторное транспортное средство, как правило, большее и более мощное, чем мотобайк.",
+        "example_en": "The police officer chased the thief on a motorcycle.",
+        "example_ru": "Полицейский преследовал вора на мотоцикле."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_motorway",
+    "word": "motorway",
+    "ipa": "/ˈməʊ.tə.weɪ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "автострада",
+        "alternative_translations": ["шоссе", "автомагистраль"],
+        "definition_en": "A wide road built for fast-moving traffic, especially between cities.",
+        "definition_ru": "Широкая дорога, предназначенная для скоростного движения, особенно между городами.",
+        "example_en": "There were long delays on the motorway due to an accident.",
+        "example_ru": "На автостраде образовались большие пробки из-за аварии."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_mountain",
+    "word": "mountain",
+    "ipa": "/ˈmaʊn.tɪn/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "гора",
+        "alternative_translations": [],
+        "definition_en": "A large natural elevation of the Earth's surface rising high above the surrounding level.",
+        "definition_ru": "Большое природное возвышение поверхности Земли, высоко поднимающееся над окружающей местностью.",
+        "example_en": "They spent a week hiking in the mountains during their summer holiday.",
+        "example_ru": "Они провели неделю, гуляя в горах во время летних каникул."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_mouse",
+    "word": "mouse",
+    "ipa": "/maʊs/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "мышь",
+        "alternative_translations": ["мышка"],
+        "definition_en": "A small rodent with a pointed nose and long tail; also a device used to control a computer cursor.",
+        "definition_ru": "Маленький грызун с острой мордочкой и длинным хвостом; также устройство для управления курсором компьютера.",
+        "example_en": "She clicked the mouse to open the file on her computer.",
+        "example_ru": "Она щёлкнула мышью, чтобы открыть файл на компьютере."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_moustache",
+    "word": "moustache",
+    "ipa": "/məˈstɑːʃ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "усы",
+        "alternative_translations": [],
+        "definition_en": "A strip of hair grown above the upper lip.",
+        "definition_ru": "Полоска волос, выращенная над верхней губой.",
+        "example_en": "He grew a moustache over the summer and his family didn't recognise him.",
+        "example_ru": "За лето он отрастил усы, и семья его не узнала."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_mouth",
+    "word": "mouth",
+    "ipa": "/maʊθ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "рот",
+        "alternative_translations": ["уста"],
+        "definition_en": "The opening in the face through which food is taken in and sounds are made.",
+        "definition_ru": "Отверстие на лице, через которое принимается пища и издаются звуки.",
+        "example_en": "Please don't talk with food in your mouth — it's impolite.",
+        "example_ru": "Пожалуйста, не разговаривай с едой во рту — это невежливо."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_move",
+    "word": "move",
+    "ipa": "/muːv/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "двигаться",
+        "alternative_translations": ["переезжать", "трогать", "перемещать"],
+        "definition_en": "To go from one place to another; to change position; to affect someone emotionally.",
+        "definition_ru": "Идти из одного места в другое; менять положение; оказывать эмоциональное воздействие на кого-либо.",
+        "example_en": "She decided to move to another city to find better job opportunities.",
+        "example_ru": "Она решила переехать в другой город, чтобы найти лучшие возможности для работы."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_movie",
+    "word": "movie",
+    "ipa": "/ˈmuː.vi/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "фильм",
+        "alternative_translations": ["кино", "кинофильм"],
+        "definition_en": "A story recorded as a set of moving images, shown at a cinema or on television.",
+        "definition_ru": "История, записанная в виде движущихся изображений, показываемая в кино или по телевидению.",
+        "example_en": "They went to see a movie at the cinema on Friday evening.",
+        "example_ru": "В пятницу вечером они пошли в кино на фильм."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_movie_star",
+    "word": "movie star",
+    "ipa": "/ˈmuː.vi stɑːr/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "кинозвезда",
+        "alternative_translations": ["звезда кино"],
+        "definition_en": "A famous actor or actress who appears in films.",
+        "definition_ru": "Известный актёр или актриса, снимающийся в кино.",
+        "example_en": "She dreamed of becoming a movie star when she was a little girl.",
+        "example_ru": "В детстве она мечтала стать кинозвездой."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_movie_theater",
+    "word": "movie theater",
+    "ipa": "/ˈmuː.vi ˌθɪə.tər/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "кинотеатр",
+        "alternative_translations": ["кинозал"],
+        "definition_en": "A building where films are shown to the public (American English).",
+        "definition_ru": "Здание, в котором показывают фильмы для публики (американский английский).",
+        "example_en": "The new movie theater in town has twelve screens and comfortable seats.",
+        "example_ru": "В новом кинотеатре в городе двенадцать залов и удобные кресла."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_mr",
+    "word": "Mr",
+    "ipa": "/ˈmɪs.tər/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "господин",
+        "alternative_translations": ["мистер", "г-н"],
+        "definition_en": "A title used before a man's surname or full name as a form of address.",
+        "definition_ru": "Обращение, используемое перед фамилией или полным именем мужчины.",
+        "example_en": "Mr Johnson will be your teacher for mathematics this year.",
+        "example_ru": "Господин Джонсон будет вашим учителем по математике в этом году."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_mrs",
+    "word": "Mrs",
+    "ipa": "/ˈmɪs.ɪz/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "госпожа",
+        "alternative_translations": ["миссис", "г-жа"],
+        "definition_en": "A title used before a married woman's surname or full name.",
+        "definition_ru": "Обращение, используемое перед фамилией или полным именем замужней женщины.",
+        "example_en": "Mrs Brown has been our neighbour for more than twenty years.",
+        "example_ru": "Миссис Браун — наша соседка уже более двадцати лет."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_ms",
+    "word": "Ms",
+    "ipa": "/mɪz/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "мисс",
+        "alternative_translations": ["г-жа"],
+        "definition_en": "A title used before a woman's surname or full name, without indicating her marital status.",
+        "definition_ru": "Обращение, используемое перед фамилией или полным именем женщины, без указания семейного положения.",
+        "example_en": "Please send your application to Ms Clarke at the main office.",
+        "example_ru": "Пожалуйста, направьте своё заявление госпоже Кларк в главный офис."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_much",
+    "word": "much",
+    "ipa": "/mʌtʃ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adverb",
+        "translation": "много",
+        "alternative_translations": ["очень", "намного"],
+        "definition_en": "To a great degree; by a large amount.",
+        "definition_ru": "В большой степени; на большое количество.",
+        "example_en": "She didn't sleep much last night because she was worried.",
+        "example_ru": "Прошлой ночью она почти не спала, потому что волновалась."
+      },
+      {
+        "part_of_speech": "pronoun",
+        "translation": "много",
+        "alternative_translations": ["многое"],
+        "definition_en": "A large amount of something.",
+        "definition_ru": "Большое количество чего-либо.",
+        "example_en": "There isn't much left in the fridge — we need to go shopping.",
+        "example_ru": "В холодильнике почти ничего не осталось — нам нужно пойти в магазин."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_mug",
+    "word": "mug",
+    "ipa": "/mʌɡ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "кружка",
+        "alternative_translations": [],
+        "definition_en": "A large, straight-sided cup with a handle, used for hot drinks.",
+        "definition_ru": "Большая кружка с прямыми стенками и ручкой, используемая для горячих напитков.",
+        "example_en": "She wrapped her hands around the mug of hot tea to warm up.",
+        "example_ru": "Она обхватила руками кружку горячего чая, чтобы согреться."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_multiply",
+    "word": "multiply",
+    "ipa": "/ˈmʌl.tɪ.plaɪ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "умножать",
+        "alternative_translations": ["размножаться", "увеличиваться"],
+        "definition_en": "To add a number to itself a specified number of times; to increase in number.",
+        "definition_ru": "Прибавлять число к самому себе указанное количество раз; увеличиваться в количестве.",
+        "example_en": "If you multiply six by eight, you get forty-eight.",
+        "example_ru": "Если умножить шесть на восемь, получится сорок восемь."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_mum",
+    "word": "mum",
+    "ipa": "/mʌm/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "мама",
+        "alternative_translations": ["мамочка"],
+        "definition_en": "An informal word for mother.",
+        "definition_ru": "Неформальное слово для обозначения матери.",
+        "example_en": "He called his mum every evening to tell her about his day.",
+        "example_ru": "Он звонил маме каждый вечер, чтобы рассказать ей о своём дне."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_museum",
+    "word": "museum",
+    "ipa": "/mjuːˈziː.əm/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "музей",
+        "alternative_translations": [],
+        "definition_en": "A building where objects of historical, scientific, or artistic interest are kept and displayed.",
+        "definition_ru": "Здание, где хранятся и экспонируются предметы исторического, научного или художественного значения.",
+        "example_en": "They spent the afternoon at the natural history museum with the children.",
+        "example_ru": "Они провели послеобеденное время в музее естественной истории с детьми."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_mushroom",
+    "word": "mushroom",
+    "ipa": "/ˈmʌʃ.ruːm/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "гриб",
+        "alternative_translations": [],
+        "definition_en": "A type of fungus that typically has a stem and a domed cap.",
+        "definition_ru": "Вид гриба, обычно с ножкой и куполообразной шляпкой.",
+        "example_en": "She added mushrooms and peppers to the omelette for extra flavour.",
+        "example_ru": "Она добавила грибы и перец в омлет для дополнительного вкуса."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_music",
+    "word": "music",
+    "ipa": "/ˈmjuː.zɪk/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "музыка",
+        "alternative_translations": [],
+        "definition_en": "Vocal or instrumental sounds combined to produce beauty of form, harmony, and expression of emotion.",
+        "definition_ru": "Вокальные или инструментальные звуки, сочетающиеся для создания красоты формы, гармонии и выражения эмоций.",
+        "example_en": "She listens to music every morning while she gets ready for work.",
+        "example_ru": "Она слушает музыку каждое утро, пока собирается на работу."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_musical",
+    "word": "musical",
+    "ipa": "/ˈmjuː.zɪ.kəl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "музыкальный",
+        "alternative_translations": [],
+        "definition_en": "Relating to music; having a natural talent for music.",
+        "definition_ru": "Относящийся к музыке; имеющий природный талант к музыке.",
+        "example_en": "She comes from a very musical family — everyone plays an instrument.",
+        "example_ru": "Она из очень музыкальной семьи — все играют на каком-нибудь инструменте."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_musician",
+    "word": "musician",
+    "ipa": "/mjuːˈzɪʃ.ən/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "музыкант",
+        "alternative_translations": [],
+        "definition_en": "A person who plays a musical instrument or composes music, especially as a profession.",
+        "definition_ru": "Человек, играющий на музыкальном инструменте или сочиняющий музыку, особенно в качестве профессии.",
+        "example_en": "The musician performed three concerts in different cities this week.",
+        "example_ru": "На этой неделе музыкант дал три концерта в разных городах."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_must",
+    "word": "must",
+    "ipa": "/mʌst/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "должен",
+        "alternative_translations": ["обязан", "нужно"],
+        "definition_en": "Used to indicate obligation, necessity, or strong intention.",
+        "definition_ru": "Используется для выражения обязательства, необходимости или твёрдого намерения.",
+        "example_en": "You must wear a seatbelt when you are driving — it's the law.",
+        "example_ru": "Вы обязаны пристёгиваться, когда ведёте машину — это закон."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_my",
+    "word": "my",
+    "ipa": "/maɪ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "pronoun",
+        "translation": "мой",
+        "alternative_translations": ["моя", "моё", "мои"],
+        "definition_en": "Belonging to or associated with the speaker.",
+        "definition_ru": "Принадлежащий говорящему или связанный с ним.",
+        "example_en": "My sister is coming to visit me this weekend.",
+        "example_ru": "Моя сестра приедет навестить меня на этих выходных."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_myself",
+    "word": "myself",
+    "ipa": "/maɪˈself/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "pronoun",
+        "translation": "себя",
+        "alternative_translations": ["сам", "самому себе"],
+        "definition_en": "Used by the speaker to refer to themselves as the object of a verb or preposition; used for emphasis.",
+        "definition_ru": "Используется говорящим для обозначения себя как объекта глагола или предлога; используется для усиления.",
+        "example_en": "I made this cake myself — it's a recipe from my grandmother.",
+        "example_ru": "Я испекла этот торт сама — это рецепт от моей бабушки."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_mystery",
+    "word": "mystery",
+    "ipa": "/ˈmɪs.tər.i/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "тайна",
+        "alternative_translations": ["загадка", "мистерия"],
+        "definition_en": "Something that is difficult or impossible to understand or explain.",
+        "definition_ru": "Нечто трудное или невозможное для понимания или объяснения.",
+        "example_en": "How the ancient Egyptians built the pyramids remains a mystery.",
+        "example_ru": "То, как древние египтяне строили пирамиды, по-прежнему остаётся загадкой."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_name",
+    "word": "name",
+    "ipa": "/neɪm/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "имя",
+        "alternative_translations": ["название", "наименование"],
+        "definition_en": "A word or set of words by which a person, place, or thing is known.",
+        "definition_ru": "Слово или совокупность слов, по которым известен человек, место или вещь.",
+        "example_en": "What is the name of the restaurant where we had dinner last week?",
+        "example_ru": "Как называется ресторан, в котором мы ужинали на прошлой неделе?"
+      },
+      {
+        "part_of_speech": "verb",
+        "translation": "называть",
+        "alternative_translations": ["именовать", "назначать"],
+        "definition_en": "To give a name to someone or something; to identify someone or something by name.",
+        "definition_ru": "Дать имя кому-либо или чему-либо; назвать кого-либо или что-либо по имени.",
+        "example_en": "They named their daughter Emma after her grandmother.",
+        "example_ru": "Они назвали дочь Эммой в честь её бабушки."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_narrow",
+    "word": "narrow",
+    "ipa": "/ˈnær.əʊ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "узкий",
+        "alternative_translations": ["тесный"],
+        "definition_en": "Of small width in relation to length; not wide.",
+        "definition_ru": "Небольшой ширины относительно длины; не широкий.",
+        "example_en": "The streets in the old town are very narrow and cars cannot pass.",
+        "example_ru": "Улицы в старом городе очень узкие, и машины не могут проехать."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_nasty",
+    "word": "nasty",
+    "ipa": "/ˈnɑː.sti/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "неприятный",
+        "alternative_translations": ["противный", "злобный"],
+        "definition_en": "Very unpleasant or unkind.",
+        "definition_ru": "Очень неприятный или недобрый.",
+        "example_en": "He had a nasty cold all week and couldn't go to school.",
+        "example_ru": "Всю неделю у него был сильный насморк, и он не мог ходить в школу."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_national",
+    "word": "national",
+    "ipa": "/ˈnæʃ.ən.əl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "национальный",
+        "alternative_translations": ["государственный", "общенациональный"],
+        "definition_en": "Relating to or belonging to a whole nation or country.",
+        "definition_ru": "Относящийся к целой нации или стране или принадлежащий ей.",
+        "example_en": "The national football team won the championship for the first time in ten years.",
+        "example_ru": "Национальная футбольная сборная выиграла чемпионат впервые за десять лет."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_nationality",
+    "word": "nationality",
+    "ipa": "/ˌnæʃ.əˈnæl.ɪ.ti/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "гражданство",
+        "alternative_translations": ["национальность"],
+        "definition_en": "The status of belonging to a particular nation by origin, birth, or naturalisation.",
+        "definition_ru": "Статус принадлежности к определённой нации по происхождению, рождению или натурализации.",
+        "example_en": "The application form asks for your name, age, and nationality.",
+        "example_ru": "В анкете нужно указать имя, возраст и гражданство."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_natural",
+    "word": "natural",
+    "ipa": "/ˈnætʃ.ər.əl/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "естественный",
+        "alternative_translations": ["природный", "натуральный"],
+        "definition_en": "Existing in or caused by nature; not made or done by people.",
+        "definition_ru": "Существующий в природе или вызванный ею; не созданный и не сделанный людьми.",
+        "example_en": "The park is famous for its beautiful natural scenery and wildlife.",
+        "example_ru": "Парк известен своими красивыми природными пейзажами и дикой природой."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_nature",
+    "word": "nature",
+    "ipa": "/ˈneɪ.tʃər/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "природа",
+        "alternative_translations": ["натура", "характер"],
+        "definition_en": "The physical world including plants, animals, and the landscape; the basic qualities of something.",
+        "definition_ru": "Физический мир, включающий растения, животных и пейзаж; основные качества чего-либо.",
+        "example_en": "She loves spending time in nature and goes hiking every weekend.",
+        "example_ru": "Она любит проводить время на природе и ходит в походы каждые выходные."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_navy_blue",
+    "word": "navy blue",
+    "ipa": "/ˌneɪ.vi ˈbluː/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "тёмно-синий",
+        "alternative_translations": ["синий цвет морской волны"],
+        "definition_en": "A very dark shade of blue.",
+        "definition_ru": "Очень тёмный оттенок синего цвета.",
+        "example_en": "She wore a navy blue dress to the formal dinner party.",
+        "example_ru": "На официальный ужин она надела тёмно-синее платье."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_near",
+    "word": "near",
+    "ipa": "/nɪər/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "близкий",
+        "alternative_translations": ["ближний"],
+        "definition_en": "Located a short distance away; not far.",
+        "definition_ru": "Расположенный на небольшом расстоянии; недалёкий.",
+        "example_en": "The nearest supermarket is about ten minutes' walk from here.",
+        "example_ru": "Ближайший супермаркет находится примерно в десяти минутах ходьбы отсюда."
+      },
+      {
+        "part_of_speech": "adverb",
+        "translation": "близко",
+        "alternative_translations": ["рядом"],
+        "definition_en": "At a short distance; not far away.",
+        "definition_ru": "На небольшом расстоянии; недалеко.",
+        "example_en": "Don't worry — the hospital is near; we'll be there in a few minutes.",
+        "example_ru": "Не волнуйся — больница рядом; мы будем там через несколько минут."
+      },
+      {
+        "part_of_speech": "preposition",
+        "translation": "рядом с",
+        "alternative_translations": ["около", "вблизи"],
+        "definition_en": "At a short distance from; close to.",
+        "definition_ru": "На небольшом расстоянии от; вблизи.",
+        "example_en": "They live near the park, so they often go for walks there.",
+        "example_ru": "Они живут рядом с парком, поэтому часто ходят туда на прогулки."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_nearby",
+    "word": "nearby",
+    "ipa": "/ˌnɪəˈbaɪ/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "близлежащий",
+        "alternative_translations": ["соседний", "поблизости"],
+        "definition_en": "Not far away; close to a particular place.",
+        "definition_ru": "Недалеко; рядом с определённым местом.",
+        "example_en": "They had lunch at a nearby café after visiting the museum.",
+        "example_ru": "После посещения музея они пообедали в ближайшем кафе."
+      },
+      {
+        "part_of_speech": "adverb",
+        "translation": "поблизости",
+        "alternative_translations": ["рядом", "неподалёку"],
+        "definition_en": "At a short distance; not far away.",
+        "definition_ru": "На небольшом расстоянии; неподалёку.",
+        "example_en": "He parked his car nearby and walked the rest of the way.",
+        "example_ru": "Он припарковал машину поблизости и прошёл оставшуюся часть пути пешком."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_nearly",
+    "word": "nearly",
+    "ipa": "/ˈnɪə.li/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adverb",
+        "translation": "почти",
+        "alternative_translations": ["едва не", "чуть не"],
+        "definition_en": "Very close to; almost but not quite.",
+        "definition_ru": "Очень близко к; почти, но не совсем.",
+        "example_en": "It's nearly midnight — we should think about going home.",
+        "example_ru": "Почти полночь — нам, пожалуй, нужно подумать о том, чтобы ехать домой."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_neat",
+    "word": "neat",
+    "ipa": "/niːt/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "аккуратный",
+        "alternative_translations": ["опрятный", "чистый"],
+        "definition_en": "Tidy and in order; arranged in an orderly way.",
+        "definition_ru": "Аккуратный и упорядоченный; расположенный в порядке.",
+        "example_en": "His room was always neat and tidy, unlike his brother's.",
+        "example_ru": "В его комнате всегда было чисто и аккуратно, в отличие от комнаты его брата."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_necessary",
+    "word": "necessary",
+    "ipa": "/ˈnes.ə.ser.i/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "необходимый",
+        "alternative_translations": ["нужный", "обязательный"],
+        "definition_en": "Needed in order to achieve a result or complete something; essential.",
+        "definition_ru": "Необходимый для достижения результата или завершения чего-либо; существенный.",
+        "example_en": "It is necessary to have a valid passport to travel abroad.",
+        "example_ru": "Для поездки за границу необходимо иметь действующий паспорт."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_neck",
+    "word": "neck",
+    "ipa": "/nek/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "шея",
+        "alternative_translations": [],
+        "definition_en": "The part of the body that connects the head to the rest of the body.",
+        "definition_ru": "Часть тела, соединяющая голову с остальным туловищем.",
+        "example_en": "She had a stiff neck after sleeping in an awkward position.",
+        "example_ru": "У неё затекла шея после сна в неудобной позе."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_necklace",
+    "word": "necklace",
+    "ipa": "/ˈnek.ləs/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "ожерелье",
+        "alternative_translations": ["колье", "цепочка"],
+        "definition_en": "A piece of jewellery worn around the neck.",
+        "definition_ru": "Украшение, которое носят на шее.",
+        "example_en": "He gave her a gold necklace as a birthday present.",
+        "example_ru": "Он подарил ей золотое ожерелье на день рождения."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_need",
+    "word": "need",
+    "ipa": "/niːd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "verb",
+        "translation": "нуждаться",
+        "alternative_translations": ["нужно", "требоваться"],
+        "definition_en": "To require something because it is essential or very important.",
+        "definition_ru": "Требовать чего-либо, поскольку это необходимо или очень важно.",
+        "example_en": "I need to buy some groceries before the shops close.",
+        "example_ru": "Мне нужно купить продукты, пока не закрылись магазины."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_negative",
+    "word": "negative",
+    "ipa": "/ˈneɡ.ə.tɪv/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "отрицательный",
+        "alternative_translations": ["негативный", "отрицающий"],
+        "definition_en": "Expressing refusal or denial; focusing on the bad aspects of something.",
+        "definition_ru": "Выражающий отказ или отрицание; сосредоточенный на плохих аспектах чего-либо.",
+        "example_en": "Try not to be so negative — there are good things about this situation too.",
+        "example_ru": "Постарайся не быть таким негативным — в этой ситуации есть и хорошие стороны."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_neighbour",
+    "word": "neighbour",
+    "ipa": "/ˈneɪ.bər/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "сосед",
+        "alternative_translations": ["соседка"],
+        "definition_en": "A person who lives next to or near another person.",
+        "definition_ru": "Человек, живущий рядом с другим человеком.",
+        "example_en": "Our neighbour knocked on the door to return the book she had borrowed.",
+        "example_ru": "Наша соседка постучала в дверь, чтобы вернуть книгу, которую одалживала."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_neighbourhood",
+    "word": "neighbourhood",
+    "ipa": "/ˈneɪ.bə.hʊd/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "район",
+        "alternative_translations": ["квартал", "окрестность"],
+        "definition_en": "An area of a town or city where people live; the area surrounding a particular place.",
+        "definition_ru": "Район города или деревни, где живут люди; территория, окружающая определённое место.",
+        "example_en": "They moved to a quieter neighbourhood with better schools for their children.",
+        "example_ru": "Они переехали в более тихий район с лучшими школами для своих детей."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_neither",
+    "word": "neither",
+    "ipa": "/ˈnaɪ.ðər/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adverb",
+        "translation": "также не",
+        "alternative_translations": ["ни то, ни другое"],
+        "definition_en": "Used to indicate a negative statement is true of two things; not either.",
+        "definition_ru": "Используется для указания того, что отрицательное утверждение верно относительно двух вещей.",
+        "example_en": "I don't like coffee. — Neither do I; I prefer tea.",
+        "example_ru": "Я не люблю кофе. — Я тоже; я предпочитаю чай."
+      },
+      {
+        "part_of_speech": "pronoun",
+        "translation": "ни один",
+        "alternative_translations": ["ни тот, ни другой"],
+        "definition_en": "Not one and not the other of two things or people.",
+        "definition_ru": "Ни один и ни другой из двух вещей или людей.",
+        "example_en": "Neither of the two candidates impressed the interviewers during the meeting.",
+        "example_ru": "Ни один из двух кандидатов не произвёл впечатления на интервьюеров во время встречи."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_nephew",
+    "word": "nephew",
+    "ipa": "/ˈnef.juː/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "племянник",
+        "alternative_translations": [],
+        "definition_en": "The son of a person's brother or sister.",
+        "definition_ru": "Сын брата или сестры.",
+        "example_en": "Her nephew is eight years old and already speaks two languages.",
+        "example_ru": "Её племяннику восемь лет, и он уже говорит на двух языках."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_nervous",
+    "word": "nervous",
+    "ipa": "/ˈnɜː.vəs/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "нервный",
+        "alternative_translations": ["взволнованный", "беспокойный"],
+        "definition_en": "Feeling worried or anxious about something that is going to happen.",
+        "definition_ru": "Испытывающий беспокойство или тревогу по поводу предстоящего события.",
+        "example_en": "She was very nervous before her job interview but tried to stay calm.",
+        "example_ru": "Перед собеседованием она очень волновалась, но старалась сохранять спокойствие."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_nest",
+    "word": "nest",
+    "ipa": "/nest/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "гнездо",
+        "alternative_translations": [],
+        "definition_en": "A structure built by a bird or other animal to hold its eggs and young.",
+        "definition_ru": "Сооружение, которое птица или другое животное строит для кладки яиц и выращивания детёнышей.",
+        "example_en": "They found a bird's nest with three small eggs in the garden tree.",
+        "example_ru": "В саду на дереве они нашли птичье гнездо с тремя маленькими яйцами."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_net",
+    "word": "net",
+    "ipa": "/net/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "сеть",
+        "alternative_translations": ["сетка"],
+        "definition_en": "A piece of open material made of thread or wire woven together with spaces between; also the internet.",
+        "definition_ru": "Кусок открытого материала из нитей или проволоки, сплетённых вместе с промежутками; также интернет.",
+        "example_en": "The ball hit the net and the goalkeeper couldn't stop it.",
+        "example_ru": "Мяч попал в сетку, и вратарь не смог его остановить."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_network",
+    "word": "network",
+    "ipa": "/ˈnet.wɜːk/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "сеть",
+        "alternative_translations": ["сетевая система", "связи"],
+        "definition_en": "A system of connected things, people, or organisations that work together.",
+        "definition_ru": "Система связанных вещей, людей или организаций, которые работают вместе.",
+        "example_en": "She used her professional network to find a new job in a different city.",
+        "example_ru": "Она воспользовалась своей профессиональной сетью контактов, чтобы найти новую работу в другом городе."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_never",
+    "word": "never",
+    "ipa": "/ˈnev.ər/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adverb",
+        "translation": "никогда",
+        "alternative_translations": [],
+        "definition_en": "At no time in the past or future; not ever.",
+        "definition_ru": "Ни в прошлом, ни в будущем; никогда.",
+        "example_en": "She has never been to Australia but hopes to visit one day.",
+        "example_ru": "Она никогда не была в Австралии, но надеется когда-нибудь туда попасть."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_new",
+    "word": "new",
+    "ipa": "/njuː/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "новый",
+        "alternative_translations": ["свежий", "современный"],
+        "definition_en": "Made, produced, or developed recently; not existing before.",
+        "definition_ru": "Сделанный, произведённый или разработанный недавно; ранее не существовавший.",
+        "example_en": "She bought a new laptop because her old one stopped working.",
+        "example_ru": "Она купила новый ноутбук, потому что старый перестал работать."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_news",
+    "word": "news",
+    "ipa": "/njuːz/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "новости",
+        "alternative_translations": ["известия", "сообщения"],
+        "definition_en": "Newly received or noteworthy information, especially about recent events.",
+        "definition_ru": "Вновь полученная или заслуживающая внимания информация, особенно о недавних событиях.",
+        "example_en": "Have you heard the news? They are opening a new shopping centre in town.",
+        "example_ru": "Ты слышал новости? В городе открывают новый торговый центр."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_newspaper",
+    "word": "newspaper",
+    "ipa": "/ˈnjuːzˌpeɪ.pər/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "газета",
+        "alternative_translations": [],
+        "definition_en": "A printed or digital publication containing news and articles, usually issued daily or weekly.",
+        "definition_ru": "Печатное или цифровое издание, содержащее новости и статьи, обычно выходящее ежедневно или еженедельно.",
+        "example_en": "He reads the newspaper every morning with his coffee before going to work.",
+        "example_ru": "Каждое утро он читает газету за чашкой кофе, прежде чем идти на работу."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_next",
+    "word": "next",
+    "ipa": "/nekst/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "следующий",
+        "alternative_translations": ["ближайший", "соседний"],
+        "definition_en": "Coming immediately after in time, order, or space.",
+        "definition_ru": "Следующий непосредственно за чем-либо во времени, порядке или пространстве.",
+        "example_en": "The next train to the city centre leaves in fifteen minutes.",
+        "example_ru": "Следующий поезд в центр города отправляется через пятнадцать минут."
+      },
+      {
+        "part_of_speech": "adverb",
+        "translation": "потом",
+        "alternative_translations": ["затем", "далее"],
+        "definition_en": "In the time, place, or order that follows immediately.",
+        "definition_ru": "Во времени, месте или порядке, следующем непосредственно за чем-либо.",
+        "example_en": "What do we do next — do we cook dinner or clean the kitchen?",
+        "example_ru": "Что мы делаем потом — готовим ужин или убираем на кухне?"
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_next_to",
+    "word": "next to",
+    "ipa": "/ˈnekst tuː/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "preposition",
+        "translation": "рядом с",
+        "alternative_translations": ["около", "по соседству с"],
+        "definition_en": "At the side of; directly beside.",
+        "definition_ru": "Сбоку от; прямо рядом с.",
+        "example_en": "She sat next to her friend during the lecture.",
+        "example_ru": "Во время лекции она сидела рядом со своей подругой."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_nice",
+    "word": "nice",
+    "ipa": "/naɪs/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "adjective",
+        "translation": "хороший",
+        "alternative_translations": ["приятный", "милый"],
+        "definition_en": "Pleasant, attractive, or satisfactory; kind and friendly.",
+        "definition_ru": "Приятный, привлекательный или удовлетворительный; добрый и дружелюбный.",
+        "example_en": "It was a nice day so we decided to have lunch outside.",
+        "example_ru": "День был хороший, и мы решили пообедать на улице."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  },
+  {
+    "id": "b1_niece",
+    "word": "niece",
+    "ipa": "/niːs/",
+    "level": "b1",
+    "meanings": [
+      {
+        "part_of_speech": "noun",
+        "translation": "племянница",
+        "alternative_translations": [],
+        "definition_en": "The daughter of a person's brother or sister.",
+        "definition_ru": "Дочь брата или сестры.",
+        "example_en": "His niece is studying medicine at university and wants to be a doctor.",
+        "example_ru": "Его племянница учится на медицинском факультете и хочет стать врачом."
+      }
+    ],
+    "topic": null,
+    "tags": [],
+    "created_at": null,
+    "updated_at": null,
+    "status": null,
+    "created_by": null
+  }
+]

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:langualio/src/core/common_widgets/custom_image.dart';
+
 import '../../../shared/constants/app_colors.dart';
 import '../../../shared/constants/app_sizes.dart';
 
@@ -39,7 +41,7 @@ class ProfileHeader extends StatelessWidget {
               child: CircleAvatar(
                 radius: 60,
                 backgroundColor: AppColors.primaryLight,
-                backgroundImage: NetworkImage(avatarUrl),
+                backgroundImage: customImageProvider(avatarUrl),
               ),
             ),
             Positioned(
@@ -74,10 +76,7 @@ class ProfileHeader extends StatelessWidget {
             color: AppColors.primary,
             borderRadius: BorderRadius.circular(20),
             boxShadow: [
-              BoxShadow(
-                color: AppColors.primaryShadow,
-                blurRadius: 8,
-              ),
+              BoxShadow(color: AppColors.primaryShadow, blurRadius: 8),
             ],
           ),
           child: Row(

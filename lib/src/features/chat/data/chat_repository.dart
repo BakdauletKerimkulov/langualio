@@ -120,6 +120,22 @@ class ChatRepository {
   Future<void> _cacheMessages(List<ChatMessage> messages) async {
     await saveMessages(messages);
   }
+
+  /// Send a message to the chat Edge Function and return the raw response.
+  Future<FunctionResponse> sendChatMessage({
+    required String message,
+    String? contextSource,
+    String? contextPayload,
+  }) async {
+    return await _client.functions.invoke(
+      'chat',
+      body: {
+        'message': message,
+        'context_source': contextSource,
+        'context_payload': contextPayload,
+      },
+    );
+  }
 }
 
 @Riverpod(keepAlive: true)
