@@ -3,17 +3,18 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+
+import '../features/admin/presentation/admin_word_list_screen.dart';
 import '../features/auth/presentation/login_screen.dart';
 import '../features/auth/presentation/register_screen.dart';
 import '../features/chat/presentation/chat_screen.dart';
-import '../features/home/presentation/home_screen.dart';
 import '../features/grammar/presentation/grammar_screen.dart';
-import '../features/word_quiz/presentation/word_quiz_home_screen.dart';
-import '../features/word_quiz/presentation/word_quiz_screen.dart';
-import '../features/word_quiz/presentation/add_word_screen.dart';
-import '../features/admin/presentation/admin_word_list_screen.dart';
+import '../features/home/presentation/home_screen.dart';
 import '../features/profile/presentation/profile_screen.dart';
 import '../features/profile/settings/presentation/settings_screen.dart';
+import '../features/word_quiz/presentation/add_word_screen.dart';
+import '../features/word_quiz/presentation/word_quiz_home_screen.dart';
+import '../features/word_quiz/presentation/word_quiz_screen.dart';
 import 'scaffold_with_nav.dart';
 
 part 'app_router.g.dart';
@@ -39,7 +40,8 @@ GoRouter goRouter(Ref ref) {
     redirect: (context, state) {
       final session = Supabase.instance.client.auth.currentSession;
       final isAuth = session != null;
-      final isAuthRoute = state.matchedLocation == '/login' ||
+      final isAuthRoute =
+          state.matchedLocation == '/login' ||
           state.matchedLocation == '/register';
 
       if (!isAuth && !isAuthRoute) return '/login';
@@ -50,16 +52,14 @@ GoRouter goRouter(Ref ref) {
       GoRoute(
         path: '/login',
         name: AppRoute.login.name,
-        pageBuilder: (context, state) => const NoTransitionPage(
-          child: LoginScreen(),
-        ),
+        pageBuilder: (context, state) =>
+            const NoTransitionPage(child: LoginScreen()),
       ),
       GoRoute(
         path: '/register',
         name: AppRoute.register.name,
-        pageBuilder: (context, state) => const NoTransitionPage(
-          child: RegisterScreen(),
-        ),
+        pageBuilder: (context, state) =>
+            const NoTransitionPage(child: RegisterScreen()),
       ),
       ShellRoute(
         builder: (context, state, child) => ScaffoldWithNav(child: child),
@@ -67,30 +67,34 @@ GoRouter goRouter(Ref ref) {
           GoRoute(
             path: '/',
             name: AppRoute.home.name,
-            pageBuilder: (context, state) => const NoTransitionPage(
-              child: HomeScreen(),
-            ),
+            pageBuilder: (context, state) =>
+                const NoTransitionPage(child: HomeScreen()),
           ),
           GoRoute(
             path: '/grammar',
             name: AppRoute.grammar.name,
-            pageBuilder: (context, state) => const NoTransitionPage(
-              child: GrammarScreen(),
-            ),
+            pageBuilder: (context, state) =>
+                const NoTransitionPage(child: GrammarScreen()),
           ),
           GoRoute(
             path: '/practice',
             name: AppRoute.practice.name,
-            pageBuilder: (context, state) => const NoTransitionPage(
-              child: WordQuizHomeScreen(),
-            ),
+            pageBuilder: (context, state) =>
+                const NoTransitionPage(child: WordQuizHomeScreen()),
           ),
           GoRoute(
             path: '/profile',
             name: AppRoute.profile.name,
-            pageBuilder: (context, state) => const NoTransitionPage(
-              child: ProfileScreen(),
-            ),
+            pageBuilder: (context, state) =>
+                const NoTransitionPage(child: ProfileScreen()),
+            routes: [
+              GoRoute(
+                path: '/settings',
+                name: AppRoute.settings.name,
+                pageBuilder: (context, state) =>
+                    const MaterialPage(child: SettingsScreen()),
+              ),
+            ],
           ),
         ],
       ),
@@ -99,38 +103,26 @@ GoRouter goRouter(Ref ref) {
         name: AppRoute.chat.name,
         pageBuilder: (context, state) {
           final prompt = state.extra as String?;
-          return MaterialPage(
-            child: ChatScreen(initialPrompt: prompt),
-          );
+          return MaterialPage(child: ChatScreen(initialPrompt: prompt));
         },
       ),
       GoRoute(
         path: '/quiz',
         name: AppRoute.quiz.name,
-        pageBuilder: (context, state) => const MaterialPage(
-          child: WordQuizScreen(),
-        ),
+        pageBuilder: (context, state) =>
+            const MaterialPage(child: WordQuizScreen()),
       ),
       GoRoute(
         path: '/practice/add-word',
         name: AppRoute.addWord.name,
-        pageBuilder: (context, state) => const MaterialPage(
-          child: AddWordScreen(),
-        ),
+        pageBuilder: (context, state) =>
+            const MaterialPage(child: AddWordScreen()),
       ),
       GoRoute(
         path: '/admin',
         name: AppRoute.admin.name,
-        pageBuilder: (context, state) => const MaterialPage(
-          child: AdminWordListScreen(),
-        ),
-      ),
-      GoRoute(
-        path: '/settings',
-        name: AppRoute.settings.name,
-        pageBuilder: (context, state) => const MaterialPage(
-          child: SettingsScreen(),
-        ),
+        pageBuilder: (context, state) =>
+            const MaterialPage(child: AdminWordListScreen()),
       ),
     ],
   );
