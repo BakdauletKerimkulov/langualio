@@ -13,6 +13,7 @@ BEGIN
   DELETE FROM auth.users WHERE id = v_test_uid;
 
   -- Insert test user into auth.users
+  -- The handle_new_user trigger auto-creates a profiles row
   INSERT INTO auth.users (
     id,
     instance_id,
@@ -38,16 +39,11 @@ BEGIN
     crypt('testpassword', gen_salt('bf')),
     now(),
     '{"provider":"email","providers":["email"]}',
-    '{"name":"Test User"}',
+    '{"nickname":"Test User"}',
     now(),
     now(),
     '', '', '', ''
   );
-
-  -- Profile is auto-created by trigger, but ensure it exists
-  INSERT INTO public.profiles (id, name)
-  VALUES (v_test_uid, 'Test User')
-  ON CONFLICT (id) DO NOTHING;
 END $$;
 
 -- ── Test 1: authenticated user CANNOT update user_daily_usage ──

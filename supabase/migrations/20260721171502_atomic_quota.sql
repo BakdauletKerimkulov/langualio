@@ -15,7 +15,7 @@ SECURITY DEFINER
 SET search_path = public
 AS $$
 DECLARE
-  v_allowed boolean;
+  v_row_count int;
 BEGIN
   -- Auth guard: only service-role calls this, but verify user exists
   IF p_user_id IS NULL THEN
@@ -41,8 +41,8 @@ BEGIN
   END IF;
 
   -- If a row was inserted or updated, quota was granted
-  GET DIAGNOSTICS v_allowed = ROW_COUNT;
-  RETURN v_allowed > 0;
+  GET DIAGNOSTICS v_row_count = ROW_COUNT;
+  RETURN v_row_count > 0;
 
   -- TODO: decide if quota should be refunded on Claude error (spec Q1).
   -- If yes, add a companion RPC: refund_quota(p_user_id, p_kind) that decrements.
