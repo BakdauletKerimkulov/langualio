@@ -61,18 +61,24 @@ serve(async (req) => {
       return jsonResponse({ error: "Unauthorized" }, 401);
     }
 
-    // 2. Check per-user rate limit (10 generations/day)
-    const today = new Date().toISOString().split("T")[0];
-    const { data: usageData } = await supabase
-      .from("user_daily_usage")
-      .select("generation_count")
-      .eq("user_id", user.id)
-      .eq("date", today)
-      .single();
+    // 2. Admin-only gate (R1: only admins can generate word entries)
+    const userRole = user.app_metadata?.role;
+    if (userRole !== "admin") {
+      return jsonResponse({ error: "Forbidden: admin only" }, 403);
+    }
 
-    const currentGenerations = usageData?.generation_count ?? 0;
+    // 3. Atomic quota check (R2: consume before Claude call, prevents race conditions)
+    const { data: quotaGranted, error: quotaError } = await supabase.rpc(
+      "try_consume_quota",
+      { p_user_id: user.id, p_kind: "generation", p_limit: DAILY_GENERATION_LIMIT }
+    );
 
-    if (currentGenerations >= DAILY_GENERATION_LIMIT) {
+    if (quotaError) {
+      console.error("Quota RPC error:", quotaError);
+      return jsonResponse({ error: "Internal server error" }, 500);
+    }
+
+    if (!quotaGranted) {
       return jsonResponse(
         {
           error: "Daily generation limit reached",
@@ -83,13 +89,13 @@ serve(async (req) => {
       );
     }
 
-    // 3. Parse and validate request
+    // 4. Parse and validate request
     const { word } = await req.json();
     if (!word || typeof word !== "string" || word.trim().length === 0) {
       return jsonResponse({ error: "Word is required" }, 400);
     }
 
-    // 4. Call Claude API
+    // 5. Call Claude API
     const claudeResponse = await fetch(CLAUDE_API_URL, {
       method: "POST",
       headers: {
@@ -116,7 +122,7 @@ serve(async (req) => {
       return jsonResponse({ error: "AI service error" }, 502);
     }
 
-    // 5. Extract text from Claude response
+    // 6. Extract text from Claude response
     const claudeData = await claudeResponse.json();
     const textContent = claudeData.content?.find(
       (block: { type: string }) => block.type === "text"
@@ -127,7 +133,7 @@ serve(async (req) => {
       return jsonResponse({ error: "AI returned empty response" }, 502);
     }
 
-    // 6. Parse JSON from response
+    // 7. Parse JSON from response
     let wordEntry: Record<string, unknown>;
     try {
       wordEntry = JSON.parse(textContent.text.trim());
@@ -139,7 +145,7 @@ serve(async (req) => {
       );
     }
 
-    // 7. Validate meanings array
+    // 8. Validate meanings array
     if (
       !Array.isArray(wordEntry.meanings) ||
       wordEntry.meanings.length === 0
@@ -151,17 +157,7 @@ serve(async (req) => {
       );
     }
 
-    // 8. Increment generation count
-    await supabase.from("user_daily_usage").upsert(
-      {
-        user_id: user.id,
-        date: today,
-        generation_count: currentGenerations + 1,
-      },
-      { onConflict: "user_id,date" }
-    );
-
-    // 9. Return the generated entry
+    // 9. Return the generated entry (quota already consumed atomically in step 3)
     return jsonResponse({ data: wordEntry }, 200);
   } catch (error) {
     console.error("Edge function error:", error);

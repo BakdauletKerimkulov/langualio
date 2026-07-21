@@ -2,7 +2,7 @@ import { serve } from "https://deno.land/std@0.177.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 const CLAUDE_API_URL = "https://api.anthropic.com/v1/messages";
-const CLAUDE_MODEL = "claude-sonnet-5";
+const CLAUDE_MODEL = "claude-sonnet-4-5-20241022";
 const MAX_TOKENS = 1024;
 const MAX_MESSAGE_LENGTH = 10_000;
 const MAX_CONTEXT_PAYLOAD_LENGTH = 500;
@@ -66,9 +66,7 @@ serve(async (req) => {
       return jsonResponse({ error: "Message too long" }, 400);
     }
 
-    // 3. Check daily limit
-    const today = new Date().toISOString().split("T")[0];
-
+    // 3. Atomic quota check (R2: consume before Claude call, prevents race conditions)
     const { data: configData } = await supabase
       .from("app_config")
       .select("value")
@@ -77,16 +75,17 @@ serve(async (req) => {
 
     const dailyLimit = parseInt(configData?.value ?? "20");
 
-    const { data: usageData } = await supabase
-      .from("user_daily_usage")
-      .select("message_count")
-      .eq("user_id", user.id)
-      .eq("date", today)
-      .single();
+    const { data: quotaGranted, error: quotaError } = await supabase.rpc(
+      "try_consume_quota",
+      { p_user_id: user.id, p_kind: "message", p_limit: dailyLimit }
+    );
 
-    const currentCount = usageData?.message_count ?? 0;
+    if (quotaError) {
+      console.error("Quota RPC error:", quotaError);
+      return jsonResponse({ error: "Internal server error" }, 500);
+    }
 
-    if (currentCount >= dailyLimit) {
+    if (!quotaGranted) {
       return jsonResponse(
         {
           error: "Daily message limit reached",
@@ -156,28 +155,35 @@ serve(async (req) => {
     }
 
     const claudeData = await claudeResponse.json();
+    console.log(
+      `Claude API response: model=${claudeData.model}, stop_reason=${claudeData.stop_reason}, content_blocks=${claudeData.content?.length ?? 0}`
+    );
     const responseText =
       claudeData.content?.[0]?.text ?? "";
 
-    const remaining = dailyLimit - currentCount - 1;
+    if (!responseText) {
+      console.warn("Empty response from Claude API. Raw response:", JSON.stringify(claudeData));
+    }
 
-    // 9. Save assistant message and update usage
+    // 9. Save assistant message (quota already consumed atomically in step 3)
     await supabase.from("chat_messages").insert({
       user_id: user.id,
       role: "assistant",
       text: responseText,
     });
 
-    await supabase.from("user_daily_usage").upsert(
-      {
-        user_id: user.id,
-        date: today,
-        message_count: currentCount + 1,
-      },
-      { onConflict: "user_id,date" }
-    );
+    // Fetch updated count for remaining calculation
+    const today = new Date().toISOString().split("T")[0];
+    const { data: updatedUsage } = await supabase
+      .from("user_daily_usage")
+      .select("message_count")
+      .eq("user_id", user.id)
+      .eq("date", today)
+      .single();
 
-    // 10. Return JSON response (R1)
+    const remaining = dailyLimit - (updatedUsage?.message_count ?? 0);
+
+    // 10. Return JSON response
     return jsonResponse(
       {
         text: responseText,
