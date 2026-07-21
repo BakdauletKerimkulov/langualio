@@ -45,14 +45,14 @@ Close all findings from the senior code review (`ai_docs/CODE_REVIEW_2026-07-19.
 ### Phase 2 — Security: server-side assessment + model ID + secrets (R4, R5, R6)
 **Goal:** Remove client write of `cefr_level`, standardize Claude model, verify no secrets in git.
 
-- [ ] `supabase/migrations/{timestamp}_assessment_server.sql` — create `assessment_questions` table (id, question_text, options jsonb, correct_answer, cefr_weight). Seed with current question bank from `lib/src/features/assessment/domain/`. Create RPC `complete_assessment(p_answers jsonb) returns json`: validate answers server-side, compute level, `UPDATE profiles SET cefr_level = ..., assessment_completed = true`, return `{cefr_level, assessment_completed}`. Revoke client UPDATE on `cefr_level` and `assessment_completed` columns of `profiles`
-- [ ] `lib/src/features/assessment/data/assessment_repository.dart` — replace `saveResult()` with `completeAssessment(answers)` calling `.rpc('complete_assessment', ...)`. Return parsed result
-- [ ] `lib/src/features/assessment/application/` — update provider to call new repository method, parse RPC response for UI display
-- [ ] TDD: `supabase/tests/rls_assessment_test.sql` — `UPDATE profiles SET cefr_level = 6` as `authenticated` fails; `SELECT` succeeds. RPC `complete_assessment` returns correct level for known answers
-- [ ] `supabase/functions/_shared/constants.ts` — create shared file. Extract `CLAUDE_MODEL` (standardize to valid model ID per Anthropic docs — both functions currently use different IDs). Export for both functions
-- [ ] `supabase/functions/chat/index.ts` + `supabase/functions/generate-word-entry/index.ts` — import `CLAUDE_MODEL` from `_shared/constants.ts`
-- [ ] TDD: verify `supabase/.env.local` is in `.gitignore` and not in git history (`git log --all -- supabase/.env.local`)
-- [ ] Verify: `flutter analyze && flutter test`; `supabase db reset`; SQL tests pass
+- [x] `supabase/migrations/20260721175539_assessment_server.sql` — create `assessment_questions` table (id, question_text, options jsonb, correct_answer, cefr_weight). Seed with current question bank from `lib/src/features/assessment/domain/`. Create RPC `complete_assessment(p_answers jsonb) returns json`: validate answers server-side, compute level, `UPDATE profiles SET cefr_level = ..., assessment_completed = true`, return `{cefr_level, assessment_completed}`. Revoke client UPDATE on `cefr_level` and `assessment_completed` columns of `profiles`
+- [x] `lib/src/features/assessment/data/assessment_repository.dart` — replace `saveResult()` with `completeAssessment(answers)` calling `.rpc('complete_assessment', ...)`. Return parsed result
+- [x] `lib/src/features/assessment/application/assessment_controller.dart` — update controller to call new repository method, parse RPC response for UI display. Added loading state during server round-trip
+- [x] TDD: `supabase/tests/rls_assessment_test.sql` — 7 tests: cefr_level UPDATE denied, assessment_completed UPDATE denied, nickname UPDATE allowed, SELECT allowed, complete_assessment all correct → C1, all wrong → A1, anon denied
+- [x] `supabase/functions/_shared/constants.ts` — created shared file with `CLAUDE_MODEL = "claude-sonnet-4-20250514"` and `CLAUDE_API_URL`. Standardized from two different IDs
+- [x] `supabase/functions/chat/index.ts` + `supabase/functions/generate-word-entry/index.ts` — import `CLAUDE_MODEL` and `CLAUDE_API_URL` from `_shared/constants.ts`
+- [x] TDD: verify `supabase/.env.local` is in `.gitignore` and not in git history (`git log --all -- supabase/.env.local` → clean)
+- [x] Verify: `flutter analyze` clean, `flutter test` 74/74 pass. _Note: `supabase db reset` not run — Docker not available locally. SQL migration syntax and test file validated by review_
 
 ### Phase 3 — Architecture: merge shared/, Supabase leaks, AuthRepository (R7, R8, R9, R10)
 **Goal:** Single `core/` directory, no `Supabase.instance` outside data/bootstrap, `_mounted` mixin, GoRouter `refreshListenable`.

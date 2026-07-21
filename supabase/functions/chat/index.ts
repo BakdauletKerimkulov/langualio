@@ -1,8 +1,6 @@
 import { serve } from "https://deno.land/std@0.177.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
-
-const CLAUDE_API_URL = "https://api.anthropic.com/v1/messages";
-const CLAUDE_MODEL = "claude-sonnet-4-5-20241022";
+import { CLAUDE_API_URL, CLAUDE_MODEL } from "../_shared/constants.ts";
 const MAX_TOKENS = 1024;
 const MAX_MESSAGE_LENGTH = 10_000;
 const MAX_CONTEXT_PAYLOAD_LENGTH = 500;
