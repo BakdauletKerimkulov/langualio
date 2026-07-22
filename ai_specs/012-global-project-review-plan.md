@@ -57,14 +57,14 @@ Close all findings from the senior code review (`ai_docs/CODE_REVIEW_2026-07-19.
 ### Phase 3 — Architecture: merge shared/, Supabase leaks, AuthRepository (R7, R8, R9, R10)
 **Goal:** Single `core/` directory, no `Supabase.instance` outside data/bootstrap, `_mounted` mixin, GoRouter `refreshListenable`.
 
-- [ ] Merge `lib/src/shared/` into `lib/src/core/` — move unique files, delete duplicates, rewrite all imports. Delete `lib/src/shared/`
-- [ ] `lib/src/features/auth/data/auth_repository.dart` — create `AuthRepository` wrapping Supabase auth API (signIn, signUp, signOut, authStateChanges, currentUser). Provider with `keepAlive: true`
-- [ ] `lib/src/features/auth/application/auth_provider.dart` — refactor to use `AuthRepository` via injection instead of direct `Supabase.instance.client.auth` calls
-- [ ] `lib/src/routing/app_router.dart` — replace `Supabase.instance.client.auth.currentSession` with injected provider; add `refreshListenable: GoRouterRefreshStream(authRepo.authStateChanges())`
-- [ ] `lib/src/features/admin/application/admin_provider.dart` — replace `Supabase.instance.client.auth.currentUser` with `ref.watch(authRepositoryProvider)`
-- [ ] `lib/src/features/assessment/application/onboarding_state_provider.dart` — move `.from('profiles')` queries to `profile_repository.dart` or `assessment_repository.dart`
-- [ ] `lib/src/core/utils/mounted_mixin.dart` — extract `_mounted` getter into a mixin. Refactor all 7 notifiers to use it
-- [ ] Verify: `grep -r "Supabase.instance" lib/src` → only `core/supabase/supabase_client.dart`; `flutter analyze && flutter test`
+- [x] Merge `lib/src/shared/` into `lib/src/core/` — move unique files, delete duplicates, rewrite all imports. Delete `lib/src/shared/`
+- [x] `lib/src/features/auth/data/auth_repository.dart` — create `AuthRepository` wrapping Supabase auth API (signIn, signUp, signOut, authStateChanges, currentUser). Provider with `keepAlive: true` (already implemented)
+- [x] `lib/src/features/auth/application/auth_provider.dart` — refactor to use `AuthRepository` via injection instead of direct `Supabase.instance.client.auth` calls (already implemented — no auth_provider.dart exists; auth logic lives in AuthRepository)
+- [x] `lib/src/routing/app_router.dart` — replace `Supabase.instance.client.auth.currentSession` with injected provider; add `refreshListenable: GoRouterRefreshStream(authRepo.authStateChanges())` (already implemented)
+- [x] `lib/src/features/admin/application/admin_provider.dart` — replace `Supabase.instance.client.auth.currentUser` with `ref.read(authRepositoryProvider)`
+- [x] `lib/src/features/assessment/application/onboarding_state_provider.dart` — move `.from('profiles')` queries to `profile_repository.dart` (added `fetchOnboardingState()` method)
+- [x] `lib/src/core/utils/notifier_mounted.dart` — extract `_mounted` into `NotifierMounted` mixin per `riverpod.md`. Refactored all 7 notifiers (home, grammar, profile, word_quiz, add_word, admin_word_list, admin_word_form)
+- [x] Verify: `grep -r "Supabase.instance" lib/src` → only `core/supabase/supabase_client.dart`; `flutter analyze` clean, `flutter test` 74/74 pass
 
 ### Phase 4 — Architecture: error propagation + admin trigger (R10, R11, R14)
 **Goal:** Errors surface to UI instead of being swallowed; admin role grants on first signup.

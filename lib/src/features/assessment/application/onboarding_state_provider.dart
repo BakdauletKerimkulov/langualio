@@ -2,8 +2,9 @@ import 'dart:async';
 
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../../../core/supabase/supabase_client.dart';
 import '../../../core/utils/logger.dart';
+import '../../auth/data/auth_repository.dart';
+import '../../profile/data/profile_repository.dart';
 import '../domain/assessment_question.dart';
 
 part 'onboarding_state_provider.g.dart';
@@ -36,10 +37,10 @@ class OnboardingState {
 class OnboardingStateNotifier extends _$OnboardingStateNotifier {
   @override
   OnboardingState build() {
-    final client = ref.watch(supabaseClientProvider);
+    final authRepo = ref.watch(authRepositoryProvider);
 
     // Re-fetch profile when auth state changes (login/logout)
-    final subscription = client.auth.onAuthStateChange.listen((data) {
+    final subscription = authRepo.authStateChanges().listen((data) {
       if (data.session != null) {
         refresh();
       } else {
@@ -53,32 +54,26 @@ class OnboardingStateNotifier extends _$OnboardingStateNotifier {
   }
 
   Future<void> _loadProfile() async {
-    final user = ref.read(supabaseClientProvider).auth.currentUser;
-    if (user == null) {
+    final authRepo = ref.read(authRepositoryProvider);
+    if (authRepo.currentUser == null) {
       state = const OnboardingState(isLoading: false);
       return;
     }
 
     try {
-      final response = await ref.read(supabaseClientProvider)
-          .from('profiles')
-          .select('assessment_completed, cefr_level')
-          .eq('id', user.id)
-          .single();
-
-      final completed = response['assessment_completed'] as bool? ?? false;
-      final cefrLevelValue = response['cefr_level'] as int?;
+      final profileRepo = ref.read(profileRepositoryProvider);
+      final result = await profileRepo.fetchOnboardingState();
 
       CefrLevel? cefrLevel;
-      if (cefrLevelValue != null) {
+      if (result.cefrLevel != null) {
         cefrLevel = CefrLevel.values.where(
-          (l) => l.dbValue == cefrLevelValue,
+          (l) => l.dbValue == result.cefrLevel,
         ).firstOrNull;
       }
 
       state = OnboardingState(
         isLoading: false,
-        assessmentCompleted: completed,
+        assessmentCompleted: result.assessmentCompleted,
         cefrLevel: cefrLevel,
       );
     } catch (e) {

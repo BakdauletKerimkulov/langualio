@@ -28,6 +28,25 @@ class ProfileRepository {
     return mapToUserProfile(row);
   }
 
+  /// Fetch only the onboarding-relevant fields from `profiles`.
+  Future<({bool assessmentCompleted, int? cefrLevel})> fetchOnboardingState() async {
+    final userId = _client.auth.currentUser?.id;
+    if (userId == null) {
+      throw Exception('User not authenticated');
+    }
+
+    final row = await _client
+        .from('profiles')
+        .select('assessment_completed, cefr_level')
+        .eq('id', userId)
+        .single();
+
+    return (
+      assessmentCompleted: row['assessment_completed'] as bool? ?? false,
+      cefrLevel: row['cefr_level'] as int?,
+    );
+  }
+
   /// Pure mapping — testable without Supabase.
   static UserProfile mapToUserProfile(Map<String, dynamic> row) {
     return UserProfile(

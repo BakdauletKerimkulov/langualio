@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
+import '../../../core/utils/notifier_mounted.dart';
 import '../../word_quiz/domain/word_entry.dart';
 import '../data/admin_repository.dart';
 
@@ -46,9 +47,11 @@ class AdminWordListState {
 }
 
 @riverpod
-class AdminWordListNotifier extends _$AdminWordListNotifier {
+class AdminWordListNotifier extends _$AdminWordListNotifier
+    with NotifierMounted {
   @override
   AdminWordListState build() {
+    ref.onDispose(setUnmounted);
     _loadWords();
     return const AdminWordListState(isLoading: true);
   }
@@ -60,10 +63,10 @@ class AdminWordListNotifier extends _$AdminWordListNotifier {
       final words = await ref
           .read(adminRepositoryProvider)
           .fetchWords(statusFilter: state.activeFilter);
-      if (!_mounted) return;
+      if (!mounted) return;
       state = state.copyWith(words: words, isLoading: false);
     } catch (e) {
-      if (!_mounted) return;
+      if (!mounted) return;
       state = state.copyWith(
         isLoading: false,
         error: 'Ошибка загрузки: $e',
@@ -78,7 +81,4 @@ class AdminWordListNotifier extends _$AdminWordListNotifier {
 
   Future<void> refresh() => _loadWords();
 
-  bool get _mounted {
-    try { state; return true; } catch (_) { return false; }
-  }
 }

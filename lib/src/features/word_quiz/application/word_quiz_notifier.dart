@@ -4,6 +4,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../../core/local_storage/storage_provider.dart';
 import '../../../core/utils/logger.dart';
+import '../../../core/utils/notifier_mounted.dart';
 import '../data/quiz_attempt_repository.dart';
 import '../domain/quiz_day_util.dart';
 import '../domain/quiz_session.dart';
@@ -14,7 +15,7 @@ import 'word_pool_provider.dart';
 part 'word_quiz_notifier.g.dart';
 
 @riverpod
-class WordQuizNotifier extends _$WordQuizNotifier {
+class WordQuizNotifier extends _$WordQuizNotifier with NotifierMounted {
   static const _directionKey = 'word_quiz_direction';
   static const _answeredIdsKey = 'word_quiz_answered_ids';
 
@@ -23,6 +24,7 @@ class WordQuizNotifier extends _$WordQuizNotifier {
 
   @override
   Future<QuizSession> build() async {
+    ref.onDispose(setUnmounted);
     final storage = ref.read(localStorageProvider);
     final directionStr = storage.getString(_directionKey);
     final direction = directionStr != null
@@ -155,7 +157,7 @@ class WordQuizNotifier extends _$WordQuizNotifier {
 
     _saveAnsweredIds(newAnsweredIds);
 
-    if (_mounted) {
+    if (mounted) {
       state = AsyncData(
         session.copyWith(
           answeredWordIds: newAnsweredIds,
@@ -187,12 +189,4 @@ class WordQuizNotifier extends _$WordQuizNotifier {
     storage.setString(_answeredIdsKey, ids.join(','));
   }
 
-  bool get _mounted {
-    try {
-      state;
-      return true;
-    } catch (_) {
-      return false;
-    }
-  }
 }

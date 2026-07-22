@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:langualio/src/core/common_widgets/custom_image.dart';
 
-import '../../../shared/constants/app_colors.dart';
-import '../../../shared/constants/app_sizes.dart';
+import '../../../core/constants/app_colors.dart';
+import '../../../core/constants/app_sizes.dart';
 
 class ProfileHeader extends StatelessWidget {
   const ProfileHeader({

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../../shared/constants/app_colors.dart';
-import '../../../shared/constants/app_sizes.dart';
-import '../../../shared/common_widgets/primary_button.dart';
+import '../../../core/constants/app_colors.dart';
+import '../../../core/constants/app_sizes.dart';
+import '../../../core/common_widgets/primary_button.dart';
 
 class HomeEmptyView extends StatelessWidget {
   const HomeEmptyView({super.key});

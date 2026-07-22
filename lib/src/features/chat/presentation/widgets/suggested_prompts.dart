@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../../shared/constants/app_colors.dart';
-import '../../../../shared/constants/app_sizes.dart';
+import '../../../../core/constants/app_colors.dart';
+import '../../../../core/constants/app_sizes.dart';
 
 class SuggestedPrompts extends StatelessWidget {
   const SuggestedPrompts({super.key, required this.onPromptSelected});

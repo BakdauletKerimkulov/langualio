@@ -7,7 +7,7 @@ part of 'admin_word_form_notifier.dart';
 // **************************************************************************
 
 String _$adminWordFormNotifierHash() =>
-    r'562f9f3d5245e8f697916f1adb2ff4d58b2f18e4';
+    r'fa4fdbad389e06b0beed73cc16da896db5850d97';
 
 /// See also [AdminWordFormNotifier].
 @ProviderFor(AdminWordFormNotifier)

@@ -1,8 +1,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../../../core/supabase/supabase_client.dart';
 import '../../../core/utils/logger.dart';
+import '../../../core/utils/notifier_mounted.dart';
+import '../../auth/data/auth_repository.dart';
 import '../data/local/asset_word_repository.dart';
 import '../data/local/user_word_repository.dart';
 import '../data/word_generation_service.dart';
@@ -61,9 +62,12 @@ class AddWordState {
 }
 
 @riverpod
-class AddWordNotifier extends _$AddWordNotifier {
+class AddWordNotifier extends _$AddWordNotifier with NotifierMounted {
   @override
-  AddWordState build() => const AddWordState();
+  AddWordState build() {
+    ref.onDispose(setUnmounted);
+    return const AddWordState();
+  }
 
   /// Generates a word entry preview via the Edge Function.
   /// Checks for duplicates in both asset pool and user Drift words.
@@ -85,7 +89,7 @@ class AddWordNotifier extends _$AddWordNotifier {
         (w) => w.word.toLowerCase() == trimmed.toLowerCase(),
       );
       if (assetDuplicate) {
-        if (_mounted) {
+        if (mounted) {
           state = state.copyWith(
             isGenerating: false,
             error: 'Это слово уже есть в вашей коллекции',
@@ -98,7 +102,7 @@ class AddWordNotifier extends _$AddWordNotifier {
       final userRepo = ref.read(userWordRepositoryProvider);
       final userDuplicate = await userRepo.existsByWord(trimmed);
       if (userDuplicate) {
-        if (_mounted) {
+        if (mounted) {
           state = state.copyWith(
             isGenerating: false,
             error: 'Это слово уже есть в вашей коллекции',
@@ -111,12 +115,12 @@ class AddWordNotifier extends _$AddWordNotifier {
       final service = ref.read(wordGenerationServiceProvider);
       final entry = await service.generateWordEntry(trimmed);
 
-      if (_mounted) {
+      if (mounted) {
         state = state.copyWith(isGenerating: false, preview: entry);
       }
     } on WordGenerationException catch (e) {
       log('Word generation failed: $e', name: 'AddWordNotifier');
-      if (_mounted) {
+      if (mounted) {
         final message = switch (e.statusCode) {
           401 => 'Войдите в аккаунт заново',
           429 => 'Дневной лимит исчерпан. Попробуйте завтра.',
@@ -126,7 +130,7 @@ class AddWordNotifier extends _$AddWordNotifier {
       }
     } catch (e) {
       log('Word generation failed: $e', name: 'AddWordNotifier');
-      if (_mounted) {
+      if (mounted) {
         state = state.copyWith(
           isGenerating: false,
           error: 'Ошибка генерации. Попробуйте ещё раз.',
@@ -150,14 +154,14 @@ class AddWordNotifier extends _$AddWordNotifier {
       // Invalidate word pool so the quiz picks up the new word
       ref.invalidate(wordPoolProvider);
 
-      if (_mounted) {
+      if (mounted) {
         state = state.copyWith(isSaving: false, saved: true);
       }
       log('Word saved: ${preview.word}', name: 'AddWordNotifier');
       return true;
     } catch (e) {
       log('Word save failed: $e', name: 'AddWordNotifier');
-      if (_mounted) {
+      if (mounted) {
         state = state.copyWith(
           isSaving: false,
           error: 'Не удалось сохранить слово',
@@ -168,15 +172,6 @@ class AddWordNotifier extends _$AddWordNotifier {
   }
 
   String get _currentUserId {
-    return ref.read(supabaseClientProvider).auth.currentUser?.id ?? '';
-  }
-
-  bool get _mounted {
-    try {
-      state;
-      return true;
-    } catch (_) {
-      return false;
-    }
+    return ref.read(authRepositoryProvider).currentUser?.id ?? '';
   }
 }

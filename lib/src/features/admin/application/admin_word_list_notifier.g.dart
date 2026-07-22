@@ -7,7 +7,7 @@ part of 'admin_word_list_notifier.dart';
 // **************************************************************************
 
 String _$adminWordListNotifierHash() =>
-    r'b91a72e79364b2cbb874cb15f3a837096160410e';
+    r'c47a8522f6739f82c08e01a34ff767746e03253e';
 
 /// See also [AdminWordListNotifier].
 @ProviderFor(AdminWordListNotifier)

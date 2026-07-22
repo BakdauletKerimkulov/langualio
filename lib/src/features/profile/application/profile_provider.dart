@@ -1,14 +1,16 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
+import '../../../core/utils/notifier_mounted.dart';
 import '../data/profile_repository.dart';
 import '../domain/user_profile.dart';
 
 part 'profile_provider.g.dart';
 
 @riverpod
-class UserProfileNotifier extends _$UserProfileNotifier {
+class UserProfileNotifier extends _$UserProfileNotifier with NotifierMounted {
   @override
   Future<UserProfile> build() async {
+    ref.onDispose(setUnmounted);
     final repo = ref.read(profileRepositoryProvider);
     return repo.fetchUserProfile();
   }
@@ -19,18 +21,9 @@ class UserProfileNotifier extends _$UserProfileNotifier {
     try {
       final repo = ref.read(profileRepositoryProvider);
       final profile = await repo.fetchUserProfile();
-      if (_mounted) state = AsyncData(profile);
+      if (mounted) state = AsyncData(profile);
     } catch (e, st) {
-      if (_mounted) state = AsyncError(e, st);
-    }
-  }
-
-  bool get _mounted {
-    try {
-      state;
-      return true;
-    } catch (_) {
-      return false;
+      if (mounted) state = AsyncError(e, st);
     }
   }
 }

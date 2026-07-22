@@ -7,7 +7,7 @@ part of 'grammar_provider.dart';
 // **************************************************************************
 
 String _$grammarItemsNotifierHash() =>
-    r'b9f2342f3c2444580f0a5e882af9d6709170f104';
+    r'4cfdc9909f9f77836337f0e5797e8c9fc06dc697';
 
 /// See also [GrammarItemsNotifier].
 @ProviderFor(GrammarItemsNotifier)
