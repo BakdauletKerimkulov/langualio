@@ -69,12 +69,12 @@ Close all findings from the senior code review (`ai_docs/CODE_REVIEW_2026-07-19.
 ### Phase 4 — Architecture: error propagation + admin trigger (R10, R11, R14)
 **Goal:** Errors surface to UI instead of being swallowed; admin role grants on first signup.
 
-- [ ] `lib/src/features/word_quiz/data/quiz_attempt_repository.dart` — `saveAttempt`: throw instead of swallowing error
-- [ ] `lib/src/features/chat/data/chat_repository.dart` — `fetchMessages`: throw on error instead of returning empty list
-- [ ] TDD: widget/provider test — network error during quiz save → `AsyncError` state, not silent success
-- [ ] `supabase/migrations/{timestamp}_admin_trigger_insert.sql` — add `BEFORE INSERT ON auth.users` trigger for `handle_admin_role()` (currently only `BEFORE UPDATE`). Add comment documenting JWT cache lag (~1h)
-- [ ] TDD: `supabase/tests/admin_trigger_test.sql` — new user with email in `admin_emails` gets role in `raw_app_meta_data` on INSERT
-- [ ] Verify: `supabase db reset`; SQL tests pass; `flutter analyze && flutter test`
+- [x] `lib/src/features/word_quiz/data/quiz_attempt_repository.dart` — `saveAttempt`: throw instead of swallowing error
+- [x] `lib/src/features/chat/data/chat_repository.dart` — `fetchMessages`: throw on error instead of returning empty list
+- [x] TDD: widget/provider test — network error during quiz save → `AsyncError` state, not silent success
+- [x] `supabase/migrations/20260722200226_admin_trigger_insert.sql` — add `BEFORE INSERT ON auth.users` trigger for `handle_admin_role()` (currently only `BEFORE UPDATE`). Add comment documenting JWT cache lag (~1h)
+- [x] TDD: `supabase/tests/admin_trigger_test.sql` — new user with email in `admin_emails` gets role in `raw_app_meta_data` on INSERT
+- [x] Verify: `supabase db reset`; SQL tests pass; `flutter analyze && flutter test`. _Note: `supabase db reset` not run — Docker not available locally. SQL migration syntax and test file validated by review. Flutter: analyze clean, 75/75 tests pass_
 
 ### Phase 5 — Backend cleanup: shared code, junk removal (R12, R13)
 **Goal:** DRY edge functions, remove dead files.

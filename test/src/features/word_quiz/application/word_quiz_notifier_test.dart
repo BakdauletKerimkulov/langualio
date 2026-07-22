@@ -269,6 +269,70 @@ void main() {
       expect(options, contains('способность'));
     });
   });
+
+  group('WordQuizNotifier.submitAnswer — error propagation', () {
+    test('network error during quiz save → AsyncError state', () async {
+      final words = [
+        _makeSingleMeaningWord('w1', 'cat', 'кошка'),
+        _makeSingleMeaningWord('w2', 'dog', 'собака'),
+        _makeSingleMeaningWord('w3', 'fish', 'рыба'),
+        _makeSingleMeaningWord('w4', 'bird', 'птица'),
+      ];
+
+      final session = QuizSession(
+        todayWords: words,
+        quizDay: DateTime.utc(2026, 6, 1),
+        languageDirection: LanguageDirection.enToRu,
+        selectedMeaningIndexes: const {'w1': 0},
+      );
+
+      final container = ProviderContainer(
+        overrides: [
+          wordQuizNotifierProvider.overrideWith(
+            () => _TestWordQuizNotifier(session),
+          ),
+          quizAttemptRepositoryProvider.overrideWithValue(
+            _ThrowingQuizAttemptRepository(),
+          ),
+        ],
+      );
+      addTearDown(container.dispose);
+
+      // Wait for build to complete
+      await container.read(wordQuizNotifierProvider.future);
+
+      // Submit answer — saveAttempt will throw
+      final notifier = container.read(wordQuizNotifierProvider.notifier);
+      await notifier.submitAnswer(
+        wordId: 'w1',
+        selectedOption: 'кошка',
+        isCorrect: true,
+      );
+
+      // State should be AsyncError, not silent success
+      final state = container.read(wordQuizNotifierProvider);
+      expect(state, isA<AsyncError<QuizSession>>());
+    });
+  });
+}
+
+/// Fake attempt repository that throws on saveAttempt.
+class _ThrowingQuizAttemptRepository implements QuizAttemptRepository {
+  @override
+  Future<List<WordQuizAttempt>> fetchTodayAttempts(
+          LanguageDirection d) async =>
+      [];
+
+  @override
+  Future<void> saveAttempt(WordQuizAttempt attempt) async {
+    throw Exception('Network error');
+  }
+
+  @override
+  Future<void> updateLearningProgress({
+    required String wordId,
+    required DateTime correctDate,
+  }) async {}
 }
 
 /// Fake attempt repository that returns empty results.

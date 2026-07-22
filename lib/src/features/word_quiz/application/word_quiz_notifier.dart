@@ -119,6 +119,7 @@ class WordQuizNotifier extends _$WordQuizNotifier with NotifierMounted {
   }
 
   /// Submits an answer for the given word.
+  /// Sets `AsyncError` state on network failure so the UI can show an error.
   Future<void> submitAnswer({
     required String wordId,
     required String selectedOption,
@@ -140,15 +141,21 @@ class WordQuizNotifier extends _$WordQuizNotifier with NotifierMounted {
       answeredAt: DateTime.now(),
     );
 
-    // Save attempt to Supabase
-    await _attemptRepo.saveAttempt(attempt);
+    try {
+      // Save attempt to Supabase
+      await _attemptRepo.saveAttempt(attempt);
 
-    // Update learning progress if correct
-    if (isCorrect) {
-      await _attemptRepo.updateLearningProgress(
-        wordId: wordId,
-        correctDate: quizDay,
-      );
+      // Update learning progress if correct
+      if (isCorrect) {
+        await _attemptRepo.updateLearningProgress(
+          wordId: wordId,
+          correctDate: quizDay,
+        );
+      }
+    } catch (e, st) {
+      log('Failed to save attempt: $e', name: 'WordQuizNotifier');
+      if (mounted) state = AsyncError(e, st);
+      return;
     }
 
     // Update session state
