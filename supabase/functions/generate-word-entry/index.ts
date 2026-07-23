@@ -1,10 +1,10 @@
 import { serve } from "https://deno.land/std@0.177.0/http/server.ts";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 import { CLAUDE_API_URL, CLAUDE_MODEL } from "../_shared/constants.ts";
+import { handleCors } from "../_shared/cors.ts";
+import { verifyAuth, type AuthResult } from "../_shared/auth.ts";
+import { jsonResponse } from "../_shared/response.ts";
+import { requireEnv } from "../_shared/env.ts";
 
-const CLAUDE_API_KEY = Deno.env.get("CLAUDE_API_KEY")!;
-const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
-const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 const MAX_TOKENS = 2048;
 const DAILY_GENERATION_LIMIT = 10;
 
@@ -31,44 +31,29 @@ Return ONLY valid JSON, no markdown fences, no explanation. Just the JSON object
 
 serve(async (req) => {
   // CORS
-  if (req.method === "OPTIONS") {
-    return new Response("ok", {
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers":
-          "authorization, content-type, x-client-info, apikey",
-      },
-    });
-  }
+  const corsResponse = handleCors(req);
+  if (corsResponse) return corsResponse;
 
   try {
     // 1. Verify auth
-    const authHeader = req.headers.get("Authorization");
-    if (!authHeader) {
-      return jsonResponse({ error: "Missing authorization" }, 401);
-    }
+    const authResult = await verifyAuth(req);
+    if (authResult instanceof Response) return authResult;
+    const { user, supabase } = authResult as AuthResult;
 
-    const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
-    const token = authHeader.replace("Bearer ", "");
-    const {
-      data: { user },
-      error: authError,
-    } = await supabase.auth.getUser(token);
-
-    if (authError || !user) {
-      return jsonResponse({ error: "Unauthorized" }, 401);
-    }
-
-    // 2. Admin-only gate (R1: only admins can generate word entries)
+    // 2. Admin-only gate (only admins can generate word entries)
     const userRole = user.app_metadata?.role;
     if (userRole !== "admin") {
       return jsonResponse({ error: "Forbidden: admin only" }, 403);
     }
 
-    // 3. Atomic quota check (R2: consume before Claude call, prevents race conditions)
+    // 3. Atomic quota check (consume before Claude call, prevents race conditions)
     const { data: quotaGranted, error: quotaError } = await supabase.rpc(
       "try_consume_quota",
-      { p_user_id: user.id, p_kind: "generation", p_limit: DAILY_GENERATION_LIMIT }
+      {
+        p_user_id: user.id,
+        p_kind: "generation",
+        p_limit: DAILY_GENERATION_LIMIT,
+      }
     );
 
     if (quotaError) {
@@ -94,11 +79,12 @@ serve(async (req) => {
     }
 
     // 5. Call Claude API
+    const claudeApiKey = requireEnv("CLAUDE_API_KEY");
     const claudeResponse = await fetch(CLAUDE_API_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "x-api-key": CLAUDE_API_KEY,
+        "x-api-key": claudeApiKey,
         "anthropic-version": "2023-06-01",
       },
       body: JSON.stringify({
@@ -148,7 +134,10 @@ serve(async (req) => {
       !Array.isArray(wordEntry.meanings) ||
       wordEntry.meanings.length === 0
     ) {
-      console.error("AI response missing meanings array:", JSON.stringify(wordEntry));
+      console.error(
+        "AI response missing meanings array:",
+        JSON.stringify(wordEntry)
+      );
       return jsonResponse(
         { error: "AI returned entry without meanings" },
         502
@@ -162,16 +151,3 @@ serve(async (req) => {
     return jsonResponse({ error: "Internal server error" }, 500);
   }
 });
-
-function jsonResponse(
-  body: Record<string, unknown>,
-  status: number
-): Response {
-  return new Response(JSON.stringify(body), {
-    status,
-    headers: {
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*",
-    },
-  });
-}

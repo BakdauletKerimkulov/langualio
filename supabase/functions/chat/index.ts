@@ -1,6 +1,10 @@
 import { serve } from "https://deno.land/std@0.177.0/http/server.ts";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 import { CLAUDE_API_URL, CLAUDE_MODEL } from "../_shared/constants.ts";
+import { handleCors } from "../_shared/cors.ts";
+import { verifyAuth, type AuthResult } from "../_shared/auth.ts";
+import { jsonResponse } from "../_shared/response.ts";
+import { requireEnv } from "../_shared/env.ts";
+
 const MAX_TOKENS = 1024;
 const MAX_MESSAGE_LENGTH = 10_000;
 const MAX_CONTEXT_PAYLOAD_LENGTH = 500;
@@ -16,42 +20,14 @@ const CEFR_LABELS: Record<number, string> = {
 
 serve(async (req) => {
   // CORS
-  if (req.method === "OPTIONS") {
-    return new Response("ok", {
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers":
-          "authorization, content-type, x-client-info, apikey",
-      },
-    });
-  }
-
-  // Env var guards (R6)
-  const CLAUDE_API_KEY = Deno.env.get("CLAUDE_API_KEY");
-  const SUPABASE_URL = Deno.env.get("SUPABASE_URL");
-  const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
-
-  if (!CLAUDE_API_KEY || !SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
-    return jsonResponse({ error: "Service not configured" }, 500);
-  }
+  const corsResponse = handleCors(req);
+  if (corsResponse) return corsResponse;
 
   try {
     // 1. Verify auth
-    const authHeader = req.headers.get("Authorization");
-    if (!authHeader) {
-      return jsonResponse({ error: "Missing authorization" }, 401);
-    }
-
-    const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
-    const token = authHeader.replace("Bearer ", "");
-    const {
-      data: { user },
-      error: authError,
-    } = await supabase.auth.getUser(token);
-
-    if (authError || !user) {
-      return jsonResponse({ error: "Unauthorized" }, 401);
-    }
+    const authResult = await verifyAuth(req);
+    if (authResult instanceof Response) return authResult;
+    const { user, supabase } = authResult as AuthResult;
 
     // 2. Parse request
     const { message, context_source, context_payload } = await req.json();
@@ -59,12 +35,12 @@ serve(async (req) => {
       return jsonResponse({ error: "Message is required" }, 400);
     }
 
-    // Input validation: message length (R4)
+    // Input validation: message length
     if (message.length > MAX_MESSAGE_LENGTH) {
       return jsonResponse({ error: "Message too long" }, 400);
     }
 
-    // 3. Atomic quota check (R2: consume before Claude call, prevents race conditions)
+    // 3. Atomic quota check (consume before Claude call, prevents race conditions)
     const { data: configData } = await supabase
       .from("app_config")
       .select("value")
@@ -117,7 +93,7 @@ serve(async (req) => {
     // Add current message
     messages.push({ role: "user", content: message });
 
-    // 6. Sanitize context_payload (R5) and build system prompt
+    // 6. Sanitize context_payload and build system prompt
     const sanitizedContext = sanitizeContextPayload(context_payload);
     const systemPrompt = buildSystemPrompt(profile, sanitizedContext);
 
@@ -130,12 +106,13 @@ serve(async (req) => {
       context_payload: context_payload ?? null,
     });
 
-    // 8. Call Claude API (non-streaming JSON mode, R1)
+    // 8. Call Claude API (non-streaming JSON mode)
+    const claudeApiKey = requireEnv("CLAUDE_API_KEY");
     const claudeResponse = await fetch(CLAUDE_API_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "x-api-key": CLAUDE_API_KEY,
+        "x-api-key": claudeApiKey,
         "anthropic-version": "2023-06-01",
       },
       body: JSON.stringify({
@@ -156,11 +133,13 @@ serve(async (req) => {
     console.log(
       `Claude API response: model=${claudeData.model}, stop_reason=${claudeData.stop_reason}, content_blocks=${claudeData.content?.length ?? 0}`
     );
-    const responseText =
-      claudeData.content?.[0]?.text ?? "";
+    const responseText = claudeData.content?.[0]?.text ?? "";
 
     if (!responseText) {
-      console.warn("Empty response from Claude API. Raw response:", JSON.stringify(claudeData));
+      console.warn(
+        "Empty response from Claude API. Raw response:",
+        JSON.stringify(claudeData)
+      );
     }
 
     // 9. Save assistant message (quota already consumed atomically in step 3)
@@ -196,7 +175,7 @@ serve(async (req) => {
   }
 });
 
-/// Sanitize context_payload (R5): truncate, strip control chars, escape delimiters
+/// Sanitize context_payload: truncate, strip control chars, escape delimiters
 function sanitizeContextPayload(
   payload: string | undefined | null
 ): string | undefined {
@@ -214,12 +193,11 @@ function sanitizeContextPayload(
   return sanitized;
 }
 
-function buildSystemPrompt(
-  profile: any,
-  contextPrompt?: string
-): string {
+function buildSystemPrompt(profile: any, contextPrompt?: string): string {
   const cefrLevel = profile?.cefr_level as number | null;
-  const cefrLabel = cefrLevel ? (CEFR_LABELS[cefrLevel] ?? "beginner") : "beginner";
+  const cefrLabel = cefrLevel
+    ? (CEFR_LABELS[cefrLevel] ?? "beginner")
+    : "beginner";
 
   const lines = [
     'You are an AI English tutor called "AI Tutor" in the Langualio app.',
@@ -252,17 +230,4 @@ function buildSystemPrompt(
   }
 
   return lines.join("\n");
-}
-
-function jsonResponse(
-  body: Record<string, unknown>,
-  status: number
-) {
-  return new Response(JSON.stringify(body), {
-    status,
-    headers: {
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*",
-    },
-  });
 }
