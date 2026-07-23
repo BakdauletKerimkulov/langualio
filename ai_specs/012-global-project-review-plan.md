@@ -90,10 +90,10 @@ Close all findings from the senior code review (`ai_docs/CODE_REVIEW_2026-07-19.
 ### Phase 6 — Documentation: PROJECT.md, README, ai_docs (R15, R16)
 **Goal:** Docs describe reality; no phantom features, no missing ones.
 
-- [ ] `ai_docs/PROJECT.md` — full rewrite: actual DB schema (all tables from migrations), actual edge function contracts (non-streaming JSON, not SSE), actual routing, actual roles. Every table + every function described; nothing described that doesn't exist
-- [ ] `README.md` — replace Flutter template with: project description, local setup (Supabase + flutter run), where docs live
-- [ ] Archive or delete `PLAN.md` if it exists as historical artifact
-- [ ] Verify: every table from `supabase/migrations/` mentioned in `PROJECT.md`; every function from `supabase/functions/` described; `grep -i "SSE" ai_docs/PROJECT.md` → 0 results
+- [x] `ai_docs/PROJECT.md` — full rewrite: actual DB schema (all tables from migrations), actual edge function contracts (non-streaming JSON, not SSE), actual routing, actual roles. Every table + every function described; nothing described that doesn't exist
+- [x] `README.md` — replace Flutter template with: project description, local setup (Supabase + flutter run), where docs live
+- [x] Archive or delete `PLAN.md` if it exists as historical artifact (renamed to `PLAN.md.archive`)
+- [x] Verify: all tables from migrations mentioned in PROJECT.md; both edge functions described; `grep "SSE" ai_docs/PROJECT.md` → 0 results (case-insensitive matches are "Assessment"/"asset" substrings only)
 
 ### Phase 7 — Backend tests + CI (R17, R18)
 **Goal:** SQL and Deno tests exist and run in CI.
