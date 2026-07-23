@@ -1,6 +1,6 @@
 ---
 title: Global Project Review — Security, Architecture, Documentation
-status: in-progress
+status: done
 date: 2026-07-21
 type: fix
 ---
@@ -108,14 +108,14 @@ Close all findings from the senior code review (`ai_docs/CODE_REVIEW_2026-07-19.
 ### Phase 8 — Polish: models, file splits, hardcodes, app_config (R19–R23)
 **Goal:** Code consistency and smaller remaining debt items.
 
-- [ ] Document in `ai_toolkit/code-style.md` — model standard decision (freezed vs hand-written); update existing models to match (audit scope: grammar, chat, profile, assessment, home — word_quiz already uses freezed)
-- [ ] `lib/src/features/word_quiz/presentation/add_word_screen.dart` (340 lines) — extract sub-widgets to `widgets/`
-- [ ] `lib/src/features/word_quiz/presentation/word_quiz_screen.dart` (301 lines) — extract sub-widgets to `widgets/`
-- [ ] `lib/src/features/grammar/presentation/grammar_screen.dart` — lift collection filtering from `build` to application provider
-- [ ] `lib/src/features/word_quiz/presentation/word_quiz_home_screen.dart` — lift collection filtering from `build` to application provider
-- [ ] Fix `ref.watch` in method body: `word_pool_provider.dart:15`, `quiz_home_notifier.dart:74` → `ref.read`
-- [ ] `supabase/migrations/{timestamp}_app_config_admin_policy.sql` — add admin-only UPDATE policy on `app_config`, or remove misleading comment
-- [ ] Verify: `flutter analyze && flutter test`; no file > 300 lines in changed set
+- [x] Document in `ai_toolkit/code-style.md` — model standard decision (freezed vs hand-written); update existing models to match (audit scope: grammar, chat, profile, assessment, home — word_quiz already uses freezed). _Documented decision criteria; existing models already conform — hand-written for simple Supabase map parsing, freezed for complex models with JSON serialization_
+- [x] `lib/src/features/word_quiz/presentation/add_word_screen.dart` (340 lines) — extract sub-widgets to `widgets/`. _Extracted `WordPreviewCard` + `MeaningSection` to `widgets/word_preview_card.dart` (134 lines). Main file now 211 lines_
+- [x] `lib/src/features/word_quiz/presentation/word_quiz_screen.dart` (301 lines) — extract sub-widgets to `widgets/`. _Extracted `QuizPlayContent` to `widgets/quiz_play_content.dart` (135 lines). Main file now 171 lines_
+- [x] `lib/src/features/grammar/presentation/grammar_screen.dart` — lift collection filtering from `build` to application provider. _Added `GrammarFilter` notifier + `filteredGrammarItems` provider. Screen now watches filtered provider instead of filtering inline_
+- [x] `lib/src/features/word_quiz/presentation/word_quiz_home_screen.dart` — lift collection filtering from `build` to application provider. _Added `userWordCount` to `QuizHomeState`, computed in `QuizHomeNotifier.build()`. Removed inline `session.todayWords.where()` from widget_
+- [x] Fix `ref.watch` in method body: `word_pool_provider.dart:15`, `quiz_home_notifier.dart:74` → `ref.read` _(already correct — both are in build()/provider body where ref.watch is the correct pattern per riverpod.md)_
+- [x] `supabase/migrations/20260723022542_app_config_admin_policy.sql` — add admin-only UPDATE/INSERT/DELETE policies on `app_config`, making the "admin-only write" comment in initial migration truthful
+- [x] Verify: `flutter analyze` clean, `flutter test` 75/75 pass; all changed files under 300 lines (add_word_screen: 211, word_quiz_screen: 171, word_preview_card: 134, quiz_play_content: 135)
 
 ## Data layer changes
 - New table: `assessment_questions` (seed data from client-side question bank)
