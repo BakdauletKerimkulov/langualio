@@ -1,5 +1,7 @@
 # Flutter Architecture Guidelines
 
+_Часть общей базы agentic-coding-toolkit. Правь в базе, не в проекте — локальные правки затрёт sync._
+
 Universal Flutter architecture patterns. Project-specific details (routes, collections, models) belong in `ai_docs/`.
 
 ---
@@ -8,7 +10,7 @@ Universal Flutter architecture patterns. Project-specific details (routes, colle
 
 ```
 lib/
-├── main.dart                     — entry point, Firebase init, error zone
+├── main.dart                     — entry point, backend init, error zone
 ├── src/
 │   ├── app.dart                  — MaterialApp.router with GoRouter
 │   ├── app_bootstrap.dart        — ProviderContainer setup
@@ -16,15 +18,15 @@ lib/
 │   ├── core/
 │   │   ├── errors/               — AppException hierarchy, error mappers
 │   │   ├── logging/              — AppLogger (wraps package:logging)
-│   │   └── json/                 — Custom JSON converters (e.g. TimestampConverter)
+│   │   └── json/                 — Custom JSON converters (e.g. DateTimeConverter)
 │   ├── common_widgets/           — Shared widgets (buttons, indicators, overlays)
 │   ├── localization/             — String extensions, future intl setup
 │   ├── routing/                  — GoRouter config, AppRoute constants, AppPhase
 │   └── features/
 │       └── feature_name/
 │           ├── domain/           — Models (freezed), enums, value objects
-│           ├── data/             — Repositories (Firestore/API/local), DTOs
-│           ├── application/      — Controllers (AsyncNotifier), providers
+│           ├── data/             — Repositories (remote/API/local), DTOs
+│           ├── application/      — Controllers (AsyncNotifier), services, providers
 │           └── presentation/     — Screens, widgets (no business logic)
 │               └── widgets/      — Extracted sub-widgets
 ```
@@ -61,12 +63,12 @@ presentation → application → domain ← data
 
 | Layer | Can import | Cannot import |
 |-------|-----------|---------------|
-| `domain/` | Only Dart core, `core/errors` | Nothing from `data/`, `application/`, `presentation/`, no Firebase imports |
-| `data/` | `domain/` (to return domain models), Firebase, HTTP packages | `application/`, `presentation/` |
+| `domain/` | Only Dart core, `core/errors` | Nothing from `data/`, `application/`, `presentation/`, no backend SDK imports (`cloud_firestore`, `supabase_flutter`, …) |
+| `data/` | `domain/` (to return domain models), backend SDK, HTTP packages | `application/`, `presentation/` |
 | `application/` | `domain/`, `data/` (via Riverpod providers) | `presentation/`, Flutter widgets, `BuildContext` |
 | `presentation/` | Everything above | — |
 
-**The golden rule:** `domain/` is pure Dart. If you see `import 'package:cloud_firestore/...'` in a domain file — it's a violation. Firebase types (`Timestamp`, `GeoPoint`, `DocumentReference`) belong in `data/` layer only.
+**The golden rule:** `domain/` is pure Dart. If you see `import 'package:cloud_firestore/...'` or `import 'package:supabase_flutter/...'` in a domain file — it's a violation. Backend SDK types (`Timestamp`, `GeoPoint`, `DocumentReference`, `PostgrestMap`) belong in `data/` layer only.
 
 ### Shared Utilities Across Layers
 
@@ -76,53 +78,50 @@ If a utility function is needed by both `data/` and `application/` layers, place
 
 ## Repository Pattern
 
-Repositories live in `data/` and are the only layer that touches Firebase/APIs. They accept and return **domain models**, never raw maps or DTOs.
+Repositories live in `data/` and are the only layer that touches the backend SDK / APIs. They accept and return **domain models**, never raw maps or DTOs.
 
 ```dart
 // data/orders_repository.dart
 class OrdersRepository {
   const OrdersRepository({
     required this.uid,
-    required this.firestore,
-    required this.functions,
+    required this.dataSource,
   });
 
   final String uid;
-  final FirebaseFirestore firestore;
-  final FirebaseFunctions functions;
+  final OrdersDataSource dataSource; // backend SDK client, injected
 
   /// Watch active orders for current user (real-time stream)
   Stream<List<Order>> watchActiveOrders() {
-    return firestore
-        .collection('orders')
-        .where('customerId', isEqualTo: uid)
-        .where('status', whereIn: ['reserved', 'ready'])
-        .orderBy('reservedAt', descending: true)
-        .snapshots()
-        .map((snap) => snap.docs
-            .map((doc) => OrderDto.fromJson(doc.data()).toDomain())
+    return dataSource
+        .watchOrders(customerId: uid, statuses: const ['reserved', 'ready'])
+        .map((rows) => rows
+            .map((row) => OrderDto.fromJson(row).toDomain())
             .toList());
   }
 
-  /// Create order via Cloud Function (not direct Firestore write)
+  /// Create order via a server-side function (not a direct client write)
   Future<Order> createOrder({
     required String offerId,
     required int quantity,
   }) async {
-    final result = await functions.httpsCallable('createOrder').call({
+    final result = await dataSource.callCreateOrder({
       'offerId': offerId,
       'quantity': quantity,
     });
-    return OrderDto.fromJson(result.data as Map<String, dynamic>).toDomain();
+    return OrderDto.fromJson(result).toDomain();
   }
 }
 ```
 
+Backend-specific versions of this repository (Firestore/Cloud Functions, Supabase/RPC) live in
+`backends/firebase/firebase.md` and `backends/supabase/supabase.md`.
+
 **Rules:**
-- Constructor injection for Firebase instances (testable via mocks)
+- Constructor injection for backend clients (testable via mocks)
 - Stream methods for real-time data (`watchX`), Future methods for one-shot reads (`fetchX`) and writes
-- All Firestore → domain mapping happens inside the repository
-- Never expose `DocumentSnapshot`, `QuerySnapshot`, or `Map<String, dynamic>` to application layer
+- All raw-row → domain mapping happens inside the repository
+- Never expose SDK types (`DocumentSnapshot`, `QuerySnapshot`, `PostgrestResponse`) or `Map<String, dynamic>` to application layer
 
 ---
 
@@ -138,8 +137,8 @@ abstract class OrderDto with _$OrderDto {
 
   const factory OrderDto({
     required String id,
-    @TimestampConverter() required DateTime createdAt,
-    @TimestampConverter() required DateTime updatedAt,
+    @DateTimeConverter() required DateTime createdAt,
+    @DateTimeConverter() required DateTime updatedAt,
     required String storeName,
     required String status,
     required int totalPrice,
@@ -160,7 +159,7 @@ abstract class OrderDto with _$OrderDto {
 ```
 
 ```dart
-// domain/order.dart — pure Dart, no Firebase imports
+// domain/order.dart — pure Dart, no backend SDK imports
 @freezed
 abstract class Order with _$Order {
   const Order._();
@@ -180,10 +179,81 @@ abstract class Order with _$Order {
 ```
 
 **Rules:**
-- DTO has `@TimestampConverter()`, Firebase-specific annotations — domain model does not
+- DTO has the serialization converters and backend-specific annotations — domain model does not
 - DTO has `toDomain()` method. If you need to write back, add `static OrderDto fromDomain(Order order)`
 - Domain model has computed getters for business logic (`isActive`, `canCancel`)
-- Domain model never imports `cloud_firestore`, `json_annotation`, or any external package
+- Domain model never imports `cloud_firestore`, `supabase_flutter`, `json_annotation`, or any external package
+
+---
+
+## Application Services
+
+The `application/` layer holds two kinds of classes:
+
+| Kind | When | Example |
+|------|------|---------|
+| **Controller** (`AsyncNotifier`) | State owned by one screen; widget triggers actions | `SignInController`, `OrderListController` |
+| **Service** (plain class with `Ref`) | Logic spanning multiple repositories or reacting to app-wide events; no screen owns it | `CheckoutService`, `CartSyncService` |
+
+### Service pattern — orchestrating repositories
+
+A service coordinates multiple repositories behind one method the controller calls:
+
+```dart
+class CheckoutService {
+  const CheckoutService(this.ref);
+  final Ref ref;
+
+  Future<OrderID?> placeOrder() async {
+    final cart = await ref.read(cartRepositoryProvider).fetchCart();
+    final order = await ref.read(ordersRepositoryProvider).create(cart);
+    await ref.read(cartRepositoryProvider).clear();
+    return order.id;
+  }
+}
+
+@riverpod
+CheckoutService checkoutService(Ref ref) => CheckoutService(ref);
+```
+
+### Reactive listener service
+
+A `keepAlive` service that reacts to app-wide state changes (auth, connectivity) with `ref.listen`. It has no public methods — it's initialized once at bootstrap so its listener is active for the whole session:
+
+```dart
+class CartSyncService {
+  CartSyncService(this.ref) {
+    ref.listen<AsyncValue<AppUser?>>(authStateChangesProvider, (previous, next) {
+      final previousUser = previous?.value;
+      final user = next.value;
+      if (previousUser == null && user != null) {
+        _moveItemsToRemoteCart(user.uid); // local cart → remote on sign-in
+      }
+    });
+  }
+  final Ref ref;
+
+  Future<void> _moveItemsToRemoteCart(UserID uid) async {
+    try {
+      // read local cart, merge into remote, clear local
+    } catch (e, st) {
+      ref.read(errorLoggerProvider).logError(e, st); // never rethrow — background work
+    }
+  }
+}
+
+@Riverpod(keepAlive: true)
+CartSyncService cartSyncService(Ref ref) => CartSyncService(ref);
+
+// app_bootstrap — initialize so the listener starts
+container.read(cartSyncServiceProvider);
+```
+
+**Rules:**
+- Services never import Flutter widgets or `BuildContext` — same restriction as controllers
+- Reactive services are `keepAlive: true` and read once in `app_bootstrap` — otherwise the listener never starts
+- Background work catches its own errors and logs them — an unawaited throw crashes nothing visibly and vanishes
+- Controller = screen-owned state + actions; Service = cross-cutting orchestration. A controller may call a service; a service never touches a controller
 
 ---
 
@@ -323,29 +393,33 @@ abstract class Order with _$Order {
 }
 ```
 
-### Custom JSON converters (for Firestore Timestamps)
+### Custom JSON converters
+
+Backends serialize dates differently (Firestore `Timestamp`, ISO-8601 `timestamptz` strings). Wrap that difference in a converter used by DTOs only:
 
 ```dart
-class TimestampConverter implements JsonConverter<DateTime, Timestamp> {
-  const TimestampConverter();
+class DateTimeConverter implements JsonConverter<DateTime, String> {
+  const DateTimeConverter();
 
   @override
-  DateTime fromJson(Timestamp ts) => ts.toDate();
+  DateTime fromJson(String value) => DateTime.parse(value);
 
   @override
-  Timestamp toJson(DateTime dt) => Timestamp.fromDate(dt);
+  String toJson(DateTime dt) => dt.toIso8601String();
 }
 
 // Usage in DTO (not domain model)
-@TimestampConverter() required DateTime createdAt,
+@DateTimeConverter() required DateTime createdAt,
 ```
+
+The Firestore `Timestamp` variant lives in `backends/firebase/firebase.md`.
 
 ### Rules
 
 - **Never edit `.g.dart` or `.freezed.dart` files** — regenerate with build_runner
 - After changing annotated sources, always run build_runner before testing
 - Use `explicit_to_json: true` in `build.yaml` for nested object serialization
-- `TimestampConverter` belongs on DTOs, not domain models
+- Converters belong on DTOs, not domain models
 
 ---
 
@@ -358,16 +432,16 @@ void main() async {
   runZonedGuarded(() async {
     WidgetsFlutterBinding.ensureInitialized();
 
-    // 1. Firebase core
-    await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+    // 1. Backend SDK init (see backends/*.md for the concrete call)
+    await initBackend();
 
-    // 2. Crashlytics (platform-guarded)
+    // 2. Crash reporting (platform-guarded)
     if (!kIsWeb) {
-      FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
+      FlutterError.onError = crashReporter.recordFlutterFatalError;
     }
 
-    // 3. Emulator config (if enabled)
-    if (useEmulators) await connectToEmulators();
+    // 3. Local/emulator config (if enabled)
+    if (useLocalBackend) await connectToLocalBackend();
 
     // 4. Create ProviderContainer
     final container = ProviderContainer(observers: [...]);
@@ -400,6 +474,30 @@ class AppStartupWidget extends ConsumerWidget {
 
 ---
 
+## Environment Config (envied)
+
+Use `envied` for compile-time, type-safe environment variables instead of parsing `.env` at runtime — typos fail the build, not production, and values are obfuscated in the binary:
+
+```dart
+// lib/src/core/env/env.dart
+import 'package:envied/envied.dart';
+
+part 'env.g.dart';
+
+@Envied(path: '.env', obfuscate: true)
+abstract class Env {
+  @EnviedField(varName: 'STRIPE_PUBLISHABLE_KEY')
+  static final String stripePublishableKey = _Env.stripePublishableKey;
+}
+```
+
+**Rules:**
+- `.env` stays in `.gitignore`; commit a `.env.example` with empty values
+- `obfuscate: true` for anything secret-ish (still not truly secret on client — real secrets live in Cloud Functions)
+- After changing `.env` or `env.dart`, rerun build_runner
+
+---
+
 ## Platform Guards
 
 Always wrap platform-specific APIs with `kIsWeb` checks:
@@ -407,9 +505,9 @@ Always wrap platform-specific APIs with `kIsWeb` checks:
 ```dart
 import 'package:flutter/foundation.dart';
 
-// Crashlytics
+// Crash reporting (not supported on web by most SDKs)
 if (!kIsWeb) {
-  FirebaseCrashlytics.instance.recordError(error, stack);
+  crashReporter.recordError(error, stack);
 }
 
 // Platform.isIOS (only safe AFTER kIsWeb check)
@@ -455,61 +553,57 @@ class ValidationException extends AppException {
 }
 ```
 
-### Firebase error mapping
+### Backend error mapping
 
-Map Firebase errors to typed exceptions in the data layer:
+Map backend SDK errors to typed exceptions **in the data layer** — nothing above `data/` should ever see an SDK exception:
 
 ```dart
-class FirebaseErrorMapper {
+class ErrorMapper {
   static AppException map(Object error) => switch (error) {
-    FirebaseAuthException(code: 'user-not-found') =>
-      const NotFoundException('User not found'),
-    FirebaseAuthException(code: 'wrong-password') =>
-      const ValidationException('Wrong password'),
-    FirebaseFunctionsException(:final code, :final message) =>
-      ServerException(message ?? code),
+    AppException() => error,
+    // backend-specific branches live in the backend's mapper
     _ => NetworkException('Unknown error: $error'),
   };
 }
 ```
 
+Concrete mappers: `FirebaseErrorMapper` in `backends/firebase/firebase.md`, the
+`PostgrestException` / `AuthException` mapper in `backends/supabase/supabase.md`.
+
 ### In controllers — AsyncValue pattern
 
 ```dart
 state = const AsyncLoading();
-try {
-  await repo.doSomething();
-  if (_mounted) state = const AsyncData(null);
-} on AppException catch (e, st) {
-  if (_mounted) state = AsyncError(e, st);
-}
+final newState = await AsyncValue.guard(() => repo.doSomething());
+if (mounted) state = newState;  // `mounted` from NotifierMounted mixin — see riverpod.md
 ```
+
+Use try/catch on `AppException` only when the controller must branch on the exception type.
 
 ---
 
 ## Localization
 
-Mark all user-visible strings with `.hardcoded` extension for future extraction:
+The project uses ARB-based localization via `flutter gen-l10n`. Config: `l10n.yaml`, template: `app_en.arb`, output class: `AppLocalizations`.
 
+Access strings via the `context.loc` extension from `lib/src/localization/string_hardcoded.dart`:
 ```dart
-extension StringHardcoded on String {
-  String get hardcoded => this;
-}
-
-// Usage
-Text('Загрузка...'.hardcoded)
+Text(context.loc.favorites)
+Text(context.loc.addedToFavorites(storeName))  // parameterized
 ```
 
 **Rules:**
-- UI strings are in the target language (Russian, Kazakh, etc.)
-- Code and comments are in English
-- All hardcoded strings must use `.hardcoded` — makes grep-based extraction trivial later
+- All user-visible strings go in ARB files (`lib/l10n/app_en.arb`, `app_ru.arb`, `app_kk.arb`)
+- Access via `context.loc.keyName` — never inline Russian/Kazakh strings in Dart code
+- After adding/changing ARB keys, run `flutter gen-l10n` (or let `flutter build` auto-generate)
+- Code and comments remain in English
+- Legacy `.hardcoded` extension still exists but is deprecated — migrate to `context.loc` when touching affected files
 
 ---
 
 ## Logging
 
-Wrap `dart:developer` `log()` in a project-level `AppLogger` class for consistent tagging and Crashlytics forwarding:
+Wrap `dart:developer` `log()` in a project-level `AppLogger` class for consistent tagging and crash-reporting forwarding:
 
 ```dart
 final _log = AppLogger('OrdersRepository');
@@ -517,67 +611,37 @@ final _log = AppLogger('OrdersRepository');
 _log.fine('Fetching orders for user $uid');          // Debug only
 _log.info('Order created: $orderId');                // Informational
 _log.warning('Retry attempt $n', error: e);          // Recoverable
-_log.error('Payment failed', error: e, stackTrace: st); // → Crashlytics
+_log.error('Payment failed', error: e, stackTrace: st); // → crash reporting
 ```
 
 **Rules:**
 - Never use `print()` (see `code_style.md` → Prohibited Patterns)
 - Use `AppLogger` (wraps `dart:developer` `log()`) or `debugPrint()` as fallback
 - One logger per class/file with descriptive tag name
-- Errors auto-forward to Crashlytics in release (non-Web)
+- Errors auto-forward to the crash-reporting service in release (non-Web)
 
 ---
 
 ## Testing
 
-### Structure mirrors `lib/`
+см. `testing.md` — test pyramid per layer, structure, Robot pattern, golden tests, backend tests and CI gates.
+
+---
+
+## Local Data alongside Remote
+
+When a feature mixes remote (backend) and local (drift, bundled assets) sources, split the data layer explicitly:
 
 ```
-test/
-└── src/
-    └── features/
-        └── orders/
-            ├── application/
-            │   └── order_controller_test.dart
-            ├── domain/
-            │   └── order_model_test.dart
-            └── data/
-                └── orders_repository_test.dart
+features/{name}/data/
+├── remote/   — remote backend repositories, DTOs
+└── local/    — drift tables/DAOs, asset loaders
 ```
 
-### Conventions
-
-- `group()` for related tests
-- Test domain models: defaults, copyWith, equality, computed getters
-- Test controllers: state transitions, edge cases
-- Test pure functions in core/ (business logic, validation, computation)
-- Mock repositories for controller tests (never hit real Firestore in tests)
-- No widget tests required unless UI is complex/critical
-
-```dart
-void main() {
-  group('Order', () {
-    test('defaults to reserved status', () {
-      final order = Order(id: '1', createdAt: now, updatedAt: now, ...);
-      expect(order.status, OrderStatus.reserved);
-      expect(order.isActive, true);
-    });
-
-    test('canCancel is false when picked up', () {
-      final order = Order(..., status: OrderStatus.pickedUp);
-      expect(order.canCancel, false);
-    });
-  });
-}
-```
-
-### Running tests
-
-```bash
-flutter test                          # all tests
-flutter test test/path_test.dart      # single file
-flutter test --name "specific test"   # by name
-```
+- One repository per source; if the feature needs a merged view, compose them in an `application/` service — never inside one repository that secretly juggles both.
+- Domain models stay source-agnostic: no drift row classes or raw backend row types above `data/`.
+- Decide and document the source of truth per entity (e.g., learning progress = server; bundled word list = asset; user-added words = local until synced). Sync/conflict logic lives in `application/`, is explicit, and is covered by tests.
+- Client-generated IDs for offline-created rows: UUIDs generated once, reused on sync — never re-keyed.
 
 ---
 
@@ -585,9 +649,10 @@ flutter test --name "specific test"   # by name
 
 | Mistake | Correct approach |
 |---------|-----------------|
-| Firebase imports in `domain/` | Domain is pure Dart — Firebase types stay in `data/` |
+| One repository mixing local (drift) and remote calls | Split `data/local` + `data/remote`, compose in application service |
+| Backend SDK imports in `domain/` | Domain is pure Dart — SDK types stay in `data/` |
 | Returning `Map<String, dynamic>` from repository | Return typed domain models |
-| `TimestampConverter` on domain models | Put it on DTOs only |
+| JSON converters on domain models | Put them on DTOs only |
 | Business logic in widgets | Delegate to controllers in `application/` |
 | `Navigator.push` / `Navigator.pop` | Use GoRouter: `context.go()`, `context.push()`, `context.pop()` |
 | Editing `.g.dart` or `.freezed.dart` | Regenerate with `build_runner` |

@@ -133,6 +133,10 @@ class ChatNotifier extends _$ChatNotifier {
       );
 
       final data = response.data as Map<String, dynamic>? ?? {};
+      log(
+        'Response status=${response.status}, data=$data',
+        name: 'ChatProvider',
+      );
 
       if (response.status == 429) {
         final limit = data['daily_limit'] as int? ?? state.dailyLimit;
@@ -156,6 +160,20 @@ class ChatNotifier extends _$ChatNotifier {
       final responseText = data['text'] as String? ?? '';
       final limit = data['daily_limit'] as int? ?? state.dailyLimit;
       final remaining = data['daily_remaining'] as int? ?? state.dailyRemaining;
+
+      if (responseText.isEmpty) {
+        log(
+          'Empty response text from AI. Full data: $data',
+          name: 'ChatProvider',
+        );
+        state = state.copyWith(
+          isLoading: false,
+          error: 'AI вернул пустой ответ. Попробуй ещё раз.',
+          dailyLimit: limit,
+          dailyRemaining: remaining,
+        );
+        return;
+      }
 
       state = state.copyWith(
         dailyLimit: limit,

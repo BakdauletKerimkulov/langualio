@@ -4,6 +4,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../../core/local_storage/storage_provider.dart';
 import '../../../core/utils/logger.dart';
+import '../../../core/utils/notifier_mounted.dart';
 import '../data/quiz_attempt_repository.dart';
 import '../domain/quiz_day_util.dart';
 import '../domain/quiz_session.dart';
@@ -14,7 +15,7 @@ import 'word_pool_provider.dart';
 part 'word_quiz_notifier.g.dart';
 
 @riverpod
-class WordQuizNotifier extends _$WordQuizNotifier {
+class WordQuizNotifier extends _$WordQuizNotifier with NotifierMounted {
   static const _directionKey = 'word_quiz_direction';
   static const _answeredIdsKey = 'word_quiz_answered_ids';
 
@@ -23,6 +24,7 @@ class WordQuizNotifier extends _$WordQuizNotifier {
 
   @override
   Future<QuizSession> build() async {
+    ref.onDispose(setUnmounted);
     final storage = ref.read(localStorageProvider);
     final directionStr = storage.getString(_directionKey);
     final direction = directionStr != null
@@ -117,6 +119,7 @@ class WordQuizNotifier extends _$WordQuizNotifier {
   }
 
   /// Submits an answer for the given word.
+  /// Sets `AsyncError` state on network failure so the UI can show an error.
   Future<void> submitAnswer({
     required String wordId,
     required String selectedOption,
@@ -138,15 +141,21 @@ class WordQuizNotifier extends _$WordQuizNotifier {
       answeredAt: DateTime.now(),
     );
 
-    // Save attempt to Supabase
-    await _attemptRepo.saveAttempt(attempt);
+    try {
+      // Save attempt to Supabase
+      await _attemptRepo.saveAttempt(attempt);
 
-    // Update learning progress if correct
-    if (isCorrect) {
-      await _attemptRepo.updateLearningProgress(
-        wordId: wordId,
-        correctDate: quizDay,
-      );
+      // Update learning progress if correct
+      if (isCorrect) {
+        await _attemptRepo.updateLearningProgress(
+          wordId: wordId,
+          correctDate: quizDay,
+        );
+      }
+    } catch (e, st) {
+      log('Failed to save attempt: $e', name: 'WordQuizNotifier');
+      if (mounted) state = AsyncError(e, st);
+      return;
     }
 
     // Update session state
@@ -155,7 +164,7 @@ class WordQuizNotifier extends _$WordQuizNotifier {
 
     _saveAnsweredIds(newAnsweredIds);
 
-    if (_mounted) {
+    if (mounted) {
       state = AsyncData(
         session.copyWith(
           answeredWordIds: newAnsweredIds,
@@ -187,12 +196,4 @@ class WordQuizNotifier extends _$WordQuizNotifier {
     storage.setString(_answeredIdsKey, ids.join(','));
   }
 
-  bool get _mounted {
-    try {
-      state;
-      return true;
-    } catch (_) {
-      return false;
-    }
-  }
 }

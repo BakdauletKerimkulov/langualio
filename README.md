@@ -1,16 +1,53 @@
-# langualio
+# Langualio
 
-A new Flutter project.
+English learning app with an AI tutor powered by Claude. Built with Flutter + Supabase.
 
-## Getting Started
+Features: word quiz (multi-meaning model with spaced repetition), AI chat tutor, grammar exercises, level assessment, progress tracking (XP, streaks, daily goals).
 
-This project is a starting point for a Flutter application.
+## Local setup
 
-A few resources to get you started if this is your first Flutter project:
+### Prerequisites
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Flutter SDK 3.41+
+- Supabase CLI
+- Docker (for local Supabase)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Run
+
+```bash
+# 1. Start local Supabase
+supabase start
+
+# 2. Apply migrations
+supabase db reset
+
+# 3. Install Flutter dependencies
+flutter pub get
+
+# 4. Run code generation
+dart run build_runner build --delete-conflicting-outputs
+
+# 5. Run the app (pass your Supabase keys)
+flutter run \
+  --dart-define=SUPABASE_URL=http://localhost:54321 \
+  --dart-define=SUPABASE_ANON_KEY=<your-anon-key>
+```
+
+### Edge Functions (local)
+
+```bash
+supabase functions serve
+```
+
+### Tests
+
+```bash
+flutter analyze
+flutter test
+```
+
+## Documentation
+
+- `ai_docs/PROJECT.md` — full project documentation (DB schema, edge functions, routing, architecture)
+- `ai_toolkit/` — code style, architecture, and framework guidelines
+- `ai_specs/` — feature specs and implementation plans

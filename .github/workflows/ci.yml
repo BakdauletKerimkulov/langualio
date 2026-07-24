@@ -3,16 +3,18 @@ name: CI
 on:
   pull_request:
     branches: [main]
+  workflow_call:
 
 jobs:
-  check:
+  flutter:
+    name: Flutter analyze & test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: "3.35.7"
+          flutter-version: "3.41.5"
           cache: true
 
       - run: flutter pub get
@@ -22,3 +24,37 @@ jobs:
       - run: flutter analyze
 
       - run: flutter test
+
+  supabase:
+    name: Supabase migrations & SQL tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: supabase/setup-cli@v1
+
+      - run: supabase start
+
+      - run: supabase db reset
+
+      - name: Run SQL tests
+        run: |
+          DB_URL=$(supabase status --output json | jq -r '.DB_URL')
+          for f in supabase/tests/*.sql; do
+            echo "Running $f..."
+            psql "$DB_URL" -f "$f"
+          done
+
+      - run: supabase stop
+
+  deno:
+    name: Deno tests (Edge Function helpers)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v1.x
+
+      - run: deno test supabase/functions/_shared/ --allow-env

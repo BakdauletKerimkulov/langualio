@@ -17,12 +17,12 @@ class GrammarScreen extends ConsumerStatefulWidget {
 }
 
 class _GrammarScreenState extends ConsumerState<GrammarScreen> {
-  String _activeFilter = 'All';
   String? _expandedId;
 
   @override
   Widget build(BuildContext context) {
-    final itemsAsync = ref.watch(grammarItemsNotifierProvider);
+    final activeFilter = ref.watch(grammarFilterProvider);
+    final filteredAsync = ref.watch(filteredGrammarItemsProvider);
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -61,18 +61,15 @@ class _GrammarScreenState extends ConsumerState<GrammarScreen> {
         // Filter chips
         FilterChipBar(
           labels: _filters,
-          selected: _activeFilter,
-          onSelected: (v) => setState(() => _activeFilter = v),
+          selected: activeFilter,
+          onSelected: (v) =>
+              ref.read(grammarFilterProvider.notifier).select(v),
         ),
         gapH8,
         // Grammar cards
         Expanded(
-          child: itemsAsync.when(
-            data: (items) {
-              final filtered = _activeFilter == 'All'
-                  ? items
-                  : items.where((i) => i.category == _activeFilter).toList();
-
+          child: filteredAsync.when(
+            data: (filtered) {
               if (filtered.isEmpty) {
                 return Center(
                   child: Text(

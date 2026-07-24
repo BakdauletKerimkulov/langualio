@@ -6,7 +6,7 @@ part of 'quiz_home_notifier.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$quizHomeNotifierHash() => r'a98e66ba300777a62f08f1a57f90d57aa84e83ec';
+String _$quizHomeNotifierHash() => r'25c4abb7b23eab838b32ce9441a957b343332c11';
 
 /// See also [QuizHomeNotifier].
 @ProviderFor(QuizHomeNotifier)

@@ -8,7 +8,6 @@ import '../../../routing/app_router.dart';
 import '../application/quiz_home_notifier.dart';
 import '../application/word_quiz_notifier.dart';
 import '../domain/quiz_session.dart';
-import '../domain/word_entry.dart';
 import 'quiz_completion_view.dart';
 import 'widgets/quiz_empty_state.dart';
 import 'widgets/quiz_language_selector.dart';
@@ -91,11 +90,7 @@ class _QuizHomeContent extends ConsumerWidget {
         : 0.0;
     final hasStarted = homeState.completedCount > 0;
 
-    final session = ref.watch(wordQuizNotifierProvider).valueOrNull;
-    final userWordCount = session?.todayWords
-            .where((w) => w.source == WordSource.user)
-            .length ??
-        0;
+    final userWordCount = homeState.userWordCount;
 
     return Padding(
       padding: const EdgeInsets.fromLTRB(

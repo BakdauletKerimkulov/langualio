@@ -1,59 +1,23 @@
-import { serve } from "https://deno.land/std@0.177.0/http/server.ts";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+import { verifyAuth, type AuthResult } from "../_shared/auth.ts";
+import { CLAUDE_API_URL, CLAUDE_MODEL } from "../_shared/constants.ts";
+import { handleCors } from "../_shared/cors.ts";
+import { requireEnv } from "../_shared/env.ts";
+import { jsonResponse } from "../_shared/response.ts";
+import { buildSystemPrompt, sanitizeContextPayload } from "./prompt.ts";
 
-const CLAUDE_API_URL = "https://api.anthropic.com/v1/messages";
-const CLAUDE_MODEL = "claude-sonnet-5";
 const MAX_TOKENS = 1024;
 const MAX_MESSAGE_LENGTH = 10_000;
-const MAX_CONTEXT_PAYLOAD_LENGTH = 500;
 
-// CEFR level mapping: DB int → human-readable label
-const CEFR_LABELS: Record<number, string> = {
-  1: "A1",
-  2: "A2",
-  3: "B1",
-  4: "B2",
-  5: "C1",
-};
-
-serve(async (req) => {
+Deno.serve(async (req: Request) => {
   // CORS
-  if (req.method === "OPTIONS") {
-    return new Response("ok", {
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers":
-          "authorization, content-type, x-client-info, apikey",
-      },
-    });
-  }
-
-  // Env var guards (R6)
-  const CLAUDE_API_KEY = Deno.env.get("CLAUDE_API_KEY");
-  const SUPABASE_URL = Deno.env.get("SUPABASE_URL");
-  const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
-
-  if (!CLAUDE_API_KEY || !SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
-    return jsonResponse({ error: "Service not configured" }, 500);
-  }
+  const corsResponse = handleCors(req);
+  if (corsResponse) return corsResponse;
 
   try {
     // 1. Verify auth
-    const authHeader = req.headers.get("Authorization");
-    if (!authHeader) {
-      return jsonResponse({ error: "Missing authorization" }, 401);
-    }
-
-    const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
-    const token = authHeader.replace("Bearer ", "");
-    const {
-      data: { user },
-      error: authError,
-    } = await supabase.auth.getUser(token);
-
-    if (authError || !user) {
-      return jsonResponse({ error: "Unauthorized" }, 401);
-    }
+    const authResult = await verifyAuth(req);
+    if (authResult instanceof Response) return authResult;
+    const { user, supabase } = authResult as AuthResult;
 
     // 2. Parse request
     const { message, context_source, context_payload } = await req.json();
@@ -61,14 +25,12 @@ serve(async (req) => {
       return jsonResponse({ error: "Message is required" }, 400);
     }
 
-    // Input validation: message length (R4)
+    // Input validation: message length
     if (message.length > MAX_MESSAGE_LENGTH) {
       return jsonResponse({ error: "Message too long" }, 400);
     }
 
-    // 3. Check daily limit
-    const today = new Date().toISOString().split("T")[0];
-
+    // 3. Atomic quota check (consume before Claude call, prevents race conditions)
     const { data: configData } = await supabase
       .from("app_config")
       .select("value")
@@ -77,16 +39,17 @@ serve(async (req) => {
 
     const dailyLimit = parseInt(configData?.value ?? "20");
 
-    const { data: usageData } = await supabase
-      .from("user_daily_usage")
-      .select("message_count")
-      .eq("user_id", user.id)
-      .eq("date", today)
-      .single();
+    const { data: quotaGranted, error: quotaError } = await supabase.rpc(
+      "try_consume_quota",
+      { p_user_id: user.id, p_kind: "message", p_limit: dailyLimit }
+    );
 
-    const currentCount = usageData?.message_count ?? 0;
+    if (quotaError) {
+      console.error("Quota RPC error:", quotaError);
+      return jsonResponse({ error: "Internal server error" }, 500);
+    }
 
-    if (currentCount >= dailyLimit) {
+    if (!quotaGranted) {
       return jsonResponse(
         {
           error: "Daily message limit reached",
@@ -120,7 +83,7 @@ serve(async (req) => {
     // Add current message
     messages.push({ role: "user", content: message });
 
-    // 6. Sanitize context_payload (R5) and build system prompt
+    // 6. Sanitize context_payload and build system prompt
     const sanitizedContext = sanitizeContextPayload(context_payload);
     const systemPrompt = buildSystemPrompt(profile, sanitizedContext);
 
@@ -133,12 +96,13 @@ serve(async (req) => {
       context_payload: context_payload ?? null,
     });
 
-    // 8. Call Claude API (non-streaming JSON mode, R1)
+    // 8. Call Claude API (non-streaming JSON mode)
+    const claudeApiKey = requireEnv("CLAUDE_API_KEY");
     const claudeResponse = await fetch(CLAUDE_API_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "x-api-key": CLAUDE_API_KEY,
+        "x-api-key": claudeApiKey,
         "anthropic-version": "2023-06-01",
       },
       body: JSON.stringify({
@@ -156,28 +120,37 @@ serve(async (req) => {
     }
 
     const claudeData = await claudeResponse.json();
-    const responseText =
-      claudeData.content?.[0]?.text ?? "";
+    console.log(
+      `Claude API response: model=${claudeData.model}, stop_reason=${claudeData.stop_reason}, content_blocks=${claudeData.content?.length ?? 0}`
+    );
+    const responseText = claudeData.content?.[0]?.text ?? "";
 
-    const remaining = dailyLimit - currentCount - 1;
+    if (!responseText) {
+      console.warn(
+        "Empty response from Claude API. Raw response:",
+        JSON.stringify(claudeData)
+      );
+    }
 
-    // 9. Save assistant message and update usage
+    // 9. Save assistant message (quota already consumed atomically in step 3)
     await supabase.from("chat_messages").insert({
       user_id: user.id,
       role: "assistant",
       text: responseText,
     });
 
-    await supabase.from("user_daily_usage").upsert(
-      {
-        user_id: user.id,
-        date: today,
-        message_count: currentCount + 1,
-      },
-      { onConflict: "user_id,date" }
-    );
+    // Fetch updated count for remaining calculation
+    const today = new Date().toISOString().split("T")[0];
+    const { data: updatedUsage } = await supabase
+      .from("user_daily_usage")
+      .select("message_count")
+      .eq("user_id", user.id)
+      .eq("date", today)
+      .single();
 
-    // 10. Return JSON response (R1)
+    const remaining = dailyLimit - (updatedUsage?.message_count ?? 0);
+
+    // 10. Return JSON response
     return jsonResponse(
       {
         text: responseText,
@@ -191,74 +164,3 @@ serve(async (req) => {
     return jsonResponse({ error: "Internal server error" }, 500);
   }
 });
-
-/// Sanitize context_payload (R5): truncate, strip control chars, escape delimiters
-function sanitizeContextPayload(
-  payload: string | undefined | null
-): string | undefined {
-  if (!payload || typeof payload !== "string") return undefined;
-
-  let sanitized = payload.slice(0, MAX_CONTEXT_PAYLOAD_LENGTH);
-
-  // Strip ASCII control characters (0x00–0x1F) except newline (0x0A) and tab (0x09)
-  sanitized = sanitized.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, "");
-
-  // Escape prompt section delimiters
-  sanitized = sanitized.replace(/^## /gm, "\\## ");
-  sanitized = sanitized.replace(/^---$/gm, "\\---");
-
-  return sanitized;
-}
-
-function buildSystemPrompt(
-  profile: any,
-  contextPrompt?: string
-): string {
-  const cefrLevel = profile?.cefr_level as number | null;
-  const cefrLabel = cefrLevel ? (CEFR_LABELS[cefrLevel] ?? "beginner") : "beginner";
-
-  const lines = [
-    'You are an AI English tutor called "AI Tutor" in the Langualio app.',
-    "Your role is to help the user learn English in a friendly and encouraging way.",
-    "",
-    "## User Profile",
-    `- Name: ${profile?.nickname ?? "Learner"}`,
-    `- CEFR Level: ${cefrLabel}`,
-    `- Level: ${profile?.level ?? 1}`,
-    `- Current XP: ${profile?.current_xp ?? 0}/${profile?.target_xp ?? 500}`,
-    `- Streak: ${profile?.streak_days ?? 0} days`,
-    "",
-    "## Behaviour Rules",
-    "- Explain in Russian, give examples in English.",
-    "- Keep answers short and clear — no walls of text.",
-    "- When the user makes a mistake, give a hint first, not the answer.",
-    "- Do NOT translate large texts — teach the user to break them down.",
-    "- Stay on topic: English learning only. Politely redirect off-topic questions.",
-    `- Adapt difficulty to the user's CEFR level (${cefrLabel}).`,
-    "- Use emoji sparingly for encouragement.",
-  ];
-
-  if (contextPrompt) {
-    lines.push(
-      "",
-      "## Current Context",
-      "The user opened this chat from a specific screen with this context:",
-      contextPrompt
-    );
-  }
-
-  return lines.join("\n");
-}
-
-function jsonResponse(
-  body: Record<string, unknown>,
-  status: number
-) {
-  return new Response(JSON.stringify(body), {
-    status,
-    headers: {
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*",
-    },
-  });
-}

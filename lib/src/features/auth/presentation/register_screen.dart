@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../../../core/common_widgets/primary_button.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_sizes.dart';
 import '../../../routing/app_router.dart';
-import '../application/auth_provider.dart';
+import '../data/auth_repository.dart';
 
 class RegisterScreen extends ConsumerStatefulWidget {
   const RegisterScreen({super.key});
@@ -20,6 +21,8 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   bool _obscurePassword = true;
+  bool _isLoading = false;
+  String? _error;
   String? _nicknameError;
 
   static final _nicknameRegExp = RegExp(r'^[a-zA-Zа-яА-ЯёЁ0-9]+$');
@@ -41,7 +44,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
     return null;
   }
 
-  void _handleRegister() {
+  Future<void> _handleRegister() async {
     final nickname = _nicknameController.text.trim();
     final email = _emailController.text.trim();
     final password = _passwordController.text;
@@ -55,20 +58,42 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
 
     if (email.isEmpty || password.isEmpty) return;
 
-    ref
-        .read(authNotifierProvider.notifier)
-        .signUp(email: email, password: password, name: nickname);
+    setState(() {
+      _isLoading = true;
+      _error = null;
+    });
+    try {
+      await ref
+          .read(authRepositoryProvider)
+          .signUp(email: email, password: password, name: nickname);
+      // Navigation handled by GoRouter redirect
+    } on AuthException catch (e) {
+      setState(() => _error = _mapAuthError(e));
+    } catch (e) {
+      setState(() => _error = 'Не удалось создать аккаунт. Попробуй ещё раз.');
+    } finally {
+      if (mounted) setState(() => _isLoading = false);
+    }
+  }
+
+  String _mapAuthError(AuthException e) {
+    final msg = e.message.toLowerCase();
+    if (msg.contains('email already registered') ||
+        msg.contains('already registered')) {
+      return 'Этот email уже зарегистрирован.';
+    }
+    if (msg.contains('password') &&
+        (msg.contains('short') || msg.contains('least'))) {
+      return 'Пароль должен быть не менее 6 символов.';
+    }
+    if (msg.contains('invalid') && msg.contains('email')) {
+      return 'Проверь формат email.';
+    }
+    return 'Ошибка: ${e.message}';
   }
 
   @override
   Widget build(BuildContext context) {
-    final state = ref.watch(authNotifierProvider);
-
-    ref.listen(authNotifierProvider, (prev, next) {
-      if (!prev!.isAuthenticated && next.isAuthenticated) {
-        context.goNamed(AppRoute.home.name);
-      }
-    });
 
     return Scaffold(
       backgroundColor: AppColors.background,
@@ -100,7 +125,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
               ),
               gapH48,
               // Error
-              if (state.error != null) ...[
+              if (_error != null) ...[
                 Container(
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
@@ -117,7 +142,7 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
                       gapW8,
                       Expanded(
                         child: Text(
-                          state.error!,
+                          _error!,
                           style: Theme.of(context)
                               .textTheme
                               .bodyMedium
@@ -181,9 +206,9 @@ class _RegisterScreenState extends ConsumerState<RegisterScreen> {
               gapH32,
               // Register button
               PrimaryButton(
-                text: state.isLoading ? 'Создаю...' : 'Создать аккаунт',
+                text: _isLoading ? 'Создаю...' : 'Создать аккаунт',
                 isExpanded: true,
-                onPressed: state.isLoading ? () {} : _handleRegister,
+                onPressed: _isLoading ? () {} : _handleRegister,
               ),
               gapH16,
               // Login link

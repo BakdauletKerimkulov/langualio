@@ -1,4 +1,4 @@
-# Langualio (WordLevel)
+# Langualio
 
 Мобильное приложение для изучения английского языка. Язык интерфейса — русский, учебный контент — английский.
 
@@ -11,7 +11,7 @@
 - **БД:** PostgreSQL (через Supabase, миграции в `supabase/migrations/`)
 - **Edge Functions:** Supabase Functions (Deno/TypeScript, `supabase/functions/`)
 - **AI:** Claude Sonnet (claude-sonnet-4-20250514) через Anthropic API
-- **Локальное хранилище:** SharedPreferences (обёртка `LocalStorage`)
+- **Локальное хранилище:** SharedPreferences (обёртка `LocalStorage`) + Drift (SQLite для user words)
 - **Шрифт:** Nunito (Google Fonts), Material 3
 
 ## Платформы
@@ -31,11 +31,13 @@ Android, iOS, Web.
 | **UserProfile** | Расширенный профиль со статистикой и ачивками | `profiles` |
 | **ChatMessage** | Сообщение в чате (role, text, context) | `chat_messages` |
 | **GrammarItem** | Грамматическое правило с примерами и статусом | `grammar_items` + `user_grammar_progress` |
-| **Question** | Вопрос для практики (слово, варианты, правильный ответ) | `practice_questions` + `practice_attempts` |
+| **WordEntry** | Слово с множественными значениями (multi-meaning model) | `daily_words` (meanings jsonb) |
+| **WordQuizAttempt** | Попытка ответа в word quiz | `word_quiz_attempts` |
+| **WordLearningProgress** | Прогресс изучения слова (greedy-chain алгоритм) | `word_learning_progress` |
 | **DailyGoal** | Дневная цель с XP-наградой | `daily_goals` |
 | **Achievement** | Достижение (title, isUnlocked) | — (пока mock) |
-| **AssessmentQuestion** | Вопрос теста уровня (text, type, discipline, CEFR level) | — (локальный банк) |
-| **AssessmentResult** | Результат теста (CEFR level, correct/total, correctByLevel) | `profiles.cefr_level` |
+| **AssessmentQuestion** | Вопрос теста уровня | `assessment_questions` (seed data, 12 вопросов) |
+| **AssessmentResult** | Результат теста (определяется server-side RPC) | `profiles.cefr_level` |
 
 ### Система прогресса
 
@@ -45,6 +47,14 @@ Android, iOS, Web.
 - **Streak:** количество дней подряд, отслеживается через `last_active_date`
 - **Дневные цели:** список задач на день, каждая с XP-наградой
 
+### Word Quiz
+
+- **Два режима:** en→ru (перевод) и ru→en (слово по переводу)
+- **Multi-meaning:** слово может иметь несколько значений; при загрузке сессии случайно выбирается один `meaningIndex` на каждое слово
+- **Варианты ответа:** 1 правильный + 3 distractor'а из текущего пула слов
+- **Прогресс изучения:** `upsert_word_learning_progress` RPC — greedy-chain алгоритм (3+ правильных дня с промежутками 1–3 дня → слово "выучено")
+- **Источник слов:** asset-файл (`b1_words.json`) + пользовательские слова (Drift/SQLite, добавляются через admin панель)
+
 ### Система грамматики
 
 - **Статусы:** `completed` → `unlocked` → `locked` (линейная прогрессия)
@@ -53,36 +63,56 @@ Android, iOS, Web.
 
 ### Лимиты чата
 
-- **Дневной лимит:** 20 сообщений/день (настраивается через `app_config` таблицу)
+- **Дневной лимит:** 20 сообщений/день (настраивается через `app_config`)
+- **Атомарная квота:** `try_consume_quota` RPC (предотвращает race conditions)
 - **Локальный кеш:** максимум 50 сообщений в SharedPreferences
 - **История для контекста:** последние 20 сообщений отправляются в Claude
 
 ---
 
-## Суpabase-схема
+## Supabase-схема
 
 ### Таблицы
 
 | Таблица | Назначение | RLS |
 |---|---|---|
-| `profiles` | Профиль пользователя (nickname, level, xp, streak, cefr_level, assessment_completed) | SELECT/UPDATE: own |
+| `profiles` | Профиль пользователя (nickname, level, xp, streak, cefr_level, assessment_completed) | SELECT: own; UPDATE: own (только nickname, avatar_url — cefr_level, assessment_completed server-only) |
 | `daily_goals` | Дневные цели с XP | SELECT/INSERT/UPDATE: own |
 | `grammar_items` | Контент грамматики (read-only) | SELECT: authenticated |
 | `user_grammar_progress` | Прогресс по грамматике (unique: user_id + grammar_id) | SELECT/INSERT/UPDATE: own |
-| `practice_questions` | Вопросы для квизов (read-only) | SELECT: authenticated |
-| `practice_attempts` | Ответы пользователя | SELECT/INSERT: own |
-| `chat_messages` | История чата | SELECT/INSERT: own |
-| `app_config` | Конфигурация (лимиты, константы) | SELECT: authenticated (write: admin only) |
-| `user_daily_usage` | Счётчик сообщений/день (unique: user_id + date) | SELECT/INSERT/UPDATE: own |
+| `daily_words` | Словарный контент (word, meanings jsonb, level, status) | Admins: full CRUD; Users: SELECT published only |
+| `daily_word_sets` | Связь слов с датами показа | SELECT: authenticated |
+| `word_quiz_attempts` | Попытки ответов в word quiz | SELECT/INSERT: own |
+| `word_learning_progress` | Прогресс изучения слов (greedy-chain) | SELECT/INSERT/UPDATE: own |
+| `chat_messages` | История чата | SELECT/INSERT/DELETE: own |
+| `app_config` | Конфигурация (лимиты, константы) | SELECT: authenticated (write: нет клиентских политик) |
+| `user_daily_usage` | Счётчик сообщений и генераций (unique: user_id + date) | SELECT: own (INSERT/UPDATE отозваны — запись только через `try_consume_quota` RPC) |
+| `admin_emails` | Whitelist email-адресов для автоматической выдачи админ-роли | Нет публичных политик (service role only) |
+| `assessment_questions` | Банк вопросов теста уровня (12 seed-вопросов) | SELECT: authenticated |
+
+### RPC-функции
+
+| Функция | Назначение | Доступ |
+|---|---|---|
+| `get_todays_words()` | Слова дня (join daily_words + daily_word_sets по дате Asia/Almaty) | authenticated |
+| `upsert_word_learning_progress(p_word_id, p_correct_date)` | Upsert прогресса изучения слова + greedy-chain алгоритм "выучено" | authenticated |
+| `try_consume_quota(p_user_id, p_kind, p_limit)` | Атомарный инкремент квоты (message/generation) с проверкой лимита | authenticated, service_role |
+| `complete_assessment(p_answers)` | Server-side оценка теста, установка cefr_level + assessment_completed | authenticated |
+
+Все RPC — `SECURITY DEFINER`, `SET search_path = public`, с auth guard и REVOKE/GRANT.
+
+### Триггеры
+
+| Триггер | Таблица | Событие | Функция |
+|---|---|---|---|
+| `on_auth_user_created` | `auth.users` | AFTER INSERT | `handle_new_user()` — создаёт profiles row |
+| `on_auth_user_updated` | `auth.users` | BEFORE UPDATE | `handle_admin_role()` — выдаёт/отзывает роль |
+| `on_auth_user_inserted` | `auth.users` | BEFORE INSERT | `handle_admin_role()` — выдаёт роль при регистрации |
 
 ### Ключевые конфиги в `app_config`
 
 - `daily_message_limit`: `'20'`
 - `xp_per_correct_answer`: `'10'`
-
-### Триггеры
-
-- `handle_new_user()` — автоматически создаёт запись в `profiles` при регистрации через auth (пишет `nickname` из `raw_user_meta_data`, `assessment_completed = false`)
 
 ### Каскадное удаление
 
@@ -92,107 +122,97 @@ Android, iOS, Web.
 
 ## Edge Functions
 
-### `chat` (supabase/functions/chat/index.ts)
+### `chat` (`supabase/functions/chat/index.ts`)
 
-AI-чат с Claude. Полный flow:
+AI-чат с Claude. Non-streaming JSON mode.
 
-1. Проверка Bearer-токена через Supabase Auth
-2. Проверка дневного лимита (`user_daily_usage` + `app_config`)
-3. Загрузка профиля пользователя для системного промпта
-4. Загрузка последних 20 сообщений из `chat_messages`
-5. Сборка системного промпта с контекстом пользователя (имя, уровень, XP, streak)
-6. Вызов Claude API со стримингом
-7. SSE-стрим ответа клиенту
-8. Сохранение обоих сообщений в `chat_messages`
-9. Обновление `user_daily_usage`
+**Flow:**
+1. CORS preflight (shared `handleCors`)
+2. JWT verification (shared `verifyAuth`)
+3. Parse request: `{ message, context_source?, context_payload? }`
+4. Input validation: message required, max 10 000 символов
+5. Atomic quota: `try_consume_quota(user_id, 'message', dailyLimit)`
+6. Загрузка профиля → системный промпт (имя, CEFR, уровень, XP, streak)
+7. Загрузка последних 20 сообщений из `chat_messages`
+8. Sanitize context_payload (truncate 500, strip control chars, escape delimiters)
+9. Сохранение user message в `chat_messages`
+10. Claude API call (non-streaming JSON, model из `_shared/constants.ts`)
+11. Сохранение assistant message в `chat_messages`
+12. JSON response с текстом и quota info
 
-**Правила системного промпта:**
-- Объяснения на русском, примеры на английском
-- Короткие и чёткие ответы
-- Подсказки вместо прямых ответов при ошибках
-- Не переводит большие тексты
-- Только тема изучения английского
-- Адаптация сложности под уровень пользователя
+**Response (200):**
+```json
+{ "text": "...", "daily_limit": 20, "daily_remaining": 15 }
+```
 
-**Коды ответов:** 401 (auth), 429 (лимит), 502 (API error), 500 (server error)
+**Коды:** 400, 401, 429 (лимит), 500, 502 (Claude error)
 
-**Заголовки ответа:** `X-Daily-Limit`, `X-Daily-Remaining`
+### `generate-word-entry` (`supabase/functions/generate-word-entry/index.ts`)
+
+Генерация структурированного WordEntry через Claude. **Admin-only.**
+
+**Flow:**
+1. CORS preflight (shared `handleCors`)
+2. JWT verification (shared `verifyAuth`)
+3. Admin gate: `app_metadata.role === 'admin'` → 403
+4. Atomic quota: `try_consume_quota(user_id, 'generation', 10)`
+5. Parse request: `{ word }`
+6. Claude API call → JSON WordEntry
+7. Validate: meanings array non-empty
+8. Return `{ data: wordEntry }`
+
+**Response (200):**
+```json
+{ "data": { "word": "...", "ipa": "...", "level": "b1", "meanings": [...], "tags": [...], "topic": "..." } }
+```
+
+**Коды:** 400, 401, 403 (not admin), 429 (лимит), 500, 502
+
+### Shared code (`supabase/functions/_shared/`)
+
+| Файл | Назначение |
+|---|---|
+| `constants.ts` | `CLAUDE_MODEL`, `CLAUDE_API_URL` |
+| `cors.ts` | `corsHeaders`, `handleCors(req)` |
+| `auth.ts` | `verifyAuth(req)` → `AuthResult \| Response` |
+| `response.ts` | `jsonResponse(body, status)` |
+| `env.ts` | `requireEnv(key)` — fail-fast |
 
 ---
 
 ## Роутинг и навигация
 
-| Маршрут | Экран | Защита |
-|---|---|---|
-| `/login` | LoginScreen | — |
-| `/register` | RegisterScreen | — |
-| `/assessment` | AssessmentScreen | Auth required, вне ShellRoute |
-| `/` | HomeScreen | Auth + assessment completed |
-| `/grammar` | GrammarScreen | Auth + assessment completed |
-| `/practice` | WordQuizHomeScreen | Auth + assessment completed |
-| `/profile` | ProfileScreen | Auth + assessment completed |
-| `/chat` | ChatScreen | Auth + assessment completed |
+| Маршрут | Экран | Shell | Защита |
+|---|---|---|---|
+| `/login` | LoginScreen | Нет | — |
+| `/register` | RegisterScreen | Нет | — |
+| `/` | HomeScreen | Да | Auth required |
+| `/grammar` | GrammarScreen | Да | Auth required |
+| `/practice` | WordQuizHomeScreen | Да | Auth required |
+| `/profile` | ProfileScreen | Да | Auth required |
+| `/profile/settings` | SettingsScreen | Да | Auth required |
+| `/chat` | ChatScreen | Нет | Auth required |
+| `/quiz` | WordQuizScreen | Нет | Auth required |
+| `/practice/add-word` | AddWordScreen | Нет | Auth required |
+| `/admin` | AdminWordListScreen | Нет | Admin (UI-level, RLS enforced) |
 
-- **Auth guard:** проверяет `Supabase.instance.client.auth.currentSession`
-- **Assessment guard:** проверяет `OnboardingStateNotifier.assessmentCompleted`
-- **Редирект:** неавторизованные → `/login`; авторизованные без теста → `/assessment`; fully onboarded → `/`
-- **Shell route:** нижняя навигация (home, grammar, practice, profile)
-- **Router refresh:** `RouterRefreshNotifier` (ChangeNotifier) слушает auth stream + onboarding state → `refreshListenable` на GoRouter
-- **Чат:** открывается отдельно, принимает `initialPrompt` через `route.extra`
-- **Контекстный чат:** можно перейти из grammar/practice с контекстом (`ChatContextSource`)
-
-### Onboarding / Assessment Guard
-
-GoRouter redirect is synchronous. To guard routes based on async server state (e.g. `assessment_completed`):
-
-1. `OnboardingStateNotifier` (`@Riverpod(keepAlive: true)`) — loads profile from Supabase, caches `assessmentCompleted`. Listens to `onAuthStateChange` to auto-refresh on login/logout.
-2. `RouterRefreshNotifier` (ChangeNotifier) — listens to both auth stream and onboarding state changes. Passed as `refreshListenable` to GoRouter.
-3. Redirect logic: while `isLoading` → return `null` (don't redirect); `!assessmentCompleted` → force `/assessment`; fully onboarded on auth/assessment route → redirect to `/`.
+- **Auth guard:** проверяет сессию через `authRepositoryProvider`
+- **Redirect:** неавторизованные → `/login`; авторизованные на auth-маршруте → `/`
+- **Shell route:** нижняя навигация (`ScaffoldWithNav`) — home, grammar, practice, profile
+- **Router refresh:** `GoRouterRefreshStream(authRepository.authStateChanges())` — автоматический redirect при login/logout
+- **Чат:** принимает `initialPrompt` через `state.extra`
+- **Контекстный чат:** переход из grammar/practice с контекстом (`ChatContextSource`)
 
 ---
 
 ## Аутентификация
 
 - **Провайдер:** только email/password (Supabase Auth)
-- **Нет:** Google Sign-In, Apple Sign-In, OAuth
-- **После регистрации:** автосоздание профиля через DB-триггер (`handle_new_user()` пишет nickname), редирект на `/assessment` (тест уровня)
-- **После теста:** `assessment_completed = true`, `cefr_level` сохраняется → редирект на `/`
-- **Ошибки:** локализованы на русский (неверный пароль, email не подтверждён, и т.д.)
-
----
-
-## Внешние сервисы
-
-| Сервис | Назначение | Конфигурация |
-|---|---|---|
-| Supabase Auth | Аутентификация | `SUPABASE_URL`, `SUPABASE_ANON_KEY` (--dart-define) |
-| Supabase Database | Хранение данных | Через Supabase SDK |
-| Supabase Edge Functions | Бэкенд-логика чата | `SUPABASE_SERVICE_ROLE_KEY` (env) |
-| Anthropic Claude API | AI-чат | `CLAUDE_API_KEY` (env в Edge Function) |
-
----
-
-## Текущее состояние (MVP)
-
-### Работает с бэкендом
-- Auth (email/password, полный flow с nickname)
-- Chat (Edge Function → Claude API, стриминг, лимиты, persistence)
-- Assessment (12-вопросный тест CEFR-уровня, сохранение в profiles)
-- Onboarding guard (route redirect на `/assessment` для новых пользователей)
-
-### Только mock-данные (нет интеграции с Supabase)
-- Home (UserProgress — mock)
-- Grammar (GrammarItem — 3 hardcoded items)
-- Practice (Question — 3 hardcoded вопроса)
-- Profile (UserProfile, Achievement — mock)
-
-### Отсутствует
-- Локализация (i18n) — строки захардкожены на русском
-- CI/CD — нет конфигурации
-- Тесты — минимальные (level_calculator_test.dart)
-- Push-уведомления
-- Социальная авторизация
-- Монетизация
+- **AuthRepository:** обёртка Supabase auth API (`keepAlive: true`)
+- **После регистрации:** триггер `handle_new_user()` создаёт profiles row (nickname из metadata)
+- **Админ-роль:** триггер `handle_admin_role()` проверяет email в `admin_emails` при INSERT и UPDATE. JWT cache lag ~1h (роль в `app_metadata`, действует после обновления токена)
+- **Assessment:** `complete_assessment` RPC оценивает тест server-side
+- **Ошибки:** локализованы на русский
 
 ---
 
@@ -203,50 +223,60 @@ GoRouter redirect is synchronous. To guard routes based on async server state (e
 ```
 lib/src/
 ├── core/                           # Инфраструктура
-│   ├── storage/                    # LocalStorage + providers
+│   ├── common_widgets/             # Переиспользуемые виджеты
+│   ├── constants/                  # Цвета, размеры, тема
+│   ├── exceptions/                 # Error logger
+│   ├── local_storage/              # SharedPreferences + Drift (SQLite)
 │   ├── supabase/                   # Инициализация Supabase
-│   └── utils/logger.dart           # Логирование
+│   └── utils/                      # Logger, NotifierMounted mixin
 ├── features/                       # Фичи (domain/data/application/presentation)
-│   ├── assessment/
-│   ├── auth/
-│   ├── chat/
-│   ├── grammar/
-│   ├── home/
-│   ├── word_quiz/
-│   └── profile/
-├── routing/                        # GoRouter + bottom nav
-└── shared/
-    ├── common_widgets/             # Переиспользуемые виджеты
-    └── constants/                  # Цвета, размеры, тема
+│   ├── admin/                      # Админ-панель (CRUD daily_words)
+│   ├── assessment/                 # Тест уровня (12 вопросов → cefr_level)
+│   ├── auth/                       # Авторизация (AuthRepository)
+│   ├── chat/                       # AI-чат с Claude
+│   ├── grammar/                    # Грамматика
+│   ├── home/                       # Главный экран (прогресс)
+│   ├── profile/                    # Профиль + настройки
+│   └── word_quiz/                  # Word quiz (domain/data/application/presentation)
+└── routing/                        # GoRouter + GoRouterRefreshStream
 ```
 
 ### Слои внутри фичи
 
-- **domain/** — модели (plain immutable classes, без freezed)
-- **data/** — репозитории (Supabase/локальное хранилище)
-- **application/** — контроллеры (Riverpod StateNotifier / AsyncNotifier)
+- **domain/** — модели (freezed в word_quiz, plain classes в остальных)
+- **data/** — репозитории (Supabase SDK, Drift для локальных слов)
+- **application/** — контроллеры (Riverpod `@riverpod` AsyncNotifier / Notifier)
 - **presentation/** — экраны и виджеты
 
-### Known Import Conflicts
+### NotifierMounted mixin
 
-- **`LocalStorage`**: `package:supabase_flutter` exports a `LocalStorage` class that conflicts with `lib/src/core/storage/local_storage.dart`. When importing both, always use: `import 'package:supabase_flutter/supabase_flutter.dart' hide LocalStorage;`
+Все async-нотифаеры используют `NotifierMounted` mixin (`core/utils/notifier_mounted.dart`) для проверки `mounted` перед установкой state.
 
 ### Supabase DELETE workaround
 
-PostgREST requires at least one filter on DELETE. To delete all user's rows (with RLS), use `.delete().neq('id', '')` as a "match all owned rows" pattern.
+PostgREST требует фильтр на DELETE. Для удаления всех строк владельца (с RLS): `.delete().neq('id', '')`.
 
 ### Quiz Day Timezone Logic
 
-The daily word quiz rolls over at **02:00 Almaty time** (21:00 UTC previous day). Almaty is hardcoded as UTC+5 (no timezone package).
+Дневной word quiz переключается в **02:00 Almaty time** (21:00 UTC предыдущего дня). Almaty hardcoded как UTC+5.
 
-- **Client (Dart):** `DateTime.now().toUtc().add(Duration(hours: 3))` truncated to date — the `+3` = UTC+5 minus 2h rollover offset. See `lib/src/features/word_quiz/domain/quiz_day_util.dart`.
+- **Client (Dart):** `DateTime.now().toUtc().add(Duration(hours: 3))` truncated to date
 - **Server (SQL):** `(NOW() AT TIME ZONE 'Asia/Almaty' - INTERVAL '2 hours')::date`
-
-Both must produce the same date for any given moment. If Kazakhstan changes its UTC offset, both must be updated.
 
 ### Инициализация приложения
 
 ```
 main() → initSupabase() → SharedPreferences.getInstance()
-       → ProviderScope(overrides: [prefs]) → LangualioApp
+       → AppDatabase (Drift) → ProviderScope(overrides: [prefs, db]) → LangualioApp
 ```
+
+---
+
+## Внешние сервисы
+
+| Сервис | Назначение | Конфигурация |
+|---|---|---|
+| Supabase Auth | Аутентификация | `SUPABASE_URL`, `SUPABASE_ANON_KEY` (--dart-define) |
+| Supabase Database | Хранение данных | Через Supabase SDK |
+| Supabase Edge Functions | Бэкенд-логика чата и генерации | `SUPABASE_SERVICE_ROLE_KEY` (env) |
+| Anthropic Claude API | AI-чат и генерация слов | `CLAUDE_API_KEY` (env в Edge Function) |

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../shared/constants/app_colors.dart';
+import '../../../core/constants/app_colors.dart';
 
 class GoalCard extends StatelessWidget {
   const GoalCard({

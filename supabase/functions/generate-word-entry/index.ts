@@ -1,13 +1,11 @@
-import { serve } from "https://deno.land/std@0.177.0/http/server.ts";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+import Anthropic from "@anthropic-ai/sdk";
+import { verifyAuth, type AuthResult } from "../_shared/auth.ts";
+import { CLAUDE_MODEL } from "../_shared/constants.ts";
+import { handleCors } from "../_shared/cors.ts";
+import { requireEnv } from "../_shared/env.ts";
+import { jsonResponse } from "../_shared/response.ts";
 
-const CLAUDE_API_KEY = Deno.env.get("CLAUDE_API_KEY")!;
-const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
-const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-
-const CLAUDE_API_URL = "https://api.anthropic.com/v1/messages";
-const CLAUDE_MODEL = "claude-sonnet-4-20250514";
-const MAX_TOKENS = 2048;
+const MAX_TOKENS = 1024;
 const DAILY_GENERATION_LIMIT = 10;
 
 const SYSTEM_PROMPT = `You are a linguistic expert that generates structured vocabulary entries for an English learning app.
@@ -31,48 +29,42 @@ Include multiple meanings when the word genuinely has distinct senses (e.g. "run
 
 Return ONLY valid JSON, no markdown fences, no explanation. Just the JSON object.`;
 
-serve(async (req) => {
+Deno.serve(async (req: Request) => {
   // CORS
-  if (req.method === "OPTIONS") {
-    return new Response("ok", {
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers":
-          "authorization, content-type, x-client-info, apikey",
-      },
-    });
-  }
+  const corsResponse = handleCors(req);
+  if (corsResponse) return corsResponse;
+
+  const startTime = performance.now();
 
   try {
     // 1. Verify auth
-    const authHeader = req.headers.get("Authorization");
-    if (!authHeader) {
-      return jsonResponse({ error: "Missing authorization" }, 401);
+    const authResult = await verifyAuth(req);
+    if (authResult instanceof Response) return authResult;
+    const { user, supabase } = authResult as AuthResult;
+    console.log(`[generate-word-entry] user=${user.id}, auth=${(performance.now() - startTime).toFixed(0)}ms`);
+
+    // 2. Admin-only gate (only admins can generate word entries)
+    const userRole = user.app_metadata?.role;
+    if (userRole !== "admin") {
+      return jsonResponse({ error: "Forbidden: admin only" }, 403);
     }
 
-    const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
-    const token = authHeader.replace("Bearer ", "");
-    const {
-      data: { user },
-      error: authError,
-    } = await supabase.auth.getUser(token);
+    // 3. Atomic quota check (consume before Claude call, prevents race conditions)
+    const { data: quotaGranted, error: quotaError } = await supabase.rpc(
+      "try_consume_quota",
+      {
+        p_user_id: user.id,
+        p_kind: "generation",
+        p_limit: DAILY_GENERATION_LIMIT,
+      }
+    );
 
-    if (authError || !user) {
-      return jsonResponse({ error: "Unauthorized" }, 401);
+    if (quotaError) {
+      console.error("Quota RPC error:", quotaError);
+      return jsonResponse({ error: "Internal server error" }, 500);
     }
 
-    // 2. Check per-user rate limit (10 generations/day)
-    const today = new Date().toISOString().split("T")[0];
-    const { data: usageData } = await supabase
-      .from("user_daily_usage")
-      .select("generation_count")
-      .eq("user_id", user.id)
-      .eq("date", today)
-      .single();
-
-    const currentGenerations = usageData?.generation_count ?? 0;
-
-    if (currentGenerations >= DAILY_GENERATION_LIMIT) {
+    if (!quotaGranted) {
       return jsonResponse(
         {
           error: "Daily generation limit reached",
@@ -83,101 +75,72 @@ serve(async (req) => {
       );
     }
 
-    // 3. Parse and validate request
+    // 4. Parse and validate request
     const { word } = await req.json();
     if (!word || typeof word !== "string" || word.trim().length === 0) {
       return jsonResponse({ error: "Word is required" }, 400);
     }
 
-    // 4. Call Claude API
-    const claudeResponse = await fetch(CLAUDE_API_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "x-api-key": CLAUDE_API_KEY,
-        "anthropic-version": "2023-06-01",
-      },
-      body: JSON.stringify({
-        model: CLAUDE_MODEL,
-        max_tokens: MAX_TOKENS,
-        system: SYSTEM_PROMPT,
-        messages: [
-          {
-            role: "user",
-            content: `Generate a vocabulary entry for the word: "${word.trim()}"`,
-          },
-        ],
-      }),
+    console.log(`[generate-word-entry] word="${word.trim()}", quota=${(performance.now() - startTime).toFixed(0)}ms`);
+
+    // 5. Call Claude API
+    const claudeStart = performance.now();
+    const client = new Anthropic({ apiKey: requireEnv("CLAUDE_API_KEY") });
+    const message = await client.messages.create({
+      model: CLAUDE_MODEL,
+      max_tokens: MAX_TOKENS,
+      system: SYSTEM_PROMPT,
+      messages: [{
+        role: "user",
+        content: `Generate a vocabulary entry for the word: "${word.trim()}"`,
+      }],
     });
 
-    if (!claudeResponse.ok) {
-      const errorText = await claudeResponse.text();
-      console.error("Claude API error:", claudeResponse.status, errorText);
-      return jsonResponse({ error: "AI service error" }, 502);
-    }
-
-    // 5. Extract text from Claude response
-    const claudeData = await claudeResponse.json();
-    const textContent = claudeData.content?.find(
-      (block: { type: string }) => block.type === "text"
+    console.log(
+      `[generate-word-entry] Claude API: model=${message.model}, stop=${message.stop_reason}, ` +
+      `tokens=${message.usage.input_tokens}in/${message.usage.output_tokens}out, ` +
+      `duration=${(performance.now() - claudeStart).toFixed(0)}ms`
     );
 
-    if (!textContent?.text) {
-      console.error("No text in Claude response:", JSON.stringify(claudeData));
+    // 6. Extract text from Claude response
+    const textBlock = message.content.find((block) => block.type === "text");
+    if (!textBlock || textBlock.type !== "text") {
+      console.error("No text in Claude response:", JSON.stringify(message.content));
       return jsonResponse({ error: "AI returned empty response" }, 502);
     }
 
-    // 6. Parse JSON from response
+    // 7. Parse JSON from response
     let wordEntry: Record<string, unknown>;
     try {
-      wordEntry = JSON.parse(textContent.text.trim());
+      wordEntry = JSON.parse(textBlock.text.trim());
     } catch {
-      console.error("Failed to parse AI response as JSON:", textContent.text);
+      console.error("Failed to parse AI response as JSON:", textBlock.text);
       return jsonResponse(
-        { error: "AI returned invalid JSON", raw: textContent.text },
+        { error: "AI returned invalid JSON", raw: textBlock.text },
         502
       );
     }
 
-    // 7. Validate meanings array
+    // 8. Validate meanings array
     if (
       !Array.isArray(wordEntry.meanings) ||
       wordEntry.meanings.length === 0
     ) {
-      console.error("AI response missing meanings array:", JSON.stringify(wordEntry));
+      console.error(
+        "AI response missing meanings array:",
+        JSON.stringify(wordEntry)
+      );
       return jsonResponse(
         { error: "AI returned entry without meanings" },
         502
       );
     }
 
-    // 8. Increment generation count
-    await supabase.from("user_daily_usage").upsert(
-      {
-        user_id: user.id,
-        date: today,
-        generation_count: currentGenerations + 1,
-      },
-      { onConflict: "user_id,date" }
-    );
-
-    // 9. Return the generated entry
+    // 9. Return the generated entry (quota already consumed atomically in step 3)
+    console.log(`[generate-word-entry] total=${(performance.now() - startTime).toFixed(0)}ms`);
     return jsonResponse({ data: wordEntry }, 200);
   } catch (error) {
     console.error("Edge function error:", error);
     return jsonResponse({ error: "Internal server error" }, 500);
   }
 });
-
-function jsonResponse(
-  body: Record<string, unknown>,
-  status: number
-): Response {
-  return new Response(JSON.stringify(body), {
-    status,
-    headers: {
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*",
-    },
-  });
-}

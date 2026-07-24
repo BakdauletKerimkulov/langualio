@@ -1,5 +1,7 @@
 # GoRouter Navigation Guidelines
 
+_Часть общей базы agentic-coding-toolkit. Правь в базе, не в проекте — локальные правки затрёт sync._
+
 Universal GoRouter patterns for all Flutter projects. Project-specific route lists belong in `ai_docs/`.
 
 ---

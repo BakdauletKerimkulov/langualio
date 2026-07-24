@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../domain/quiz_session.dart';
+import '../domain/word_entry.dart';
 import '../domain/word_quiz_attempt.dart';
 import 'word_quiz_notifier.dart';
 
@@ -17,6 +18,7 @@ class QuizHomeState {
     this.mistakes = const [],
     this.languageDirection = LanguageDirection.enToRu,
     this.hasWords = false,
+    this.userWordCount = 0,
   });
 
   final int completedCount;
@@ -26,6 +28,7 @@ class QuizHomeState {
   final List<WordQuizAttempt> mistakes;
   final LanguageDirection languageDirection;
   final bool hasWords;
+  final int userWordCount;
 
   double get scorePercent =>
       totalWords > 0 ? correctCount / totalWords : 0.0;
@@ -38,6 +41,7 @@ class QuizHomeState {
     List<WordQuizAttempt>? mistakes,
     LanguageDirection? languageDirection,
     bool? hasWords,
+    int? userWordCount,
   }) {
     return QuizHomeState(
       completedCount: completedCount ?? this.completedCount,
@@ -47,6 +51,7 @@ class QuizHomeState {
       mistakes: mistakes ?? this.mistakes,
       languageDirection: languageDirection ?? this.languageDirection,
       hasWords: hasWords ?? this.hasWords,
+      userWordCount: userWordCount ?? this.userWordCount,
     );
   }
 
@@ -59,12 +64,13 @@ class QuizHomeState {
           isFinished == other.isFinished &&
           correctCount == other.correctCount &&
           languageDirection == other.languageDirection &&
-          hasWords == other.hasWords;
+          hasWords == other.hasWords &&
+          userWordCount == other.userWordCount;
 
   @override
   int get hashCode => Object.hash(
       completedCount, totalWords, isFinished, correctCount,
-      languageDirection, hasWords);
+      languageDirection, hasWords, userWordCount);
 }
 
 @riverpod
@@ -82,6 +88,9 @@ class QuizHomeNotifier extends _$QuizHomeNotifier {
         mistakes: session.mistakes,
         languageDirection: session.languageDirection,
         hasWords: session.todayWords.isNotEmpty,
+        userWordCount: session.todayWords
+            .where((w) => w.source == WordSource.user)
+            .length,
       ),
       loading: () => const QuizHomeState(),
       error: (_, __) => const QuizHomeState(),

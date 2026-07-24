@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
+import '../../../core/utils/notifier_mounted.dart';
 import '../../word_quiz/domain/word_entry.dart';
 import '../data/admin_repository.dart';
 
@@ -57,9 +58,13 @@ class AdminWordFormState {
 }
 
 @riverpod
-class AdminWordFormNotifier extends _$AdminWordFormNotifier {
+class AdminWordFormNotifier extends _$AdminWordFormNotifier
+    with NotifierMounted {
   @override
-  AdminWordFormState build() => const AdminWordFormState();
+  AdminWordFormState build() {
+    ref.onDispose(setUnmounted);
+    return const AdminWordFormState();
+  }
 
   AdminRepository get _repo => ref.read(adminRepositoryProvider);
 
@@ -72,21 +77,21 @@ class AdminWordFormNotifier extends _$AdminWordFormNotifier {
     try {
       // Check for duplicate first
       final isDuplicate = await _repo.checkDuplicateWord(word);
-      if (!_mounted) return;
+      if (!mounted) return;
 
       if (isDuplicate) {
         state = state.copyWith(isGenerating: false, duplicateWarning: true);
       }
 
       final data = await _repo.generateWordEntry(word);
-      if (!_mounted) return;
+      if (!mounted) return;
 
       state = state.copyWith(
         generatedData: data,
         isGenerating: false,
       );
     } catch (e) {
-      if (!_mounted) return;
+      if (!mounted) return;
       state = state.copyWith(
         isGenerating: false,
         error: 'Ошибка генерации: $e',
@@ -103,11 +108,11 @@ class AdminWordFormNotifier extends _$AdminWordFormNotifier {
 
     try {
       await _repo.createWord(entry, status: status);
-      if (!_mounted) return false;
+      if (!mounted) return false;
       state = state.copyWith(isSaving: false);
       return true;
     } catch (e) {
-      if (!_mounted) return false;
+      if (!mounted) return false;
       state = state.copyWith(
         isSaving: false,
         error: 'Ошибка сохранения: $e',
@@ -126,11 +131,11 @@ class AdminWordFormNotifier extends _$AdminWordFormNotifier {
 
     try {
       await _repo.updateWord(wordId, entry, status: status);
-      if (!_mounted) return false;
+      if (!mounted) return false;
       state = state.copyWith(isSaving: false);
       return true;
     } catch (e) {
-      if (!_mounted) return false;
+      if (!mounted) return false;
       state = state.copyWith(
         isSaving: false,
         error: 'Ошибка обновления: $e',
@@ -144,7 +149,4 @@ class AdminWordFormNotifier extends _$AdminWordFormNotifier {
     state = state.copyWith(duplicateWarning: false);
   }
 
-  bool get _mounted {
-    try { state; return true; } catch (_) { return false; }
-  }
 }

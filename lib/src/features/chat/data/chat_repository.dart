@@ -2,10 +2,9 @@ import 'dart:convert';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:supabase_flutter/supabase_flutter.dart' hide LocalStorage;
-import '../../../core/storage/local_storage.dart';
-import '../../../core/storage/storage_provider.dart';
+import '../../../core/local_storage/shared_prefs.dart';
+import '../../../core/local_storage/storage_provider.dart';
 import '../../../core/supabase/supabase_client.dart';
-import '../../../core/utils/logger.dart';
 import '../domain/chat_message.dart';
 
 part 'chat_repository.g.dart';
@@ -38,44 +37,39 @@ class ChatRepository {
   }
 
   /// Fetch messages from Supabase with cursor pagination and 48h filter.
-  /// On network error, falls back to cached messages.
+  /// Throws on network error so the caller can surface the error to the user.
   Future<List<ChatMessage>> fetchMessages({
     int limit = 20,
     DateTime? before,
   }) async {
-    try {
-      final cutoff =
-          DateTime.now().subtract(const Duration(hours: 48)).toUtc();
+    final cutoff =
+        DateTime.now().subtract(const Duration(hours: 48)).toUtc();
 
-      var query = _client
-          .from(_table)
-          .select()
-          .gt('created_at', cutoff.toIso8601String());
+    var query = _client
+        .from(_table)
+        .select()
+        .gt('created_at', cutoff.toIso8601String());
 
-      if (before != null) {
-        query = query.lt('created_at', before.toUtc().toIso8601String());
-      }
-
-      final response = await query
-          .order('created_at', ascending: false)
-          .limit(limit);
-
-      final messages = (response as List)
-          .map((row) => _fromRow(row as Map<String, dynamic>))
-          .toList()
-          .reversed
-          .toList();
-
-      // Cache first page (most recent messages) only
-      if (before == null) {
-        await _cacheMessages(messages);
-      }
-
-      return messages;
-    } catch (e) {
-      log('fetchMessages error: $e', name: 'ChatRepository');
-      return loadCachedMessages();
+    if (before != null) {
+      query = query.lt('created_at', before.toUtc().toIso8601String());
     }
+
+    final response = await query
+        .order('created_at', ascending: false)
+        .limit(limit);
+
+    final messages = (response as List)
+        .map((row) => _fromRow(row as Map<String, dynamic>))
+        .toList()
+        .reversed
+        .toList();
+
+    // Cache first page (most recent messages) only
+    if (before == null) {
+      await _cacheMessages(messages);
+    }
+
+    return messages;
   }
 
   /// Delete all user messages from server, then clear local cache.

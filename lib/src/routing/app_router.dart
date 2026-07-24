@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:langualio/src/features/auth/data/auth_repository.dart';
+import 'package:langualio/src/routing/go_router_refresh_stream.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../features/admin/presentation/admin_word_list_screen.dart';
 import '../features/auth/presentation/login_screen.dart';
@@ -35,10 +36,12 @@ enum AppRoute {
 
 @riverpod
 GoRouter goRouter(Ref ref) {
+  final authRepository = ref.read(authRepositoryProvider);
+
   return GoRouter(
     initialLocation: '/',
     redirect: (context, state) {
-      final session = Supabase.instance.client.auth.currentSession;
+      final session = authRepository.currentSession;
       final isAuth = session != null;
       final isAuthRoute =
           state.matchedLocation == '/login' ||
@@ -48,6 +51,7 @@ GoRouter goRouter(Ref ref) {
       if (isAuth && isAuthRoute) return '/';
       return null;
     },
+    refreshListenable: GoRouterRefreshStream(authRepository.authStateChanges()),
     routes: [
       GoRoute(
         path: '/login',

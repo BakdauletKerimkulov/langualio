@@ -4,7 +4,6 @@ import '../data/assessment_repository.dart';
 import '../data/question_bank.dart';
 import '../domain/assessment_question.dart';
 import '../domain/assessment_result.dart';
-import 'level_calculator.dart';
 import 'onboarding_state_provider.dart';
 
 part 'assessment_controller.g.dart';
@@ -57,21 +56,29 @@ class AssessmentController extends _$AssessmentController {
         answers: newAnswers,
       );
     } else {
-      // Last question — calculate result
-      final result = calculateLevel(
-        questions: questionBank,
-        answers: newAnswers,
-      );
-      state = state.copyWith(answers: newAnswers, result: result);
+      // Last question — store answer and submit to server
+      state = state.copyWith(answers: newAnswers, isSaving: true);
+      _completeOnServer(newAnswers);
     }
   }
 
-  Future<void> saveAndComplete() async {
+  /// Sends answers to server RPC which validates, computes level,
+  /// and updates the profile.
+  Future<void> _completeOnServer(Map<int, String> answers) async {
+    final result = await ref
+        .read(assessmentRepositoryProvider)
+        .completeAssessment(
+          questions: questionBank,
+          answers: answers,
+        );
+
+    state = state.copyWith(isSaving: false, result: result);
+  }
+
+  /// Called from ResultView "Continue" button — updates onboarding state.
+  void completeOnboarding() {
     final result = state.result;
     if (result == null) return;
-
-    state = state.copyWith(isSaving: true);
-    await ref.read(assessmentRepositoryProvider).saveResult(result.level);
     ref
         .read(onboardingStateNotifierProvider.notifier)
         .markCompleted(result.level);

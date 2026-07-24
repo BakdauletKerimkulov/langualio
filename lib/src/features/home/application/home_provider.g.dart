@@ -7,7 +7,7 @@ part of 'home_provider.dart';
 // **************************************************************************
 
 String _$userProgressNotifierHash() =>
-    r'0084272f0a83fbc97eadf2528dc2b7a8e2c4e974';
+    r'7080b390b7dec3d42592a1ab69fee8b16f1abe0f';
 
 /// See also [UserProgressNotifier].
 @ProviderFor(UserProgressNotifier)

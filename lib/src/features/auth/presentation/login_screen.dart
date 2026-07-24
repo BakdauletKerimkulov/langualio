@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../../../core/common_widgets/primary_button.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_sizes.dart';
 import '../../../routing/app_router.dart';
-import '../application/auth_provider.dart';
+import '../data/auth_repository.dart';
 
 class LoginScreen extends ConsumerStatefulWidget {
   const LoginScreen({super.key});
@@ -19,6 +20,8 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   bool _obscurePassword = true;
+  bool _isLoading = false;
+  String? _error;
 
   @override
   void dispose() {
@@ -27,25 +30,42 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
     super.dispose();
   }
 
-  void _handleLogin() {
+  Future<void> _handleLogin() async {
     final email = _emailController.text.trim();
     final password = _passwordController.text;
     if (email.isEmpty || password.isEmpty) return;
 
-    ref
-        .read(authNotifierProvider.notifier)
-        .signIn(email: email, password: password);
+    setState(() {
+      _isLoading = true;
+      _error = null;
+    });
+    try {
+      await ref
+          .read(authRepositoryProvider)
+          .signIn(email: email, password: password);
+      // Navigation handled by GoRouter redirect
+    } on AuthException catch (e) {
+      setState(() => _error = _mapAuthError(e));
+    } catch (e) {
+      setState(() => _error = 'Не удалось войти. Проверь интернет.');
+    } finally {
+      if (mounted) setState(() => _isLoading = false);
+    }
+  }
+
+  String _mapAuthError(AuthException e) {
+    final msg = e.message.toLowerCase();
+    if (msg.contains('invalid login credentials')) {
+      return 'Неверный email или пароль.';
+    }
+    if (msg.contains('email not confirmed')) {
+      return 'Email не подтверждён. Проверь почту.';
+    }
+    return 'Ошибка: ${e.message}';
   }
 
   @override
   Widget build(BuildContext context) {
-    final state = ref.watch(authNotifierProvider);
-
-    ref.listen(authNotifierProvider, (prev, next) {
-      if (!prev!.isAuthenticated && next.isAuthenticated) {
-        context.goNamed(AppRoute.home.name);
-      }
-    });
 
     return Scaffold(
       backgroundColor: AppColors.background,
@@ -92,7 +112,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
               ),
               gapH48,
               // Error
-              if (state.error != null) ...[
+              if (_error != null) ...[
                 Container(
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
@@ -109,7 +129,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       gapW8,
                       Expanded(
                         child: Text(
-                          state.error!,
+                          _error!,
                           style: Theme.of(context)
                               .textTheme
                               .bodyMedium
@@ -155,9 +175,9 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
               gapH32,
               // Login button
               PrimaryButton(
-                text: state.isLoading ? 'Вхожу...' : 'Войти',
+                text: _isLoading ? 'Вхожу...' : 'Войти',
                 isExpanded: true,
-                onPressed: state.isLoading ? () {} : _handleLogin,
+                onPressed: _isLoading ? () {} : _handleLogin,
               ),
               gapH16,
               // Register link

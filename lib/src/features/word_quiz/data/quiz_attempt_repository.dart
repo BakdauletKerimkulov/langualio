@@ -3,7 +3,6 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../../../core/supabase/supabase_client.dart';
-import '../../../core/utils/logger.dart';
 import '../domain/quiz_day_util.dart';
 import '../domain/quiz_session.dart';
 import '../domain/word_quiz_attempt.dart';
@@ -37,37 +36,25 @@ class QuizAttemptRepository {
         .toList();
   }
 
-  /// Saves an attempt to Supabase.
+  /// Saves an attempt to Supabase. Throws on failure so the caller can surface
+  /// the error to the user instead of silently losing progress.
   Future<void> saveAttempt(WordQuizAttempt attempt) async {
-    try {
-      await _client.from('word_quiz_attempts').insert(attempt.toJson());
-    } catch (e) {
-      log(
-        'Failed to save attempt: $e',
-        name: 'QuizAttemptRepository',
-      );
-    }
+    await _client.from('word_quiz_attempts').insert(attempt.toJson());
   }
 
   /// Calls the server-side `upsert_word_learning_progress` RPC.
+  /// Throws on failure so the caller can surface the error.
   Future<void> updateLearningProgress({
     required String wordId,
     required DateTime correctDate,
   }) async {
-    try {
-      await _client.rpc(
-        'upsert_word_learning_progress',
-        params: {
-          'p_word_id': wordId,
-          'p_correct_date': dateToString(correctDate),
-        },
-      );
-    } catch (e) {
-      log(
-        'Failed to update learning progress: $e',
-        name: 'QuizAttemptRepository',
-      );
-    }
+    await _client.rpc(
+      'upsert_word_learning_progress',
+      params: {
+        'p_word_id': wordId,
+        'p_correct_date': dateToString(correctDate),
+      },
+    );
   }
 }
 

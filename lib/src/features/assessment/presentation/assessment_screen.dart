@@ -23,12 +23,14 @@ class AssessmentScreen extends ConsumerWidget {
           child: state.isComplete
               ? ResultView(
                   result: state.result!,
-                  isSaving: state.isSaving,
+                  isSaving: false,
                   onContinue: () => ref
                       .read(assessmentControllerProvider.notifier)
-                      .saveAndComplete(),
+                      .completeOnboarding(),
                 )
-              : _QuestionView(state: state),
+              : state.isSaving
+                  ? const Center(child: CircularProgressIndicator())
+                  : _QuestionView(state: state),
         ),
       ),
     );
