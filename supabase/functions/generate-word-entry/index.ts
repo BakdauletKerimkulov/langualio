@@ -1,11 +1,11 @@
-import { serve } from "https://deno.land/std@0.177.0/http/server.ts";
-import { CLAUDE_API_URL, CLAUDE_MODEL } from "../_shared/constants.ts";
-import { handleCors } from "../_shared/cors.ts";
+import Anthropic from "@anthropic-ai/sdk";
 import { verifyAuth, type AuthResult } from "../_shared/auth.ts";
-import { jsonResponse } from "../_shared/response.ts";
+import { CLAUDE_MODEL } from "../_shared/constants.ts";
+import { handleCors } from "../_shared/cors.ts";
 import { requireEnv } from "../_shared/env.ts";
+import { jsonResponse } from "../_shared/response.ts";
 
-const MAX_TOKENS = 2048;
+const MAX_TOKENS = 1024;
 const DAILY_GENERATION_LIMIT = 10;
 
 const SYSTEM_PROMPT = `You are a linguistic expert that generates structured vocabulary entries for an English learning app.
@@ -29,16 +29,19 @@ Include multiple meanings when the word genuinely has distinct senses (e.g. "run
 
 Return ONLY valid JSON, no markdown fences, no explanation. Just the JSON object.`;
 
-serve(async (req) => {
+Deno.serve(async (req: Request) => {
   // CORS
   const corsResponse = handleCors(req);
   if (corsResponse) return corsResponse;
+
+  const startTime = performance.now();
 
   try {
     // 1. Verify auth
     const authResult = await verifyAuth(req);
     if (authResult instanceof Response) return authResult;
     const { user, supabase } = authResult as AuthResult;
+    console.log(`[generate-word-entry] user=${user.id}, auth=${(performance.now() - startTime).toFixed(0)}ms`);
 
     // 2. Admin-only gate (only admins can generate word entries)
     const userRole = user.app_metadata?.role;
@@ -78,53 +81,42 @@ serve(async (req) => {
       return jsonResponse({ error: "Word is required" }, 400);
     }
 
+    console.log(`[generate-word-entry] word="${word.trim()}", quota=${(performance.now() - startTime).toFixed(0)}ms`);
+
     // 5. Call Claude API
-    const claudeApiKey = requireEnv("CLAUDE_API_KEY");
-    const claudeResponse = await fetch(CLAUDE_API_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "x-api-key": claudeApiKey,
-        "anthropic-version": "2023-06-01",
-      },
-      body: JSON.stringify({
-        model: CLAUDE_MODEL,
-        max_tokens: MAX_TOKENS,
-        system: SYSTEM_PROMPT,
-        messages: [
-          {
-            role: "user",
-            content: `Generate a vocabulary entry for the word: "${word.trim()}"`,
-          },
-        ],
-      }),
+    const claudeStart = performance.now();
+    const client = new Anthropic({ apiKey: requireEnv("CLAUDE_API_KEY") });
+    const message = await client.messages.create({
+      model: CLAUDE_MODEL,
+      max_tokens: MAX_TOKENS,
+      system: SYSTEM_PROMPT,
+      messages: [{
+        role: "user",
+        content: `Generate a vocabulary entry for the word: "${word.trim()}"`,
+      }],
     });
 
-    if (!claudeResponse.ok) {
-      const errorText = await claudeResponse.text();
-      console.error("Claude API error:", claudeResponse.status, errorText);
-      return jsonResponse({ error: "AI service error" }, 502);
-    }
-
-    // 6. Extract text from Claude response
-    const claudeData = await claudeResponse.json();
-    const textContent = claudeData.content?.find(
-      (block: { type: string }) => block.type === "text"
+    console.log(
+      `[generate-word-entry] Claude API: model=${message.model}, stop=${message.stop_reason}, ` +
+      `tokens=${message.usage.input_tokens}in/${message.usage.output_tokens}out, ` +
+      `duration=${(performance.now() - claudeStart).toFixed(0)}ms`
     );
 
-    if (!textContent?.text) {
-      console.error("No text in Claude response:", JSON.stringify(claudeData));
+    // 6. Extract text from Claude response
+    const textBlock = message.content.find((block) => block.type === "text");
+    if (!textBlock || textBlock.type !== "text") {
+      console.error("No text in Claude response:", JSON.stringify(message.content));
       return jsonResponse({ error: "AI returned empty response" }, 502);
     }
 
     // 7. Parse JSON from response
     let wordEntry: Record<string, unknown>;
     try {
-      wordEntry = JSON.parse(textContent.text.trim());
+      wordEntry = JSON.parse(textBlock.text.trim());
     } catch {
-      console.error("Failed to parse AI response as JSON:", textContent.text);
+      console.error("Failed to parse AI response as JSON:", textBlock.text);
       return jsonResponse(
-        { error: "AI returned invalid JSON", raw: textContent.text },
+        { error: "AI returned invalid JSON", raw: textBlock.text },
         502
       );
     }
@@ -145,6 +137,7 @@ serve(async (req) => {
     }
 
     // 9. Return the generated entry (quota already consumed atomically in step 3)
+    console.log(`[generate-word-entry] total=${(performance.now() - startTime).toFixed(0)}ms`);
     return jsonResponse({ data: wordEntry }, 200);
   } catch (error) {
     console.error("Edge function error:", error);

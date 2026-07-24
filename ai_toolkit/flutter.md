@@ -1,5 +1,7 @@
 # Flutter & Dart Framework Guidelines
 
+_Часть общей базы agentic-coding-toolkit. Правь в базе, не в проекте — локальные правки затрёт sync._
+
 Current versions and framework-specific rules. Updated May 2026.
 
 ---
@@ -202,6 +204,26 @@ dart run build_runner build --delete-conflicting-outputs
 ```
 
 After every Flutter upgrade: run `dart fix --apply`, then `dart analyze`, then `build_runner build`.
+
+---
+
+## Widget Tests with Localization
+
+Screens using `context.loc` require localization delegates in the test harness:
+
+```dart
+ProviderScope(
+  overrides: [...],
+  child: MaterialApp(
+    localizationsDelegates: AppLocalizations.localizationsDelegates,
+    supportedLocales: AppLocalizations.supportedLocales,
+    locale: const Locale('en'),
+    home: const MyScreen(),
+  ),
+)
+```
+
+Pure widgets that don't access `context.loc` (like `AnimatedFavoriteButton`) can use a plain `MaterialApp`.
 
 ---
 

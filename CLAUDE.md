@@ -1,15 +1,15 @@
 # CLAUDE.md
 
 Read these before any task:
-1. `ai_toolkit/guidelines/` — all files (code style, architecture, riverpod, firebase, flutter)
+1. `ai_toolkit/` — all files (code style, architecture, riverpod, supabase, edge-functions, testing, flutter, gorouter)
 2. `ai_docs/` — all files (project-specific knowledge base)
 
-For feature work, follow the workflow:
+For feature work, follow the workflow in `ai_toolkit/commands.md` (templates in `ai_toolkit/templates.md`):
 1. Read `ai_specs/{feature}/requirements.md`
-2. Generate plan with `ai_toolkit/commands/plan.md`
-3. Implement with `ai_toolkit/commands/implement.md`
-4. Review with `ai_toolkit/commands/review.md`
-5. Commit with `ai_toolkit/commands/commit.md`
+2. Generate plan with `/plan`
+3. Implement with `/implement`
+4. Review with `/review`
+5. Commit with `/commit`
 
 ## Build & Dev Commands
 

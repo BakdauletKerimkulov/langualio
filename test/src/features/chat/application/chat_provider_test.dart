@@ -93,6 +93,63 @@ void main() {
       expect(state.error, contains('Ошибка'));
     });
 
+    test('empty response text sets error instead of empty bubble', () async {
+      final fakeRepo = _FakeChatRepository(
+        sendResult: FunctionResponse(
+          status: 200,
+          data: {
+            'text': '',
+            'daily_limit': 20,
+            'daily_remaining': 19,
+          },
+        ),
+      );
+
+      final container = ProviderContainer(
+        overrides: [
+          chatRepositoryProvider.overrideWithValue(fakeRepo),
+        ],
+      );
+      addTearDown(container.dispose);
+
+      final notifier = container.read(chatNotifierProvider.notifier);
+      await notifier.sendMessage('Hello');
+
+      final state = container.read(chatNotifierProvider);
+      expect(state.isLoading, false);
+      expect(state.error, isNotNull);
+      // Should only have user message, no empty assistant bubble
+      expect(state.messages, hasLength(1));
+      expect(state.messages.first.role, MessageRole.user);
+    });
+
+    test('null response text sets error instead of empty bubble', () async {
+      final fakeRepo = _FakeChatRepository(
+        sendResult: FunctionResponse(
+          status: 200,
+          data: {
+            'daily_limit': 20,
+            'daily_remaining': 19,
+          },
+        ),
+      );
+
+      final container = ProviderContainer(
+        overrides: [
+          chatRepositoryProvider.overrideWithValue(fakeRepo),
+        ],
+      );
+      addTearDown(container.dispose);
+
+      final notifier = container.read(chatNotifierProvider.notifier);
+      await notifier.sendMessage('Hello');
+
+      final state = container.read(chatNotifierProvider);
+      expect(state.isLoading, false);
+      expect(state.error, isNotNull);
+      expect(state.messages, hasLength(1));
+    });
+
     test('network error sets error with internet message', () async {
       final fakeRepo = _FakeChatRepository(sendThrows: true);
 
