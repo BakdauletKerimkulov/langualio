@@ -1,0 +1,8 @@
+[project]
+id = "nuysaiqhhyvfqccgxpte"
+
+[functions.chat]
+import_map = "./functions/deno.json"
+
+[functions.generate-word-entry]
+import_map = "./functions/deno.json"
