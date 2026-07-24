@@ -1,6 +1,11 @@
 # Supabase local CLI state
 supabase/.temp/
 
+# Root-level Deno/TS artifacts (real config is in supabase/functions/)
+/deno.json
+/deno.lock
+/tsconfig.json
+
 # Environment files
 .env
 .env.*

@@ -1,11 +1,5 @@
 {
-    "compilerOptions": {
-        "strict": true,
-        "lib": [
-            "deno.window"
-        ]
-    },
-    "imports": {
-        "@anthropic-ai/sdk": "npm:@anthropic-ai/sdk@^0.113.0"
-    }
+  "imports": {
+    "@anthropic-ai/sdk": "npm:@anthropic-ai/sdk@^0.113.0"
+  }
 }
