@@ -1,6 +1,3 @@
-[project]
-id = "nuysaiqhhyvfqccgxpte"
-
 [functions.chat]
 import_map = "./functions/deno.json"
 
