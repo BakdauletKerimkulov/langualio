@@ -1,5 +1,6 @@
+import Anthropic from "@anthropic-ai/sdk";
 import { verifyAuth, type AuthResult } from "../_shared/auth.ts";
-import { CLAUDE_API_URL, CLAUDE_MODEL } from "../_shared/constants.ts";
+import { CLAUDE_MODEL } from "../_shared/constants.ts";
 import { handleCors } from "../_shared/cors.ts";
 import { requireEnv } from "../_shared/env.ts";
 import { jsonResponse } from "../_shared/response.ts";
@@ -96,41 +97,28 @@ Deno.serve(async (req: Request) => {
       context_payload: context_payload ?? null,
     });
 
-    // 8. Call Claude API (non-streaming JSON mode)
-    const claudeApiKey = requireEnv("CLAUDE_API_KEY");
-    const claudeResponse = await fetch(CLAUDE_API_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "x-api-key": claudeApiKey,
-        "anthropic-version": "2023-06-01",
-      },
-      body: JSON.stringify({
-        model: CLAUDE_MODEL,
-        max_tokens: MAX_TOKENS,
-        system: systemPrompt,
-        messages,
-      }),
+    // 8. Call Claude API
+    const client = new Anthropic({ apiKey: requireEnv("CLAUDE_API_KEY") });
+    const claudeResponse = await client.messages.create({
+      model: CLAUDE_MODEL,
+      max_tokens: MAX_TOKENS,
+      system: systemPrompt,
+      messages,
     });
 
-    if (!claudeResponse.ok) {
-      const errorText = await claudeResponse.text();
-      console.error("Claude API error:", claudeResponse.status, errorText);
-      return jsonResponse({ error: "AI service error" }, 502);
-    }
-
-    const claudeData = await claudeResponse.json();
     console.log(
-      `Claude API response: model=${claudeData.model}, stop_reason=${claudeData.stop_reason}, content_blocks=${claudeData.content?.length ?? 0}`
+      `[chat] Claude API: model=${claudeResponse.model}, stop=${claudeResponse.stop_reason}, ` +
+      `tokens=${claudeResponse.usage.input_tokens}in/${claudeResponse.usage.output_tokens}out`
     );
-    const responseText = claudeData.content?.[0]?.text ?? "";
 
-    if (!responseText) {
-      console.warn(
-        "Empty response from Claude API. Raw response:",
-        JSON.stringify(claudeData)
-      );
+    // Extract text from response
+    const textBlock = claudeResponse.content.find((block) => block.type === "text");
+    if (!textBlock || textBlock.type !== "text") {
+      console.error("No text in Claude response:", JSON.stringify(claudeResponse.content));
+      return jsonResponse({ error: "AI returned empty response" }, 502);
     }
+
+    const responseText = textBlock.text;
 
     // 9. Save assistant message (quota already consumed atomically in step 3)
     await supabase.from("chat_messages").insert({
