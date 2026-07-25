@@ -1,1 +1,1 @@
-export const CLAUDE_MODEL = "claude-opus-4-8";
+export const CLAUDE_MODEL = "claude-sonnet-5";
