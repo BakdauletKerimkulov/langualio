@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_sizes.dart';
-import '../application/admin_word_list_notifier.dart';
+import '../application/admin_word_list.dart';
 import 'widgets/status_filter_bar.dart';
 import 'widgets/word_list_tile.dart';
 
@@ -13,7 +13,7 @@ class AdminWordListScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final listState = ref.watch(adminWordListNotifierProvider);
+    final listState = ref.watch(adminWordListProvider);
 
     return Scaffold(
       appBar: AppBar(title: const Text('Управление словами')),
@@ -22,16 +22,15 @@ class AdminWordListScreen extends ConsumerWidget {
           gapH8,
           StatusFilterBar(
             activeFilter: listState.activeFilter,
-            onFilterChanged: (filter) => ref
-                .read(adminWordListNotifierProvider.notifier)
-                .setFilter(filter),
+            onFilterChanged: (filter) =>
+                ref.read(adminWordListProvider.notifier).setFilter(filter),
           ),
           gapH8,
           Expanded(
             child: _AdminWordListBody(
               listState: listState,
               onRefresh: () =>
-                  ref.read(adminWordListNotifierProvider.notifier).refresh(),
+                  ref.read(adminWordListProvider.notifier).refresh(),
             ),
           ),
         ],
@@ -39,7 +38,7 @@ class AdminWordListScreen extends ConsumerWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
           await context.push('/admin/create');
-          ref.read(adminWordListNotifierProvider.notifier).refresh();
+          ref.read(adminWordListProvider.notifier).refresh();
         },
         child: const Icon(Icons.add),
       ),
@@ -48,10 +47,7 @@ class AdminWordListScreen extends ConsumerWidget {
 }
 
 class _AdminWordListBody extends StatelessWidget {
-  const _AdminWordListBody({
-    required this.listState,
-    required this.onRefresh,
-  });
+  const _AdminWordListBody({required this.listState, required this.onRefresh});
 
   final AdminWordListState listState;
   final Future<void> Function() onRefresh;
@@ -69,17 +65,13 @@ class _AdminWordListBody extends StatelessWidget {
           children: [
             Text(
               listState.error!,
-              style: Theme.of(context)
-                  .textTheme
-                  .bodyMedium
-                  ?.copyWith(color: AppColors.error),
+              style: Theme.of(
+                context,
+              ).textTheme.bodyMedium?.copyWith(color: AppColors.error),
               textAlign: TextAlign.center,
             ),
             gapH16,
-            FilledButton(
-              onPressed: onRefresh,
-              child: const Text('Повторить'),
-            ),
+            FilledButton(onPressed: onRefresh, child: const Text('Повторить')),
           ],
         ),
       );
@@ -91,10 +83,9 @@ class _AdminWordListBody extends StatelessWidget {
           listState.activeFilter != null
               ? 'Нет слов с таким статусом'
               : 'Нет слов',
-          style: Theme.of(context)
-              .textTheme
-              .bodyLarge
-              ?.copyWith(color: AppColors.textSecondary),
+          style: Theme.of(
+            context,
+          ).textTheme.bodyLarge?.copyWith(color: AppColors.textSecondary),
         ),
       );
     }

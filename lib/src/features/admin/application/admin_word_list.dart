@@ -5,7 +5,7 @@ import '../../../core/utils/notifier_mounted.dart';
 import '../../word_quiz/domain/word_entry.dart';
 import '../data/admin_repository.dart';
 
-part 'admin_word_list_notifier.g.dart';
+part 'admin_word_list.g.dart';
 
 @immutable
 class AdminWordListState {
@@ -47,8 +47,7 @@ class AdminWordListState {
 }
 
 @riverpod
-class AdminWordListNotifier extends _$AdminWordListNotifier
-    with NotifierMounted {
+class AdminWordList extends _$AdminWordList with NotifierMounted {
   @override
   AdminWordListState build() {
     ref.onDispose(setUnmounted);
@@ -67,10 +66,7 @@ class AdminWordListNotifier extends _$AdminWordListNotifier
       state = state.copyWith(words: words, isLoading: false);
     } catch (e) {
       if (!mounted) return;
-      state = state.copyWith(
-        isLoading: false,
-        error: 'Ошибка загрузки: $e',
-      );
+      state = state.copyWith(isLoading: false, error: 'Ошибка загрузки: $e');
     }
   }
 
@@ -80,5 +76,4 @@ class AdminWordListNotifier extends _$AdminWordListNotifier
   }
 
   Future<void> refresh() => _loadWords();
-
 }
