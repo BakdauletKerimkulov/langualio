@@ -257,92 +257,23 @@ container.read(cartSyncServiceProvider);
 
 ---
 
-## GoRouter Navigation
+## Navigation
 
-### Route constants
+Routing lives in `lib/src/routing/` and is owned by **`gorouter.md`** — route enum, named navigation, router provider, redirect guards, typed extras, tab shells. Read it before touching a route.
 
-```dart
-abstract final class AppRoute {
-  static const home = '/';
-  static const signIn = '/sign-in';
-  static const offers = '/offers';
-  static const offerDetail = '/offers/:offerId';
-  static const orders = '/orders';
-  static const orderDetail = '/orders/:orderId';
-  static const settings = '/settings';
-}
-```
+The one rule that belongs here, because it is a layer rule: navigation is a `presentation/` concern. `application/` and below never navigate and never touch `BuildContext`; a controller returns a result, the widget decides where to go.
 
-### Navigation
+**Never use `Navigator.push` / `Navigator.pop`** — always GoRouter, always by name.
 
-```dart
-// Replace current screen (no back button)
-context.go(AppRoute.home);
+### AppPhase — app-state-driven redirects
 
-// Push on top (back button returns)
-context.push(AppRoute.offerDetail, pathParameters: {'offerId': offer.id});
-
-// Push with extra data
-context.push(AppRoute.orderDetail, extra: OrderDetailArgs(order: order));
-```
-
-**Never use `Navigator.push`** — always navigate via GoRouter.
-
-### Typed extras
-
-Pass data between screens with typed classes:
-
-```dart
-class OrderDetailArgs {
-  const OrderDetailArgs({required this.order});
-  final Order order;
-}
-
-GoRoute(
-  path: 'orders/:orderId',
-  redirect: (_, state) => state.extra is OrderDetailArgs ? null : AppRoute.orders,
-  builder: (_, state) {
-    final args = state.extra! as OrderDetailArgs;
-    return OrderDetailScreen(args: args);
-  },
-)
-```
-
-### Redirect guards (AppPhase)
-
-Control flow based on app state (auth, onboarding):
+When redirects depend on more than auth (onboarding, forced update, maintenance), model the app's state as one enum instead of chaining boolean checks in `redirect`:
 
 ```dart
 enum AppPhase { loading, unauthenticated, onboarding, ready }
-
-redirect: (ctx, state) {
-  final phase = ref.read(appPhaseProvider);
-  final path = state.matchedLocation;
-
-  return switch (phase) {
-    AppPhase.unauthenticated => AppRoute.signIn,
-    AppPhase.onboarding when !path.startsWith('/onboarding') => AppRoute.onboarding,
-    AppPhase.ready when path == AppRoute.signIn => AppRoute.home,
-    _ => null,
-  };
-}
 ```
 
-### Tab navigation (StatefulShellRoute)
-
-Preserves state across bottom nav tabs:
-
-```dart
-StatefulShellRoute.indexedStack(
-  builder: (_, __, navigationShell) => ScaffoldWithNav(shell: navigationShell),
-  branches: [
-    StatefulShellBranch(routes: [GoRoute(path: '/home', ...)]),
-    StatefulShellBranch(routes: [GoRoute(path: '/offers', ...)]),
-    StatefulShellBranch(routes: [GoRoute(path: '/orders', ...)]),
-    StatefulShellBranch(routes: [GoRoute(path: '/profile', ...)]),
-  ],
-)
-```
+The router reads it via `ref.read(appPhaseProvider)` and returns a destination per phase. Full redirect wiring → `gorouter.md` → Redirect Guards.
 
 ---
 
@@ -551,7 +482,14 @@ class ValidationException extends AppException {
   const ValidationException(super.message);
   @override String get code => 'validation';
 }
+
+class UnauthenticatedException extends AppException {
+  const UnauthenticatedException([super.message = 'Not authenticated']);
+  @override String get code => 'unauthenticated';
+}
 ```
+
+This is the **only** `AppException` hierarchy. Do not declare a parallel one per feature or per layer — `riverpod.md` and the backend files reference this one.
 
 ### Backend error mapping
 

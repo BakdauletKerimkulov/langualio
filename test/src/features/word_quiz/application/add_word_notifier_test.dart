@@ -11,18 +11,18 @@ import 'package:langualio/src/features/word_quiz/domain/word_meaning.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 WordEntry _makeEntry(String word) => WordEntry(
-      id: '',
-      word: word,
-      level: DifficultyLevel.b1,
-      meanings: const [
-        WordMeaning(
-          partOfSpeech: PartOfSpeech.noun,
-          translation: 'тест',
-          exampleEn: 'Example.',
-          exampleRu: 'Пример.',
-        ),
-      ],
-    );
+  id: '',
+  word: word,
+  level: DifficultyLevel.b1,
+  meanings: const [
+    WordMeaning(
+      partOfSpeech: PartOfSpeech.noun,
+      translation: 'тест',
+      exampleEn: 'Example.',
+      exampleRu: 'Пример.',
+    ),
+  ],
+);
 
 void main() {
   group('AddWordNotifier', () {
@@ -43,11 +43,13 @@ void main() {
       final generated = _makeEntry('ephemeral');
       final container = ProviderContainer(
         overrides: [
-          wordGenerationServiceProvider
-              .overrideWithValue(_FakeWordGenerationService(generated)),
+          wordGenerationServiceProvider.overrideWithValue(
+            _FakeWordGenerationService(generated),
+          ),
           assetWordsProvider.overrideWith((ref) async => <WordEntry>[]),
-          userWordRepositoryProvider
-              .overrideWithValue(_FakeUserWordRepository()),
+          userWordRepositoryProvider.overrideWithValue(
+            _FakeUserWordRepository(),
+          ),
         ],
       );
       addTearDown(container.dispose);
@@ -75,11 +77,13 @@ void main() {
       final assetWord = _makeEntry('ability');
       final container = ProviderContainer(
         overrides: [
-          wordGenerationServiceProvider
-              .overrideWithValue(_FakeWordGenerationService(_makeEntry('x'))),
+          wordGenerationServiceProvider.overrideWithValue(
+            _FakeWordGenerationService(_makeEntry('x')),
+          ),
           assetWordsProvider.overrideWith((ref) async => [assetWord]),
-          userWordRepositoryProvider
-              .overrideWithValue(_FakeUserWordRepository()),
+          userWordRepositoryProvider.overrideWithValue(
+            _FakeUserWordRepository(),
+          ),
         ],
       );
       addTearDown(container.dispose);
@@ -96,8 +100,9 @@ void main() {
     test('generate: duplicate in user words → error', () async {
       final container = ProviderContainer(
         overrides: [
-          wordGenerationServiceProvider
-              .overrideWithValue(_FakeWordGenerationService(_makeEntry('x'))),
+          wordGenerationServiceProvider.overrideWithValue(
+            _FakeWordGenerationService(_makeEntry('x')),
+          ),
           assetWordsProvider.overrideWith((ref) async => <WordEntry>[]),
           userWordRepositoryProvider.overrideWithValue(
             _FakeUserWordRepository(existingWords: {'custom'}),
@@ -122,8 +127,9 @@ void main() {
             _ThrowingWordGenerationService(),
           ),
           assetWordsProvider.overrideWith((ref) async => <WordEntry>[]),
-          userWordRepositoryProvider
-              .overrideWithValue(_FakeUserWordRepository()),
+          userWordRepositoryProvider.overrideWithValue(
+            _FakeUserWordRepository(),
+          ),
         ],
       );
       addTearDown(container.dispose);
@@ -144,8 +150,9 @@ void main() {
             _FakeWordGenerationService(_makeEntry('ephemeral')),
           ),
           assetWordsProvider.overrideWith((ref) async => <WordEntry>[]),
-          userWordRepositoryProvider
-              .overrideWithValue(_FakeUserWordRepository()),
+          userWordRepositoryProvider.overrideWithValue(
+            _FakeUserWordRepository(),
+          ),
         ],
       );
       addTearDown(container2.dispose);
@@ -165,8 +172,9 @@ void main() {
             _RateLimitedWordGenerationService(),
           ),
           assetWordsProvider.overrideWith((ref) async => <WordEntry>[]),
-          userWordRepositoryProvider
-              .overrideWithValue(_FakeUserWordRepository()),
+          userWordRepositoryProvider.overrideWithValue(
+            _FakeUserWordRepository(),
+          ),
         ],
       );
       addTearDown(container.dispose);
@@ -183,8 +191,9 @@ void main() {
       final fakeRepo = _FakeUserWordRepository();
       final container = ProviderContainer(
         overrides: [
-          addWordNotifierProvider
-              .overrideWith(() => _PreloadedAddWordNotifier(entry)),
+          addWordNotifierProvider.overrideWith(
+            () => _PreloadedAddWordNotifier(entry),
+          ),
           userWordRepositoryProvider.overrideWithValue(fakeRepo),
           supabaseClientProvider.overrideWithValue(
             SupabaseClient('https://test.supabase.co', 'test-key'),
@@ -255,7 +264,7 @@ class _RateLimitedWordGenerationService implements WordGenerationService {
 
 class _FakeUserWordRepository implements UserWordRepository {
   _FakeUserWordRepository({Set<String>? existingWords})
-      : _existingWords = existingWords ?? {};
+    : _existingWords = existingWords ?? {};
 
   final Set<String> _existingWords;
   final List<WordEntry> insertedWords = [];

@@ -7,18 +7,18 @@ import 'package:langualio/src/features/word_quiz/domain/word_entry.dart';
 import 'package:langualio/src/features/word_quiz/domain/word_meaning.dart';
 
 WordEntry _makeEntry(String word) => WordEntry(
-      id: '', // will be replaced by insert
-      word: word,
-      level: DifficultyLevel.b1,
-      meanings: const [
-        WordMeaning(
-          partOfSpeech: PartOfSpeech.noun,
-          translation: 'перевод',
-          exampleEn: 'Example.',
-          exampleRu: 'Пример.',
-        ),
-      ],
-    );
+  id: '', // will be replaced by insert
+  word: word,
+  level: DifficultyLevel.b1,
+  meanings: const [
+    WordMeaning(
+      partOfSpeech: PartOfSpeech.noun,
+      translation: 'перевод',
+      exampleEn: 'Example.',
+      exampleRu: 'Пример.',
+    ),
+  ],
+);
 
 void main() {
   late AppDatabase db;
@@ -57,20 +57,24 @@ void main() {
       // UUID v4 format: 8-4-4-4-12 hex chars
       expect(
         words.first.id,
-        matches(RegExp(
-          r'^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$',
-        )),
+        matches(
+          RegExp(
+            r'^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$',
+          ),
+        ),
       );
     });
 
-    test('existsByWord returns true for existing word (case-insensitive)',
-        () async {
-      await repo.insert(_makeEntry('Ephemeral'), userId: 'user-123');
+    test(
+      'existsByWord returns true for existing word (case-insensitive)',
+      () async {
+        await repo.insert(_makeEntry('Ephemeral'), userId: 'user-123');
 
-      expect(await repo.existsByWord('ephemeral'), isTrue);
-      expect(await repo.existsByWord('EPHEMERAL'), isTrue);
-      expect(await repo.existsByWord('Ephemeral'), isTrue);
-    });
+        expect(await repo.existsByWord('ephemeral'), isTrue);
+        expect(await repo.existsByWord('EPHEMERAL'), isTrue);
+        expect(await repo.existsByWord('Ephemeral'), isTrue);
+      },
+    );
 
     test('existsByWord returns false for non-existing word', () async {
       expect(await repo.existsByWord('nonexistent'), isFalse);

@@ -29,7 +29,8 @@ class ProfileRepository {
   }
 
   /// Fetch only the onboarding-relevant fields from `profiles`.
-  Future<({bool assessmentCompleted, int? cefrLevel})> fetchOnboardingState() async {
+  Future<({bool assessmentCompleted, int? cefrLevel})>
+  fetchOnboardingState() async {
     final userId = _client.auth.currentUser?.id;
     if (userId == null) {
       throw Exception('User not authenticated');
@@ -68,7 +69,5 @@ class ProfileRepository {
 
 @Riverpod(keepAlive: true)
 ProfileRepository profileRepository(Ref ref) {
-  return ProfileRepository(
-    ref.watch(supabaseClientProvider),
-  );
+  return ProfileRepository(ref.watch(supabaseClientProvider));
 }

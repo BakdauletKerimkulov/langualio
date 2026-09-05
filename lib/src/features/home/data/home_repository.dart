@@ -63,7 +63,5 @@ class HomeRepository {
 
 @Riverpod(keepAlive: true)
 HomeRepository homeRepository(Ref ref) {
-  return HomeRepository(
-    ref.watch(supabaseClientProvider),
-  );
+  return HomeRepository(ref.watch(supabaseClientProvider));
 }

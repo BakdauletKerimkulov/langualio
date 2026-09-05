@@ -27,8 +27,7 @@ class SettingsScreen extends StatelessWidget {
             Consumer(
               builder: (context, ref, child) {
                 return ElevatedButton(
-                  onPressed: () =>
-                      ref.read(authRepositoryProvider).signOut(),
+                  onPressed: () => ref.read(authRepositoryProvider).signOut(),
                   child: Text('logout'),
                 );
               },

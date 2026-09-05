@@ -51,17 +51,17 @@ class AdminWordList extends _$AdminWordList with NotifierMounted {
   @override
   AdminWordListState build() {
     ref.onDispose(setUnmounted);
-    _loadWords();
+    // Must not touch `state` here: the element has no state until build()
+    // returns, so the initial filter is passed explicitly instead of read.
+    _loadWords(null);
     return const AdminWordListState(isLoading: true);
   }
 
-  Future<void> _loadWords() async {
-    state = state.copyWith(isLoading: true, error: null);
-
+  Future<void> _loadWords(String? statusFilter) async {
     try {
       final words = await ref
           .read(adminRepositoryProvider)
-          .fetchWords(statusFilter: state.activeFilter);
+          .fetchWords(statusFilter: statusFilter);
       if (!mounted) return;
       state = state.copyWith(words: words, isLoading: false);
     } catch (e) {
@@ -71,9 +71,13 @@ class AdminWordList extends _$AdminWordList with NotifierMounted {
   }
 
   void setFilter(String? status) {
-    state = state.copyWith(activeFilter: () => status);
-    _loadWords();
+    state = state.copyWith(activeFilter: () => status, isLoading: true);
+    _loadWords(status);
   }
 
-  Future<void> refresh() => _loadWords();
+  Future<void> refresh() {
+    final statusFilter = state.activeFilter;
+    state = state.copyWith(isLoading: true);
+    return _loadWords(statusFilter);
+  }
 }

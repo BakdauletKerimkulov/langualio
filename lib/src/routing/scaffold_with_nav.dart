@@ -10,8 +10,16 @@ class ScaffoldWithNav extends StatelessWidget {
 
   static const _tabs = [
     _NavTab(label: 'Home', icon: Icons.home_rounded, path: '/'),
-    _NavTab(label: 'Grammar', icon: Icons.auto_stories_rounded, path: '/grammar'),
-    _NavTab(label: 'Practice', icon: Icons.sports_esports_rounded, path: '/practice'),
+    _NavTab(
+      label: 'Grammar',
+      icon: Icons.auto_stories_rounded,
+      path: '/grammar',
+    ),
+    _NavTab(
+      label: 'Practice',
+      icon: Icons.sports_esports_rounded,
+      path: '/practice',
+    ),
     _NavTab(label: 'Profile', icon: Icons.person_rounded, path: '/profile'),
   ];
 
@@ -73,11 +81,7 @@ class ScaffoldWithNav extends StatelessWidget {
 }
 
 class _NavTab {
-  const _NavTab({
-    required this.label,
-    required this.icon,
-    required this.path,
-  });
+  const _NavTab({required this.label, required this.icon, required this.path});
 
   final String label;
   final IconData icon;

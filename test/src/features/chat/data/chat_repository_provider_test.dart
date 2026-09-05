@@ -15,18 +15,13 @@ void main() {
       overrides: [
         // Override the same provider that app_bootstrap overrides
         sharedPreferencesProvider.overrideWithValue(prefs),
-        supabaseClientProvider.overrideWithValue(
-          _FakeSupabaseClient(),
-        ),
+        supabaseClientProvider.overrideWithValue(_FakeSupabaseClient()),
       ],
     );
     addTearDown(container.dispose);
 
     // This should NOT throw UnimplementedError
-    expect(
-      () => container.read(chatRepositoryProvider),
-      returnsNormally,
-    );
+    expect(() => container.read(chatRepositoryProvider), returnsNormally);
   });
 }
 

@@ -17,8 +17,9 @@ Future<List<WordEntry>> wordPool(Ref ref) async {
   final userWords = await userRepo.fetchAll();
 
   // Tag user words with WordSource.user
-  final taggedUserWords =
-      userWords.map((w) => w.copyWith(source: WordSource.user)).toList();
+  final taggedUserWords = userWords
+      .map((w) => w.copyWith(source: WordSource.user))
+      .toList();
 
   // Build lookup of user words by lowercase word
   final userWordLookup = <String, WordEntry>{};

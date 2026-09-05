@@ -15,7 +15,8 @@ WordEntry collectFormEntry({
 }) {
   final meanings = meaningControllers.map((mc) {
     return WordMeaning(
-      partOfSpeech: PartOfSpeech.values
+      partOfSpeech:
+          PartOfSpeech.values
               .where((e) => e.name == mc.partOfSpeech)
               .firstOrNull ??
           PartOfSpeech.noun,
@@ -27,10 +28,12 @@ WordEntry collectFormEntry({
                 .map((t) => t.trim())
                 .where((t) => t.isNotEmpty)
                 .toList(),
-      definitionEn:
-          mc.definitionEn.text.trim().isEmpty ? null : mc.definitionEn.text.trim(),
-      definitionRu:
-          mc.definitionRu.text.trim().isEmpty ? null : mc.definitionRu.text.trim(),
+      definitionEn: mc.definitionEn.text.trim().isEmpty
+          ? null
+          : mc.definitionEn.text.trim(),
+      definitionRu: mc.definitionRu.text.trim().isEmpty
+          ? null
+          : mc.definitionRu.text.trim(),
       exampleEn: mc.exampleEn.text.trim(),
       exampleRu: mc.exampleRu.text.trim(),
     );
@@ -40,13 +43,18 @@ WordEntry collectFormEntry({
     id: wordId ?? '',
     word: word.trim(),
     ipa: ipa.trim().isEmpty ? null : ipa.trim(),
-    level: DifficultyLevel.values.where((e) => e.name == level).firstOrNull ??
+    level:
+        DifficultyLevel.values.where((e) => e.name == level).firstOrNull ??
         DifficultyLevel.a1,
     meanings: meanings,
     topic: topic.trim().isEmpty ? null : topic.trim(),
     tags: tags.trim().isEmpty
         ? <String>[]
-        : tags.split(',').map((t) => t.trim()).where((t) => t.isNotEmpty).toList(),
+        : tags
+              .split(',')
+              .map((t) => t.trim())
+              .where((t) => t.isNotEmpty)
+              .toList(),
     createdAt: DateTime.now(),
   );
 }

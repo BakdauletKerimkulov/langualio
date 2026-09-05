@@ -7,8 +7,7 @@ import '../domain/user_progress.dart';
 part 'home_provider.g.dart';
 
 @riverpod
-class UserProgressNotifier extends _$UserProgressNotifier
-    with NotifierMounted {
+class UserProgressNotifier extends _$UserProgressNotifier with NotifierMounted {
   @override
   Future<UserProgress> build() async {
     ref.onDispose(setUnmounted);

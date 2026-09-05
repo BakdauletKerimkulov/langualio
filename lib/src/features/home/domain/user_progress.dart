@@ -28,5 +28,4 @@ class UserProgress {
   final int targetXp;
   final int streakDays;
   final List<DailyGoal> dailyGoals;
-
 }

@@ -1,5 +1,7 @@
 # Supabase Guidelines
 
+_Часть общей базы agentic-coding-toolkit. Правь в базе, не в проекте — локальные правки затрёт sync._
+
 Universal Supabase patterns (Postgres + RLS + RPC + Edge Functions) for this project. Project-specific tables, columns, and functions belong in `ai_docs/`. TypeScript Edge Function conventions live in `edge-functions.md`.
 
 ---

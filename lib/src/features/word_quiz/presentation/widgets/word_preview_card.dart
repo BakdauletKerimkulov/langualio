@@ -71,9 +71,7 @@ class WordPreviewCard extends StatelessWidget {
           ),
           gapH16,
           // Meanings
-          ...entry.meanings.map(
-            (meaning) => MeaningSection(meaning: meaning),
-          ),
+          ...entry.meanings.map((meaning) => MeaningSection(meaning: meaning)),
         ],
       ),
     );

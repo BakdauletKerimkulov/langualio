@@ -21,25 +21,25 @@ class QuizOptionButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final (bgColor, borderColor, textColor) = switch (optionState) {
       QuizOptionState.idle => (
-          AppColors.surface,
-          AppColors.borderLight,
-          AppColors.textPrimary,
-        ),
+        AppColors.surface,
+        AppColors.borderLight,
+        AppColors.textPrimary,
+      ),
       QuizOptionState.correct => (
-          AppColors.successLight,
-          AppColors.successBorder,
-          const Color(0xFF00C853),
-        ),
+        AppColors.successLight,
+        AppColors.successBorder,
+        const Color(0xFF00C853),
+      ),
       QuizOptionState.wrong => (
-          const Color(0x1AFF6B6B),
-          AppColors.error.withValues(alpha: 0.3),
-          AppColors.error,
-        ),
+        const Color(0x1AFF6B6B),
+        AppColors.error.withValues(alpha: 0.3),
+        AppColors.error,
+      ),
       QuizOptionState.dimmed => (
-          AppColors.surfaceDim,
-          AppColors.borderLight,
-          AppColors.textTertiary,
-        ),
+        AppColors.surfaceDim,
+        AppColors.borderLight,
+        AppColors.textTertiary,
+      ),
     };
 
     return Padding(
@@ -51,7 +51,9 @@ class QuizOptionButton extends StatelessWidget {
           curve: Curves.easeOut,
           width: double.infinity,
           padding: const EdgeInsets.symmetric(
-              horizontal: Sizes.p20, vertical: Sizes.p16),
+            horizontal: Sizes.p20,
+            vertical: Sizes.p16,
+          ),
           decoration: BoxDecoration(
             color: bgColor,
             borderRadius: BorderRadius.circular(Sizes.p16),

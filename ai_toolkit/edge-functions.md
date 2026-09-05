@@ -1,5 +1,7 @@
 # TypeScript Backend Functions (Supabase Edge Functions)
 
+_Часть общей базы agentic-coding-toolkit. Правь в базе, не в проекте — локальные правки затрёт sync._
+
 Rules for writing `.ts` backend code in `supabase/functions/`. Patterns adapted from proven Firebase Functions codebases, applied to the Deno / Supabase Edge runtime.
 
 ---

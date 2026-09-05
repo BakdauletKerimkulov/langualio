@@ -29,8 +29,8 @@ class AssessmentScreen extends ConsumerWidget {
                       .completeOnboarding(),
                 )
               : state.isSaving
-                  ? const Center(child: CircularProgressIndicator())
-                  : _QuestionView(state: state),
+              ? const Center(child: CircularProgressIndicator())
+              : _QuestionView(state: state),
         ),
       ),
     );

@@ -17,7 +17,8 @@ class HomeScreen extends ConsumerWidget {
     return SafeArea(
       child: progressAsync.when(
         data: (progress) {
-          final isEmpty = progress.dailyGoals.isEmpty && progress.streakDays == 0;
+          final isEmpty =
+              progress.dailyGoals.isEmpty && progress.streakDays == 0;
 
           return SingleChildScrollView(
             padding: const EdgeInsets.symmetric(horizontal: Sizes.p16),
@@ -30,7 +31,10 @@ class HomeScreen extends ConsumerWidget {
                   streak: progress.streakDays,
                 ),
                 gapH32,
-                if (isEmpty) const HomeEmptyView() else HomeActiveView(progress: progress),
+                if (isEmpty)
+                  const HomeEmptyView()
+                else
+                  HomeActiveView(progress: progress),
               ],
             ),
           );
@@ -79,7 +83,9 @@ class _TopBar extends StatelessWidget {
             CircleAvatar(
               radius: 24,
               backgroundColor: AppColors.primaryLight,
-              backgroundImage: avatarUrl.isNotEmpty ? NetworkImage(avatarUrl) : null,
+              backgroundImage: avatarUrl.isNotEmpty
+                  ? NetworkImage(avatarUrl)
+                  : null,
               child: avatarUrl.isEmpty
                   ? Text(
                       nickname.isNotEmpty ? nickname[0].toUpperCase() : '?',

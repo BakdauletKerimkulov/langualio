@@ -227,8 +227,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
                   ),
           ),
           // Limit reached banner
-          if (state.isLimitReached)
-            LimitBanner(dailyLimit: state.dailyLimit),
+          if (state.isLimitReached) LimitBanner(dailyLimit: state.dailyLimit),
           // Input bar
           ChatInputBar(
             controller: _controller,

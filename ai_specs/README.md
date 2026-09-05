@@ -7,7 +7,7 @@ Key architectural decisions from all past specs preserved in:
 
 ## Active Specs
 
-_(none — all specs archived on 2026-07-26)_
+- [014 — AdminWordList reads state inside build()](014-admin-word-list-uninitialized-provider-spec.md) — fix, S, done 2026-09-05
 
 ## Archive
 

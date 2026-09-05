@@ -147,8 +147,7 @@ class _WordQuizScreenState extends ConsumerState<WordQuizScreen> {
 
             final isEnToRu =
                 session.languageDirection == LanguageDirection.enToRu;
-            final meaningIdx =
-                session.selectedMeaningIndexes[word.id] ?? 0;
+            final meaningIdx = session.selectedMeaningIndexes[word.id] ?? 0;
             final questionWord = isEnToRu
                 ? word.word
                 : word.meanings[meaningIdx].translation;

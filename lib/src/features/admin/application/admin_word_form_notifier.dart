@@ -72,7 +72,11 @@ class AdminWordFormNotifier extends _$AdminWordFormNotifier
   Future<void> generate(String word) async {
     if (word.trim().isEmpty) return;
 
-    state = state.copyWith(isGenerating: true, error: null, duplicateWarning: false);
+    state = state.copyWith(
+      isGenerating: true,
+      error: null,
+      duplicateWarning: false,
+    );
 
     try {
       // Check for duplicate first
@@ -86,10 +90,7 @@ class AdminWordFormNotifier extends _$AdminWordFormNotifier
       final data = await _repo.generateWordEntry(word);
       if (!mounted) return;
 
-      state = state.copyWith(
-        generatedData: data,
-        isGenerating: false,
-      );
+      state = state.copyWith(generatedData: data, isGenerating: false);
     } catch (e) {
       if (!mounted) return;
       state = state.copyWith(
@@ -100,10 +101,7 @@ class AdminWordFormNotifier extends _$AdminWordFormNotifier
   }
 
   /// Saves the word to the database with the given status.
-  Future<bool> save({
-    required WordEntry entry,
-    required String status,
-  }) async {
+  Future<bool> save({required WordEntry entry, required String status}) async {
     state = state.copyWith(isSaving: true, error: null);
 
     try {
@@ -113,10 +111,7 @@ class AdminWordFormNotifier extends _$AdminWordFormNotifier
       return true;
     } catch (e) {
       if (!mounted) return false;
-      state = state.copyWith(
-        isSaving: false,
-        error: 'Ошибка сохранения: $e',
-      );
+      state = state.copyWith(isSaving: false, error: 'Ошибка сохранения: $e');
       return false;
     }
   }
@@ -136,10 +131,7 @@ class AdminWordFormNotifier extends _$AdminWordFormNotifier
       return true;
     } catch (e) {
       if (!mounted) return false;
-      state = state.copyWith(
-        isSaving: false,
-        error: 'Ошибка обновления: $e',
-      );
+      state = state.copyWith(isSaving: false, error: 'Ошибка обновления: $e');
       return false;
     }
   }
@@ -148,5 +140,4 @@ class AdminWordFormNotifier extends _$AdminWordFormNotifier
   void clearDuplicateWarning() {
     state = state.copyWith(duplicateWarning: false);
   }
-
 }

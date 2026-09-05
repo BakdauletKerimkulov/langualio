@@ -75,9 +75,7 @@ class _AddWordScreenState extends ConsumerState<AddWordScreen> {
               if (state.isGenerating) ...[
                 const Expanded(
                   child: Center(
-                    child: CircularProgressIndicator(
-                      color: AppColors.primary,
-                    ),
+                    child: CircularProgressIndicator(color: AppColors.primary),
                   ),
                 ),
               ] else if (state.preview != null) ...[
@@ -127,9 +125,7 @@ class _WordInputField extends StatelessWidget {
             onSubmitted: (_) => onGenerate(),
             decoration: InputDecoration(
               hintText: 'Введите слово на английском'.hardcoded,
-              hintStyle: TextStyle(
-                color: AppColors.textHint,
-              ),
+              hintStyle: TextStyle(color: AppColors.textHint),
               filled: true,
               fillColor: AppColors.surface,
               border: OutlineInputBorder(
@@ -172,10 +168,7 @@ class _WordInputField extends StatelessWidget {
 }
 
 class _SaveButton extends StatelessWidget {
-  const _SaveButton({
-    required this.isSaving,
-    required this.onSave,
-  });
+  const _SaveButton({required this.isSaving, required this.onSave});
 
   final bool isSaving;
   final VoidCallback onSave;
@@ -191,10 +184,7 @@ class _SaveButton extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(Sizes.p16),
         ),
-        textStyle: const TextStyle(
-          fontSize: 18,
-          fontWeight: FontWeight.w700,
-        ),
+        textStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
       ),
       child: isSaving
           ? const SizedBox(

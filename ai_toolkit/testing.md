@@ -25,6 +25,28 @@ Rules of thumb:
 
 ---
 
+## Test seams
+
+A **seam** is the boundary where a test replaces something nondeterministic or external with something controlled. This project has a fixed set of them; a feature is designed around them, not alongside them.
+
+| Seam | Replaces | How |
+|---|---|---|
+| Repository provider override | the backend | `overrideWith` on the repository provider — never on the controller |
+| Fakes container | the whole data layer, for flows | `createFakesProviderContainer(addDelay: false)` + Robot |
+| `currentDateBuilderProvider` | the clock | inject; never `DateTime.now()` in a controller, domain, or repository |
+| Extracted pure mapper | the SDK response | `Repository.mapToX(rows)` tested with literal rows, no client |
+| Server-function pure helper | HTTP + secrets | test the extracted helper; smoke the handler against the emulator |
+
+Rules:
+
+- **Prefer an existing seam. A new seam needs a stated reason** — one sentence in the spec's Validation section saying which existing seam it does not fit and why. A feature that adds a mock per test has no seams; it has scaffolding that will rot.
+- **Never mock the backend SDK client** to create a seam where a pure mapper would do. Mocking `FirebaseFirestore` or `SupabaseClient` couples the test to the SDK's shape and survives no upgrade.
+- **Never mock a controller.** Controllers are what you are testing; overriding one means the test asserts on itself.
+- A behavior with no seam is a design problem surfacing as a testing problem. Fix the design: inject the dependency, extract the pure part, move the decision into `domain/`.
+- Name the seam in the spec before implementing (`spec-driven-rules.md` § 6). Choosing it during implementation means choosing whichever is easiest for the code that already exists.
+
+---
+
 ## Structure mirrors `lib/`
 
 ```

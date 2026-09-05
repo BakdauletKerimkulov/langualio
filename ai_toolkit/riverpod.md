@@ -173,7 +173,7 @@ Repositories are functional providers with `keepAlive: true`. They encapsulate a
 @Riverpod(keepAlive: true)
 OrdersRepository ordersRepository(Ref ref) {
   final user = ref.watch(authStateChangesProvider).valueOrNull;
-  if (user == null) throw const AppException.unauthenticated();
+  if (user == null) throw const UnauthenticatedException();
 
   return OrdersRepository(
     uid: user.uid,
@@ -326,16 +326,9 @@ asyncValue.when(
 
 ### Error types
 
-Use typed exceptions (not raw strings) so widgets can show appropriate messages:
+Use typed exceptions (not raw strings) so widgets can show appropriate messages. The `AppException` hierarchy is defined once in **`architecture.md` → Error Handling** — use those classes (`NetworkException`, `ServerException`, `NotFoundException`, `ValidationException`, `UnauthenticatedException`), do not declare a parallel one here or per feature.
 
-```dart
-sealed class AppException implements Exception {
-  const AppException();
-  const factory AppException.unauthenticated() = UnauthenticatedException;
-  const factory AppException.notFound(String resource) = NotFoundException;
-  const factory AppException.server(String message) = ServerException;
-}
-```
+Backend SDK errors are mapped into that hierarchy in the `data/` layer — a provider should never see a raw SDK exception.
 
 ### AsyncErrorLogger (ProviderObserver)
 

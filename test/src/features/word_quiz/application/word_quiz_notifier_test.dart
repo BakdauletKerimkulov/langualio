@@ -16,25 +16,25 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 /// Creates a multi-meaning word for testing.
 WordEntry _makeMultiMeaningWord() => WordEntry(
-      id: 'run-id',
-      word: 'run',
-      level: DifficultyLevel.b1,
-      meanings: const [
-        WordMeaning(
-          partOfSpeech: PartOfSpeech.verb,
-          translation: 'бежать',
-          exampleEn: 'I run.',
-          exampleRu: 'Я бегу.',
-        ),
-        WordMeaning(
-          partOfSpeech: PartOfSpeech.noun,
-          translation: 'пробежка',
-          exampleEn: 'A good run.',
-          exampleRu: 'Хорошая пробежка.',
-        ),
-      ],
-      createdAt: DateTime.utc(2026, 6, 1),
-    );
+  id: 'run-id',
+  word: 'run',
+  level: DifficultyLevel.b1,
+  meanings: const [
+    WordMeaning(
+      partOfSpeech: PartOfSpeech.verb,
+      translation: 'бежать',
+      exampleEn: 'I run.',
+      exampleRu: 'Я бегу.',
+    ),
+    WordMeaning(
+      partOfSpeech: PartOfSpeech.noun,
+      translation: 'пробежка',
+      exampleEn: 'A good run.',
+      exampleRu: 'Хорошая пробежка.',
+    ),
+  ],
+  createdAt: DateTime.utc(2026, 6, 1),
+);
 
 WordEntry _makeSingleMeaningWord(String id, String word, String translation) =>
     WordEntry(
@@ -75,55 +75,59 @@ void main() {
       );
     }
 
-    test('en→ru: correct answer is selected meaning translation (index 1)',
-        () async {
-      final multiWord = _makeMultiMeaningWord();
-      final distractorWords = [
-        _makeSingleMeaningWord('cat-id', 'cat', 'кошка'),
-        _makeSingleMeaningWord('dog-id', 'dog', 'собака'),
-        _makeSingleMeaningWord('fish-id', 'fish', 'рыба'),
-      ];
-      final allWords = [multiWord, ...distractorWords];
+    test(
+      'en→ru: correct answer is selected meaning translation (index 1)',
+      () async {
+        final multiWord = _makeMultiMeaningWord();
+        final distractorWords = [
+          _makeSingleMeaningWord('cat-id', 'cat', 'кошка'),
+          _makeSingleMeaningWord('dog-id', 'dog', 'собака'),
+          _makeSingleMeaningWord('fish-id', 'fish', 'рыба'),
+        ];
+        final allWords = [multiWord, ...distractorWords];
 
-      final session = QuizSession(
-        todayWords: allWords,
-        quizDay: DateTime.utc(2026, 6, 1),
-        languageDirection: LanguageDirection.enToRu,
-        selectedMeaningIndexes: const {'run-id': 1},
-      );
-      injectSession(session);
+        final session = QuizSession(
+          todayWords: allWords,
+          quizDay: DateTime.utc(2026, 6, 1),
+          languageDirection: LanguageDirection.enToRu,
+          selectedMeaningIndexes: const {'run-id': 1},
+        );
+        injectSession(session);
 
-      await container.read(wordQuizNotifierProvider.future);
-      final notifier = container.read(wordQuizNotifierProvider.notifier);
-      final options = notifier.generateOptions(multiWord);
+        await container.read(wordQuizNotifierProvider.future);
+        final notifier = container.read(wordQuizNotifierProvider.notifier);
+        final options = notifier.generateOptions(multiWord);
 
-      expect(options, contains('пробежка'));
-    });
+        expect(options, contains('пробежка'));
+      },
+    );
 
-    test('en→ru: correct answer is selected meaning translation (index 0)',
-        () async {
-      final multiWord = _makeMultiMeaningWord();
-      final distractorWords = [
-        _makeSingleMeaningWord('cat-id', 'cat', 'кошка'),
-        _makeSingleMeaningWord('dog-id', 'dog', 'собака'),
-        _makeSingleMeaningWord('fish-id', 'fish', 'рыба'),
-      ];
-      final allWords = [multiWord, ...distractorWords];
+    test(
+      'en→ru: correct answer is selected meaning translation (index 0)',
+      () async {
+        final multiWord = _makeMultiMeaningWord();
+        final distractorWords = [
+          _makeSingleMeaningWord('cat-id', 'cat', 'кошка'),
+          _makeSingleMeaningWord('dog-id', 'dog', 'собака'),
+          _makeSingleMeaningWord('fish-id', 'fish', 'рыба'),
+        ];
+        final allWords = [multiWord, ...distractorWords];
 
-      final session = QuizSession(
-        todayWords: allWords,
-        quizDay: DateTime.utc(2026, 6, 1),
-        languageDirection: LanguageDirection.enToRu,
-        selectedMeaningIndexes: const {'run-id': 0},
-      );
-      injectSession(session);
+        final session = QuizSession(
+          todayWords: allWords,
+          quizDay: DateTime.utc(2026, 6, 1),
+          languageDirection: LanguageDirection.enToRu,
+          selectedMeaningIndexes: const {'run-id': 0},
+        );
+        injectSession(session);
 
-      await container.read(wordQuizNotifierProvider.future);
-      final notifier = container.read(wordQuizNotifierProvider.notifier);
-      final options = notifier.generateOptions(multiWord);
+        await container.read(wordQuizNotifierProvider.future);
+        final notifier = container.read(wordQuizNotifierProvider.notifier);
+        final options = notifier.generateOptions(multiWord);
 
-      expect(options, contains('бежать'));
-    });
+        expect(options, contains('бежать'));
+      },
+    );
 
     test('ru→en: correct answer is always the English word', () async {
       final multiWord = _makeMultiMeaningWord();
@@ -149,40 +153,42 @@ void main() {
       expect(options, contains('run'));
     });
 
-    test('defaults to index 0 when word not in selectedMeaningIndexes',
-        () async {
-      final multiWord = _makeMultiMeaningWord();
-      final distractorWords = [
-        _makeSingleMeaningWord('cat-id', 'cat', 'кошка'),
-        _makeSingleMeaningWord('dog-id', 'dog', 'собака'),
-        _makeSingleMeaningWord('fish-id', 'fish', 'рыба'),
-      ];
-      final allWords = [multiWord, ...distractorWords];
+    test(
+      'defaults to index 0 when word not in selectedMeaningIndexes',
+      () async {
+        final multiWord = _makeMultiMeaningWord();
+        final distractorWords = [
+          _makeSingleMeaningWord('cat-id', 'cat', 'кошка'),
+          _makeSingleMeaningWord('dog-id', 'dog', 'собака'),
+          _makeSingleMeaningWord('fish-id', 'fish', 'рыба'),
+        ];
+        final allWords = [multiWord, ...distractorWords];
 
-      final session = QuizSession(
-        todayWords: allWords,
-        quizDay: DateTime.utc(2026, 6, 1),
-        languageDirection: LanguageDirection.enToRu,
-        selectedMeaningIndexes: const {},
-      );
-      injectSession(session);
+        final session = QuizSession(
+          todayWords: allWords,
+          quizDay: DateTime.utc(2026, 6, 1),
+          languageDirection: LanguageDirection.enToRu,
+          selectedMeaningIndexes: const {},
+        );
+        injectSession(session);
 
-      await container.read(wordQuizNotifierProvider.future);
-      final notifier = container.read(wordQuizNotifierProvider.notifier);
-      final options = notifier.generateOptions(multiWord);
+        await container.read(wordQuizNotifierProvider.future);
+        final notifier = container.read(wordQuizNotifierProvider.notifier);
+        final options = notifier.generateOptions(multiWord);
 
-      expect(options, contains('бежать'));
-    });
+        expect(options, contains('бежать'));
+      },
+    );
   });
 
   group('WordQuizNotifier.build — local word pool', () {
     List<WordEntry> makeAssetWords() => [
-          _makeSingleMeaningWord('b1_ability', 'ability', 'способность'),
-          _makeSingleMeaningWord('b1_achieve', 'achieve', 'достигать'),
-          _makeSingleMeaningWord('b1_advantage', 'advantage', 'преимущество'),
-          _makeSingleMeaningWord('b1_afford', 'afford', 'позволить себе'),
-          _makeSingleMeaningWord('b1_agree', 'agree', 'соглашаться'),
-        ];
+      _makeSingleMeaningWord('b1_ability', 'ability', 'способность'),
+      _makeSingleMeaningWord('b1_achieve', 'achieve', 'достигать'),
+      _makeSingleMeaningWord('b1_advantage', 'advantage', 'преимущество'),
+      _makeSingleMeaningWord('b1_afford', 'afford', 'позволить себе'),
+      _makeSingleMeaningWord('b1_agree', 'agree', 'соглашаться'),
+    ];
 
     test('loads words from word pool provider (asset + user words)', () async {
       SharedPreferences.setMockInitialValues({});
@@ -235,39 +241,41 @@ void main() {
   });
 
   group('WordQuizNotifier.generateOptions — asset words only', () {
-    test('returns 4 options with asset-style words (sufficient pool)',
-        () async {
-      final assetWords = [
-        _makeSingleMeaningWord('b1_ability', 'ability', 'способность'),
-        _makeSingleMeaningWord('b1_achieve', 'achieve', 'достигать'),
-        _makeSingleMeaningWord('b1_advantage', 'advantage', 'преимущество'),
-        _makeSingleMeaningWord('b1_afford', 'afford', 'позволить себе'),
-        _makeSingleMeaningWord('b1_agree', 'agree', 'соглашаться'),
-      ];
+    test(
+      'returns 4 options with asset-style words (sufficient pool)',
+      () async {
+        final assetWords = [
+          _makeSingleMeaningWord('b1_ability', 'ability', 'способность'),
+          _makeSingleMeaningWord('b1_achieve', 'achieve', 'достигать'),
+          _makeSingleMeaningWord('b1_advantage', 'advantage', 'преимущество'),
+          _makeSingleMeaningWord('b1_afford', 'afford', 'позволить себе'),
+          _makeSingleMeaningWord('b1_agree', 'agree', 'соглашаться'),
+        ];
 
-      final session = QuizSession(
-        todayWords: assetWords,
-        quizDay: DateTime.utc(2026, 6, 1),
-        languageDirection: LanguageDirection.enToRu,
-        selectedMeaningIndexes: const {'b1_ability': 0},
-      );
+        final session = QuizSession(
+          todayWords: assetWords,
+          quizDay: DateTime.utc(2026, 6, 1),
+          languageDirection: LanguageDirection.enToRu,
+          selectedMeaningIndexes: const {'b1_ability': 0},
+        );
 
-      final container = ProviderContainer(
-        overrides: [
-          wordQuizNotifierProvider.overrideWith(
-            () => _TestWordQuizNotifier(session),
-          ),
-        ],
-      );
-      addTearDown(container.dispose);
+        final container = ProviderContainer(
+          overrides: [
+            wordQuizNotifierProvider.overrideWith(
+              () => _TestWordQuizNotifier(session),
+            ),
+          ],
+        );
+        addTearDown(container.dispose);
 
-      await container.read(wordQuizNotifierProvider.future);
-      final notifier = container.read(wordQuizNotifierProvider.notifier);
-      final options = notifier.generateOptions(assetWords.first);
+        await container.read(wordQuizNotifierProvider.future);
+        final notifier = container.read(wordQuizNotifierProvider.notifier);
+        final options = notifier.generateOptions(assetWords.first);
 
-      expect(options, hasLength(4));
-      expect(options, contains('способность'));
-    });
+        expect(options, hasLength(4));
+        expect(options, contains('способность'));
+      },
+    );
   });
 
   group('WordQuizNotifier.submitAnswer — error propagation', () {
@@ -319,8 +327,7 @@ void main() {
 /// Fake attempt repository that throws on saveAttempt.
 class _ThrowingQuizAttemptRepository implements QuizAttemptRepository {
   @override
-  Future<List<WordQuizAttempt>> fetchTodayAttempts(
-          LanguageDirection d) async =>
+  Future<List<WordQuizAttempt>> fetchTodayAttempts(LanguageDirection d) async =>
       [];
 
   @override
@@ -338,8 +345,7 @@ class _ThrowingQuizAttemptRepository implements QuizAttemptRepository {
 /// Fake attempt repository that returns empty results.
 class _FakeQuizAttemptRepository implements QuizAttemptRepository {
   @override
-  Future<List<WordQuizAttempt>> fetchTodayAttempts(
-          LanguageDirection d) async =>
+  Future<List<WordQuizAttempt>> fetchTodayAttempts(LanguageDirection d) async =>
       [];
 
   @override

@@ -7,37 +7,41 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 
 void main() {
   group('ChatNotifier.sendMessage', () {
-    test('parses JSON response → correct dailyLimit, dailyRemaining, and assistant text', () async {
-      final fakeRepo = _FakeChatRepository(
-        sendResult: FunctionResponse(
-          status: 200,
-          data: {
-            'text': 'Hello! How can I help you learn English?',
-            'daily_limit': 20,
-            'daily_remaining': 17,
-          },
-        ),
-      );
+    test(
+      'parses JSON response → correct dailyLimit, dailyRemaining, and assistant text',
+      () async {
+        final fakeRepo = _FakeChatRepository(
+          sendResult: FunctionResponse(
+            status: 200,
+            data: {
+              'text': 'Hello! How can I help you learn English?',
+              'daily_limit': 20,
+              'daily_remaining': 17,
+            },
+          ),
+        );
 
-      final container = ProviderContainer(
-        overrides: [
-          chatRepositoryProvider.overrideWithValue(fakeRepo),
-        ],
-      );
-      addTearDown(container.dispose);
+        final container = ProviderContainer(
+          overrides: [chatRepositoryProvider.overrideWithValue(fakeRepo)],
+        );
+        addTearDown(container.dispose);
 
-      final notifier = container.read(chatNotifierProvider.notifier);
-      await notifier.sendMessage('Hello');
+        final notifier = container.read(chatNotifierProvider.notifier);
+        await notifier.sendMessage('Hello');
 
-      final state = container.read(chatNotifierProvider);
-      expect(state.isLoading, false);
-      expect(state.error, isNull);
-      expect(state.dailyLimit, 20);
-      expect(state.dailyRemaining, 17);
-      expect(state.messages, hasLength(2)); // user + assistant
-      expect(state.messages.last.role, MessageRole.assistant);
-      expect(state.messages.last.text, 'Hello! How can I help you learn English?');
-    });
+        final state = container.read(chatNotifierProvider);
+        expect(state.isLoading, false);
+        expect(state.error, isNull);
+        expect(state.dailyLimit, 20);
+        expect(state.dailyRemaining, 17);
+        expect(state.messages, hasLength(2)); // user + assistant
+        expect(state.messages.last.role, MessageRole.assistant);
+        expect(
+          state.messages.last.text,
+          'Hello! How can I help you learn English?',
+        );
+      },
+    );
 
     test('429 response sets isLimitReached with error message', () async {
       final fakeRepo = _FakeChatRepository(
@@ -52,9 +56,7 @@ void main() {
       );
 
       final container = ProviderContainer(
-        overrides: [
-          chatRepositoryProvider.overrideWithValue(fakeRepo),
-        ],
+        overrides: [chatRepositoryProvider.overrideWithValue(fakeRepo)],
       );
       addTearDown(container.dispose);
 
@@ -78,9 +80,7 @@ void main() {
       );
 
       final container = ProviderContainer(
-        overrides: [
-          chatRepositoryProvider.overrideWithValue(fakeRepo),
-        ],
+        overrides: [chatRepositoryProvider.overrideWithValue(fakeRepo)],
       );
       addTearDown(container.dispose);
 
@@ -97,18 +97,12 @@ void main() {
       final fakeRepo = _FakeChatRepository(
         sendResult: FunctionResponse(
           status: 200,
-          data: {
-            'text': '',
-            'daily_limit': 20,
-            'daily_remaining': 19,
-          },
+          data: {'text': '', 'daily_limit': 20, 'daily_remaining': 19},
         ),
       );
 
       final container = ProviderContainer(
-        overrides: [
-          chatRepositoryProvider.overrideWithValue(fakeRepo),
-        ],
+        overrides: [chatRepositoryProvider.overrideWithValue(fakeRepo)],
       );
       addTearDown(container.dispose);
 
@@ -127,17 +121,12 @@ void main() {
       final fakeRepo = _FakeChatRepository(
         sendResult: FunctionResponse(
           status: 200,
-          data: {
-            'daily_limit': 20,
-            'daily_remaining': 19,
-          },
+          data: {'daily_limit': 20, 'daily_remaining': 19},
         ),
       );
 
       final container = ProviderContainer(
-        overrides: [
-          chatRepositoryProvider.overrideWithValue(fakeRepo),
-        ],
+        overrides: [chatRepositoryProvider.overrideWithValue(fakeRepo)],
       );
       addTearDown(container.dispose);
 
@@ -154,9 +143,7 @@ void main() {
       final fakeRepo = _FakeChatRepository(sendThrows: true);
 
       final container = ProviderContainer(
-        overrides: [
-          chatRepositoryProvider.overrideWithValue(fakeRepo),
-        ],
+        overrides: [chatRepositoryProvider.overrideWithValue(fakeRepo)],
       );
       addTearDown(container.dispose);
 
@@ -230,7 +217,10 @@ class _FakeChatRepository implements ChatRepository {
   List<ChatMessage> loadCachedMessages() => [];
 
   @override
-  Future<List<ChatMessage>> fetchMessages({int limit = 20, DateTime? before}) async => [];
+  Future<List<ChatMessage>> fetchMessages({
+    int limit = 20,
+    DateTime? before,
+  }) async => [];
 
   @override
   Future<void> deleteAllMessages() async {}

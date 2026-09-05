@@ -113,9 +113,9 @@ class _QuizHomeContent extends ConsumerWidget {
             gapH4,
             Text(
               '$userWordCount своих слов',
-              style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                color: AppColors.textTertiary,
-              ),
+              style: Theme.of(
+                context,
+              ).textTheme.bodySmall?.copyWith(color: AppColors.textTertiary),
             ),
           ],
           gapH32,

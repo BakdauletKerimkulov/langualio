@@ -96,8 +96,9 @@ class _AdminWordFormScreenState extends ConsumerState<AdminWordFormScreen> {
         final mc = MeaningControllers();
         mc.partOfSpeech = meaning.partOfSpeech.name;
         mc.translation.text = meaning.translation;
-        mc.alternativeTranslations.text =
-            meaning.alternativeTranslations.join(', ');
+        mc.alternativeTranslations.text = meaning.alternativeTranslations.join(
+          ', ',
+        );
         mc.definitionEn.text = meaning.definitionEn ?? '';
         mc.definitionRu.text = meaning.definitionRu ?? '';
         mc.exampleEn.text = meaning.exampleEn;

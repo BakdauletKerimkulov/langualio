@@ -45,8 +45,7 @@ class WordLearningProgress {
 
   @override
   bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is WordLearningProgress && id == other.id;
+      identical(this, other) || other is WordLearningProgress && id == other.id;
 
   @override
   int get hashCode => id.hashCode;

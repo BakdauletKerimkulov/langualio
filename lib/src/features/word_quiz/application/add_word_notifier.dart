@@ -37,14 +37,13 @@ class AddWordState {
     bool? saved,
     bool clearPreview = false,
     bool clearError = false,
-  }) =>
-      AddWordState(
-        preview: clearPreview ? null : (preview ?? this.preview),
-        isGenerating: isGenerating ?? this.isGenerating,
-        isSaving: isSaving ?? this.isSaving,
-        error: clearError ? null : (error ?? this.error),
-        saved: saved ?? this.saved,
-      );
+  }) => AddWordState(
+    preview: clearPreview ? null : (preview ?? this.preview),
+    isGenerating: isGenerating ?? this.isGenerating,
+    isSaving: isSaving ?? this.isSaving,
+    error: clearError ? null : (error ?? this.error),
+    saved: saved ?? this.saved,
+  );
 
   @override
   bool operator ==(Object other) =>

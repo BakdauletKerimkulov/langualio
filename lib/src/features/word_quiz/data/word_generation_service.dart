@@ -15,7 +15,7 @@ part 'word_generation_service.g.dart';
 /// Shared by both [AdminRepository] and [AddWordNotifier].
 class WordGenerationService {
   const WordGenerationService({required SupabaseClient client})
-      : _client = client;
+    : _client = client;
 
   final SupabaseClient _client;
 
@@ -33,8 +33,9 @@ class WordGenerationService {
     );
 
     if (response.status != 200) {
-      final error =
-          response.data is Map ? response.data['error'] : 'Unknown error';
+      final error = response.data is Map
+          ? response.data['error']
+          : 'Unknown error';
       throw WordGenerationException(
         message: error?.toString() ?? 'Unknown error',
         statusCode: response.status,
@@ -77,7 +78,9 @@ class WordGenerationService {
     final meaning = WordMeaning(
       partOfSpeech: _parsePartOfSpeech(data['part_of_speech'] as String?),
       translation: data['translation'] as String? ?? '',
-      alternativeTranslations: _parseStringList(data['alternative_translations']),
+      alternativeTranslations: _parseStringList(
+        data['alternative_translations'],
+      ),
       definitionEn: data['definition_en'] as String?,
       definitionRu: data['definition_ru'] as String?,
       exampleEn: data['example_en'] as String? ?? '',

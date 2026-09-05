@@ -13,10 +13,7 @@ class UserStats {
 }
 
 class Achievement {
-  const Achievement({
-    required this.title,
-    required this.isUnlocked,
-  });
+  const Achievement({required this.title, required this.isUnlocked});
 
   final String title;
   final bool isUnlocked;

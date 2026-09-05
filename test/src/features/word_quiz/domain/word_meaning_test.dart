@@ -5,11 +5,11 @@ import 'package:langualio/src/features/word_quiz/domain/part_of_speech.dart';
 void main() {
   group('WordMeaning', () {
     WordMeaning createTestMeaning() => const WordMeaning(
-          partOfSpeech: PartOfSpeech.verb,
-          translation: 'бежать',
-          exampleEn: 'I run every morning.',
-          exampleRu: 'Я бегаю каждое утро.',
-        );
+      partOfSpeech: PartOfSpeech.verb,
+      translation: 'бежать',
+      exampleEn: 'I run every morning.',
+      exampleRu: 'Я бегаю каждое утро.',
+    );
 
     test('creates with required fields and defaults', () {
       final meaning = createTestMeaning();

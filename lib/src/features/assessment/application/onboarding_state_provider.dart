@@ -66,9 +66,9 @@ class OnboardingStateNotifier extends _$OnboardingStateNotifier {
 
       CefrLevel? cefrLevel;
       if (result.cefrLevel != null) {
-        cefrLevel = CefrLevel.values.where(
-          (l) => l.dbValue == result.cefrLevel,
-        ).firstOrNull;
+        cefrLevel = CefrLevel.values
+            .where((l) => l.dbValue == result.cefrLevel)
+            .firstOrNull;
       }
 
       state = OnboardingState(
@@ -88,10 +88,7 @@ class OnboardingStateNotifier extends _$OnboardingStateNotifier {
 
   /// Called after assessment is completed to update cached state.
   void markCompleted(CefrLevel level) {
-    state = state.copyWith(
-      assessmentCompleted: true,
-      cefrLevel: level,
-    );
+    state = state.copyWith(assessmentCompleted: true, cefrLevel: level);
   }
 
   /// Re-fetch profile from Supabase (e.g. after login).

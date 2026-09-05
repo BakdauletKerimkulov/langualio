@@ -61,19 +61,25 @@ BEGIN
   SET LOCAL ROLE authenticated;
   SET LOCAL request.jwt.claims = '{"sub":"aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee","role":"authenticated"}';
 
-  -- Attempt to reset message_count — should affect 0 rows (no UPDATE policy)
-  UPDATE public.user_daily_usage
-  SET message_count = 0
-  WHERE user_id = v_test_uid;
+  -- Attempt to reset message_count. The client has SELECT only on this table
+  -- (20260905150312), so the write is rejected on privilege, before RLS.
+  DECLARE
+    v_denied boolean := false;
+  BEGIN
+    BEGIN
+      UPDATE public.user_daily_usage
+      SET message_count = 0
+      WHERE user_id = v_test_uid;
+    EXCEPTION WHEN insufficient_privilege THEN
+      v_denied := true;
+    END;
 
-  GET DIAGNOSTICS v_count = ROW_COUNT;
+    RESET ROLE;
 
-  -- Reset role before assertions
-  RESET ROLE;
-
-  IF v_count > 0 THEN
-    RAISE EXCEPTION 'TEST FAILED: authenticated user was able to UPDATE user_daily_usage (% rows)', v_count;
-  END IF;
+    IF NOT v_denied THEN
+      RAISE EXCEPTION 'TEST FAILED: authenticated user was allowed to UPDATE user_daily_usage';
+    END IF;
+  END;
 
   -- Verify value unchanged
   SELECT message_count INTO v_count

@@ -27,46 +27,72 @@ BEGIN
 END $$;
 
 -- ── Test 1: authenticated user CANNOT update cefr_level ──
+-- 20260721175539_assessment_server.sql revoked the table-wide UPDATE and re-granted
+-- (nickname, avatar_url) only. A column-level REVOKE makes Postgres raise
+-- insufficient_privilege — it does not silently drop the column from the UPDATE.
 DO $$
 DECLARE
   v_test_uid uuid := 'bbbbbbbb-cccc-dddd-eeee-ffffffffffff';
-  v_count int;
+  v_orig int;
+  v_after int;
+  v_denied boolean := false;
 BEGIN
+  SELECT cefr_level INTO v_orig FROM public.profiles WHERE id = v_test_uid;
+
   SET LOCAL ROLE authenticated;
   SET LOCAL request.jwt.claims = '{"sub":"bbbbbbbb-cccc-dddd-eeee-ffffffffffff","role":"authenticated"}';
 
-  UPDATE public.profiles
-  SET cefr_level = 5
-  WHERE id = v_test_uid;
+  BEGIN
+    UPDATE public.profiles SET cefr_level = 5 WHERE id = v_test_uid;
+  EXCEPTION WHEN insufficient_privilege THEN
+    v_denied := true;
+  END;
 
-  GET DIAGNOSTICS v_count = ROW_COUNT;
   RESET ROLE;
 
-  IF v_count > 0 THEN
-    RAISE EXCEPTION 'TEST FAILED: authenticated user updated cefr_level (% rows)', v_count;
+  IF NOT v_denied THEN
+    RAISE EXCEPTION 'TEST FAILED: authenticated user was allowed to UPDATE cefr_level';
+  END IF;
+
+  SELECT cefr_level INTO v_after FROM public.profiles WHERE id = v_test_uid;
+  IF v_after IS DISTINCT FROM v_orig THEN
+    RAISE EXCEPTION 'TEST FAILED: cefr_level changed from % to %', v_orig, v_after;
   END IF;
 
   RAISE NOTICE 'PASS: authenticated user cannot UPDATE cefr_level';
 END $$;
 
 -- ── Test 2: authenticated user CANNOT update assessment_completed ──
+-- 20260721175539_assessment_server.sql revoked the table-wide UPDATE and re-granted
+-- (nickname, avatar_url) only. A column-level REVOKE makes Postgres raise
+-- insufficient_privilege — it does not silently drop the column from the UPDATE.
 DO $$
 DECLARE
   v_test_uid uuid := 'bbbbbbbb-cccc-dddd-eeee-ffffffffffff';
-  v_count int;
+  v_orig boolean;
+  v_after boolean;
+  v_denied boolean := false;
 BEGIN
+  SELECT assessment_completed INTO v_orig FROM public.profiles WHERE id = v_test_uid;
+
   SET LOCAL ROLE authenticated;
   SET LOCAL request.jwt.claims = '{"sub":"bbbbbbbb-cccc-dddd-eeee-ffffffffffff","role":"authenticated"}';
 
-  UPDATE public.profiles
-  SET assessment_completed = true
-  WHERE id = v_test_uid;
+  BEGIN
+    UPDATE public.profiles SET assessment_completed = true WHERE id = v_test_uid;
+  EXCEPTION WHEN insufficient_privilege THEN
+    v_denied := true;
+  END;
 
-  GET DIAGNOSTICS v_count = ROW_COUNT;
   RESET ROLE;
 
-  IF v_count > 0 THEN
-    RAISE EXCEPTION 'TEST FAILED: authenticated user updated assessment_completed (% rows)', v_count;
+  IF NOT v_denied THEN
+    RAISE EXCEPTION 'TEST FAILED: authenticated user was allowed to UPDATE assessment_completed';
+  END IF;
+
+  SELECT assessment_completed INTO v_after FROM public.profiles WHERE id = v_test_uid;
+  IF v_after IS DISTINCT FROM v_orig THEN
+    RAISE EXCEPTION 'TEST FAILED: assessment_completed changed from % to %', v_orig, v_after;
   END IF;
 
   RAISE NOTICE 'PASS: authenticated user cannot UPDATE assessment_completed';
