@@ -104,8 +104,7 @@ class QuizPlayContent extends StatelessWidget {
                     ),
                     child: Text(
                       'Моё слово',
-                      style:
-                          Theme.of(context).textTheme.labelSmall?.copyWith(
+                      style: Theme.of(context).textTheme.labelSmall?.copyWith(
                         color: AppColors.primary,
                         fontWeight: FontWeight.w600,
                       ),

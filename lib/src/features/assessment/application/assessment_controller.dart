@@ -67,10 +67,7 @@ class AssessmentController extends _$AssessmentController {
   Future<void> _completeOnServer(Map<int, String> answers) async {
     final result = await ref
         .read(assessmentRepositoryProvider)
-        .completeAssessment(
-          questions: questionBank,
-          answers: answers,
-        );
+        .completeAssessment(questions: questionBank, answers: answers);
 
     state = state.copyWith(isSaving: false, result: result);
   }

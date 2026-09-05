@@ -13,18 +13,15 @@ void main() {
       routes: [
         GoRoute(
           path: '/',
-          builder: (context, state) => const Scaffold(
-            body: Center(child: Text('Test')),
-          ),
+          builder: (context, state) =>
+              const Scaffold(body: Center(child: Text('Test'))),
         ),
       ],
     );
 
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
-          goRouterProvider.overrideWithValue(testRouter),
-        ],
+        overrides: [goRouterProvider.overrideWithValue(testRouter)],
         child: const LangualioApp(),
       ),
     );

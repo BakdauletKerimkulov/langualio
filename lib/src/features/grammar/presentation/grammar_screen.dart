@@ -62,8 +62,7 @@ class _GrammarScreenState extends ConsumerState<GrammarScreen> {
         FilterChipBar(
           labels: _filters,
           selected: activeFilter,
-          onSelected: (v) =>
-              ref.read(grammarFilterProvider.notifier).select(v),
+          onSelected: (v) => ref.read(grammarFilterProvider.notifier).select(v),
         ),
         gapH8,
         // Grammar cards
@@ -113,7 +112,8 @@ class _GrammarScreenState extends ConsumerState<GrammarScreen> {
                   ),
                   gapH16,
                   FilledButton(
-                    onPressed: () => ref.invalidate(grammarItemsNotifierProvider),
+                    onPressed: () =>
+                        ref.invalidate(grammarItemsNotifierProvider),
                     child: const Text('Retry'),
                   ),
                 ],

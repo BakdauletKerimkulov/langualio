@@ -17,7 +17,9 @@ void main() {
 
     test('loads and deserializes b1_words.json', () async {
       // Load the actual asset file content for the test
-      final jsonString = await rootBundle.loadString('assets/data/b1_words.json');
+      final jsonString = await rootBundle.loadString(
+        'assets/data/b1_words.json',
+      );
       final list = jsonDecode(jsonString) as List;
       expect(list, isNotEmpty);
 

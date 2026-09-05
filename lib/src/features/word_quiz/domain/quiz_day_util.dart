@@ -4,8 +4,11 @@ DateTime getQuizDay() {
   final now = DateTime.now().toUtc();
   // Almaty is UTC+5, minus 2 hours offset = UTC+3 for day boundary
   final almatyAdjusted = now.add(const Duration(hours: 3));
-  return DateTime(almatyAdjusted.year, almatyAdjusted.month,
-      almatyAdjusted.day);
+  return DateTime(
+    almatyAdjusted.year,
+    almatyAdjusted.month,
+    almatyAdjusted.day,
+  );
 }
 
 /// Formats a DateTime as yyyy-MM-dd string.

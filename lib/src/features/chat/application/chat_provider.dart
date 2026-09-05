@@ -48,8 +48,9 @@ class ChatState {
       isLoadingMore: isLoadingMore ?? this.isLoadingMore,
       hasMore: hasMore ?? this.hasMore,
       error: clearError ? null : (error ?? this.error),
-      streamingText:
-          clearStreaming ? null : (streamingText ?? this.streamingText),
+      streamingText: clearStreaming
+          ? null
+          : (streamingText ?? this.streamingText),
       dailyLimit: dailyLimit ?? this.dailyLimit,
       dailyRemaining: dailyRemaining ?? this.dailyRemaining,
     );
@@ -175,10 +176,7 @@ class ChatNotifier extends _$ChatNotifier {
         return;
       }
 
-      state = state.copyWith(
-        dailyLimit: limit,
-        dailyRemaining: remaining,
-      );
+      state = state.copyWith(dailyLimit: limit, dailyRemaining: remaining);
 
       _addAssistantMessage(responseText);
     } catch (e) {

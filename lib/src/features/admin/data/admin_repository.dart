@@ -13,8 +13,8 @@ class AdminRepository {
   AdminRepository({
     required SupabaseClient client,
     required WordGenerationService wordGenerationService,
-  })  : _client = client,
-        _wordGenerationService = wordGenerationService;
+  }) : _client = client,
+       _wordGenerationService = wordGenerationService;
 
   final SupabaseClient _client;
   final WordGenerationService _wordGenerationService;
@@ -51,7 +51,10 @@ class AdminRepository {
     };
 
     await _client.from('daily_words').insert(row);
-    log('Word created: ${entry.word} (status: $status)', name: 'AdminRepository');
+    log(
+      'Word created: ${entry.word} (status: $status)',
+      name: 'AdminRepository',
+    );
   }
 
   /// Fetches words from `daily_words`, optionally filtered by status.
@@ -77,7 +80,11 @@ class AdminRepository {
   }
 
   /// Updates an existing word row.
-  Future<void> updateWord(String id, WordEntry entry, {required String status}) async {
+  Future<void> updateWord(
+    String id,
+    WordEntry entry, {
+    required String status,
+  }) async {
     final json = entry.toJson();
     final updates = <String, dynamic>{
       'word': json['word'],

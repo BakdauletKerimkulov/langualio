@@ -10,8 +10,10 @@ void main() {
       for (var i = 0; i < questionBank.length; i++) {
         allCorrect[i] = questionBank[i].correctAnswer;
       }
-      final result =
-          calculateLevel(questions: questionBank, answers: allCorrect);
+      final result = calculateLevel(
+        questions: questionBank,
+        answers: allCorrect,
+      );
       expect(result.level, CefrLevel.c1);
       expect(result.correctAnswers, 12);
     });
@@ -21,8 +23,7 @@ void main() {
       for (var i = 0; i < questionBank.length; i++) {
         allWrong[i] = 'wrong_answer_xyz';
       }
-      final result =
-          calculateLevel(questions: questionBank, answers: allWrong);
+      final result = calculateLevel(questions: questionBank, answers: allWrong);
       expect(result.level, CefrLevel.a1);
       expect(result.correctAnswers, 0);
     });

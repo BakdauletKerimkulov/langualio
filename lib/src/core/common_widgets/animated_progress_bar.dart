@@ -26,9 +26,7 @@ class AnimatedProgressBar extends StatelessWidget {
       decoration: BoxDecoration(
         color: backgroundColor ?? color.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(height / 2),
-        border: borderColor != null
-            ? Border.all(color: borderColor!)
-            : null,
+        border: borderColor != null ? Border.all(color: borderColor!) : null,
       ),
       child: TweenAnimationBuilder<double>(
         tween: Tween(begin: 0, end: progress.clamp(0.0, 1.0)),

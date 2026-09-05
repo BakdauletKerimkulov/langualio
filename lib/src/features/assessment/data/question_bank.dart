@@ -70,7 +70,8 @@ const List<AssessmentQuestion> questionBank = [
   ),
   AssessmentQuestion(
     id: 'b1_reading_1',
-    text: 'What is the main reason people move to cities according to the text?',
+    text:
+        'What is the main reason people move to cities according to the text?',
     type: QuestionType.multipleChoice,
     discipline: Discipline.reading,
     level: CefrLevel.b1,

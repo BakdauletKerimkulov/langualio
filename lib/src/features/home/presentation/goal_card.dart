@@ -43,7 +43,9 @@ class GoalCard extends StatelessWidget {
               title,
               style: TextStyle(
                 fontWeight: FontWeight.w700,
-                color: isCompleted ? AppColors.textSecondary : AppColors.textPrimary,
+                color: isCompleted
+                    ? AppColors.textSecondary
+                    : AppColors.textPrimary,
                 decoration: isCompleted ? TextDecoration.lineThrough : null,
               ),
             ),

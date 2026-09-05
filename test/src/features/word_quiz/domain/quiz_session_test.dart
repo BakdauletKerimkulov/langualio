@@ -5,12 +5,12 @@ import 'package:langualio/src/features/word_quiz/domain/word_entry.dart';
 import 'package:langualio/src/features/word_quiz/domain/word_meaning.dart';
 
 WordEntry _makeWord(String id, List<WordMeaning> meanings) => WordEntry(
-      id: id,
-      word: 'word_$id',
-      level: DifficultyLevel.b1,
-      meanings: meanings,
-      createdAt: DateTime.utc(2026, 6, 1),
-    );
+  id: id,
+  word: 'word_$id',
+  level: DifficultyLevel.b1,
+  meanings: meanings,
+  createdAt: DateTime.utc(2026, 6, 1),
+);
 
 const _verbMeaning = WordMeaning(
   partOfSpeech: PartOfSpeech.verb,

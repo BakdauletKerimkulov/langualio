@@ -8,8 +8,7 @@ import '../domain/grammar_item.dart';
 part 'grammar_provider.g.dart';
 
 @riverpod
-class GrammarItemsNotifier extends _$GrammarItemsNotifier
-    with NotifierMounted {
+class GrammarItemsNotifier extends _$GrammarItemsNotifier with NotifierMounted {
   @override
   Future<List<GrammarItem>> build() async {
     ref.onDispose(setUnmounted);
@@ -39,9 +38,7 @@ class GrammarFilter extends _$GrammarFilter {
 }
 
 @riverpod
-AsyncValue<List<GrammarItem>> filteredGrammarItems(
-  Ref ref,
-) {
+AsyncValue<List<GrammarItem>> filteredGrammarItems(Ref ref) {
   final filter = ref.watch(grammarFilterProvider);
   final itemsAsync = ref.watch(grammarItemsNotifierProvider);
 

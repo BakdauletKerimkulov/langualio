@@ -83,7 +83,5 @@ class GrammarRepository {
 
 @Riverpod(keepAlive: true)
 GrammarRepository grammarRepository(Ref ref) {
-  return GrammarRepository(
-    ref.watch(supabaseClientProvider),
-  );
+  return GrammarRepository(ref.watch(supabaseClientProvider));
 }

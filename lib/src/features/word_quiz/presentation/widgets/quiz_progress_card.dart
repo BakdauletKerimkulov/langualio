@@ -61,10 +61,9 @@ class QuizProgressCard extends StatelessWidget {
           gapH8,
           Text(
             '$completedCount из $totalWords слов пройдено',
-            style: Theme.of(context)
-                .textTheme
-                .bodySmall
-                ?.copyWith(color: AppColors.textTertiary),
+            style: Theme.of(
+              context,
+            ).textTheme.bodySmall?.copyWith(color: AppColors.textTertiary),
           ),
         ],
       ),

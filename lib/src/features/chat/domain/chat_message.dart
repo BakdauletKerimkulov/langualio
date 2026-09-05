@@ -3,10 +3,7 @@ enum MessageRole { user, assistant }
 enum ChatContextSource { home, grammar, practice }
 
 class ChatContext {
-  const ChatContext({
-    required this.source,
-    required this.payload,
-  });
+  const ChatContext({required this.source, required this.payload});
 
   final ChatContextSource source;
   final String payload;

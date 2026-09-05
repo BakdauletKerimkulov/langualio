@@ -30,7 +30,11 @@ class QuizCompletionView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       padding: const EdgeInsets.fromLTRB(
-          Sizes.p24, Sizes.p48, Sizes.p24, Sizes.p24),
+        Sizes.p24,
+        Sizes.p48,
+        Sizes.p24,
+        Sizes.p24,
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -42,8 +46,7 @@ class QuizCompletionView extends StatelessWidget {
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: AppColors.primaryLight,
-                border: Border.all(
-                    color: AppColors.primaryBorder, width: 3),
+                border: Border.all(color: AppColors.primaryBorder, width: 3),
               ),
               alignment: Alignment.center,
               child: Text(
@@ -69,9 +72,9 @@ class QuizCompletionView extends StatelessWidget {
           gapH8,
           Text(
             'Квиз завершён',
-            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-              color: AppColors.textSecondary,
-            ),
+            style: Theme.of(
+              context,
+            ).textTheme.bodyMedium?.copyWith(color: AppColors.textSecondary),
             textAlign: TextAlign.center,
           ),
           gapH32,
@@ -126,9 +129,7 @@ class _MistakeRow extends StatelessWidget {
       decoration: BoxDecoration(
         color: AppColors.surface,
         borderRadius: BorderRadius.circular(Sizes.p12),
-        border: Border.all(
-          color: AppColors.error.withValues(alpha: 0.3),
-        ),
+        border: Border.all(color: AppColors.error.withValues(alpha: 0.3)),
       ),
       child: Row(
         children: [

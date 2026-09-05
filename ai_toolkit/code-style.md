@@ -190,52 +190,9 @@ if (MediaQuery.sizeOf(context).width < 412) { ... }
 - Use `LayoutBuilder` when a widget adapts to its **parent's** constraints rather than the screen (e.g. a card that lives in both a list and a sidebar)
 - Content widths: use the shared `ResponsiveCenter` widget (max content width + centering) instead of ad-hoc `ConstrainedBox` — and `ResponsiveSliverCenter` inside `CustomScrollView`. Its `maxContentWidth` default comes from the same `Breakpoints` class — never a separate constant
 
-## Domain Models & State Classes
+## State Classes
 
-**Decision criteria — freezed vs hand-written:**
-
-| Use | When |
-|-----|------|
-| **Hand-written** | Simple models (≤5 fields), no nested unions, factory from `Map` (e.g. Supabase row). Manual `==`, `hashCode`, `copyWith` (if needed). |
-| **Freezed + json_serializable** | Complex models with unions/sealed variants, deep nesting, or generated `fromJson`/`toJson` needed by external APIs. |
-
-Most domain models in this project parse Supabase response maps via a `factory Model.fromMap(Map)` constructor — these stay **hand-written**. Freezed is used where `copyWith`, union types, or json_serializable integration justify the codegen overhead (e.g. `WordEntry`, `WordMeaning`).
-
-**Hand-written immutable model template:**
-
-```dart
-@immutable
-class SomeModel {
-  const SomeModel({
-    required this.id,
-    required this.name,
-    this.description,
-  });
-
-  final String id;
-  final String name;
-  final String? description;
-
-  factory SomeModel.fromMap(Map<String, dynamic> map) => SomeModel(
-    id: map['id'] as String,
-    name: map['name'] as String,
-    description: map['description'] as String?,
-  );
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is SomeModel &&
-          id == other.id &&
-          name == other.name &&
-          description == other.description;
-
-  @override
-  int get hashCode => Object.hash(id, name, description);
-}
-```
-
-**Hand-written state class** (for notifier state with 2–4 fields):
+Hand-written immutable state when freezed is overkill (simple state with 2–4 fields):
 
 ```dart
 @immutable
@@ -267,6 +224,8 @@ class SomeScreenState {
   int get hashCode => Object.hash(status, errorMessage);
 }
 ```
+
+For domain models with JSON serialization — use **freezed + json_serializable**.
 
 ## Enums
 

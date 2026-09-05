@@ -12,10 +12,7 @@ class SuggestedPrompts extends StatelessWidget {
       icon: Icons.chat_bubble_outline_rounded,
       text: 'Давай попрактикуем диалог',
     ),
-    _Prompt(
-      icon: Icons.auto_stories_rounded,
-      text: 'Объясни Present Perfect',
-    ),
+    _Prompt(icon: Icons.auto_stories_rounded, text: 'Объясни Present Perfect'),
     _Prompt(
       icon: Icons.psychology_rounded,
       text: 'Помоги запомнить новые слова',
@@ -60,14 +57,16 @@ class SuggestedPrompts extends StatelessWidget {
           textAlign: TextAlign.center,
         ),
         gapH32,
-        ..._prompts.map((p) => Padding(
-              padding: const EdgeInsets.only(bottom: 12),
-              child: _PromptCard(
-                icon: p.icon,
-                text: p.text,
-                onTap: () => onPromptSelected(p.text),
-              ),
-            )),
+        ..._prompts.map(
+          (p) => Padding(
+            padding: const EdgeInsets.only(bottom: 12),
+            child: _PromptCard(
+              icon: p.icon,
+              text: p.text,
+              onTap: () => onPromptSelected(p.text),
+            ),
+          ),
+        ),
       ],
     );
   }
@@ -123,11 +122,7 @@ class _PromptCard extends StatelessWidget {
                 ),
               ),
             ),
-            Icon(
-              Icons.arrow_forward_ios,
-              size: 14,
-              color: AppColors.textHint,
-            ),
+            Icon(Icons.arrow_forward_ios, size: 14, color: AppColors.textHint),
           ],
         ),
       ),

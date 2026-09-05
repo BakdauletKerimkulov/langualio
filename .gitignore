@@ -53,3 +53,6 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# состояние agentic-цикла (допуск gate, логи ретраев, вердикты ревью)
+.gate/

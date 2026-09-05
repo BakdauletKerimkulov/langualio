@@ -42,8 +42,7 @@ class ChatRepository {
     int limit = 20,
     DateTime? before,
   }) async {
-    final cutoff =
-        DateTime.now().subtract(const Duration(hours: 48)).toUtc();
+    final cutoff = DateTime.now().subtract(const Duration(hours: 48)).toUtc();
 
     var query = _client
         .from(_table)
@@ -86,12 +85,14 @@ class ChatRepository {
         : messages;
 
     final list = trimmed
-        .map((m) => {
-              'id': m.id,
-              'role': m.role == MessageRole.user ? 'user' : 'assistant',
-              'text': m.text,
-              'timestamp': m.timestamp.toIso8601String(),
-            })
+        .map(
+          (m) => {
+            'id': m.id,
+            'role': m.role == MessageRole.user ? 'user' : 'assistant',
+            'text': m.text,
+            'timestamp': m.timestamp.toIso8601String(),
+          },
+        )
         .toList();
 
     await _storage.setString(_key, jsonEncode(list));

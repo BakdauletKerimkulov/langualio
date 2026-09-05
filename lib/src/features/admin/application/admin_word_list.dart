@@ -5,7 +5,7 @@ import '../../../core/utils/notifier_mounted.dart';
 import '../../word_quiz/domain/word_entry.dart';
 import '../data/admin_repository.dart';
 
-part 'admin_word_list_notifier.g.dart';
+part 'admin_word_list.g.dart';
 
 @immutable
 class AdminWordListState {
@@ -47,38 +47,37 @@ class AdminWordListState {
 }
 
 @riverpod
-class AdminWordListNotifier extends _$AdminWordListNotifier
-    with NotifierMounted {
+class AdminWordList extends _$AdminWordList with NotifierMounted {
   @override
   AdminWordListState build() {
     ref.onDispose(setUnmounted);
-    _loadWords();
+    // Must not touch `state` here: the element has no state until build()
+    // returns, so the initial filter is passed explicitly instead of read.
+    _loadWords(null);
     return const AdminWordListState(isLoading: true);
   }
 
-  Future<void> _loadWords() async {
-    state = state.copyWith(isLoading: true, error: null);
-
+  Future<void> _loadWords(String? statusFilter) async {
     try {
       final words = await ref
           .read(adminRepositoryProvider)
-          .fetchWords(statusFilter: state.activeFilter);
+          .fetchWords(statusFilter: statusFilter);
       if (!mounted) return;
       state = state.copyWith(words: words, isLoading: false);
     } catch (e) {
       if (!mounted) return;
-      state = state.copyWith(
-        isLoading: false,
-        error: 'Ошибка загрузки: $e',
-      );
+      state = state.copyWith(isLoading: false, error: 'Ошибка загрузки: $e');
     }
   }
 
   void setFilter(String? status) {
-    state = state.copyWith(activeFilter: () => status);
-    _loadWords();
+    state = state.copyWith(activeFilter: () => status, isLoading: true);
+    _loadWords(status);
   }
 
-  Future<void> refresh() => _loadWords();
-
+  Future<void> refresh() {
+    final statusFilter = state.activeFilter;
+    state = state.copyWith(isLoading: true);
+    return _loadWords(statusFilter);
+  }
 }

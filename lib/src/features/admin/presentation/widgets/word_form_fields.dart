@@ -94,9 +94,9 @@ class WordFormFields extends StatelessWidget {
           children: [
             Text(
               'Значения',
-              style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                fontWeight: FontWeight.w600,
-              ),
+              style: Theme.of(
+                context,
+              ).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w600),
             ),
             const Spacer(),
             TextButton.icon(
@@ -156,9 +156,9 @@ class _MeaningSection extends StatelessWidget {
               children: [
                 Text(
                   'Значение ${index + 1}',
-                  style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                    fontWeight: FontWeight.w600,
-                  ),
+                  style: Theme.of(
+                    context,
+                  ).textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w600),
                 ),
                 const Spacer(),
                 if (canRemove)
@@ -226,10 +226,7 @@ class _MeaningSection extends StatelessWidget {
 }
 
 class _LabeledTextField extends StatelessWidget {
-  const _LabeledTextField({
-    required this.controller,
-    required this.label,
-  });
+  const _LabeledTextField({required this.controller, required this.label});
 
   final TextEditingController controller;
   final String label;

@@ -6,26 +6,26 @@ import 'package:langualio/src/features/word_quiz/domain/word_meaning.dart';
 void main() {
   group('WordEntry', () {
     WordEntry createTestEntry() => WordEntry(
-          id: 'test-id',
-          word: 'run',
-          ipa: '/rʌn/',
-          level: DifficultyLevel.b1,
-          meanings: const [
-            WordMeaning(
-              partOfSpeech: PartOfSpeech.verb,
-              translation: 'бежать',
-              exampleEn: 'I run every morning.',
-              exampleRu: 'Я бегаю каждое утро.',
-            ),
-            WordMeaning(
-              partOfSpeech: PartOfSpeech.noun,
-              translation: 'пробежка',
-              exampleEn: 'I went for a run.',
-              exampleRu: 'Я пошёл на пробежку.',
-            ),
-          ],
-          createdAt: DateTime.utc(2026, 6, 1),
-        );
+      id: 'test-id',
+      word: 'run',
+      ipa: '/rʌn/',
+      level: DifficultyLevel.b1,
+      meanings: const [
+        WordMeaning(
+          partOfSpeech: PartOfSpeech.verb,
+          translation: 'бежать',
+          exampleEn: 'I run every morning.',
+          exampleRu: 'Я бегаю каждое утро.',
+        ),
+        WordMeaning(
+          partOfSpeech: PartOfSpeech.noun,
+          translation: 'пробежка',
+          exampleEn: 'I went for a run.',
+          exampleRu: 'Я пошёл на пробежку.',
+        ),
+      ],
+      createdAt: DateTime.utc(2026, 6, 1),
+    );
 
     test('creates with multiple meanings', () {
       final entry = createTestEntry();

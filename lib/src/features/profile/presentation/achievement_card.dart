@@ -35,19 +35,14 @@ class AchievementCard extends StatelessWidget {
                     width: 2,
                   ),
                 ),
-                child: Center(
-                  child: Icon(icon, size: 32, color: color),
-                ),
+                child: Center(child: Icon(icon, size: 32, color: color)),
               ),
             ),
             const SizedBox(height: 8),
             Text(
               title,
               textAlign: TextAlign.center,
-              style: const TextStyle(
-                fontSize: 12,
-                fontWeight: FontWeight.w700,
-              ),
+              style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w700),
             ),
           ],
         ),

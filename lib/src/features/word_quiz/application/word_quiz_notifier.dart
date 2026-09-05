@@ -195,5 +195,4 @@ class WordQuizNotifier extends _$WordQuizNotifier with NotifierMounted {
     final storage = ref.read(localStorageProvider);
     storage.setString(_answeredIdsKey, ids.join(','));
   }
-
 }

@@ -227,7 +227,7 @@ BEGIN
   RAISE NOTICE 'PASS: authenticated can call upsert_word_learning_progress (count=%)', v_count;
 END $$;
 
--- ── Test 9: upsert_word_learning_progress double call with same date is idempotent ──
+-- ── Test 9: upsert_word_learning_progress same-date double call does not double-count a day ──
 DO $$
 DECLARE
   v_test_uid uuid := 'dddddddd-1111-2222-3333-dddddddddddd';
@@ -252,16 +252,30 @@ BEGIN
 
   RESET ROLE;
 
-  SELECT correct_count INTO v_count
-  FROM public.word_learning_progress
-  WHERE user_id = v_test_uid AND word_id = v_word_id;
+  -- The idempotent part is the day set, not the answer counter. `correct_count`
+  -- counts correct answers (ai_docs/GLOSSARY.md), so a second correct answer on
+  -- the same day legitimately increments it. What must not happen is the same
+  -- day landing twice in dates_correct, because the greedy-chain "learned"
+  -- decision is computed from that array.
+  DECLARE
+    v_dates jsonb;
+    v_learned timestamptz;
+  BEGIN
+    SELECT dates_correct, learned_at INTO v_dates, v_learned
+    FROM public.word_learning_progress
+    WHERE user_id = v_test_uid AND word_id = v_word_id;
 
-  -- Same date called twice should NOT double-count (deduplication in dates_correct)
-  IF v_count != 1 THEN
-    RAISE EXCEPTION 'TEST FAILED: double call same date should give count=1, got %', v_count;
-  END IF;
+    IF jsonb_array_length(v_dates) != 1 THEN
+      RAISE EXCEPTION 'TEST FAILED: same date recorded % times in dates_correct (%)',
+        jsonb_array_length(v_dates), v_dates;
+    END IF;
 
-  RAISE NOTICE 'PASS: upsert_word_learning_progress same-date double call is idempotent (count=1)';
+    IF v_learned IS NOT NULL THEN
+      RAISE EXCEPTION 'TEST FAILED: one correct day marked the word as learned (learned_at=%)', v_learned;
+    END IF;
+  END;
+
+  RAISE NOTICE 'PASS: upsert_word_learning_progress same-date double call keeps one day in dates_correct';
 END $$;
 
 -- ════════════════════════════════════════════

@@ -30,8 +30,7 @@ class QuizHomeState {
   final bool hasWords;
   final int userWordCount;
 
-  double get scorePercent =>
-      totalWords > 0 ? correctCount / totalWords : 0.0;
+  double get scorePercent => totalWords > 0 ? correctCount / totalWords : 0.0;
 
   QuizHomeState copyWith({
     int? completedCount,
@@ -69,8 +68,14 @@ class QuizHomeState {
 
   @override
   int get hashCode => Object.hash(
-      completedCount, totalWords, isFinished, correctCount,
-      languageDirection, hasWords, userWordCount);
+    completedCount,
+    totalWords,
+    isFinished,
+    correctCount,
+    languageDirection,
+    hasWords,
+    userWordCount,
+  );
 }
 
 @riverpod

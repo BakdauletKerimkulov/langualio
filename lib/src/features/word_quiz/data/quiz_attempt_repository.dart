@@ -11,7 +11,7 @@ part 'quiz_attempt_repository.g.dart';
 
 class QuizAttemptRepository {
   const QuizAttemptRepository({required SupabaseClient client})
-      : _client = client;
+    : _client = client;
 
   final SupabaseClient _client;
 
